@@ -1,0 +1,56 @@
+version: '3.8'
+
+services:
+  # 1. POSTGRESQL (Tüm servislerin ortak veritabanı sunucusu)
+  postgres:
+    image: postgres:15-alpine
+    container_name: tavia-postgres
+    restart: always
+    environment:
+      POSTGRES_USER: tavia_user
+      POSTGRES_PASSWORD: tavia_password
+      POSTGRES_DB: tavia_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  # 2. PGADMIN (Veritabanını görsel olarak yönetmek için arayüz)
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: tavia-pgadmin
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@tavia.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "5050:80"
+    depends_on:
+      - postgres
+
+  # 3. ZOOKEEPER (Kafka'nın çalışması için gereken orkestra şefi)
+  zookeeper:
+    image: confluentinc/cp-zookeeper:7.4.0
+    container_name: tavia-zookeeper
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+    ports:
+      - "2181:2181"
+
+  # 4. APACHE KAFKA (Mikroservislerin birbiriyle asenkron haberleştiği mesaj kuyruğu)
+  kafka:
+    image: confluentinc/cp-kafka:7.4.0
+    container_name: tavia-kafka
+    depends_on:
+      - zookeeper
+    ports:
+      - "9092:9092"
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+
+volumes:
+  postgres_data:
