@@ -51,3 +51,19 @@ spring:
               metadata:
                 connect-timeout: 5000
                 response-timeout: 5000
+
+            - id: crm-service
+              uri: http://localhost:8086
+              predicates:
+                - Path=/api/v1/crm/**
+              metadata:
+                connect-timeout: 5000
+                response-timeout: 5000
+
+            - id: context-service
+              uri: http://localhost:8087
+              predicates:
+                - Path=/api/v1/context/**
+              metadata:
+                connect-timeout: 5000
+                response-timeout: 5000

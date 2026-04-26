@@ -19,4 +19,9 @@ public class DailySalesDto {
     private BigDecimal totalRevenue;
     private Integer totalOrders;
     private LocalDate reportDate;
+
+    // New enrichment fields
+    private String weather;
+    private String loyaltyLevel;
+    private String eventType;
 }

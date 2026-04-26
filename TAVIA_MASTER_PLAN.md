@@ -1,7 +1,3 @@
-Aşağıdaki doküman bir “görev listesi” değil. Bu bir operasyon planıdır. Ajanın hata yapacağı yerler önceden düşünülmüş, sınırlar çizilmiş, serbestlik alanı kontrollü bırakılmıştır. Eğer ajan bu plana sadık kalırsa sistem evrilir. Kalmazsa parçalanır.
-
----
-
 # **TAVIA_MASTER_PLAN.md**
 
 ## **1. MİSYON TANIMI**
@@ -328,11 +324,11 @@ Ajan bir fazı bitirdi sayılmak için:
 ## **11. OPERASYON AKIŞI (CHECKLIST)**
 
 ```
-[ ] FAZ 1 — CRM Service
-[ ] FAZ 2 — Context Service
-[ ] FAZ 3 — Order Service Update
-[ ] FAZ 4 — AI Service Update
-[ ] FAZ 5 — Gateway Update
+[x] FAZ 1 — CRM Service
+[x] FAZ 2 — Context Service
+[x] FAZ 3 — Order Service Update
+[x] FAZ 4 — AI Service Update
+[x] FAZ 5 — Gateway Update
 ```
 
 ---

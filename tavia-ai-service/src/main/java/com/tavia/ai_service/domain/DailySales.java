@@ -31,4 +31,11 @@ public class DailySales {
 
     @Column(nullable = false)
     private LocalDate reportDate;
+
+    // New enrichment fields
+    private String weather;
+
+    private String loyaltyLevel;
+
+    private String eventType;
 }
