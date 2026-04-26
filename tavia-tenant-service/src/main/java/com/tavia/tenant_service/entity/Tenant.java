@@ -22,7 +22,9 @@ public class Tenant {
     @Column(nullable = false)
     private String name; 
 
-    private String location;
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    private City city;
 
     @Column(nullable = false, unique = true)
     private String username;

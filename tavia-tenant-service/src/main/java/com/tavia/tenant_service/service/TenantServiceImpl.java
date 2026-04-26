@@ -3,6 +3,7 @@ package com.tavia.tenant_service.service;
 import com.tavia.tenant_service.dto.TenantCreateRequest;
 import com.tavia.tenant_service.dto.TenantLoginRequest;
 import com.tavia.tenant_service.dto.TenantResponse;
+import com.tavia.tenant_service.entity.City;
 import com.tavia.tenant_service.entity.SubscriptionPlan;
 import com.tavia.tenant_service.entity.Tenant;
 import com.tavia.tenant_service.exception.BusinessException;
@@ -36,6 +37,10 @@ public class TenantServiceImpl implements TenantService {
         }
         if (tenantRepository.existsByUsername(request.getUsername())) {
             throw new BusinessException("Bu kullanici adi zaten kayitli.");
+        }
+
+        if (request.getCity() == null) {
+            throw new BusinessException("Sehir alani zorunludur. Gecerli degerler: " + java.util.Arrays.toString(City.values()));
         }
 
         if (request.getSubscriptionPlan() == null) {

@@ -1,5 +1,6 @@
 package com.tavia.order_service.kafka;
 
+import com.tavia.order_service.enums.LoyaltyLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -20,7 +21,7 @@ public class OrderEvent {
     private BigDecimal price;
 
     // Enrichment fields from CRM
-    private String customerLevel;
+    private LoyaltyLevel customerLevel;
     private BigDecimal totalSpent;
 
     // Enrichment fields from Context

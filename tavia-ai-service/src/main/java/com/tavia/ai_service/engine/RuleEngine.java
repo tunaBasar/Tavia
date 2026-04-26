@@ -1,5 +1,6 @@
 package com.tavia.ai_service.engine;
 
+import com.tavia.ai_service.enums.LoyaltyLevel;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
@@ -18,12 +19,12 @@ public class RuleEngine {
     /**
      * Evaluate all rules against the given enriched context and return suggestions.
      */
-    public List<String> evaluate(String weather, String loyaltyLevel, String activeEvent,
+    public List<String> evaluate(String weather, LoyaltyLevel loyaltyLevel, String activeEvent,
                                   String competitorIntensity) {
         List<String> suggestions = new ArrayList<>();
 
         // Rule 1: Rainy weather + Gold loyalty → increase premium product pricing
-        if ("RAINY".equalsIgnoreCase(weather) && "GOLD".equalsIgnoreCase(loyaltyLevel)) {
+        if ("RAINY".equalsIgnoreCase(weather) && loyaltyLevel == LoyaltyLevel.GOLD) {
             suggestions.add("Increase Latte price by 5%");
             log.info("Rule triggered: RAINY + GOLD → Increase Latte price by 5%");
         }
@@ -47,16 +48,22 @@ public class RuleEngine {
         }
 
         // Rule 5: Sunny weather + Bronze loyalty → send engagement offer
-        if ("SUNNY".equalsIgnoreCase(weather) && "BRONZE".equalsIgnoreCase(loyaltyLevel)) {
+        if ("SUNNY".equalsIgnoreCase(weather) && loyaltyLevel == LoyaltyLevel.BRONZE) {
             suggestions.add("Send loyalty upgrade offer to customer");
             log.info("Rule triggered: SUNNY + BRONZE → Send loyalty upgrade offer");
         }
 
         // Rule 6: Cloudy weather + Silver loyalty + Medium competition → maintain prices
-        if ("CLOUDY".equalsIgnoreCase(weather) && "SILVER".equalsIgnoreCase(loyaltyLevel)
+        if ("CLOUDY".equalsIgnoreCase(weather) && loyaltyLevel == LoyaltyLevel.SILVER
                 && "MEDIUM".equalsIgnoreCase(competitorIntensity)) {
             suggestions.add("Maintain current pricing strategy");
             log.info("Rule triggered: CLOUDY + SILVER + MEDIUM → Maintain pricing");
+        }
+
+        // Rule 7: Platinum loyalty → VIP treatment
+        if (loyaltyLevel == LoyaltyLevel.PLATINUM) {
+            suggestions.add("Apply VIP exclusive offer for Platinum customer");
+            log.info("Rule triggered: PLATINUM loyalty → VIP exclusive offer");
         }
 
         // Default: no rules matched

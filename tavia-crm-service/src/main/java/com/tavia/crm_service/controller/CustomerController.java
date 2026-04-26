@@ -40,9 +40,10 @@ public class CustomerController {
     }
 
     @GetMapping
-    @Operation(summary = "Get all customers")
-    public ResponseEntity<ApiResponse<List<CustomerDto>>> getAllCustomers() {
-        List<CustomerDto> customers = customerService.getAllCustomers();
+    @Operation(summary = "Get all customers, optionally filtered by tenantId")
+    public ResponseEntity<ApiResponse<List<CustomerDto>>> getAllCustomers(
+            @RequestParam(required = false) UUID tenantId) {
+        List<CustomerDto> customers = customerService.getAllCustomers(tenantId);
         return ResponseEntity.ok(ApiResponse.success(customers));
     }
 

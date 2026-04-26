@@ -1,5 +1,6 @@
 package com.tavia.ai_service.dto;
 
+import com.tavia.ai_service.enums.LoyaltyLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -22,7 +23,7 @@ public class OrderEventDto {
     private Double quantityDouble;
 
     // Enrichment fields from CRM
-    private String customerLevel;
+    private LoyaltyLevel customerLevel;
     private BigDecimal totalSpent;
 
     // Enrichment fields from Context

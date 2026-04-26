@@ -8,6 +8,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
+import java.util.UUID;
 
 @Data
 @Builder
@@ -25,4 +26,9 @@ public class CreateCustomerRequest {
     private BigDecimal totalSpent;
 
     private String loyaltyLevel;
+
+    @NotBlank(message = "City is mandatory")
+    private String city;
+
+    private UUID tenantId;
 }

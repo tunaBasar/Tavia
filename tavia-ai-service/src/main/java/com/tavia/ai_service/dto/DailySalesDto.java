@@ -1,5 +1,6 @@
 package com.tavia.ai_service.dto;
 
+import com.tavia.ai_service.enums.LoyaltyLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -22,6 +23,6 @@ public class DailySalesDto {
 
     // New enrichment fields
     private String weather;
-    private String loyaltyLevel;
+    private LoyaltyLevel loyaltyLevel;
     private String eventType;
 }

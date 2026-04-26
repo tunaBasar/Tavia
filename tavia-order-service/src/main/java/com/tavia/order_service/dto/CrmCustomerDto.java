@@ -1,5 +1,6 @@
 package com.tavia.order_service.dto;
 
+import com.tavia.order_service.enums.LoyaltyLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -17,5 +18,5 @@ public class CrmCustomerDto {
     private String name;
     private String email;
     private BigDecimal totalSpent;
-    private String loyaltyLevel;
+    private LoyaltyLevel loyaltyLevel;
 }

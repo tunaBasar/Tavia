@@ -7,34 +7,30 @@ import java.math.BigDecimal;
 import java.util.UUID;
 
 @Entity
-@Table(name = "customers")
+@Table(name = "tenant_loyalty")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Customer {
+public class TenantLoyalty {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
     @Column(nullable = false)
-    private String name;
-
-    @Column(nullable = false, unique = true)
-    private String email;
+    private UUID customerId;
 
     @Column(nullable = false)
-    @Builder.Default
-    private BigDecimal totalSpent = BigDecimal.ZERO;
+    private UUID tenantId;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     @Builder.Default
     private LoyaltyLevel loyaltyLevel = LoyaltyLevel.BRONZE;
 
-    @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private City city;
+    @Builder.Default
+    private BigDecimal totalSpentInThisTenant = BigDecimal.ZERO;
 }

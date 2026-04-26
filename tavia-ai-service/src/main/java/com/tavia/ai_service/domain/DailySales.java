@@ -1,5 +1,6 @@
 package com.tavia.ai_service.domain;
 
+import com.tavia.ai_service.enums.LoyaltyLevel;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -35,7 +36,8 @@ public class DailySales {
     // New enrichment fields
     private String weather;
 
-    private String loyaltyLevel;
+    @Enumerated(EnumType.STRING)
+    private LoyaltyLevel loyaltyLevel;
 
     private String eventType;
 }

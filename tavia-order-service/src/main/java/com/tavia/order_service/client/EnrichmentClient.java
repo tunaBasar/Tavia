@@ -3,6 +3,7 @@ package com.tavia.order_service.client;
 import com.tavia.order_service.dto.ContextDataDto;
 import com.tavia.order_service.dto.CrmCustomerDto;
 import com.tavia.order_service.dto.ExternalApiResponse;
+import com.tavia.order_service.enums.LoyaltyLevel;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.ParameterizedTypeReference;
@@ -84,7 +85,7 @@ public class EnrichmentClient {
 
     private CrmCustomerDto fallbackCustomer() {
         return CrmCustomerDto.builder()
-                .loyaltyLevel("UNKNOWN")
+                .loyaltyLevel(LoyaltyLevel.UNKNOWN)
                 .totalSpent(BigDecimal.ZERO)
                 .build();
     }

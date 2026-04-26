@@ -1,5 +1,6 @@
 package com.tavia.tenant_service.dto;
 
+import com.tavia.tenant_service.entity.City;
 import com.tavia.tenant_service.entity.SubscriptionPlan;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -12,7 +13,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class TenantCreateRequest {
     private String name;
-    private String location;
+    private City city;
     private String username;
     private String password;
     private SubscriptionPlan subscriptionPlan;
