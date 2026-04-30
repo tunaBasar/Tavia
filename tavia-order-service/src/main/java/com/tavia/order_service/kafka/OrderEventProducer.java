@@ -19,7 +19,7 @@ public class OrderEventProducer {
 
     public void sendOrderEvent(OrderDto orderDto) {
         // 1. CRM enrichment
-        CrmCustomerDto crmData = enrichmentClient.getCustomer(orderDto.getCustomerId());
+        CrmCustomerDto crmData = enrichmentClient.getCustomer(orderDto.getCustomerId(), orderDto.getTenantId());
 
         // 2. Context enrichment
         ContextDataDto contextData = enrichmentClient.getContext();
@@ -33,7 +33,7 @@ public class OrderEventProducer {
                 .price(orderDto.getPrice())
                 // CRM enrichment
                 .customerLevel(crmData.getLoyaltyLevel())
-                .totalSpent(crmData.getTotalSpent())
+                .totalSpent(crmData.getTotalSpentInThisTenant())
                 // Context enrichment
                 .weather(contextData.getWeather())
                 .activeEvent(contextData.getActiveEvent())

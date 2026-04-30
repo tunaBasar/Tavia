@@ -8,7 +8,6 @@ import com.tavia.crm_service.entity.Customer;
 import com.tavia.crm_service.entity.LoyaltyLevel;
 import com.tavia.crm_service.entity.TenantLoyalty;
 import com.tavia.crm_service.exception.ResourceNotFoundException;
-import com.tavia.crm_service.mapper.CustomerMapper;
 import com.tavia.crm_service.repository.CustomerRepository;
 import com.tavia.crm_service.repository.TenantLoyaltyRepository;
 import lombok.RequiredArgsConstructor;
@@ -26,10 +25,9 @@ public class CustomerServiceImpl implements CustomerService {
 
     private final CustomerRepository customerRepository;
     private final TenantLoyaltyRepository tenantLoyaltyRepository;
-    private final CustomerMapper customerMapper;
 
     @Override
-    public CustomerDto createCustomer(CreateCustomerRequest request) {
+    public CustomerDto createCustomer(CreateCustomerRequest request, UUID tenantId) {
         log.info("Creating customer with email: {}", request.getEmail());
 
         City city = parseCity(request.getCity());
@@ -40,35 +38,23 @@ public class CustomerServiceImpl implements CustomerService {
         Customer customer = Customer.builder()
                 .name(request.getName())
                 .email(request.getEmail())
-                .totalSpent(request.getTotalSpent() != null ? request.getTotalSpent() : BigDecimal.ZERO)
-                .loyaltyLevel(parseLoyaltyLevel(request.getLoyaltyLevel()))
                 .city(city)
                 .build();
 
         Customer saved = customerRepository.save(customer);
 
-        // If tenantId is provided, create TenantLoyalty mapping
-        if (request.getTenantId() != null) {
-            TenantLoyalty loyalty = TenantLoyalty.builder()
-                    .customerId(saved.getId())
-                    .tenantId(request.getTenantId())
-                    .loyaltyLevel(LoyaltyLevel.BRONZE)
-                    .totalSpentInThisTenant(BigDecimal.ZERO)
-                    .build();
-            tenantLoyaltyRepository.save(loyalty);
-            log.info("TenantLoyalty created for customer {} in tenant {}", saved.getId(), request.getTenantId());
-        }
+        getOrCreateTenantLoyalty(saved.getId(), tenantId);
 
         log.info("Customer created with id: {}", saved.getId());
-        return mapToDto(saved, request.getTenantId());
+        return mapToDto(saved, tenantId);
     }
 
     @Override
-    public CustomerDto getCustomerById(UUID id) {
-        log.info("Fetching customer with id: {}", id);
+    public CustomerDto getCustomerById(UUID id, UUID tenantId) {
+        log.info("Fetching customer with id: {} for tenant: {}", id, tenantId);
         Customer customer = customerRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Customer not found with id: " + id));
-        return mapToDto(customer, null);
+        return mapToDto(customer, tenantId);
     }
 
     @Override
@@ -90,34 +76,16 @@ public class CustomerServiceImpl implements CustomerService {
 
             return customers.stream()
                     .map(customer -> {
-                        TenantLoyalty tl = loyaltyMap.get(customer.getId());
-                        return CustomerDto.builder()
-                                .id(customer.getId())
-                                .name(customer.getName())
-                                .email(customer.getEmail())
-                                .city(customer.getCity())
-                                .loyaltyLevel(tl != null ? tl.getLoyaltyLevel() : customer.getLoyaltyLevel())
-                                .totalSpentInThisTenant(tl != null ? tl.getTotalSpentInThisTenant() : BigDecimal.ZERO)
-                                .build();
+                        return mapToDto(customer, tenantId);
                     })
                     .collect(Collectors.toList());
         }
 
-        // No tenantId filter — return all customers with their base data
-        return customerRepository.findAll().stream()
-                .map(customer -> CustomerDto.builder()
-                        .id(customer.getId())
-                        .name(customer.getName())
-                        .email(customer.getEmail())
-                        .city(customer.getCity())
-                        .loyaltyLevel(customer.getLoyaltyLevel())
-                        .totalSpentInThisTenant(customer.getTotalSpent())
-                        .build())
-                .collect(Collectors.toList());
+        return Collections.emptyList();
     }
 
     @Override
-    public CustomerDto updateCustomer(UUID id, UpdateCustomerRequest request) {
+    public CustomerDto updateCustomer(UUID id, UpdateCustomerRequest request, UUID tenantId) {
         log.info("Updating customer with id: {}", id);
         Customer customer = customerRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Customer not found with id: " + id));
@@ -128,16 +96,31 @@ public class CustomerServiceImpl implements CustomerService {
         if (request.getEmail() != null) {
             customer.setEmail(request.getEmail());
         }
-        if (request.getTotalSpent() != null) {
-            customer.setTotalSpent(request.getTotalSpent());
-        }
-        if (request.getLoyaltyLevel() != null) {
-            customer.setLoyaltyLevel(parseLoyaltyLevel(request.getLoyaltyLevel()));
+        if (request.getCity() != null) {
+            City city = parseCity(request.getCity());
+            if (city == null) {
+                throw new IllegalArgumentException("City must be a valid City enum value.");
+            }
+            customer.setCity(city);
         }
 
         Customer updated = customerRepository.save(customer);
         log.info("Customer updated with id: {}", updated.getId());
-        return mapToDto(updated, null);
+        return mapToDto(updated, tenantId);
+    }
+
+    @Override
+    public CustomerDto adjustTenantLoyalty(UUID customerId, UUID tenantId, BigDecimal orderAmount) {
+        Customer customer = customerRepository.findById(customerId)
+                .orElseThrow(() -> new ResourceNotFoundException("Customer not found with id: " + customerId));
+
+        TenantLoyalty tenantLoyalty = getOrCreateTenantLoyalty(customerId, tenantId);
+        BigDecimal nextTotal = tenantLoyalty.getTotalSpent().add(orderAmount);
+        tenantLoyalty.setTotalSpent(nextTotal);
+        tenantLoyalty.setLoyaltyLevel(resolveLoyaltyLevel(nextTotal));
+        tenantLoyaltyRepository.save(tenantLoyalty);
+
+        return mapToDto(customer, tenantId);
     }
 
     @Override
@@ -151,37 +134,45 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     private CustomerDto mapToDto(Customer customer, UUID tenantId) {
-        LoyaltyLevel level = customer.getLoyaltyLevel();
-        BigDecimal spent = customer.getTotalSpent();
-
-        if (tenantId != null) {
-            Optional<TenantLoyalty> tlOpt = tenantLoyaltyRepository
-                    .findByCustomerIdAndTenantId(customer.getId(), tenantId);
-            if (tlOpt.isPresent()) {
-                level = tlOpt.get().getLoyaltyLevel();
-                spent = tlOpt.get().getTotalSpentInThisTenant();
-            }
-        }
+        TenantLoyalty tenantLoyalty = getOrCreateTenantLoyalty(customer.getId(), tenantId);
 
         return CustomerDto.builder()
                 .id(customer.getId())
                 .name(customer.getName())
                 .email(customer.getEmail())
                 .city(customer.getCity())
-                .loyaltyLevel(level)
-                .totalSpentInThisTenant(spent)
+                .tenantId(tenantId)
+                .loyaltyLevel(tenantLoyalty.getLoyaltyLevel())
+                .totalSpentInThisTenant(tenantLoyalty.getTotalSpent())
                 .build();
     }
 
-    private LoyaltyLevel parseLoyaltyLevel(String level) {
-        if (level == null || level.isBlank()) {
-            return LoyaltyLevel.BRONZE;
+    private TenantLoyalty getOrCreateTenantLoyalty(UUID customerId, UUID tenantId) {
+        if (tenantId == null) {
+            throw new IllegalArgumentException("X-Tenant-ID header is required.");
         }
-        try {
-            return LoyaltyLevel.valueOf(level.toUpperCase());
-        } catch (IllegalArgumentException e) {
-            return LoyaltyLevel.BRONZE;
+        return tenantLoyaltyRepository.findByCustomerIdAndTenantId(customerId, tenantId)
+                .orElseGet(() -> tenantLoyaltyRepository.save(
+                        TenantLoyalty.builder()
+                                .customerId(customerId)
+                                .tenantId(tenantId)
+                                .loyaltyLevel(LoyaltyLevel.BRONZE)
+                                .totalSpent(BigDecimal.ZERO)
+                                .build()
+                ));
+    }
+
+    private LoyaltyLevel resolveLoyaltyLevel(BigDecimal totalSpent) {
+        if (totalSpent.compareTo(new BigDecimal("50000")) >= 0) {
+            return LoyaltyLevel.PLATINUM;
         }
+        if (totalSpent.compareTo(new BigDecimal("20000")) >= 0) {
+            return LoyaltyLevel.GOLD;
+        }
+        if (totalSpent.compareTo(new BigDecimal("5000")) >= 0) {
+            return LoyaltyLevel.SILVER;
+        }
+        return LoyaltyLevel.BRONZE;
     }
 
     private City parseCity(String city) {

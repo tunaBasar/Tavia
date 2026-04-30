@@ -7,7 +7,10 @@ import java.math.BigDecimal;
 import java.util.UUID;
 
 @Entity
-@Table(name = "tenant_loyalty")
+@Table(
+        name = "tenant_loyalty",
+        uniqueConstraints = @UniqueConstraint(columnNames = {"customerId", "tenantId"})
+)
 @Getter
 @Setter
 @NoArgsConstructor
@@ -30,7 +33,7 @@ public class TenantLoyalty {
     @Builder.Default
     private LoyaltyLevel loyaltyLevel = LoyaltyLevel.BRONZE;
 
-    @Column(nullable = false)
+    @Column(name = "total_spent", nullable = false)
     @Builder.Default
-    private BigDecimal totalSpentInThisTenant = BigDecimal.ZERO;
+    private BigDecimal totalSpent = BigDecimal.ZERO;
 }

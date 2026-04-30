@@ -1,0 +1,195 @@
+
+
+********************************************************
+>>> SERVİS BAŞLATILDI: 2026-04-30 22:06:58
+********************************************************
+
+Starting a Gradle Daemon, 2 busy and 33 stopped Daemons could not be reused, use --status for details
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :resolveMainClassName UP-TO-DATE
+
+> Task :bootRun
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.6)
+
+2026-04-30T22:07:10.661+03:00  INFO 67337 --- [tavia-tenant-service] [           main] c.t.t.TenantServiceApplication           : Starting TenantServiceApplication using Java 21.0.10 with PID 67337 (/home/tuna/Desktop/tavia_v2/tavia-tenant-service/build/classes/java/main started by tuna in /home/tuna/Desktop/tavia_v2/tavia-tenant-service)
+2026-04-30T22:07:10.663+03:00 DEBUG 67337 --- [tavia-tenant-service] [           main] c.t.t.TenantServiceApplication           : Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-04-30T22:07:10.664+03:00  INFO 67337 --- [tavia-tenant-service] [           main] c.t.t.TenantServiceApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-04-30T22:07:10.719+03:00  INFO 67337 --- [tavia-tenant-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2026-04-30T22:07:10.719+03:00  INFO 67337 --- [tavia-tenant-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=tavia-tenant-service, profiles=[default], label=null, version=null, state=null
+2026-04-30T22:07:10.719+03:00 DEBUG 67337 --- [tavia-tenant-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Environment tavia-tenant-service has 2 property sources with 31 properties.
+2026-04-30T22:07:11.558+03:00  INFO 67337 --- [tavia-tenant-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-30T22:07:11.712+03:00  INFO 67337 --- [tavia-tenant-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 145 ms. Found 1 JPA repository interface.
+2026-04-30T22:07:11.975+03:00  INFO 67337 --- [tavia-tenant-service] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d0d8fc6f-af9b-32a7-90ba-be0a357ec273
+2026-04-30T22:07:12.347+03:00  INFO 67337 --- [tavia-tenant-service] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-04-30T22:07:12.363+03:00  INFO 67337 --- [tavia-tenant-service] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-30T22:07:12.364+03:00  INFO 67337 --- [tavia-tenant-service] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-04-30T22:07:12.419+03:00  INFO 67337 --- [tavia-tenant-service] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1695 ms
+2026-04-30T22:07:12.594+03:00  INFO 67337 --- [tavia-tenant-service] [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-30T22:07:12.647+03:00  INFO 67337 --- [tavia-tenant-service] [           main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-04-30T22:07:13.193+03:00  INFO 67337 --- [tavia-tenant-service] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-30T22:07:13.231+03:00  INFO 67337 --- [tavia-tenant-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-30T22:07:13.347+03:00  INFO 67337 --- [tavia-tenant-service] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@65880400
+2026-04-30T22:07:13.349+03:00  INFO 67337 --- [tavia-tenant-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-30T22:07:13.377+03:00  WARN 67337 --- [tavia-tenant-service] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-30T22:07:13.400+03:00  INFO 67337 --- [tavia-tenant-service] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/tavia_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.17
+	Default catalog/schema: tavia_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-30T22:07:14.352+03:00  INFO 67337 --- [tavia-tenant-service] [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-30T22:07:14.412+03:00  INFO 67337 --- [tavia-tenant-service] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-30T22:07:14.509+03:00  INFO 67337 --- [tavia-tenant-service] [           main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-04-30T22:07:14.817+03:00  WARN 67337 --- [tavia-tenant-service] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-30T22:07:15.640+03:00  INFO 67337 --- [tavia-tenant-service] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
+2026-04-30T22:07:15.691+03:00  WARN 67337 --- [tavia-tenant-service] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-04-30T22:07:15.737+03:00  INFO 67337 --- [tavia-tenant-service] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-04-30T22:07:15.774+03:00  INFO 67337 --- [tavia-tenant-service] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-04-30T22:07:15.778+03:00  INFO 67337 --- [tavia-tenant-service] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-04-30T22:07:15.787+03:00  INFO 67337 --- [tavia-tenant-service] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-04-30T22:07:15.788+03:00  INFO 67337 --- [tavia-tenant-service] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-04-30T22:07:15.788+03:00  INFO 67337 --- [tavia-tenant-service] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-04-30T22:07:15.788+03:00  INFO 67337 --- [tavia-tenant-service] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-04-30T22:07:15.788+03:00  INFO 67337 --- [tavia-tenant-service] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-04-30T22:07:15.788+03:00  INFO 67337 --- [tavia-tenant-service] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-04-30T22:07:15.788+03:00  INFO 67337 --- [tavia-tenant-service] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-04-30T22:07:16.351+03:00  INFO 67337 --- [tavia-tenant-service] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-04-30T22:07:16.352+03:00  INFO 67337 --- [tavia-tenant-service] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-04-30T22:07:16.354+03:00  INFO 67337 --- [tavia-tenant-service] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-04-30T22:07:16.355+03:00  INFO 67337 --- [tavia-tenant-service] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1777576036355 with initial instances count: 0
+2026-04-30T22:07:16.361+03:00  INFO 67337 --- [tavia-tenant-service] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application TAVIA-TENANT-SERVICE with eureka with status UP
+2026-04-30T22:07:16.362+03:00  INFO 67337 --- [tavia-tenant-service] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1777576036362, current=UP, previous=STARTING]
+2026-04-30T22:07:16.364+03:00  INFO 67337 --- [tavia-tenant-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TAVIA-TENANT-SERVICE/10.90.11.230:tavia-tenant-service:8081: registering service...
+2026-04-30T22:07:16.379+03:00  INFO 67337 --- [tavia-tenant-service] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
+2026-04-30T22:07:16.380+03:00  INFO 67337 --- [tavia-tenant-service] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8081
+2026-04-30T22:07:16.398+03:00  INFO 67337 --- [tavia-tenant-service] [           main] c.t.t.TenantServiceApplication           : Started TenantServiceApplication in 6.809 seconds (process running for 7.385)
+2026-04-30T22:07:16.403+03:00  WARN 67337 --- [tavia-tenant-service] [           main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-04-30T22:07:16.403+03:00  WARN 67337 --- [tavia-tenant-service] [           main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-04-30T22:07:16.498+03:00  INFO 67337 --- [tavia-tenant-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TAVIA-TENANT-SERVICE/10.90.11.230:tavia-tenant-service:8081 - registration status: 204
+2026-04-30T22:07:46.352+03:00  INFO 67337 --- [tavia-tenant-service] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-04-30T22:07:46.352+03:00  INFO 67337 --- [tavia-tenant-service] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-04-30T22:07:46.352+03:00  INFO 67337 --- [tavia-tenant-service] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-04-30T22:07:46.352+03:00  INFO 67337 --- [tavia-tenant-service] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-04-30T22:07:46.352+03:00  INFO 67337 --- [tavia-tenant-service] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-04-30T22:07:46.352+03:00  INFO 67337 --- [tavia-tenant-service] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2026-04-30T22:07:46.352+03:00  INFO 67337 --- [tavia-tenant-service] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-04-30T22:07:46.378+03:00  INFO 67337 --- [tavia-tenant-service] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-04-30T22:12:15.790+03:00  INFO 67337 --- [tavia-tenant-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+
+********************************************************
+<<< SERVİS DURDURULDU: 2026-04-30 22:14:27
+********************************************************
+
+
+
+********************************************************
+>>> SERVİS BAŞLATILDI: 2026-04-30 22:18:43
+********************************************************
+
+Starting a Gradle Daemon, 2 busy and 35 stopped Daemons could not be reused, use --status for details
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :resolveMainClassName UP-TO-DATE
+
+> Task :bootRun
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.6)
+
+2026-04-30T22:18:51.084+03:00  INFO 72688 --- [tavia-tenant-service] [           main] c.t.t.TenantServiceApplication           : Starting TenantServiceApplication using Java 21.0.10 with PID 72688 (/home/tuna/Desktop/tavia_v2/tavia-tenant-service/build/classes/java/main started by tuna in /home/tuna/Desktop/tavia_v2/tavia-tenant-service)
+2026-04-30T22:18:51.086+03:00 DEBUG 72688 --- [tavia-tenant-service] [           main] c.t.t.TenantServiceApplication           : Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-04-30T22:18:51.086+03:00  INFO 72688 --- [tavia-tenant-service] [           main] c.t.t.TenantServiceApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-04-30T22:18:51.114+03:00  INFO 72688 --- [tavia-tenant-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2026-04-30T22:18:51.114+03:00  INFO 72688 --- [tavia-tenant-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=tavia-tenant-service, profiles=[default], label=null, version=null, state=null
+2026-04-30T22:18:51.114+03:00 DEBUG 72688 --- [tavia-tenant-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Environment tavia-tenant-service has 2 property sources with 31 properties.
+2026-04-30T22:18:51.559+03:00  INFO 72688 --- [tavia-tenant-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-30T22:18:51.653+03:00  INFO 72688 --- [tavia-tenant-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 88 ms. Found 1 JPA repository interface.
+2026-04-30T22:18:51.794+03:00  INFO 72688 --- [tavia-tenant-service] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d0d8fc6f-af9b-32a7-90ba-be0a357ec273
+2026-04-30T22:18:52.006+03:00  INFO 72688 --- [tavia-tenant-service] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-04-30T22:18:52.016+03:00  INFO 72688 --- [tavia-tenant-service] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-30T22:18:52.016+03:00  INFO 72688 --- [tavia-tenant-service] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-04-30T22:18:52.063+03:00  INFO 72688 --- [tavia-tenant-service] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 947 ms
+2026-04-30T22:18:52.166+03:00  INFO 72688 --- [tavia-tenant-service] [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-30T22:18:52.198+03:00  INFO 72688 --- [tavia-tenant-service] [           main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-04-30T22:18:52.483+03:00  INFO 72688 --- [tavia-tenant-service] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-30T22:18:52.504+03:00  INFO 72688 --- [tavia-tenant-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-30T22:18:52.581+03:00  INFO 72688 --- [tavia-tenant-service] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3833897c
+2026-04-30T22:18:52.582+03:00  INFO 72688 --- [tavia-tenant-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-30T22:18:52.600+03:00  WARN 72688 --- [tavia-tenant-service] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-30T22:18:52.614+03:00  INFO 72688 --- [tavia-tenant-service] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/tavia_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.17
+	Default catalog/schema: tavia_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-30T22:18:53.160+03:00  INFO 72688 --- [tavia-tenant-service] [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-30T22:18:53.198+03:00  INFO 72688 --- [tavia-tenant-service] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-30T22:18:53.249+03:00  INFO 72688 --- [tavia-tenant-service] [           main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-04-30T22:18:53.421+03:00  WARN 72688 --- [tavia-tenant-service] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-30T22:18:53.778+03:00  INFO 72688 --- [tavia-tenant-service] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
+2026-04-30T22:18:53.802+03:00  WARN 72688 --- [tavia-tenant-service] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-04-30T22:18:53.820+03:00  INFO 72688 --- [tavia-tenant-service] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-04-30T22:18:53.835+03:00  INFO 72688 --- [tavia-tenant-service] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-04-30T22:18:53.837+03:00  INFO 72688 --- [tavia-tenant-service] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-04-30T22:18:53.842+03:00  INFO 72688 --- [tavia-tenant-service] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-04-30T22:18:53.842+03:00  INFO 72688 --- [tavia-tenant-service] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-04-30T22:18:53.842+03:00  INFO 72688 --- [tavia-tenant-service] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-04-30T22:18:53.842+03:00  INFO 72688 --- [tavia-tenant-service] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-04-30T22:18:53.842+03:00  INFO 72688 --- [tavia-tenant-service] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-04-30T22:18:53.842+03:00  INFO 72688 --- [tavia-tenant-service] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-04-30T22:18:53.842+03:00  INFO 72688 --- [tavia-tenant-service] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-04-30T22:18:54.088+03:00  INFO 72688 --- [tavia-tenant-service] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-04-30T22:18:54.089+03:00  INFO 72688 --- [tavia-tenant-service] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-04-30T22:18:54.090+03:00  INFO 72688 --- [tavia-tenant-service] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-04-30T22:18:54.090+03:00  INFO 72688 --- [tavia-tenant-service] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1777576734090 with initial instances count: 0
+2026-04-30T22:18:54.093+03:00  INFO 72688 --- [tavia-tenant-service] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application TAVIA-TENANT-SERVICE with eureka with status UP
+2026-04-30T22:18:54.093+03:00  INFO 72688 --- [tavia-tenant-service] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1777576734093, current=UP, previous=STARTING]
+2026-04-30T22:18:54.094+03:00  INFO 72688 --- [tavia-tenant-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TAVIA-TENANT-SERVICE/10.90.11.230:tavia-tenant-service:8081: registering service...
+2026-04-30T22:18:54.102+03:00  INFO 72688 --- [tavia-tenant-service] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
+2026-04-30T22:18:54.103+03:00  INFO 72688 --- [tavia-tenant-service] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8081
+2026-04-30T22:18:54.113+03:00  INFO 72688 --- [tavia-tenant-service] [           main] c.t.t.TenantServiceApplication           : Started TenantServiceApplication in 3.689 seconds (process running for 4.025)
+2026-04-30T22:18:54.115+03:00  WARN 72688 --- [tavia-tenant-service] [           main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-04-30T22:18:54.116+03:00  WARN 72688 --- [tavia-tenant-service] [           main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-04-30T22:18:54.149+03:00  INFO 72688 --- [tavia-tenant-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TAVIA-TENANT-SERVICE/10.90.11.230:tavia-tenant-service:8081 - registration status: 204
+2026-04-30T22:19:24.089+03:00  INFO 72688 --- [tavia-tenant-service] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-04-30T22:19:24.089+03:00  INFO 72688 --- [tavia-tenant-service] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-04-30T22:19:24.089+03:00  INFO 72688 --- [tavia-tenant-service] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-04-30T22:19:24.089+03:00  INFO 72688 --- [tavia-tenant-service] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-04-30T22:19:24.089+03:00  INFO 72688 --- [tavia-tenant-service] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-04-30T22:19:24.089+03:00  INFO 72688 --- [tavia-tenant-service] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2026-04-30T22:19:24.089+03:00  INFO 72688 --- [tavia-tenant-service] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-04-30T22:19:24.108+03:00  INFO 72688 --- [tavia-tenant-service] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : The response status is 200
+
+********************************************************
+<<< SERVİS DURDURULDU: 2026-04-30 22:22:48
+********************************************************
+

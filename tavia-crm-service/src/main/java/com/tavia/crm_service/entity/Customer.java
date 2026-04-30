@@ -3,7 +3,6 @@ package com.tavia.crm_service.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.math.BigDecimal;
 import java.util.UUID;
 
 @Entity
@@ -25,16 +24,8 @@ public class Customer {
     @Column(nullable = false, unique = true)
     private String email;
 
-    @Column(nullable = false)
-    @Builder.Default
-    private BigDecimal totalSpent = BigDecimal.ZERO;
-
-    @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
-    @Builder.Default
-    private LoyaltyLevel loyaltyLevel = LoyaltyLevel.BRONZE;
-
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private City city;
+
 }

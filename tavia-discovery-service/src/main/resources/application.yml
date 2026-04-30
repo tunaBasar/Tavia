@@ -1,0 +1,18 @@
+server:
+  port: 8761
+
+spring:
+  application:
+    name: tavia-discovery-service
+  config:
+    # Discovery de ayarlarını Config Server'dan (8888) çekebilir
+    import: "optional:configserver:http://localhost:8888"
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: false # Kendisini rehbere eklemesin
+    fetch-registry: false      # Rehberi kendisinden çekmesine gerek yok
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/

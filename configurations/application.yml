@@ -1,9 +1,15 @@
 logging:
   level:
-    root: WARN
+    root: INFO
     com.tavia: DEBUG
+    # Flyway neden uyanmıyor veya nereye bakıyor?
+    org.flywaydb: DEBUG
+    # Config Client ayarları gerçekten çekiyor mu?
+    org.springframework.cloud.config: DEBUG
+    # Hibernate'in tablo arama detayları
     org.hibernate.SQL: DEBUG
     org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    org.hibernate.tool.schema: DEBUG
 
 tavia:
   cities:
@@ -21,7 +27,7 @@ tavia:
     - ISPARTA
   multi-tenancy:
     tenant-id-header-validation:
-      header-name: tenantId
+      header-name: X-Tenant-ID
       required: true
       allow-empty: false
       expected-format: UUID

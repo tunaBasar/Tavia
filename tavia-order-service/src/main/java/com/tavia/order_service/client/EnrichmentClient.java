@@ -2,6 +2,7 @@ package com.tavia.order_service.client;
 
 import com.tavia.order_service.dto.ContextDataDto;
 import com.tavia.order_service.dto.CrmCustomerDto;
+import com.tavia.order_service.dto.AdjustTenantLoyaltyRequest;
 import com.tavia.order_service.dto.ExternalApiResponse;
 import com.tavia.order_service.enums.LoyaltyLevel;
 import lombok.extern.slf4j.Slf4j;
@@ -36,15 +37,16 @@ public class EnrichmentClient {
     /**
      * Fetch customer data from CRM service with fallback.
      */
-    public CrmCustomerDto getCustomer(UUID customerId) {
-        if (customerId == null) {
-            log.warn("No customerId provided, using fallback CRM data");
+    public CrmCustomerDto getCustomer(UUID customerId, UUID tenantId) {
+        if (customerId == null || tenantId == null) {
+            log.warn("Missing customerId or tenantId, using fallback CRM data");
             return fallbackCustomer();
         }
         try {
             log.info("Calling CRM service for customer: {}", customerId);
             ExternalApiResponse<CrmCustomerDto> response = crmClient.get()
                     .uri("/api/v1/crm/customers/{id}", customerId)
+                    .header("X-Tenant-ID", tenantId.toString())
                     .retrieve()
                     .body(new ParameterizedTypeReference<>() {});
 
@@ -57,6 +59,24 @@ public class EnrichmentClient {
         } catch (Exception e) {
             log.error("Circuit breaker: CRM service call failed for customer {}: {}", customerId, e.getMessage());
             return fallbackCustomer();
+        }
+    }
+
+    public void adjustTenantLoyalty(UUID customerId, UUID tenantId, BigDecimal orderAmount) {
+        if (customerId == null || tenantId == null || orderAmount == null) {
+            return;
+        }
+        try {
+            crmClient.post()
+                    .uri("/api/v1/crm/customers/{id}/loyalty/adjust", customerId)
+                    .header("X-Tenant-ID", tenantId.toString())
+                    .body(AdjustTenantLoyaltyRequest.builder().orderAmount(orderAmount).build())
+                    .retrieve()
+                    .toBodilessEntity();
+            log.info("CRM tenant loyalty adjusted for customer {} in tenant {}", customerId, tenantId);
+        } catch (Exception e) {
+            log.error("Failed to adjust CRM tenant loyalty for customer {} tenant {}: {}",
+                    customerId, tenantId, e.getMessage());
         }
     }
 
@@ -86,7 +106,7 @@ public class EnrichmentClient {
     private CrmCustomerDto fallbackCustomer() {
         return CrmCustomerDto.builder()
                 .loyaltyLevel(LoyaltyLevel.UNKNOWN)
-                .totalSpent(BigDecimal.ZERO)
+                .totalSpentInThisTenant(BigDecimal.ZERO)
                 .build();
     }
 

@@ -2,6 +2,7 @@ package com.tavia.order_service.service;
 
 import com.tavia.order_service.dto.CreateOrderRequest;
 import com.tavia.order_service.dto.OrderDto;
+import com.tavia.order_service.client.EnrichmentClient;
 import com.tavia.order_service.entity.Order;
 import com.tavia.order_service.exception.ResourceNotFoundException;
 import com.tavia.order_service.kafka.OrderEventProducer;
@@ -23,6 +24,7 @@ public class OrderServiceImpl implements OrderService {
     private final OrderRepository orderRepository;
     private final OrderMapper orderMapper;
     private final OrderEventProducer orderEventProducer;
+    private final EnrichmentClient enrichmentClient;
 
     @Override
     public OrderDto createOrder(CreateOrderRequest request) {
@@ -36,7 +38,8 @@ public class OrderServiceImpl implements OrderService {
 
         Order savedOrder = orderRepository.save(order);
         OrderDto orderDto = orderMapper.toDto(savedOrder);
-        
+
+        enrichmentClient.adjustTenantLoyalty(orderDto.getCustomerId(), orderDto.getTenantId(), orderDto.getPrice());
         orderEventProducer.sendOrderEvent(orderDto);
         log.info("Sipariş Kafka'ya gönderildi: {}", orderDto.getId());
 

@@ -15,8 +15,9 @@ import java.util.UUID;
 @AllArgsConstructor
 public class CrmCustomerDto {
     private UUID id;
+    private UUID tenantId;
     private String name;
     private String email;
-    private BigDecimal totalSpent;
+    private BigDecimal totalSpentInThisTenant;
     private LoyaltyLevel loyaltyLevel;
 }

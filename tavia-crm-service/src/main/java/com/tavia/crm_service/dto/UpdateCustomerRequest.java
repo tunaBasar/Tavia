@@ -6,8 +6,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.math.BigDecimal;
-
 @Data
 @Builder
 @NoArgsConstructor
@@ -19,7 +17,5 @@ public class UpdateCustomerRequest {
     @Email(message = "Email must be valid")
     private String email;
 
-    private BigDecimal totalSpent;
-
-    private String loyaltyLevel;
+    private String city;
 }
