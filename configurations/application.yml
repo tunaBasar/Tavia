@@ -1,0 +1,27 @@
+logging:
+  level:
+    root: WARN
+    com.tavia: DEBUG
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+
+tavia:
+  cities:
+    - ISTANBUL
+    - ANKARA
+    - IZMIR
+    - BURSA
+    - ANTALYA
+    - ADANA
+    - KONYA
+    - SANLIURFA
+    - GAZIANTEP
+    - KOCAELI
+    - ESKISEHIR
+    - ISPARTA
+  multi-tenancy:
+    tenant-id-header-validation:
+      header-name: tenantId
+      required: true
+      allow-empty: false
+      expected-format: UUID

@@ -1,0 +1,67 @@
+server:
+  port: 8080
+
+spring:
+  cloud:
+    gateway:
+      server:
+        webflux:
+          globalcors:
+            corsConfigurations:
+              '[/**]':
+                allowedOrigins: "*"
+                allowedMethods:
+                  - GET
+                  - POST
+                  - PUT
+                  - DELETE
+                  - OPTIONS
+                allowedHeaders: "*"
+          routes:
+            - id: tenant-service
+              uri: http://localhost:8081
+              predicates:
+                - Path=/api/v1/tenants/**
+              metadata:
+                connect-timeout: 5000
+                response-timeout: 5000
+
+            - id: order-service
+              uri: http://localhost:8082
+              predicates:
+                - Path=/api/v1/orders/**,/api/v1/customers/**
+              metadata:
+                connect-timeout: 5000
+                response-timeout: 5000
+
+            - id: inventory-service
+              uri: http://localhost:8083
+              predicates:
+                - Path=/api/v1/inventory/**
+              metadata:
+                connect-timeout: 5000
+                response-timeout: 5000
+
+            - id: ai-service
+              uri: http://localhost:8084
+              predicates:
+                - Path=/api/v1/ai/**
+              metadata:
+                connect-timeout: 5000
+                response-timeout: 5000
+
+            - id: crm-service
+              uri: http://localhost:8086
+              predicates:
+                - Path=/api/v1/crm/**
+              metadata:
+                connect-timeout: 5000
+                response-timeout: 5000
+
+            - id: context-service
+              uri: http://localhost:8087
+              predicates:
+                - Path=/api/v1/context/**
+              metadata:
+                connect-timeout: 5000
+                response-timeout: 5000
