@@ -3,6 +3,7 @@ package com.tavia.crm_service.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Entity
@@ -28,4 +29,12 @@ public class Customer {
     @Column(nullable = false)
     private City city;
 
+    @Column(name = "password_hash")
+    private String passwordHash;
+
+    @Column(name = "reset_token")
+    private String resetToken;
+
+    @Column(name = "reset_token_expiry")
+    private LocalDateTime resetTokenExpiry;
 }

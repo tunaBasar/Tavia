@@ -4,10 +4,12 @@ CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 -- 1. GLOBAL CUSTOMER TABLOSU
 CREATE TABLE customers (
     id UUID PRIMARY KEY,
-    tenant_id UUID NOT NULL, -- Müşteriyi ilk kaydeden işletme
     name VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL,
     city VARCHAR(50),
+    password_hash VARCHAR(255),
+    reset_token VARCHAR(255),
+    reset_token_expiry TIMESTAMP,
     
     -- Müşteri emaili globalde tekildir (Clean Architecture kuralımız)
     CONSTRAINT uk_customer_email UNIQUE (email)

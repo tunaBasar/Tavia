@@ -91,4 +91,11 @@ public class TenantServiceImpl implements TenantService {
         log.info("Tenant status updated successfully for ID: {}", id);
         return tenantMapper.toResponse(updatedTenant);
     }
+
+    @Override
+    public List<TenantResponse> listTenantsByCity(City city) {
+        log.info("Listing tenants for city: {}", city);
+        List<Tenant> tenants = tenantRepository.findByCity(city);
+        return tenantMapper.toResponseList(tenants);
+    }
 }

@@ -16,7 +16,6 @@ public class CustomerDto {
     private String name;
     private String email;
     private City city;
-    private UUID tenantId;
     private LoyaltyLevel loyaltyLevel;
     private BigDecimal totalSpentInThisTenant;
 }

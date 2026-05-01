@@ -1,40 +1,81 @@
 package com.tavia.crm_service.exception;
 
-import com.tavia.crm_service.dto.ApiResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.ProblemDetail;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-import java.util.stream.Collectors;
+import java.net.URI;
+import java.time.Instant;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.UUID;
 
 @Slf4j
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
-    @ExceptionHandler(ResourceNotFoundException.class)
-    public ResponseEntity<ApiResponse<Void>> handleResourceNotFound(ResourceNotFoundException ex) {
-        log.warn("Resource not found: {}", ex.getMessage());
-        return ResponseEntity.status(HttpStatus.NOT_FOUND)
-                .body(ApiResponse.error(ex.getMessage()));
+    @ExceptionHandler(MethodArgumentNotValidException.class)
+    public ProblemDetail handleValidationExceptions(MethodArgumentNotValidException ex) {
+        String traceId = UUID.randomUUID().toString();
+        log.error("[TraceId: {}] Validation Error: {}", traceId, ex.getMessage());
+
+        ProblemDetail problemDetail = ProblemDetail.forStatusAndDetail(HttpStatus.BAD_REQUEST, "Validation failed for one or more fields.");
+        problemDetail.setTitle("Bad Request");
+        problemDetail.setType(URI.create("https://tavia.com/errors/validation"));
+        problemDetail.setProperty("traceId", traceId);
+        problemDetail.setProperty("timestamp", Instant.now());
+        
+        Map<String, String> errors = new HashMap<>();
+        ex.getBindingResult().getFieldErrors().forEach(error -> 
+            errors.put(error.getField(), error.getDefaultMessage())
+        );
+        problemDetail.setProperty("errors", errors);
+
+        return problemDetail;
     }
 
-    @ExceptionHandler(MethodArgumentNotValidException.class)
-    public ResponseEntity<ApiResponse<Void>> handleValidation(MethodArgumentNotValidException ex) {
-        String errors = ex.getBindingResult().getFieldErrors().stream()
-                .map(e -> e.getField() + ": " + e.getDefaultMessage())
-                .collect(Collectors.joining(", "));
-        log.warn("Validation error: {}", errors);
-        return ResponseEntity.status(HttpStatus.BAD_REQUEST)
-                .body(ApiResponse.error(errors));
+    @ExceptionHandler(IllegalArgumentException.class)
+    public ProblemDetail handleIllegalArgumentException(IllegalArgumentException ex) {
+        String traceId = UUID.randomUUID().toString();
+        log.error("[TraceId: {}] Illegal Argument: {}", traceId, ex.getMessage());
+
+        ProblemDetail problemDetail = ProblemDetail.forStatusAndDetail(HttpStatus.BAD_REQUEST, ex.getMessage());
+        problemDetail.setTitle("Invalid Request");
+        problemDetail.setType(URI.create("https://tavia.com/errors/illegal-argument"));
+        problemDetail.setProperty("traceId", traceId);
+        problemDetail.setProperty("timestamp", Instant.now());
+
+        return problemDetail;
+    }
+    
+    @ExceptionHandler(ResourceNotFoundException.class)
+    public ProblemDetail handleResourceNotFoundException(ResourceNotFoundException ex) {
+        String traceId = UUID.randomUUID().toString();
+        log.error("[TraceId: {}] Resource Not Found: {}", traceId, ex.getMessage());
+
+        ProblemDetail problemDetail = ProblemDetail.forStatusAndDetail(HttpStatus.NOT_FOUND, ex.getMessage());
+        problemDetail.setTitle("Resource Not Found");
+        problemDetail.setType(URI.create("https://tavia.com/errors/not-found"));
+        problemDetail.setProperty("traceId", traceId);
+        problemDetail.setProperty("timestamp", Instant.now());
+
+        return problemDetail;
     }
 
     @ExceptionHandler(Exception.class)
-    public ResponseEntity<ApiResponse<Void>> handleGeneral(Exception ex) {
-        log.error("Unexpected error: {}", ex.getMessage(), ex);
-        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
-                .body(ApiResponse.error("An unexpected error occurred"));
+    public ProblemDetail handleGenericException(Exception ex) {
+        String traceId = UUID.randomUUID().toString();
+        log.error("[TraceId: {}] Internal Server Error: {}", traceId, ex.getMessage(), ex);
+
+        ProblemDetail problemDetail = ProblemDetail.forStatusAndDetail(HttpStatus.INTERNAL_SERVER_ERROR, "An unexpected internal server error occurred.");
+        problemDetail.setTitle("Internal Server Error");
+        problemDetail.setType(URI.create("https://tavia.com/errors/internal-server-error"));
+        problemDetail.setProperty("traceId", traceId);
+        problemDetail.setProperty("timestamp", Instant.now());
+
+        return problemDetail;
     }
 }

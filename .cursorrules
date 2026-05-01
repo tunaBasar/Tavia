@@ -3,12 +3,12 @@
 ## 🧠 1. CORE PHILOSOPHY & IDENTITY
 - You are an Elite Senior Full-Stack Architect working on the 'TAVIA V2 Ecosystem'.
 - Your code must adhere strictly to **Clean Code**, **Clean Architecture**, and **SOLID** principles.
+- **Anti-Spaghetti (Guard Clauses):** DO NOT use deep nested `if-else` blocks. Validate inputs and negative states at the very beginning of a method and return/throw immediately.
 - **NO REDUNDANCY:** Do NOT use redundant naming (e.g., if a table is `tenant_loyalty`, the column is `total_spent`, NEVER `total_spent_in_this_tenant`).
-- **NO MOCK DATA:** Always aim for real end-to-end integration with the actual backend.
-- **THINK BEFORE YOU CODE:** Analyze the impact of your changes across the 9 microservices before modifying a single file.
+- **NO MOCK DATA:** Always aim for real end-to-end integration with the actual backend. Handle missing data gracefully.
 
 ## 🏛️ 2. SYSTEM ARCHITECTURE & INFRASTRUCTURE
-- **Ecosystem:** A multi-tenant SaaS with Spring Boot 4.x/Cloud 5.x microservices and Next.js 15 App Router.
+- **Ecosystem:** A multi-tenant SaaS with Spring Boot 4.x/Cloud 5.x microservices, Next.js 15 App Router (Web), and Expo/React Native (Mobile).
 - **Centralized Config:** Services fetch properties from `tavia-config-service` (Port 8888). Do NOT put local DB credentials in service `application.yml` files.
 - **Service Discovery:** Services register with `tavia-discovery-service` (Eureka, Port 8761).
 - **Gateway Relay:** `tavia-api-gateway` routes all traffic. Ensure global filters propagate essential headers (especially `X-Tenant-ID`) to downstream services.
@@ -21,21 +21,26 @@
 
 ## ⚙️ 4. BACKEND RULES (SPRING BOOT)
 - **The X-Tenant-ID Header:** EVERY request to tenant-specific data must include the `X-Tenant-ID` header. Controllers must extract it, and Services must use it for DB isolation.
-- **DTO Synchronization:** Never expose Entities directly. Use MapStruct or manual mappers to convert between Entities and DTOs (Request/Response).
+- **DTO Synchronization:** Never expose Entities directly. Use MapStruct or manual mappers.
+- **Global Exception Handling & Observability:** EVERY microservice MUST have a `@RestControllerAdvice`. Strictly use the 2026 standard `ProblemDetail` (RFC 7807) for REST errors. Never silently swallow exceptions. Always include a Correlation ID / Trace ID in logs.
 - **Validation:** Enforce strict Jakarta Validation (`@NotNull`, `@NotBlank`, `@Email`) on all incoming DTOs.
-- **Logging Noise:** Keep logs clean. Root should be `WARN`, `com.tavia` should be `DEBUG`. Do not clutter the terminal.
+- **Logging Noise:** Keep logs clean. Root should be `WARN`, `com.tavia` should be `DEBUG`.
 
-## 🚀 5. FRONTEND RULES (NEXT.JS / tavia-ui)
-- **Type Safety First:** Before writing any API call, verify the exact Java DTO structure. Match TypeScript interfaces in `types/index.ts` flawlessly.
-- **Zustand & Interceptors:** Use Zustand (`useTenantStore`) to manage `activeTenantId`. You MUST use an Axios/Fetch Interceptor to automatically append the `X-Tenant-ID` header to all outgoing requests.
-- **UI Consistency:** Strictly use **Shadcn UI** and **Tailwind CSS**. Do not introduce external UI libraries unless strictly necessary.
-- **Form Handling:** Always use **React Hook Form** paired with **Zod** for schema validation. Ensure Zod schemas match Backend Jakarta rules.
+## 🚀 5. FRONTEND (Next.js) & MOBILE (Expo) RULES
+- **Type Safety First:** Match TypeScript interfaces (`types/index.ts`) exactly with Backend DTOs.
+- **State & Interceptors:** Use Zustand (`useTenantStore`) for state. You MUST use an Axios/Fetch Interceptor to automatically append the `X-Tenant-ID` header to all outgoing requests.
+- **UI Consistency (Web):** Strictly use **Shadcn UI** and **Tailwind CSS**. Do not introduce external UI libraries unless strictly necessary.
+- **Form Handling & Error Parsing:** Use **React Hook Form + Zod**. Wrap all API calls in try-catch blocks. Parse backend `ProblemDetail` payloads gracefully and display user-friendly toast/alert messages instead of generic "Network Errors".
 
 ## 📨 6. KAFKA & EVENT-DRIVEN RULES
 - **Eventual Consistency:** Respect the asynchronous nature of Kafka. Order flows and inventory updates are decoupled.
-- **Idempotency:** Kafka consumers must be idempotent (can process the same message twice without breaking the DB).
+- **Idempotency & Resilience:** Kafka consumers must be idempotent. Implement `ErrorHandlingDeserializer` and `spring.json.trusted.packages: "*"` to prevent Poison Pill lockups.
 - **Contracts:** Check `application.yml` (in the central config repo) for exact topic names before creating producers/consumers.
 
 ## ⚖️ 7. THE TAVIA DOMAIN LAWS (CRITICAL)
 - **City Enum Restriction:** Only the following 12 cities are valid in the system. Match the enum EXACTLY: `ISTANBUL, ANKARA, IZMIR, BURSA, ANTALYA, ADANA, KONYA, SANLIURFA, GAZIANTEP, KOCAELI, ESKISEHIR, ISPARTA`.
-- **Global Customer / Local Loyalty:** A `Customer` is a global entity (unique email). However, their loyalty points and tier (`TenantLoyalty`) are strictly localized to the specific `tenant_id`. NEVER put loyalty points directly on the global Customer table.
+- **Global Customer / Local Loyalty:** A `Customer` is a global entity (unique email). Loyalty points and tier (`TenantLoyalty`) are strictly localized to the specific `tenant_id`. NEVER put loyalty points or `tenant_id` directly on the global Customer table.
+
+## 🤖 8. AI AUTONOMY PROTOCOL
+- **Analyze Impact:** Check how a change in one microservice affects the other 8 before writing code.
+- **Failure Loop:** If a build fails, retry max 3 times. If it still fails, log to `ERROR_LOG.md` and move on. Do not get stuck in infinite loops.

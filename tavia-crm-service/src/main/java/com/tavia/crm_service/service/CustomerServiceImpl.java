@@ -141,7 +141,6 @@ public class CustomerServiceImpl implements CustomerService {
                 .name(customer.getName())
                 .email(customer.getEmail())
                 .city(customer.getCity())
-                .tenantId(tenantId)
                 .loyaltyLevel(tenantLoyalty.getLoyaltyLevel())
                 .totalSpentInThisTenant(tenantLoyalty.getTotalSpent())
                 .build();

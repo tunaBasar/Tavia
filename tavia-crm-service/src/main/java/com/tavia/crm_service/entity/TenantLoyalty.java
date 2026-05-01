@@ -9,7 +9,7 @@ import java.util.UUID;
 @Entity
 @Table(
         name = "tenant_loyalty",
-        uniqueConstraints = @UniqueConstraint(columnNames = {"customerId", "tenantId"})
+        uniqueConstraints = @UniqueConstraint(columnNames = {"customer_id", "tenant_id"})
 )
 @Getter
 @Setter
@@ -22,10 +22,10 @@ public class TenantLoyalty {
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
-    @Column(nullable = false)
+    @Column(name = "customer_id", nullable = false)
     private UUID customerId;
 
-    @Column(nullable = false)
+    @Column(name = "tenant_id", nullable = false)
     private UUID tenantId;
 
     @Enumerated(EnumType.STRING)

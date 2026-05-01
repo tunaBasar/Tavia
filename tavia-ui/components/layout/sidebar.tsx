@@ -44,10 +44,10 @@ export function Sidebar() {
   const tenantName = useAuthStore((s) => s.tenantName);
   const plan = useAuthStore((s) => s.plan);
   const tenantCity = useAuthStore((s) => s.tenantCity);
-  const reset = useAuthStore((s) => s.reset);
+  const logout = useAuthStore((s) => s.logout);
 
   function handleLogout() {
-    reset();
+    logout();
     router.replace("/login");
   }
 

@@ -43,7 +43,7 @@ CYAN='\033[0;36m'
 MAGENTA='\033[0;35m'
 NC='\033[0m'
 
-mkdir -p "$LOG_DIR" "$PID_DIR"
+mkdir -p "$LOG_DIR" "$LOG_DIR/errors" "$PID_DIR"
 
 function build_service() {
     local svc=$1

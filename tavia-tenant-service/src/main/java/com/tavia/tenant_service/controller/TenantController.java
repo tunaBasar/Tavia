@@ -4,6 +4,7 @@ import com.tavia.tenant_service.dto.ApiResponse;
 import com.tavia.tenant_service.dto.TenantCreateRequest;
 import com.tavia.tenant_service.dto.TenantLoginRequest;
 import com.tavia.tenant_service.dto.TenantResponse;
+import com.tavia.tenant_service.entity.City;
 import com.tavia.tenant_service.service.TenantService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -33,8 +34,14 @@ public class TenantController {
     }
 
     @GetMapping
-    public ResponseEntity<ApiResponse<List<TenantResponse>>> listAll() {
-        List<TenantResponse> responses = tenantService.listAllTenants();
+    public ResponseEntity<ApiResponse<List<TenantResponse>>> listTenants(
+            @RequestParam(required = false) City city) {
+        List<TenantResponse> responses;
+        if (city != null) {
+            responses = tenantService.listTenantsByCity(city);
+        } else {
+            responses = tenantService.listAllTenants();
+        }
         return ResponseEntity.ok(ApiResponse.success(responses, "Tenant listesi getirildi."));
     }
 
@@ -46,3 +53,4 @@ public class TenantController {
         return ResponseEntity.ok(ApiResponse.success(response, "Tenant durumu guncellendi."));
     }
 }
+
