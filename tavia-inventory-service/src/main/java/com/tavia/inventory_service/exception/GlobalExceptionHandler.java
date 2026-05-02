@@ -3,6 +3,7 @@ package com.tavia.inventory_service.exception;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ProblemDetail;
 import org.springframework.web.bind.MethodArgumentNotValidException;
+import org.springframework.web.bind.MissingRequestHeaderException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
@@ -17,6 +18,20 @@ import java.util.UUID;
 @Slf4j
 @RestControllerAdvice
 public class GlobalExceptionHandler {
+
+    @ExceptionHandler(MissingRequestHeaderException.class)
+    public ProblemDetail handleMissingRequestHeaderException(MissingRequestHeaderException ex) {
+        String traceId = UUID.randomUUID().toString();
+        log.error("[TraceId: {}] Missing Request Header: {}", traceId, ex.getMessage());
+
+        ProblemDetail problemDetail = ProblemDetail.forStatusAndDetail(HttpStatus.BAD_REQUEST, ex.getMessage());
+        problemDetail.setTitle("Missing Required Header");
+        problemDetail.setType(URI.create("https://tavia.com/errors/missing-header"));
+        problemDetail.setProperty("traceId", traceId);
+        problemDetail.setProperty("timestamp", Instant.now());
+
+        return problemDetail;
+    }
 
     @ExceptionHandler(ResourceNotFoundException.class)
     public ProblemDetail handleResourceNotFoundException(ResourceNotFoundException ex) {

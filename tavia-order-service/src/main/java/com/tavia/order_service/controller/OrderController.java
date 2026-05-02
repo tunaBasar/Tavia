@@ -38,4 +38,16 @@ public class OrderController {
         List<OrderDto> orders = orderService.getAllOrders();
         return ResponseEntity.ok(ApiResponse.success(orders));
     }
+
+    @GetMapping("/tenant/{tenantId}")
+    public ResponseEntity<ApiResponse<List<OrderDto>>> getOrdersByTenantId(@PathVariable UUID tenantId) {
+        List<OrderDto> orders = orderService.getOrdersByTenantId(tenantId);
+        return ResponseEntity.ok(ApiResponse.success(orders));
+    }
+
+    @GetMapping("/tenant/{tenantId}/count")
+    public ResponseEntity<ApiResponse<Long>> countOrdersByTenantId(@PathVariable UUID tenantId) {
+        long count = orderService.countOrdersByTenantId(tenantId);
+        return ResponseEntity.ok(ApiResponse.success(count, "Order count retrieved"));
+    }
 }

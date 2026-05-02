@@ -1,9 +1,14 @@
+"use client";
+
 import { CustomersCard } from "@/components/dashboard/customers-card";
 import { ContextCard } from "@/components/dashboard/context-card";
 import { AiLiveFeed } from "@/components/dashboard/ai-live-feed";
 import { SimulateOrderButton } from "@/components/dashboard/simulate-order-button";
+import { useOrderCount } from "@/lib/hooks/use-order-count";
 
 export default function OverviewPage() {
+  const { data: totalOrders, isLoading: isOrderCountLoading } = useOrderCount();
+
   return (
     <div className="space-y-8">
       {/* Page Header + Simulate Button */}
@@ -30,11 +35,20 @@ export default function OverviewPage() {
 
           {/* Additional metrics area — ready for future expansion */}
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
-            {/* Placeholder stats cards */}
             <StatCard
               label="Total Orders"
-              value="—"
-              subtext="Awaiting data"
+              value={
+                isOrderCountLoading
+                  ? "..."
+                  : totalOrders != null
+                    ? totalOrders.toLocaleString()
+                    : "0"
+              }
+              subtext={
+                isOrderCountLoading
+                  ? "Loading..."
+                  : "All-time for this tenant"
+              }
               gradient="from-amber-500 via-orange-500 to-red-500"
             />
             <StatCard

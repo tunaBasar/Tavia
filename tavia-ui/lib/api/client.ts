@@ -8,6 +8,7 @@ import type {
   Order,
   CreateOrderPayload,
   CreateCustomerRequest,
+  InventoryItem,
 } from "@/types";
 
 const BASE_URL = "/api";
@@ -52,6 +53,14 @@ async function request<T>(
   return res.json() as Promise<T>;
 }
 
+/**
+ * Builds the X-Tenant-ID header object for tenant-scoped requests.
+ * Per GEMINI.md §3.2: every request to tenant data MUST use the X-Tenant-ID header.
+ */
+function tenantHeaders(tenantId: string): HeadersInit {
+  return { "X-Tenant-ID": tenantId };
+}
+
 // ─── Tenant / Auth endpoints ─────────────────────────────────────
 
 /**
@@ -87,21 +96,29 @@ export async function fetchAllTenants() {
 // ─── Customer endpoints ──────────────────────────────────────────
 
 /**
- * GET /api/v1/crm/customers?tenantId=<tenantId>
- * Backend: CustomerController#getAllCustomers(@RequestParam UUID tenantId)
+ * GET /api/v1/crm/customers
+ * Backend: CustomerController#getAllCustomers(@RequestHeader("X-Tenant-ID") UUID tenantId)
+ *
+ * FIX: Previously sent tenantId as query param, but backend requires X-Tenant-ID header.
+ * This mismatch caused MissingRequestHeaderException → unhandled → 500 Internal Server Error.
  */
-export async function fetchCustomers(tenantId?: string) {
-  const query = tenantId ? `?tenantId=${tenantId}` : "";
-  return request<ApiResponse<Customer[]>>(`/crm/customers${query}`);
+export async function fetchCustomers(tenantId: string) {
+  return request<ApiResponse<Customer[]>>("/crm/customers", {
+    headers: tenantHeaders(tenantId),
+  });
 }
 
 /**
  * POST /api/v1/crm/customers
- * Backend: CustomerController#createCustomer(@Valid @RequestBody CreateCustomerRequest)
+ * Backend: CustomerController#createCustomer(@RequestHeader("X-Tenant-ID"), @Valid @RequestBody CreateCustomerRequest)
  */
-export async function createCustomer(payload: CreateCustomerRequest) {
+export async function createCustomer(
+  payload: CreateCustomerRequest,
+  tenantId: string
+) {
   return request<ApiResponse<Customer>>("/crm/customers", {
     method: "POST",
+    headers: tenantHeaders(tenantId),
     body: JSON.stringify(payload),
   });
 }
@@ -115,6 +132,18 @@ export async function createCustomer(payload: CreateCustomerRequest) {
  */
 export async function fetchCurrentContext() {
   return request<ApiResponse<ContextData>>("/context");
+}
+
+// ─── Inventory endpoints ─────────────────────────────────────────
+
+/**
+ * GET /api/v1/inventory/tenant/{tenantId}
+ * Backend: InventoryController#getInventoryByTenantId(@PathVariable UUID tenantId)
+ */
+export async function fetchInventory(tenantId: string) {
+  return request<ApiResponse<InventoryItem[]>>(
+    `/inventory/tenant/${tenantId}`
+  );
 }
 
 // ─── Order endpoints ─────────────────────────────────────────────
@@ -140,11 +169,28 @@ export async function fetchAllOrders() {
 }
 
 /**
+ * GET /api/v1/orders/tenant/{tenantId}
+ * Backend: OrderController#getOrdersByTenantId(@PathVariable UUID tenantId)
+ */
+export async function fetchOrdersByTenant(tenantId: string) {
+  return request<ApiResponse<Order[]>>(`/orders/tenant/${tenantId}`);
+}
+
+/**
  * GET /api/v1/orders/:id
  * Backend: OrderController#getOrderById(@PathVariable UUID id)
  */
 export async function fetchOrderById(id: string) {
   return request<ApiResponse<Order>>(`/orders/${id}`);
+}
+
+/**
+ * GET /api/v1/orders/tenant/{tenantId}/count
+ * Backend: OrderController#countOrdersByTenantId(@PathVariable UUID tenantId)
+ * Returns the total number of orders for the given tenant.
+ */
+export async function fetchOrderCount(tenantId: string) {
+  return request<ApiResponse<number>>(`/orders/tenant/${tenantId}/count`);
 }
 
 export { ApiError };

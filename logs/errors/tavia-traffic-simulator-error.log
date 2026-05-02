@@ -1,0 +1,31 @@
+
+
+********************************************************
+>>> SERVİS BAŞLATILDI: 2026-05-02 11:34:34
+********************************************************
+
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':bootRun'.
+> Process 'command '/home/tuna/.jdks/temurin-21.0.10/bin/java'' finished with non-zero exit value 1
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 7s
+
+********************************************************
+<<< SERVİS DURDURULDU: 2026-05-02 13:26:44
+********************************************************
+
+
+
+********************************************************
+>>> SERVİS BAŞLATILDI: 2026-05-02 13:29:25
+********************************************************
+

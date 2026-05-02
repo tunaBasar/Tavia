@@ -9,7 +9,7 @@ export function useCustomers() {
 
   return useQuery({
     queryKey: ["customers", tenantId],
-    queryFn: () => fetchCustomers(tenantId ?? undefined),
+    queryFn: () => fetchCustomers(tenantId!),
     staleTime: 30_000,
     retry: 2,
     enabled: !!tenantId,

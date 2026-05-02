@@ -33,6 +33,9 @@ export function useSimulateOrder() {
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["customers"] });
       queryClient.invalidateQueries({ queryKey: ["context"] });
+      queryClient.invalidateQueries({ queryKey: ["orders"] });
+      queryClient.invalidateQueries({ queryKey: ["orderCount"] });
+      queryClient.invalidateQueries({ queryKey: ["inventory"] });
     },
   });
 }

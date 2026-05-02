@@ -1,0 +1,1591 @@
+
+
+********************************************************
+>>> SERVİS BAŞLATILDI: 2026-05-02 02:21:36
+********************************************************
+
+Starting a Gradle Daemon, 30 busy and 1 incompatible and 18 stopped Daemons could not be reused, use --status for details
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :resolveMainClassName UP-TO-DATE
+
+> Task :bootRun
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.6)
+
+2026-05-02 02:21:45.736 [background-preinit] INFO  o.h.validator.internal.util.Version — HV000001: Hibernate Validator 9.0.1.Final
+2026-05-02 02:21:45.771 [main] INFO  c.t.c.CrmServiceApplication — Starting CrmServiceApplication using Java 21.0.10 with PID 58841 (/home/tuna/Desktop/tavia_v2/tavia-crm-service/build/classes/java/main started by tuna in /home/tuna/Desktop/tavia_v2/tavia-crm-service)
+2026-05-02 02:21:45.772 [main] DEBUG c.t.c.CrmServiceApplication — Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-02 02:21:45.772 [main] INFO  c.t.c.CrmServiceApplication — No active profile set, falling back to 1 default profile: "default"
+2026-05-02 02:21:45.804 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Fetching config from server at : http://localhost:8888
+2026-05-02 02:21:45.805 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Located environment: name=tavia-crm-service, profiles=[default], label=null, version=null, state=null
+2026-05-02 02:21:45.805 [main] DEBUG o.s.c.c.c.ConfigServerConfigDataLoader — Environment tavia-crm-service has 2 property sources with 34 properties.
+2026-05-02 02:21:46.478 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate — Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-02 02:21:46.581 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate — Finished Spring Data repository scanning in 96 ms. Found 2 JPA repository interfaces.
+2026-05-02 02:21:46.770 [main] INFO  o.s.cloud.context.scope.GenericScope — BeanFactory id=a639f2b3-0653-379e-a25f-f63cdb9710c1
+2026-05-02 02:21:47.043 [main] INFO  o.s.boot.tomcat.TomcatWebServer — Tomcat initialized with port 8086 (http)
+2026-05-02 02:21:47.052 [main] INFO  o.a.coyote.http11.Http11NioProtocol — Initializing ProtocolHandler ["http-nio-8086"]
+2026-05-02 02:21:47.054 [main] INFO  o.a.catalina.core.StandardService — Starting service [Tomcat]
+2026-05-02 02:21:47.054 [main] INFO  o.a.catalina.core.StandardEngine — Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-02 02:21:47.096 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer — Root WebApplicationContext: initialization completed in 1289 ms
+2026-05-02 02:21:47.225 [main] INFO  org.hibernate.orm.jpa — HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-02 02:21:47.265 [main] INFO  org.hibernate.orm.core — HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-05-02 02:21:47.611 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo — No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-02 02:21:47.635 [main] INFO  com.zaxxer.hikari.HikariDataSource — HikariPool-1 - Starting...
+2026-05-02 02:21:47.728 [main] INFO  com.zaxxer.hikari.pool.HikariPool — HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3b39bee2
+2026-05-02 02:21:47.729 [main] INFO  com.zaxxer.hikari.HikariDataSource — HikariPool-1 - Start completed.
+2026-05-02 02:21:47.752 [main] WARN  org.hibernate.orm.deprecation — HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-02 02:21:47.773 [main] INFO  o.hibernate.orm.connections.pooling — HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/tavia_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.17
+	Default catalog/schema: tavia_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-02 02:21:48.515 [main] INFO  org.hibernate.orm.core — HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-02 02:21:48.561 [main] DEBUG org.hibernate.SQL — create table customers (id uuid not null, city varchar(255) not null check ((city in ('ISTANBUL','ANKARA','IZMIR','BURSA','ANTALYA','ADANA','KONYA','SANLIURFA','GAZIANTEP','KOCAELI','ESKISEHIR','ISPARTA'))), email varchar(255) not null, name varchar(255) not null, password_hash varchar(255), reset_token varchar(255), reset_token_expiry timestamp(6), primary key (id))
+Hibernate: create table customers (id uuid not null, city varchar(255) not null check ((city in ('ISTANBUL','ANKARA','IZMIR','BURSA','ANTALYA','ADANA','KONYA','SANLIURFA','GAZIANTEP','KOCAELI','ESKISEHIR','ISPARTA'))), email varchar(255) not null, name varchar(255) not null, password_hash varchar(255), reset_token varchar(255), reset_token_expiry timestamp(6), primary key (id))
+2026-05-02 02:21:48.568 [main] DEBUG org.hibernate.SQL — create table tenant_loyalty (id uuid not null, customer_id uuid not null, loyalty_level varchar(255) not null check ((loyalty_level in ('BRONZE','SILVER','GOLD','PLATINUM'))), tenant_id uuid not null, total_spent numeric(38,2) not null, primary key (id))
+Hibernate: create table tenant_loyalty (id uuid not null, customer_id uuid not null, loyalty_level varchar(255) not null check ((loyalty_level in ('BRONZE','SILVER','GOLD','PLATINUM'))), tenant_id uuid not null, total_spent numeric(38,2) not null, primary key (id))
+2026-05-02 02:21:48.572 [main] DEBUG org.hibernate.SQL — alter table if exists customers drop constraint if exists UKrfbvkrffamfql7cjmen8v976v
+Hibernate: alter table if exists customers drop constraint if exists UKrfbvkrffamfql7cjmen8v976v
+2026-05-02 02:21:48.575 [main] WARN  org.hibernate.orm.jdbc.warn — HHH000247: ErrorCode: 0, SQLState: 00000
+2026-05-02 02:21:48.575 [main] WARN  org.hibernate.orm.jdbc.warn — constraint "ukrfbvkrffamfql7cjmen8v976v" of relation "customers" does not exist, skipping
+2026-05-02 02:21:48.575 [main] DEBUG org.hibernate.SQL — alter table if exists customers add constraint UKrfbvkrffamfql7cjmen8v976v unique (email)
+Hibernate: alter table if exists customers add constraint UKrfbvkrffamfql7cjmen8v976v unique (email)
+2026-05-02 02:21:48.578 [main] DEBUG org.hibernate.SQL — alter table if exists tenant_loyalty drop constraint if exists UK8x11wkkqr2o5vq5jb1up7vv4q
+Hibernate: alter table if exists tenant_loyalty drop constraint if exists UK8x11wkkqr2o5vq5jb1up7vv4q
+2026-05-02 02:21:48.579 [main] WARN  org.hibernate.orm.jdbc.warn — HHH000247: ErrorCode: 0, SQLState: 00000
+2026-05-02 02:21:48.579 [main] WARN  org.hibernate.orm.jdbc.warn — constraint "uk8x11wkkqr2o5vq5jb1up7vv4q" of relation "tenant_loyalty" does not exist, skipping
+2026-05-02 02:21:48.579 [main] DEBUG org.hibernate.SQL — alter table if exists tenant_loyalty add constraint UK8x11wkkqr2o5vq5jb1up7vv4q unique (customer_id, tenant_id)
+Hibernate: alter table if exists tenant_loyalty add constraint UK8x11wkkqr2o5vq5jb1up7vv4q unique (customer_id, tenant_id)
+2026-05-02 02:21:48.583 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean — Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-02 02:21:48.647 [main] INFO  o.s.d.j.r.q.QueryEnhancerFactories — Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-02 02:21:48.865 [main] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration — spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-02 02:21:49.369 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration — Eureka HTTP Client uses RestClient.
+2026-05-02 02:21:49.402 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger — Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-05-02 02:21:49.431 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory — Setting initial instance status as: STARTING
+2026-05-02 02:21:49.453 [main] INFO  c.netflix.discovery.DiscoveryClient — Initializing Eureka in region us-east-1
+2026-05-02 02:21:49.456 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 02:21:49.462 [main] INFO  c.netflix.discovery.DiscoveryClient — Disable delta property : false
+2026-05-02 02:21:49.463 [main] INFO  c.netflix.discovery.DiscoveryClient — Single vip registry refresh property : null
+2026-05-02 02:21:49.463 [main] INFO  c.netflix.discovery.DiscoveryClient — Force full registry fetch : false
+2026-05-02 02:21:49.463 [main] INFO  c.netflix.discovery.DiscoveryClient — Application is null : false
+2026-05-02 02:21:49.463 [main] INFO  c.netflix.discovery.DiscoveryClient — Registered Applications size is zero : true
+2026-05-02 02:21:49.463 [main] INFO  c.netflix.discovery.DiscoveryClient — Application version is -1: true
+2026-05-02 02:21:49.463 [main] INFO  c.netflix.discovery.DiscoveryClient — Getting all instance registry info from the eureka server
+2026-05-02 02:21:49.688 [main] INFO  c.netflix.discovery.DiscoveryClient — The response status is 200
+2026-05-02 02:21:49.690 [main] INFO  c.netflix.discovery.DiscoveryClient — Starting heartbeat executor: renew interval is: 30
+2026-05-02 02:21:49.691 [main] INFO  c.n.discovery.InstanceInfoReplicator — InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-05-02 02:21:49.692 [main] INFO  c.netflix.discovery.DiscoveryClient — Discovery Client initialized at timestamp 1777677709692 with initial instances count: 1
+2026-05-02 02:21:49.694 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry — Registering application TAVIA-CRM-SERVICE with eureka with status UP
+2026-05-02 02:21:49.695 [main] INFO  c.netflix.discovery.DiscoveryClient — Saw local status change event StatusChangeEvent [timestamp=1777677709695, current=UP, previous=STARTING]
+2026-05-02 02:21:49.696 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-CRM-SERVICE/10.209.184.229:tavia-crm-service:8086: registering service...
+2026-05-02 02:21:49.696 [main] INFO  o.a.coyote.http11.Http11NioProtocol — Starting ProtocolHandler ["http-nio-8086"]
+2026-05-02 02:21:49.705 [main] INFO  o.s.boot.tomcat.TomcatWebServer — Tomcat started on port 8086 (http) with context path '/'
+2026-05-02 02:21:49.706 [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration — Updating port to 8086
+2026-05-02 02:21:49.720 [main] INFO  c.t.c.CrmServiceApplication — Started CrmServiceApplication in 4.821 seconds (process running for 5.291)
+2026-05-02 02:21:49.723 [main] WARN  o.s.c.events.SpringDocAppInitializer — SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-05-02 02:21:49.724 [main] WARN  o.s.c.events.SpringDocAppInitializer — SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-05-02 02:21:49.728 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-CRM-SERVICE/10.209.184.229:tavia-crm-service:8086 - registration status: 204
+2026-05-02 02:23:53.585 [http-nio-8086-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] — Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-02 02:23:53.585 [http-nio-8086-exec-1] INFO  o.s.web.servlet.DispatcherServlet — Initializing Servlet 'dispatcherServlet'
+2026-05-02 02:23:53.588 [http-nio-8086-exec-1] INFO  o.s.web.servlet.DispatcherServlet — Completed initialization in 3 ms
+2026-05-02 02:23:54.298 [http-nio-8086-exec-5] INFO  o.s.api.AbstractOpenApiResource — Init duration for springdoc-openapi is: 268 ms
+2026-05-02 02:24:19.823 [http-nio-8086-exec-6] INFO  c.t.c.s.CustomerAuthServiceImpl — Registering customer with email: tunabasar@gmail.com
+2026-05-02 02:24:20.208 [http-nio-8086-exec-6] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+Hibernate: select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+2026-05-02 02:24:20.285 [http-nio-8086-exec-6] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+Hibernate: insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-02 02:24:20.294 [http-nio-8086-exec-6] INFO  c.t.c.s.CustomerAuthServiceImpl — Customer registered with id: 807018b3-ba1c-4706-af15-1b2d1f4b3537
+
+
+********************************************************
+>>> SERVİS BAŞLATILDI: 2026-05-02 02:30:24
+********************************************************
+
+Starting a Gradle Daemon, 39 busy and 1 incompatible and 12 stopped Daemons could not be reused, use --status for details
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :resolveMainClassName UP-TO-DATE
+
+> Task :bootRun
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.6)
+
+2026-05-02 02:30:31.843 [background-preinit] INFO  o.h.validator.internal.util.Version — HV000001: Hibernate Validator 9.0.1.Final
+2026-05-02 02:30:31.870 [main] INFO  c.t.c.CrmServiceApplication — Starting CrmServiceApplication using Java 21.0.10 with PID 15227 (/home/tuna/Desktop/tavia_v2/tavia-crm-service/build/classes/java/main started by tuna in /home/tuna/Desktop/tavia_v2/tavia-crm-service)
+2026-05-02 02:30:31.871 [main] DEBUG c.t.c.CrmServiceApplication — Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-02 02:30:31.871 [main] INFO  c.t.c.CrmServiceApplication — No active profile set, falling back to 1 default profile: "default"
+2026-05-02 02:30:31.899 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Fetching config from server at : http://localhost:8888
+2026-05-02 02:30:31.899 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Located environment: name=tavia-crm-service, profiles=[default], label=null, version=null, state=null
+2026-05-02 02:30:31.899 [main] DEBUG o.s.c.c.c.ConfigServerConfigDataLoader — Environment tavia-crm-service has 2 property sources with 34 properties.
+2026-05-02 02:30:32.404 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate — Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-02 02:30:32.495 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate — Finished Spring Data repository scanning in 85 ms. Found 2 JPA repository interfaces.
+2026-05-02 02:30:32.647 [main] INFO  o.s.cloud.context.scope.GenericScope — BeanFactory id=a639f2b3-0653-379e-a25f-f63cdb9710c1
+2026-05-02 02:30:32.875 [main] INFO  o.s.boot.tomcat.TomcatWebServer — Tomcat initialized with port 8086 (http)
+2026-05-02 02:30:32.883 [main] INFO  o.a.coyote.http11.Http11NioProtocol — Initializing ProtocolHandler ["http-nio-8086"]
+2026-05-02 02:30:32.885 [main] INFO  o.a.catalina.core.StandardService — Starting service [Tomcat]
+2026-05-02 02:30:32.885 [main] INFO  o.a.catalina.core.StandardEngine — Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-02 02:30:32.922 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer — Root WebApplicationContext: initialization completed in 1020 ms
+2026-05-02 02:30:33.027 [main] INFO  org.hibernate.orm.jpa — HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-02 02:30:33.060 [main] INFO  org.hibernate.orm.core — HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-05-02 02:30:33.359 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo — No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-02 02:30:33.380 [main] INFO  com.zaxxer.hikari.HikariDataSource — HikariPool-1 - Starting...
+2026-05-02 02:30:33.464 [main] INFO  com.zaxxer.hikari.pool.HikariPool — HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@29a5f924
+2026-05-02 02:30:33.466 [main] INFO  com.zaxxer.hikari.HikariDataSource — HikariPool-1 - Start completed.
+2026-05-02 02:30:33.484 [main] WARN  org.hibernate.orm.deprecation — HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-02 02:30:33.498 [main] INFO  o.hibernate.orm.connections.pooling — HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/tavia_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.17
+	Default catalog/schema: tavia_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-02 02:30:34.077 [main] INFO  org.hibernate.orm.core — HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-02 02:30:34.131 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean — Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-02 02:30:34.183 [main] INFO  o.s.d.j.r.q.QueryEnhancerFactories — Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-02 02:30:34.362 [main] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration — spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-02 02:30:34.736 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration — Eureka HTTP Client uses RestClient.
+2026-05-02 02:30:34.761 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger — Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-05-02 02:30:34.781 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory — Setting initial instance status as: STARTING
+2026-05-02 02:30:34.796 [main] INFO  c.netflix.discovery.DiscoveryClient — Initializing Eureka in region us-east-1
+2026-05-02 02:30:34.799 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 02:30:34.803 [main] INFO  c.netflix.discovery.DiscoveryClient — Disable delta property : false
+2026-05-02 02:30:34.804 [main] INFO  c.netflix.discovery.DiscoveryClient — Single vip registry refresh property : null
+2026-05-02 02:30:34.804 [main] INFO  c.netflix.discovery.DiscoveryClient — Force full registry fetch : false
+2026-05-02 02:30:34.804 [main] INFO  c.netflix.discovery.DiscoveryClient — Application is null : false
+2026-05-02 02:30:34.804 [main] INFO  c.netflix.discovery.DiscoveryClient — Registered Applications size is zero : true
+2026-05-02 02:30:34.804 [main] INFO  c.netflix.discovery.DiscoveryClient — Application version is -1: true
+2026-05-02 02:30:34.804 [main] INFO  c.netflix.discovery.DiscoveryClient — Getting all instance registry info from the eureka server
+2026-05-02 02:30:34.991 [main] INFO  c.netflix.discovery.DiscoveryClient — The response status is 200
+2026-05-02 02:30:34.993 [main] INFO  c.netflix.discovery.DiscoveryClient — Starting heartbeat executor: renew interval is: 30
+2026-05-02 02:30:34.994 [main] INFO  c.n.discovery.InstanceInfoReplicator — InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-05-02 02:30:34.995 [main] INFO  c.netflix.discovery.DiscoveryClient — Discovery Client initialized at timestamp 1777678234995 with initial instances count: 2
+2026-05-02 02:30:34.997 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry — Registering application TAVIA-CRM-SERVICE with eureka with status UP
+2026-05-02 02:30:34.997 [main] INFO  c.netflix.discovery.DiscoveryClient — Saw local status change event StatusChangeEvent [timestamp=1777678234997, current=UP, previous=STARTING]
+2026-05-02 02:30:34.998 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-CRM-SERVICE/10.0.0.139:tavia-crm-service:8086: registering service...
+2026-05-02 02:30:34.998 [main] INFO  o.a.coyote.http11.Http11NioProtocol — Starting ProtocolHandler ["http-nio-8086"]
+2026-05-02 02:30:35.008 [main] INFO  o.s.boot.tomcat.TomcatWebServer — Tomcat started on port 8086 (http) with context path '/'
+2026-05-02 02:30:35.008 [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration — Updating port to 8086
+2026-05-02 02:30:35.020 [main] INFO  c.t.c.CrmServiceApplication — Started CrmServiceApplication in 3.899 seconds (process running for 4.254)
+2026-05-02 02:30:35.022 [main] WARN  o.s.c.events.SpringDocAppInitializer — SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-05-02 02:30:35.023 [main] WARN  o.s.c.events.SpringDocAppInitializer — SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-05-02 02:30:35.026 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-CRM-SERVICE/10.0.0.139:tavia-crm-service:8086 - registration status: 204
+2026-05-02 02:35:09.723 [http-nio-8086-exec-3] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] — Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-02 02:35:09.723 [http-nio-8086-exec-3] INFO  o.s.web.servlet.DispatcherServlet — Initializing Servlet 'dispatcherServlet'
+2026-05-02 02:35:09.725 [http-nio-8086-exec-3] INFO  o.s.web.servlet.DispatcherServlet — Completed initialization in 2 ms
+2026-05-02 02:35:09.765 [http-nio-8086-exec-4] ERROR c.t.c.e.GlobalExceptionHandler — [TraceId: ba061a9e-43b0-4c28-baac-255e72db9c51] Internal Server Error: java.io.IOException: Broken pipe
+org.apache.catalina.connector.ClientAbortException: java.io.IOException: Broken pipe
+	at org.apache.catalina.connector.OutputBuffer.realWriteBytes(OutputBuffer.java:328)
+	at org.apache.catalina.connector.OutputBuffer.flushByteBuffer(OutputBuffer.java:764)
+	at org.apache.catalina.connector.OutputBuffer.append(OutputBuffer.java:661)
+	at org.apache.catalina.connector.OutputBuffer.writeBytes(OutputBuffer.java:363)
+	at org.apache.catalina.connector.OutputBuffer.write(OutputBuffer.java:341)
+	at org.apache.catalina.connector.CoyoteOutputStream.write(CoyoteOutputStream.java:99)
+	at org.springframework.util.StreamUtils$NonClosingOutputStream.write(StreamUtils.java:311)
+	at java.base/java.io.InputStream.transferTo(InputStream.java:797)
+	at org.springframework.http.converter.ResourceHttpMessageConverter.writeContent(ResourceHttpMessageConverter.java:158)
+	at org.springframework.http.converter.ResourceHttpMessageConverter.writeInternal(ResourceHttpMessageConverter.java:114)
+	at org.springframework.http.converter.ResourceHttpMessageConverter.writeInternal(ResourceHttpMessageConverter.java:47)
+	at org.springframework.http.converter.AbstractHttpMessageConverter.write(AbstractHttpMessageConverter.java:232)
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:563)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:50)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:102)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at org.apache.tomcat.util.net.NioChannel.write(NioChannel.java:129)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.doWrite(NioEndpoint.java:1441)
+	at org.apache.tomcat.util.net.SocketWrapperBase.doWrite(SocketWrapperBase.java:747)
+	at org.apache.tomcat.util.net.SocketWrapperBase.writeBlocking(SocketWrapperBase.java:587)
+	at org.apache.tomcat.util.net.SocketWrapperBase.write(SocketWrapperBase.java:535)
+	at org.apache.coyote.http11.Http11OutputBuffer$SocketOutputBuffer.doWrite(Http11OutputBuffer.java:537)
+	at org.apache.coyote.http11.filters.IdentityOutputFilter.doWrite(IdentityOutputFilter.java:71)
+	at org.apache.coyote.http11.Http11OutputBuffer.doWrite(Http11OutputBuffer.java:193)
+	at org.apache.coyote.Response.doWrite(Response.java:633)
+	at org.apache.catalina.connector.OutputBuffer.realWriteBytes(OutputBuffer.java:316)
+	... 48 common frames omitted
+2026-05-02 02:35:09.765 [http-nio-8086-exec-2] ERROR c.t.c.e.GlobalExceptionHandler — [TraceId: 02ce062a-0790-4147-b836-6846fa67c918] Internal Server Error: java.io.IOException: Broken pipe
+org.apache.catalina.connector.ClientAbortException: java.io.IOException: Broken pipe
+	at org.apache.catalina.connector.OutputBuffer.realWriteBytes(OutputBuffer.java:328)
+	at org.apache.catalina.connector.OutputBuffer.flushByteBuffer(OutputBuffer.java:764)
+	at org.apache.catalina.connector.OutputBuffer.append(OutputBuffer.java:661)
+	at org.apache.catalina.connector.OutputBuffer.writeBytes(OutputBuffer.java:363)
+	at org.apache.catalina.connector.OutputBuffer.write(OutputBuffer.java:341)
+	at org.apache.catalina.connector.CoyoteOutputStream.write(CoyoteOutputStream.java:99)
+	at org.springframework.util.StreamUtils$NonClosingOutputStream.write(StreamUtils.java:311)
+	at java.base/java.io.InputStream.transferTo(InputStream.java:797)
+	at org.springframework.http.converter.ResourceHttpMessageConverter.writeContent(ResourceHttpMessageConverter.java:158)
+	at org.springframework.http.converter.ResourceHttpMessageConverter.writeInternal(ResourceHttpMessageConverter.java:114)
+	at org.springframework.http.converter.ResourceHttpMessageConverter.writeInternal(ResourceHttpMessageConverter.java:47)
+	at org.springframework.http.converter.AbstractHttpMessageConverter.write(AbstractHttpMessageConverter.java:232)
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:563)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:50)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:102)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at org.apache.tomcat.util.net.NioChannel.write(NioChannel.java:129)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.doWrite(NioEndpoint.java:1441)
+	at org.apache.tomcat.util.net.SocketWrapperBase.doWrite(SocketWrapperBase.java:747)
+	at org.apache.tomcat.util.net.SocketWrapperBase.writeBlocking(SocketWrapperBase.java:587)
+	at org.apache.tomcat.util.net.SocketWrapperBase.write(SocketWrapperBase.java:535)
+	at org.apache.coyote.http11.Http11OutputBuffer$SocketOutputBuffer.doWrite(Http11OutputBuffer.java:537)
+	at org.apache.coyote.http11.filters.IdentityOutputFilter.doWrite(IdentityOutputFilter.java:71)
+	at org.apache.coyote.http11.Http11OutputBuffer.doWrite(Http11OutputBuffer.java:193)
+	at org.apache.coyote.Response.doWrite(Response.java:633)
+	at org.apache.catalina.connector.OutputBuffer.realWriteBytes(OutputBuffer.java:316)
+	... 48 common frames omitted
+2026-05-02 02:35:09.772 [http-nio-8086-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver — Failure in @ExceptionHandler com.tavia.crm_service.exception.GlobalExceptionHandler#handleGenericException(Exception)
+org.springframework.http.converter.HttpMessageNotWritableException: No converter for [class org.springframework.http.ProblemDetail] with preset Content-Type 'text/css'
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:363)
+	at org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.handleReturnValue(HttpEntityMethodProcessor.java:261)
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:77)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:135)
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:460)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:72)
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:176)
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:78)
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1227)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1035)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:980)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-05-02 02:35:09.772 [http-nio-8086-exec-4] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver — Failure in @ExceptionHandler com.tavia.crm_service.exception.GlobalExceptionHandler#handleGenericException(Exception)
+org.springframework.http.converter.HttpMessageNotWritableException: No converter for [class org.springframework.http.ProblemDetail] with preset Content-Type 'text/javascript'
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:363)
+	at org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.handleReturnValue(HttpEntityMethodProcessor.java:261)
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:77)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:135)
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:460)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:72)
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:176)
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:78)
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1227)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1035)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:980)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-05-02 02:35:10.166 [http-nio-8086-exec-8] INFO  o.s.api.AbstractOpenApiResource — Init duration for springdoc-openapi is: 262 ms
+2026-05-02 02:35:34.805 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 02:35:38.414 [http-nio-8086-exec-9] INFO  c.t.c.s.CustomerAuthServiceImpl — Registering customer with email: yusuf@gmail.com
+2026-05-02 02:35:38.772 [http-nio-8086-exec-9] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+Hibernate: select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+2026-05-02 02:35:38.803 [http-nio-8086-exec-9] ERROR c.t.c.e.GlobalExceptionHandler — [TraceId: 942af86d-4b3b-4239-9f3d-187c9e0281d7] Illegal Argument: Invalid city provided: İzmir. Must be a valid City enum value.
+2026-05-02 02:35:45.781 [http-nio-8086-exec-10] INFO  c.t.c.s.CustomerAuthServiceImpl — Registering customer with email: yusuf@gmail.com
+2026-05-02 02:35:45.782 [http-nio-8086-exec-10] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+Hibernate: select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+2026-05-02 02:35:45.824 [http-nio-8086-exec-10] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+Hibernate: insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-02 02:35:45.832 [http-nio-8086-exec-10] INFO  c.t.c.s.CustomerAuthServiceImpl — Customer registered with id: 7755c93d-c4a9-4243-b275-380c97b9f51f
+2026-05-02 02:36:01.030 [http-nio-8086-exec-5] INFO  c.t.c.s.CustomerAuthServiceImpl — Registering customer with email: yusuf@gmail.com
+2026-05-02 02:36:01.030 [http-nio-8086-exec-5] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+Hibernate: select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+2026-05-02 02:36:01.034 [http-nio-8086-exec-5] ERROR c.t.c.e.GlobalExceptionHandler — [TraceId: 9847cbd2-3a08-4b14-a051-5311a1433d67] Illegal Argument: A customer with this email already exists.
+2026-05-02 02:36:45.693 [http-nio-8086-exec-1] INFO  c.t.c.s.CustomerAuthServiceImpl — Registering customer with email: yusuf@gmail.com
+2026-05-02 02:36:45.694 [http-nio-8086-exec-1] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+Hibernate: select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+2026-05-02 02:36:45.696 [http-nio-8086-exec-1] ERROR c.t.c.e.GlobalExceptionHandler — [TraceId: b9408e73-30e0-421b-a5aa-b35fc70a02c0] Illegal Argument: A customer with this email already exists.
+2026-05-02 02:36:48.892 [http-nio-8086-exec-3] INFO  c.t.c.s.CustomerAuthServiceImpl — Registering customer with email: yusuf@gmail.com
+2026-05-02 02:36:48.893 [http-nio-8086-exec-3] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+Hibernate: select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+2026-05-02 02:36:48.894 [http-nio-8086-exec-3] ERROR c.t.c.e.GlobalExceptionHandler — [TraceId: 70e783a8-3a36-430a-86ec-f714a31931b4] Illegal Argument: A customer with this email already exists.
+2026-05-02 02:37:02.262 [http-nio-8086-exec-2] INFO  c.t.c.s.CustomerAuthServiceImpl — Registering customer with email: yusuf@gmail.com
+2026-05-02 02:37:02.263 [http-nio-8086-exec-2] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+Hibernate: select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+2026-05-02 02:37:02.264 [http-nio-8086-exec-2] ERROR c.t.c.e.GlobalExceptionHandler — [TraceId: e67178c4-0cb9-4f48-909d-dd0025beb1f2] Illegal Argument: A customer with this email already exists.
+2026-05-02 02:38:00.630 [http-nio-8086-exec-4] INFO  c.t.c.s.CustomerAuthServiceImpl — Login attempt for email: tunabasar@gmail.com
+2026-05-02 02:38:00.631 [http-nio-8086-exec-4] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+Hibernate: select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+2026-05-02 02:38:00.632 [http-nio-8086-exec-4] INFO  c.t.c.s.CustomerAuthServiceImpl — Login successful for customer: 807018b3-ba1c-4706-af15-1b2d1f4b3537
+2026-05-02 02:40:34.805 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+
+
+********************************************************
+>>> SERVİS BAŞLATILDI: 2026-05-02 11:33:09
+********************************************************
+
+Starting a Gradle Daemon, 48 busy and 1 incompatible and 1 stopped Daemons could not be reused, use --status for details
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :resolveMainClassName UP-TO-DATE
+
+> Task :bootRun
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.6)
+
+2026-05-02 11:33:16.423 [background-preinit] INFO  o.h.validator.internal.util.Version — HV000001: Hibernate Validator 9.0.1.Final
+2026-05-02 11:33:16.450 [main] INFO  c.t.c.CrmServiceApplication — Starting CrmServiceApplication using Java 21.0.10 with PID 15688 (/home/tuna/Desktop/tavia_v2/tavia-crm-service/build/classes/java/main started by tuna in /home/tuna/Desktop/tavia_v2/tavia-crm-service)
+2026-05-02 11:33:16.450 [main] DEBUG c.t.c.CrmServiceApplication — Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-02 11:33:16.451 [main] INFO  c.t.c.CrmServiceApplication — No active profile set, falling back to 1 default profile: "default"
+2026-05-02 11:33:16.478 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Fetching config from server at : http://localhost:8888
+2026-05-02 11:33:16.479 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Located environment: name=tavia-crm-service, profiles=[default], label=null, version=null, state=null
+2026-05-02 11:33:16.479 [main] DEBUG o.s.c.c.c.ConfigServerConfigDataLoader — Environment tavia-crm-service has 2 property sources with 34 properties.
+2026-05-02 11:33:16.956 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate — Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-02 11:33:17.046 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate — Finished Spring Data repository scanning in 84 ms. Found 2 JPA repository interfaces.
+2026-05-02 11:33:17.193 [main] INFO  o.s.cloud.context.scope.GenericScope — BeanFactory id=a639f2b3-0653-379e-a25f-f63cdb9710c1
+2026-05-02 11:33:17.412 [main] INFO  o.s.boot.tomcat.TomcatWebServer — Tomcat initialized with port 8086 (http)
+2026-05-02 11:33:17.420 [main] INFO  o.a.coyote.http11.Http11NioProtocol — Initializing ProtocolHandler ["http-nio-8086"]
+2026-05-02 11:33:17.422 [main] INFO  o.a.catalina.core.StandardService — Starting service [Tomcat]
+2026-05-02 11:33:17.422 [main] INFO  o.a.catalina.core.StandardEngine — Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-02 11:33:17.458 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer — Root WebApplicationContext: initialization completed in 977 ms
+2026-05-02 11:33:17.561 [main] INFO  org.hibernate.orm.jpa — HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-02 11:33:17.593 [main] INFO  org.hibernate.orm.core — HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-05-02 11:33:17.877 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo — No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-02 11:33:17.898 [main] INFO  com.zaxxer.hikari.HikariDataSource — HikariPool-1 - Starting...
+2026-05-02 11:33:17.980 [main] INFO  com.zaxxer.hikari.pool.HikariPool — HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@22f0e329
+2026-05-02 11:33:17.981 [main] INFO  com.zaxxer.hikari.HikariDataSource — HikariPool-1 - Start completed.
+2026-05-02 11:33:17.999 [main] WARN  org.hibernate.orm.deprecation — HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-02 11:33:18.014 [main] INFO  o.hibernate.orm.connections.pooling — HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/tavia_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.17
+	Default catalog/schema: tavia_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-02 11:33:18.567 [main] INFO  org.hibernate.orm.core — HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-02 11:33:18.627 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean — Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-02 11:33:18.677 [main] INFO  o.s.d.j.r.q.QueryEnhancerFactories — Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-02 11:33:18.852 [main] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration — spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-02 11:33:19.210 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration — Eureka HTTP Client uses RestClient.
+2026-05-02 11:33:19.234 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger — Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-05-02 11:33:19.252 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory — Setting initial instance status as: STARTING
+2026-05-02 11:33:19.266 [main] INFO  c.netflix.discovery.DiscoveryClient — Initializing Eureka in region us-east-1
+2026-05-02 11:33:19.268 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 11:33:19.273 [main] INFO  c.netflix.discovery.DiscoveryClient — Disable delta property : false
+2026-05-02 11:33:19.273 [main] INFO  c.netflix.discovery.DiscoveryClient — Single vip registry refresh property : null
+2026-05-02 11:33:19.273 [main] INFO  c.netflix.discovery.DiscoveryClient — Force full registry fetch : false
+2026-05-02 11:33:19.273 [main] INFO  c.netflix.discovery.DiscoveryClient — Application is null : false
+2026-05-02 11:33:19.273 [main] INFO  c.netflix.discovery.DiscoveryClient — Registered Applications size is zero : true
+2026-05-02 11:33:19.273 [main] INFO  c.netflix.discovery.DiscoveryClient — Application version is -1: true
+2026-05-02 11:33:19.273 [main] INFO  c.netflix.discovery.DiscoveryClient — Getting all instance registry info from the eureka server
+2026-05-02 11:33:19.452 [main] INFO  c.netflix.discovery.DiscoveryClient — The response status is 200
+2026-05-02 11:33:19.453 [main] INFO  c.netflix.discovery.DiscoveryClient — Starting heartbeat executor: renew interval is: 30
+2026-05-02 11:33:19.455 [main] INFO  c.n.discovery.InstanceInfoReplicator — InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-05-02 11:33:19.455 [main] INFO  c.netflix.discovery.DiscoveryClient — Discovery Client initialized at timestamp 1777710799455 with initial instances count: 1
+2026-05-02 11:33:19.458 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry — Registering application TAVIA-CRM-SERVICE with eureka with status UP
+2026-05-02 11:33:19.458 [main] INFO  c.netflix.discovery.DiscoveryClient — Saw local status change event StatusChangeEvent [timestamp=1777710799458, current=UP, previous=STARTING]
+2026-05-02 11:33:19.459 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-CRM-SERVICE/10.0.0.139:tavia-crm-service:8086: registering service...
+2026-05-02 11:33:19.459 [main] INFO  o.a.coyote.http11.Http11NioProtocol — Starting ProtocolHandler ["http-nio-8086"]
+2026-05-02 11:33:19.467 [main] INFO  o.s.boot.tomcat.TomcatWebServer — Tomcat started on port 8086 (http) with context path '/'
+2026-05-02 11:33:19.468 [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration — Updating port to 8086
+2026-05-02 11:33:19.477 [main] INFO  c.t.c.CrmServiceApplication — Started CrmServiceApplication in 3.77 seconds (process running for 4.096)
+2026-05-02 11:33:19.479 [main] WARN  o.s.c.events.SpringDocAppInitializer — SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-05-02 11:33:19.479 [main] WARN  o.s.c.events.SpringDocAppInitializer — SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-05-02 11:33:19.483 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-CRM-SERVICE/10.0.0.139:tavia-crm-service:8086 - registration status: 204
+2026-05-02 11:38:19.274 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 11:43:19.278 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 11:48:19.279 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 11:53:19.279 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 11:58:19.280 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 12:03:19.280 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 12:08:19.281 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 12:13:19.281 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 12:18:19.285 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 12:23:19.285 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 12:28:19.286 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 12:33:19.286 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 12:35:42.849 [http-nio-8086-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] — Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-02 12:35:42.851 [http-nio-8086-exec-1] INFO  o.s.web.servlet.DispatcherServlet — Initializing Servlet 'dispatcherServlet'
+2026-05-02 12:35:42.856 [http-nio-8086-exec-1] INFO  o.s.web.servlet.DispatcherServlet — Completed initialization in 4 ms
+2026-05-02 12:35:42.972 [http-nio-8086-exec-1] INFO  c.t.c.s.CustomerAuthServiceImpl — Login attempt for email: tunabasar@gmail.com
+2026-05-02 12:35:43.374 [http-nio-8086-exec-1] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+Hibernate: select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+2026-05-02 12:35:43.402 [http-nio-8086-exec-1] INFO  c.t.c.s.CustomerAuthServiceImpl — Login successful for customer: 807018b3-ba1c-4706-af15-1b2d1f4b3537
+2026-05-02 12:38:19.287 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 12:38:22.251 [http-nio-8086-exec-3] INFO  c.t.c.s.CustomerAuthServiceImpl — Fetching loyalties for customer: 807018b3-ba1c-4706-af15-1b2d1f4b3537
+2026-05-02 12:38:22.293 [http-nio-8086-exec-3] DEBUG org.hibernate.SQL — select count(*) from customers c1_0 where c1_0.id=?
+Hibernate: select count(*) from customers c1_0 where c1_0.id=?
+2026-05-02 12:38:22.308 [http-nio-8086-exec-3] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=?
+Hibernate: select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=?
+2026-05-02 12:40:45.247 [http-nio-8086-exec-5] INFO  c.t.c.s.CustomerAuthServiceImpl — Registering customer with email: behicdincer@gmail.com
+2026-05-02 12:40:45.249 [http-nio-8086-exec-5] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+Hibernate: select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+2026-05-02 12:40:45.284 [http-nio-8086-exec-5] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+Hibernate: insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-02 12:40:45.290 [http-nio-8086-exec-5] INFO  c.t.c.s.CustomerAuthServiceImpl — Customer registered with id: 23806d36-39f1-4fa1-9117-c1a1d5fed7b3
+2026-05-02 12:41:05.372 [http-nio-8086-exec-6] INFO  c.t.c.s.CustomerAuthServiceImpl — Fetching loyalties for customer: 23806d36-39f1-4fa1-9117-c1a1d5fed7b3
+2026-05-02 12:41:05.374 [http-nio-8086-exec-6] DEBUG org.hibernate.SQL — select count(*) from customers c1_0 where c1_0.id=?
+Hibernate: select count(*) from customers c1_0 where c1_0.id=?
+2026-05-02 12:41:05.376 [http-nio-8086-exec-6] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=?
+Hibernate: select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=?
+2026-05-02 12:43:19.291 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 12:48:19.291 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 12:53:19.291 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 12:58:19.292 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 13:03:19.292 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 13:04:05.924 [http-nio-8086-exec-8] ERROR c.t.c.e.GlobalExceptionHandler — [TraceId: a55caa0e-0e9f-438e-8ab5-516c59a4987a] Internal Server Error: Required request header 'X-Tenant-ID' for method parameter type UUID is not present
+org.springframework.web.bind.MissingRequestHeaderException: Required request header 'X-Tenant-ID' for method parameter type UUID is not present
+	at org.springframework.web.method.annotation.RequestHeaderMethodArgumentResolver.handleMissingValue(RequestHeaderMethodArgumentResolver.java:89)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.handleMissingValue(AbstractNamedValueMethodArgumentResolver.java:230)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:123)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:224)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:174)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-05-02 13:04:07.086 [http-nio-8086-exec-9] ERROR c.t.c.e.GlobalExceptionHandler — [TraceId: 7d4d11f6-581c-4207-8316-2a5646685355] Internal Server Error: Required request header 'X-Tenant-ID' for method parameter type UUID is not present
+org.springframework.web.bind.MissingRequestHeaderException: Required request header 'X-Tenant-ID' for method parameter type UUID is not present
+	at org.springframework.web.method.annotation.RequestHeaderMethodArgumentResolver.handleMissingValue(RequestHeaderMethodArgumentResolver.java:89)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.handleMissingValue(AbstractNamedValueMethodArgumentResolver.java:230)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:123)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:224)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:174)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-05-02 13:04:09.128 [http-nio-8086-exec-10] ERROR c.t.c.e.GlobalExceptionHandler — [TraceId: 5e9bd288-1092-46e3-8a26-f6323dbe0439] Internal Server Error: Required request header 'X-Tenant-ID' for method parameter type UUID is not present
+org.springframework.web.bind.MissingRequestHeaderException: Required request header 'X-Tenant-ID' for method parameter type UUID is not present
+	at org.springframework.web.method.annotation.RequestHeaderMethodArgumentResolver.handleMissingValue(RequestHeaderMethodArgumentResolver.java:89)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.handleMissingValue(AbstractNamedValueMethodArgumentResolver.java:230)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:123)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:224)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:174)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-05-02 13:04:10.596 [http-nio-8086-exec-1] ERROR c.t.c.e.GlobalExceptionHandler — [TraceId: 18850a6c-109d-433c-8cf7-077101991870] Internal Server Error: Required request header 'X-Tenant-ID' for method parameter type UUID is not present
+org.springframework.web.bind.MissingRequestHeaderException: Required request header 'X-Tenant-ID' for method parameter type UUID is not present
+	at org.springframework.web.method.annotation.RequestHeaderMethodArgumentResolver.handleMissingValue(RequestHeaderMethodArgumentResolver.java:89)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.handleMissingValue(AbstractNamedValueMethodArgumentResolver.java:230)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:123)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:224)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:174)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-05-02 13:04:11.631 [http-nio-8086-exec-2] ERROR c.t.c.e.GlobalExceptionHandler — [TraceId: 4cc6f1b0-3630-421b-8d39-b5e7eae95e68] Internal Server Error: Required request header 'X-Tenant-ID' for method parameter type UUID is not present
+org.springframework.web.bind.MissingRequestHeaderException: Required request header 'X-Tenant-ID' for method parameter type UUID is not present
+	at org.springframework.web.method.annotation.RequestHeaderMethodArgumentResolver.handleMissingValue(RequestHeaderMethodArgumentResolver.java:89)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.handleMissingValue(AbstractNamedValueMethodArgumentResolver.java:230)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:123)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:224)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:174)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-05-02 13:04:13.653 [http-nio-8086-exec-3] ERROR c.t.c.e.GlobalExceptionHandler — [TraceId: 0e305cdd-af3c-4307-a649-5ea6e6402788] Internal Server Error: Required request header 'X-Tenant-ID' for method parameter type UUID is not present
+org.springframework.web.bind.MissingRequestHeaderException: Required request header 'X-Tenant-ID' for method parameter type UUID is not present
+	at org.springframework.web.method.annotation.RequestHeaderMethodArgumentResolver.handleMissingValue(RequestHeaderMethodArgumentResolver.java:89)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.handleMissingValue(AbstractNamedValueMethodArgumentResolver.java:230)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:123)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:224)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:174)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-05-02 13:04:26.061 [http-nio-8086-exec-4] ERROR c.t.c.e.GlobalExceptionHandler — [TraceId: 6c22d37c-68a8-46fd-9370-8fe8bd72dd93] Internal Server Error: Required request header 'X-Tenant-ID' for method parameter type UUID is not present
+org.springframework.web.bind.MissingRequestHeaderException: Required request header 'X-Tenant-ID' for method parameter type UUID is not present
+	at org.springframework.web.method.annotation.RequestHeaderMethodArgumentResolver.handleMissingValue(RequestHeaderMethodArgumentResolver.java:89)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.handleMissingValue(AbstractNamedValueMethodArgumentResolver.java:230)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:123)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:224)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:174)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-05-02 13:04:27.090 [http-nio-8086-exec-5] ERROR c.t.c.e.GlobalExceptionHandler — [TraceId: 61cb4ab2-e3af-4afe-9b28-035680859db5] Internal Server Error: Required request header 'X-Tenant-ID' for method parameter type UUID is not present
+org.springframework.web.bind.MissingRequestHeaderException: Required request header 'X-Tenant-ID' for method parameter type UUID is not present
+	at org.springframework.web.method.annotation.RequestHeaderMethodArgumentResolver.handleMissingValue(RequestHeaderMethodArgumentResolver.java:89)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.handleMissingValue(AbstractNamedValueMethodArgumentResolver.java:230)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:123)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:224)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:174)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-05-02 13:04:29.110 [http-nio-8086-exec-6] ERROR c.t.c.e.GlobalExceptionHandler — [TraceId: 1f6dae11-e518-40d4-b606-f0ecc8ca190c] Internal Server Error: Required request header 'X-Tenant-ID' for method parameter type UUID is not present
+org.springframework.web.bind.MissingRequestHeaderException: Required request header 'X-Tenant-ID' for method parameter type UUID is not present
+	at org.springframework.web.method.annotation.RequestHeaderMethodArgumentResolver.handleMissingValue(RequestHeaderMethodArgumentResolver.java:89)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.handleMissingValue(AbstractNamedValueMethodArgumentResolver.java:230)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:123)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:224)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:174)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-05-02 13:04:31.837 [http-nio-8086-exec-7] ERROR c.t.c.e.GlobalExceptionHandler — [TraceId: d8b8d961-595f-4616-8c85-b8e47d8afe43] Internal Server Error: Required request header 'X-Tenant-ID' for method parameter type UUID is not present
+org.springframework.web.bind.MissingRequestHeaderException: Required request header 'X-Tenant-ID' for method parameter type UUID is not present
+	at org.springframework.web.method.annotation.RequestHeaderMethodArgumentResolver.handleMissingValue(RequestHeaderMethodArgumentResolver.java:89)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.handleMissingValue(AbstractNamedValueMethodArgumentResolver.java:230)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:123)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:224)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:174)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-05-02 13:04:32.863 [http-nio-8086-exec-8] ERROR c.t.c.e.GlobalExceptionHandler — [TraceId: b76dc202-a5fe-4736-8e68-2875c5d90d6c] Internal Server Error: Required request header 'X-Tenant-ID' for method parameter type UUID is not present
+org.springframework.web.bind.MissingRequestHeaderException: Required request header 'X-Tenant-ID' for method parameter type UUID is not present
+	at org.springframework.web.method.annotation.RequestHeaderMethodArgumentResolver.handleMissingValue(RequestHeaderMethodArgumentResolver.java:89)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.handleMissingValue(AbstractNamedValueMethodArgumentResolver.java:230)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:123)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:224)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:174)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-05-02 13:04:34.881 [http-nio-8086-exec-9] ERROR c.t.c.e.GlobalExceptionHandler — [TraceId: 506b4792-5338-46f0-b4bb-3cf2f27510ad] Internal Server Error: Required request header 'X-Tenant-ID' for method parameter type UUID is not present
+org.springframework.web.bind.MissingRequestHeaderException: Required request header 'X-Tenant-ID' for method parameter type UUID is not present
+	at org.springframework.web.method.annotation.RequestHeaderMethodArgumentResolver.handleMissingValue(RequestHeaderMethodArgumentResolver.java:89)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.handleMissingValue(AbstractNamedValueMethodArgumentResolver.java:230)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:123)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:224)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:174)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-05-02 13:04:37.228 [http-nio-8086-exec-10] ERROR c.t.c.e.GlobalExceptionHandler — [TraceId: 6cf8f5ac-09a9-4754-8ac9-66fe7ff2593c] Internal Server Error: Required request header 'X-Tenant-ID' for method parameter type UUID is not present
+org.springframework.web.bind.MissingRequestHeaderException: Required request header 'X-Tenant-ID' for method parameter type UUID is not present
+	at org.springframework.web.method.annotation.RequestHeaderMethodArgumentResolver.handleMissingValue(RequestHeaderMethodArgumentResolver.java:89)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.handleMissingValue(AbstractNamedValueMethodArgumentResolver.java:230)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:123)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:224)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:174)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-05-02 13:04:38.250 [http-nio-8086-exec-1] ERROR c.t.c.e.GlobalExceptionHandler — [TraceId: 1a5b052d-c9fc-477d-ad13-9ea3a2e2c08b] Internal Server Error: Required request header 'X-Tenant-ID' for method parameter type UUID is not present
+org.springframework.web.bind.MissingRequestHeaderException: Required request header 'X-Tenant-ID' for method parameter type UUID is not present
+	at org.springframework.web.method.annotation.RequestHeaderMethodArgumentResolver.handleMissingValue(RequestHeaderMethodArgumentResolver.java:89)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.handleMissingValue(AbstractNamedValueMethodArgumentResolver.java:230)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:123)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:224)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:174)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-05-02 13:04:40.269 [http-nio-8086-exec-2] ERROR c.t.c.e.GlobalExceptionHandler — [TraceId: 5cdee160-f2f2-400b-ac2b-6a0dbe9d92f7] Internal Server Error: Required request header 'X-Tenant-ID' for method parameter type UUID is not present
+org.springframework.web.bind.MissingRequestHeaderException: Required request header 'X-Tenant-ID' for method parameter type UUID is not present
+	at org.springframework.web.method.annotation.RequestHeaderMethodArgumentResolver.handleMissingValue(RequestHeaderMethodArgumentResolver.java:89)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.handleMissingValue(AbstractNamedValueMethodArgumentResolver.java:230)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:123)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:224)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:174)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-05-02 13:04:45.439 [http-nio-8086-exec-3] ERROR c.t.c.e.GlobalExceptionHandler — [TraceId: 71910240-4514-47cb-b787-52c6a109adfb] Internal Server Error: Required request header 'X-Tenant-ID' for method parameter type UUID is not present
+org.springframework.web.bind.MissingRequestHeaderException: Required request header 'X-Tenant-ID' for method parameter type UUID is not present
+	at org.springframework.web.method.annotation.RequestHeaderMethodArgumentResolver.handleMissingValue(RequestHeaderMethodArgumentResolver.java:89)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.handleMissingValue(AbstractNamedValueMethodArgumentResolver.java:230)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:123)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:224)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:174)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-05-02 13:04:46.492 [http-nio-8086-exec-4] ERROR c.t.c.e.GlobalExceptionHandler — [TraceId: 07124952-efc4-4371-ad60-fb59a364e35b] Internal Server Error: Required request header 'X-Tenant-ID' for method parameter type UUID is not present
+org.springframework.web.bind.MissingRequestHeaderException: Required request header 'X-Tenant-ID' for method parameter type UUID is not present
+	at org.springframework.web.method.annotation.RequestHeaderMethodArgumentResolver.handleMissingValue(RequestHeaderMethodArgumentResolver.java:89)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.handleMissingValue(AbstractNamedValueMethodArgumentResolver.java:230)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:123)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:224)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:174)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-05-02 13:04:48.516 [http-nio-8086-exec-5] ERROR c.t.c.e.GlobalExceptionHandler — [TraceId: 3f2f6c45-a139-413d-ac33-238f0c82654e] Internal Server Error: Required request header 'X-Tenant-ID' for method parameter type UUID is not present
+org.springframework.web.bind.MissingRequestHeaderException: Required request header 'X-Tenant-ID' for method parameter type UUID is not present
+	at org.springframework.web.method.annotation.RequestHeaderMethodArgumentResolver.handleMissingValue(RequestHeaderMethodArgumentResolver.java:89)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.handleMissingValue(AbstractNamedValueMethodArgumentResolver.java:230)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:123)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:224)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:174)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-05-02 13:08:19.292 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 13:13:19.296 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 13:18:19.297 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 13:23:19.301 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+
+********************************************************
+<<< SERVİS DURDURULDU: 2026-05-02 13:26:44
+********************************************************
+
+
+
+********************************************************
+>>> SERVİS BAŞLATILDI: 2026-05-02 13:28:00
+********************************************************
+
+Starting a Gradle Daemon, 48 busy and 9 stopped Daemons could not be reused, use --status for details
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :resolveMainClassName UP-TO-DATE
+
+> Task :bootRun
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.6)
+
+2026-05-02 13:28:18.623 [background-preinit] INFO  o.h.validator.internal.util.Version — HV000001: Hibernate Validator 9.0.1.Final
+2026-05-02 13:28:18.693 [restartedMain] INFO  c.t.c.CrmServiceApplication — Starting CrmServiceApplication using Java 21.0.10 with PID 53839 (/home/tuna/Desktop/tavia_v2/tavia-crm-service/build/classes/java/main started by tuna in /home/tuna/Desktop/tavia_v2/tavia-crm-service)
+2026-05-02 13:28:18.694 [restartedMain] DEBUG c.t.c.CrmServiceApplication — Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-02 13:28:18.697 [restartedMain] INFO  c.t.c.CrmServiceApplication — No active profile set, falling back to 1 default profile: "default"
+2026-05-02 13:28:18.798 [restartedMain] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Fetching config from server at : http://localhost:8888
+2026-05-02 13:28:18.798 [restartedMain] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Located environment: name=tavia-crm-service, profiles=[default], label=null, version=null, state=null
+2026-05-02 13:28:18.799 [restartedMain] DEBUG o.s.c.c.c.ConfigServerConfigDataLoader — Environment tavia-crm-service has 2 property sources with 34 properties.
+2026-05-02 13:28:18.804 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor — Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-02 13:28:18.805 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor — For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-02 13:28:20.532 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate — Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-02 13:28:20.796 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate — Finished Spring Data repository scanning in 248 ms. Found 2 JPA repository interfaces.
+2026-05-02 13:28:21.271 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope — BeanFactory id=89dd6eac-d973-3148-9115-123946d3a2bc
+2026-05-02 13:28:22.270 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer — Tomcat initialized with port 8086 (http)
+2026-05-02 13:28:22.300 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol — Initializing ProtocolHandler ["http-nio-8086"]
+2026-05-02 13:28:22.306 [restartedMain] INFO  o.a.catalina.core.StandardService — Starting service [Tomcat]
+2026-05-02 13:28:22.306 [restartedMain] INFO  o.a.catalina.core.StandardEngine — Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-02 13:28:22.378 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer — Root WebApplicationContext: initialization completed in 3570 ms
+2026-05-02 13:28:22.709 [restartedMain] INFO  org.hibernate.orm.jpa — HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-02 13:28:22.798 [restartedMain] INFO  org.hibernate.orm.core — HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-05-02 13:28:23.670 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo — No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-02 13:28:23.730 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource — HikariPool-1 - Starting...
+2026-05-02 13:28:23.904 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool — HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@42cff3e4
+2026-05-02 13:28:23.906 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource — HikariPool-1 - Start completed.
+2026-05-02 13:28:23.950 [restartedMain] WARN  org.hibernate.orm.deprecation — HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-02 13:28:23.985 [restartedMain] INFO  o.hibernate.orm.connections.pooling — HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/tavia_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.17
+	Default catalog/schema: tavia_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-02 13:28:25.708 [restartedMain] INFO  org.hibernate.orm.core — HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-02 13:28:25.888 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean — Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-02 13:28:26.070 [restartedMain] INFO  o.s.d.j.r.q.QueryEnhancerFactories — Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-02 13:28:26.595 [restartedMain] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration — spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-02 13:28:27.735 [restartedMain] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration — Eureka HTTP Client uses RestClient.
+2026-05-02 13:28:27.823 [restartedMain] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger — Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-05-02 13:28:27.880 [restartedMain] INFO  o.s.c.n.eureka.InstanceInfoFactory — Setting initial instance status as: STARTING
+2026-05-02 13:28:27.930 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Initializing Eureka in region us-east-1
+2026-05-02 13:28:27.936 [restartedMain] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 13:28:28.033 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Disable delta property : false
+2026-05-02 13:28:28.033 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Single vip registry refresh property : null
+2026-05-02 13:28:28.033 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Force full registry fetch : false
+2026-05-02 13:28:28.033 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Application is null : false
+2026-05-02 13:28:28.033 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Registered Applications size is zero : true
+2026-05-02 13:28:28.033 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Application version is -1: true
+2026-05-02 13:28:28.033 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Getting all instance registry info from the eureka server
+2026-05-02 13:28:28.634 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — The response status is 200
+2026-05-02 13:28:28.637 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Starting heartbeat executor: renew interval is: 30
+2026-05-02 13:28:28.640 [restartedMain] INFO  c.n.discovery.InstanceInfoReplicator — InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-05-02 13:28:28.642 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Discovery Client initialized at timestamp 1777717708641 with initial instances count: 1
+2026-05-02 13:28:28.647 [restartedMain] INFO  o.s.c.n.e.s.EurekaServiceRegistry — Registering application TAVIA-CRM-SERVICE with eureka with status UP
+2026-05-02 13:28:28.648 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Saw local status change event StatusChangeEvent [timestamp=1777717708648, current=UP, previous=STARTING]
+2026-05-02 13:28:28.650 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-CRM-SERVICE/10.0.0.139:tavia-crm-service:8086: registering service...
+2026-05-02 13:28:28.651 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol — Starting ProtocolHandler ["http-nio-8086"]
+2026-05-02 13:28:28.674 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer — Tomcat started on port 8086 (http) with context path '/'
+2026-05-02 13:28:28.676 [restartedMain] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration — Updating port to 8086
+2026-05-02 13:28:28.702 [restartedMain] INFO  c.t.c.CrmServiceApplication — Started CrmServiceApplication in 11.946 seconds (process running for 12.884)
+2026-05-02 13:28:28.709 [restartedMain] WARN  o.s.c.events.SpringDocAppInitializer — SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-05-02 13:28:28.709 [restartedMain] WARN  o.s.c.events.SpringDocAppInitializer — SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-05-02 13:28:28.726 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-CRM-SERVICE/10.0.0.139:tavia-crm-service:8086 - registration status: 204
+2026-05-02 13:31:53.324 [http-nio-8086-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] — Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-02 13:31:53.324 [http-nio-8086-exec-1] INFO  o.s.web.servlet.DispatcherServlet — Initializing Servlet 'dispatcherServlet'
+2026-05-02 13:31:53.331 [http-nio-8086-exec-1] INFO  o.s.web.servlet.DispatcherServlet — Completed initialization in 6 ms
+2026-05-02 13:31:53.397 [http-nio-8086-exec-1] INFO  c.t.c.service.CustomerServiceImpl — Fetching customers, tenantId filter: 228f8e0a-035c-47e0-8ac6-e30991748cf0
+2026-05-02 13:31:54.081 [http-nio-8086-exec-1] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.tenant_id=?
+Hibernate: select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.tenant_id=?
+2026-05-02 13:32:16.303 [http-nio-8086-exec-2] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.id=?
+Hibernate: select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.id=?
+2026-05-02 13:32:16.316 [http-nio-8086-exec-2] ERROR c.t.c.e.GlobalExceptionHandler — [TraceId: ae1904b4-0cc1-46f8-995f-1e237bcb51cc] Resource Not Found: Customer not found with id: 7c9e6679-7425-40de-944b-e07fc1f90ae7
+2026-05-02 13:32:16.340 [http-nio-8086-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver — Resolved [com.tavia.crm_service.exception.ResourceNotFoundException: Customer not found with id: 7c9e6679-7425-40de-944b-e07fc1f90ae7]
+2026-05-02 13:32:16.360 [http-nio-8086-exec-3] INFO  c.t.c.service.CustomerServiceImpl — Fetching customer with id: 7c9e6679-7425-40de-944b-e07fc1f90ae7 for tenant: 228f8e0a-035c-47e0-8ac6-e30991748cf0
+2026-05-02 13:32:16.362 [http-nio-8086-exec-3] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.id=?
+Hibernate: select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.id=?
+2026-05-02 13:32:16.367 [http-nio-8086-exec-3] ERROR c.t.c.e.GlobalExceptionHandler — [TraceId: cf7446fe-ce01-425c-b08d-7d0cd4a22973] Resource Not Found: Customer not found with id: 7c9e6679-7425-40de-944b-e07fc1f90ae7
+2026-05-02 13:32:16.369 [http-nio-8086-exec-3] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver — Resolved [com.tavia.crm_service.exception.ResourceNotFoundException: Customer not found with id: 7c9e6679-7425-40de-944b-e07fc1f90ae7]
+2026-05-02 13:32:17.499 [http-nio-8086-exec-4] INFO  c.t.c.service.CustomerServiceImpl — Fetching customers, tenantId filter: 228f8e0a-035c-47e0-8ac6-e30991748cf0
+2026-05-02 13:32:17.502 [http-nio-8086-exec-4] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.tenant_id=?
+Hibernate: select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.tenant_id=?
+2026-05-02 13:33:28.041 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 13:33:50.791 [http-nio-8086-exec-10] INFO  o.s.api.AbstractOpenApiResource — Init duration for springdoc-openapi is: 381 ms
+2026-05-02 13:35:52.223 [http-nio-8086-exec-2] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.id=?
+Hibernate: select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.id=?
+2026-05-02 13:35:52.249 [http-nio-8086-exec-2] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+Hibernate: select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-02 13:35:52.283 [http-nio-8086-exec-2] DEBUG org.hibernate.SQL — insert into tenant_loyalty (customer_id,loyalty_level,tenant_id,total_spent,id) values (?,?,?,?,?)
+Hibernate: insert into tenant_loyalty (customer_id,loyalty_level,tenant_id,total_spent,id) values (?,?,?,?,?)
+2026-05-02 13:35:52.302 [http-nio-8086-exec-2] DEBUG org.hibernate.SQL — update tenant_loyalty set customer_id=?,loyalty_level=?,tenant_id=?,total_spent=? where id=?
+Hibernate: update tenant_loyalty set customer_id=?,loyalty_level=?,tenant_id=?,total_spent=? where id=?
+2026-05-02 13:35:52.308 [http-nio-8086-exec-2] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+Hibernate: select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-02 13:35:52.324 [http-nio-8086-exec-3] INFO  c.t.c.service.CustomerServiceImpl — Fetching customer with id: 807018b3-ba1c-4706-af15-1b2d1f4b3537 for tenant: 228f8e0a-035c-47e0-8ac6-e30991748cf0
+2026-05-02 13:35:52.325 [http-nio-8086-exec-3] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.id=?
+Hibernate: select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.id=?
+2026-05-02 13:35:52.329 [http-nio-8086-exec-3] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+Hibernate: select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-02 13:35:59.286 [http-nio-8086-exec-4] INFO  c.t.c.service.CustomerServiceImpl — Fetching customers, tenantId filter: 228f8e0a-035c-47e0-8ac6-e30991748cf0
+2026-05-02 13:35:59.288 [http-nio-8086-exec-4] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.tenant_id=?
+Hibernate: select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.tenant_id=?
+2026-05-02 13:35:59.335 [http-nio-8086-exec-4] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.id in (?)
+Hibernate: select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.id in (?)
+2026-05-02 13:35:59.340 [http-nio-8086-exec-4] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+Hibernate: select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-02 13:38:28.041 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 13:43:28.042 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 13:48:28.043 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 13:53:28.043 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 13:58:28.047 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 14:01:26.872 [HikariPool-1:housekeeper] WARN  com.zaxxer.hikari.pool.PoolBase — HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@626a3adc (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-02 14:01:33.815 [HikariPool-1:housekeeper] WARN  com.zaxxer.hikari.pool.PoolBase — HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@5e043bb0 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-02 14:02:26.916 [HikariPool-1:housekeeper] WARN  com.zaxxer.hikari.pool.PoolBase — HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@5c5c04b3 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-02 14:03:30.460 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration

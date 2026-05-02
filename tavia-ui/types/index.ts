@@ -143,6 +143,23 @@ export interface Order {
   orderDate: string;
 }
 
+// ─── Inventory (Raw Materials — DDD) ─────────────────────────────
+
+/**
+ * Matches backend: RawMaterialDto (inventory-service)
+ * Fields: id (UUID), tenantId (UUID), name, unit (UnitType enum), stockQuantity
+ * Per GEMINI.md §2.2: Inventory tracks ONLY raw materials, never final products.
+ */
+export type UnitType = "MILLILITER" | "GRAM" | "PIECE";
+
+export interface InventoryItem {
+  id: string;
+  tenantId: string;
+  name: string;
+  stockQuantity: number;
+  unit: UnitType;
+}
+
 // ─── AI Feed Entry ───────────────────────────────────────────────
 export interface AiFeedEntry {
   id: string;

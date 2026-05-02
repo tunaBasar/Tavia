@@ -7,6 +7,8 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
+import org.springframework.web.bind.MissingRequestHeaderException;
+
 import java.net.URI;
 import java.time.Instant;
 import java.util.HashMap;
@@ -16,6 +18,20 @@ import java.util.UUID;
 @Slf4j
 @RestControllerAdvice
 public class GlobalExceptionHandler {
+
+    @ExceptionHandler(MissingRequestHeaderException.class)
+    public ProblemDetail handleMissingRequestHeaderException(MissingRequestHeaderException ex) {
+        String traceId = UUID.randomUUID().toString();
+        log.error("[TraceId: {}] Missing Request Header: {}", traceId, ex.getMessage());
+
+        ProblemDetail problemDetail = ProblemDetail.forStatusAndDetail(HttpStatus.BAD_REQUEST, ex.getMessage());
+        problemDetail.setTitle("Missing Required Header");
+        problemDetail.setType(URI.create("https://tavia.com/errors/missing-header"));
+        problemDetail.setProperty("traceId", traceId);
+        problemDetail.setProperty("timestamp", Instant.now());
+
+        return problemDetail;
+    }
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ProblemDetail handleValidationExceptions(MethodArgumentNotValidException ex) {

@@ -1,0 +1,451 @@
+
+
+********************************************************
+>>> SERVİS BAŞLATILDI: 2026-05-02 02:22:44
+********************************************************
+
+Starting a Gradle Daemon, 34 busy and 1 incompatible and 18 stopped Daemons could not be reused, use --status for details
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :resolveMainClassName UP-TO-DATE
+
+> Task :bootRun
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.6)
+
+2026-05-02 02:22:54.038 [main] INFO  c.t.gateway.ApiGatewayApplication — Starting ApiGatewayApplication using Java 21.0.10 with PID 60439 (/home/tuna/Desktop/tavia_v2/tavia-api-gateway/build/classes/java/main started by tuna in /home/tuna/Desktop/tavia_v2/tavia-api-gateway)
+2026-05-02 02:22:54.041 [main] DEBUG c.t.gateway.ApiGatewayApplication — Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-02 02:22:54.041 [main] INFO  c.t.gateway.ApiGatewayApplication — No active profile set, falling back to 1 default profile: "default"
+2026-05-02 02:22:54.078 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Fetching config from server at : http://localhost:8888
+2026-05-02 02:22:54.078 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Located environment: name=tavia-api-gateway, profiles=[default], label=null, version=null, state=null
+2026-05-02 02:22:54.078 [main] DEBUG o.s.c.c.c.ConfigServerConfigDataLoader — Environment tavia-api-gateway has 2 property sources with 61 properties.
+2026-05-02 02:22:54.120 [background-preinit] INFO  o.h.validator.internal.util.Version — HV000001: Hibernate Validator 9.0.1.Final
+2026-05-02 02:22:54.707 [main] INFO  o.s.cloud.context.scope.GenericScope — BeanFactory id=a0390805-931c-3f7b-9ea5-3b2742a3bf01
+2026-05-02 02:22:55.454 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [After]
+2026-05-02 02:22:55.454 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Before]
+2026-05-02 02:22:55.454 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Between]
+2026-05-02 02:22:55.454 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Cookie]
+2026-05-02 02:22:55.454 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Header]
+2026-05-02 02:22:55.454 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Host]
+2026-05-02 02:22:55.454 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Method]
+2026-05-02 02:22:55.454 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Path]
+2026-05-02 02:22:55.454 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Query]
+2026-05-02 02:22:55.455 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [ReadBody]
+2026-05-02 02:22:55.455 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [RemoteAddr]
+2026-05-02 02:22:55.455 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Version]
+2026-05-02 02:22:55.455 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2026-05-02 02:22:55.455 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Weight]
+2026-05-02 02:22:55.455 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2026-05-02 02:22:55.619 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration — Eureka HTTP Client uses RestClient.
+2026-05-02 02:22:55.652 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger — Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-05-02 02:22:55.677 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory — Setting initial instance status as: STARTING
+2026-05-02 02:22:55.693 [main] INFO  c.netflix.discovery.DiscoveryClient — Initializing Eureka in region us-east-1
+2026-05-02 02:22:55.695 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 02:22:55.700 [main] INFO  c.netflix.discovery.DiscoveryClient — Disable delta property : false
+2026-05-02 02:22:55.700 [main] INFO  c.netflix.discovery.DiscoveryClient — Single vip registry refresh property : null
+2026-05-02 02:22:55.700 [main] INFO  c.netflix.discovery.DiscoveryClient — Force full registry fetch : false
+2026-05-02 02:22:55.701 [main] INFO  c.netflix.discovery.DiscoveryClient — Application is null : false
+2026-05-02 02:22:55.701 [main] INFO  c.netflix.discovery.DiscoveryClient — Registered Applications size is zero : true
+2026-05-02 02:22:55.701 [main] INFO  c.netflix.discovery.DiscoveryClient — Application version is -1: true
+2026-05-02 02:22:55.701 [main] INFO  c.netflix.discovery.DiscoveryClient — Getting all instance registry info from the eureka server
+2026-05-02 02:22:55.939 [main] INFO  c.netflix.discovery.DiscoveryClient — The response status is 200
+2026-05-02 02:22:55.940 [main] INFO  c.netflix.discovery.DiscoveryClient — Starting heartbeat executor: renew interval is: 30
+2026-05-02 02:22:55.941 [main] INFO  c.n.discovery.InstanceInfoReplicator — InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-05-02 02:22:55.942 [main] INFO  c.netflix.discovery.DiscoveryClient — Discovery Client initialized at timestamp 1777677775942 with initial instances count: 5
+2026-05-02 02:22:55.945 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry — Registering application TAVIA-API-GATEWAY with eureka with status UP
+2026-05-02 02:22:55.946 [main] INFO  c.netflix.discovery.DiscoveryClient — Saw local status change event StatusChangeEvent [timestamp=1777677775946, current=UP, previous=STARTING]
+2026-05-02 02:22:55.947 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-API-GATEWAY/10.209.184.229:tavia-api-gateway:8080: registering service...
+2026-05-02 02:22:55.989 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-API-GATEWAY/10.209.184.229:tavia-api-gateway:8080 - registration status: 204
+2026-05-02 02:22:56.093 [main] INFO  o.s.b.reactor.netty.NettyWebServer — Netty started on port 8080 (http)
+2026-05-02 02:22:56.094 [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration — Updating port to 8080
+2026-05-02 02:22:56.130 [main] INFO  c.t.gateway.ApiGatewayApplication — Started ApiGatewayApplication in 2.834 seconds (process running for 3.292)
+
+
+********************************************************
+>>> SERVİS BAŞLATILDI: 2026-05-02 02:31:32
+********************************************************
+
+Starting a Gradle Daemon, 43 busy and 1 incompatible and 12 stopped Daemons could not be reused, use --status for details
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :resolveMainClassName UP-TO-DATE
+
+> Task :bootRun
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.6)
+
+2026-05-02 02:31:39.761 [main] INFO  c.t.gateway.ApiGatewayApplication — Starting ApiGatewayApplication using Java 21.0.10 with PID 16886 (/home/tuna/Desktop/tavia_v2/tavia-api-gateway/build/classes/java/main started by tuna in /home/tuna/Desktop/tavia_v2/tavia-api-gateway)
+2026-05-02 02:31:39.766 [main] DEBUG c.t.gateway.ApiGatewayApplication — Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-02 02:31:39.766 [main] INFO  c.t.gateway.ApiGatewayApplication — No active profile set, falling back to 1 default profile: "default"
+2026-05-02 02:31:39.796 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Fetching config from server at : http://localhost:8888
+2026-05-02 02:31:39.796 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Located environment: name=tavia-api-gateway, profiles=[default], label=null, version=null, state=null
+2026-05-02 02:31:39.796 [main] DEBUG o.s.c.c.c.ConfigServerConfigDataLoader — Environment tavia-api-gateway has 2 property sources with 61 properties.
+2026-05-02 02:31:39.812 [background-preinit] INFO  o.h.validator.internal.util.Version — HV000001: Hibernate Validator 9.0.1.Final
+2026-05-02 02:31:40.269 [main] INFO  o.s.cloud.context.scope.GenericScope — BeanFactory id=a0390805-931c-3f7b-9ea5-3b2742a3bf01
+2026-05-02 02:31:40.995 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [After]
+2026-05-02 02:31:40.996 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Before]
+2026-05-02 02:31:40.996 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Between]
+2026-05-02 02:31:40.996 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Cookie]
+2026-05-02 02:31:40.996 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Header]
+2026-05-02 02:31:40.996 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Host]
+2026-05-02 02:31:40.996 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Method]
+2026-05-02 02:31:40.996 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Path]
+2026-05-02 02:31:40.996 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Query]
+2026-05-02 02:31:40.996 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [ReadBody]
+2026-05-02 02:31:40.996 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [RemoteAddr]
+2026-05-02 02:31:40.996 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Version]
+2026-05-02 02:31:40.996 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2026-05-02 02:31:40.996 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Weight]
+2026-05-02 02:31:40.997 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2026-05-02 02:31:41.154 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration — Eureka HTTP Client uses RestClient.
+2026-05-02 02:31:41.179 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger — Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-05-02 02:31:41.199 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory — Setting initial instance status as: STARTING
+2026-05-02 02:31:41.213 [main] INFO  c.netflix.discovery.DiscoveryClient — Initializing Eureka in region us-east-1
+2026-05-02 02:31:41.215 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 02:31:41.220 [main] INFO  c.netflix.discovery.DiscoveryClient — Disable delta property : false
+2026-05-02 02:31:41.221 [main] INFO  c.netflix.discovery.DiscoveryClient — Single vip registry refresh property : null
+2026-05-02 02:31:41.221 [main] INFO  c.netflix.discovery.DiscoveryClient — Force full registry fetch : false
+2026-05-02 02:31:41.221 [main] INFO  c.netflix.discovery.DiscoveryClient — Application is null : false
+2026-05-02 02:31:41.221 [main] INFO  c.netflix.discovery.DiscoveryClient — Registered Applications size is zero : true
+2026-05-02 02:31:41.221 [main] INFO  c.netflix.discovery.DiscoveryClient — Application version is -1: true
+2026-05-02 02:31:41.221 [main] INFO  c.netflix.discovery.DiscoveryClient — Getting all instance registry info from the eureka server
+2026-05-02 02:31:41.425 [main] INFO  c.netflix.discovery.DiscoveryClient — The response status is 200
+2026-05-02 02:31:41.426 [main] INFO  c.netflix.discovery.DiscoveryClient — Starting heartbeat executor: renew interval is: 30
+2026-05-02 02:31:41.427 [main] INFO  c.n.discovery.InstanceInfoReplicator — InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-05-02 02:31:41.428 [main] INFO  c.netflix.discovery.DiscoveryClient — Discovery Client initialized at timestamp 1777678301428 with initial instances count: 6
+2026-05-02 02:31:41.430 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry — Registering application TAVIA-API-GATEWAY with eureka with status UP
+2026-05-02 02:31:41.430 [main] INFO  c.netflix.discovery.DiscoveryClient — Saw local status change event StatusChangeEvent [timestamp=1777678301430, current=UP, previous=STARTING]
+2026-05-02 02:31:41.431 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-API-GATEWAY/10.0.0.139:tavia-api-gateway:8080: registering service...
+2026-05-02 02:31:41.467 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-API-GATEWAY/10.0.0.139:tavia-api-gateway:8080 - registration status: 204
+2026-05-02 02:31:41.552 [main] INFO  o.s.b.reactor.netty.NettyWebServer — Netty started on port 8080 (http)
+2026-05-02 02:31:41.553 [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration — Updating port to 8080
+2026-05-02 02:31:41.573 [main] INFO  c.t.gateway.ApiGatewayApplication — Started ApiGatewayApplication in 2.455 seconds (process running for 2.813)
+2026-05-02 02:36:41.222 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+
+
+********************************************************
+>>> SERVİS BAŞLATILDI: 2026-05-02 11:34:17
+********************************************************
+
+Starting a Gradle Daemon, 52 busy and 1 incompatible and 1 stopped Daemons could not be reused, use --status for details
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :resolveMainClassName UP-TO-DATE
+
+> Task :bootRun
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.6)
+
+2026-05-02 11:34:23.843 [main] INFO  c.t.gateway.ApiGatewayApplication — Starting ApiGatewayApplication using Java 21.0.10 with PID 17280 (/home/tuna/Desktop/tavia_v2/tavia-api-gateway/build/classes/java/main started by tuna in /home/tuna/Desktop/tavia_v2/tavia-api-gateway)
+2026-05-02 11:34:23.848 [main] DEBUG c.t.gateway.ApiGatewayApplication — Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-02 11:34:23.849 [main] INFO  c.t.gateway.ApiGatewayApplication — No active profile set, falling back to 1 default profile: "default"
+2026-05-02 11:34:23.877 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Fetching config from server at : http://localhost:8888
+2026-05-02 11:34:23.878 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Located environment: name=tavia-api-gateway, profiles=[default], label=null, version=null, state=null
+2026-05-02 11:34:23.878 [main] DEBUG o.s.c.c.c.ConfigServerConfigDataLoader — Environment tavia-api-gateway has 2 property sources with 61 properties.
+2026-05-02 11:34:23.891 [background-preinit] INFO  o.h.validator.internal.util.Version — HV000001: Hibernate Validator 9.0.1.Final
+2026-05-02 11:34:24.348 [main] INFO  o.s.cloud.context.scope.GenericScope — BeanFactory id=a0390805-931c-3f7b-9ea5-3b2742a3bf01
+2026-05-02 11:34:24.946 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [After]
+2026-05-02 11:34:24.946 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Before]
+2026-05-02 11:34:24.947 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Between]
+2026-05-02 11:34:24.947 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Cookie]
+2026-05-02 11:34:24.947 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Header]
+2026-05-02 11:34:24.947 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Host]
+2026-05-02 11:34:24.947 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Method]
+2026-05-02 11:34:24.947 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Path]
+2026-05-02 11:34:24.947 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Query]
+2026-05-02 11:34:24.947 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [ReadBody]
+2026-05-02 11:34:24.947 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [RemoteAddr]
+2026-05-02 11:34:24.947 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Version]
+2026-05-02 11:34:24.947 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2026-05-02 11:34:24.947 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Weight]
+2026-05-02 11:34:24.947 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2026-05-02 11:34:25.087 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration — Eureka HTTP Client uses RestClient.
+2026-05-02 11:34:25.110 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger — Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-05-02 11:34:25.129 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory — Setting initial instance status as: STARTING
+2026-05-02 11:34:25.142 [main] INFO  c.netflix.discovery.DiscoveryClient — Initializing Eureka in region us-east-1
+2026-05-02 11:34:25.144 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 11:34:25.149 [main] INFO  c.netflix.discovery.DiscoveryClient — Disable delta property : false
+2026-05-02 11:34:25.149 [main] INFO  c.netflix.discovery.DiscoveryClient — Single vip registry refresh property : null
+2026-05-02 11:34:25.149 [main] INFO  c.netflix.discovery.DiscoveryClient — Force full registry fetch : false
+2026-05-02 11:34:25.149 [main] INFO  c.netflix.discovery.DiscoveryClient — Application is null : false
+2026-05-02 11:34:25.149 [main] INFO  c.netflix.discovery.DiscoveryClient — Registered Applications size is zero : true
+2026-05-02 11:34:25.149 [main] INFO  c.netflix.discovery.DiscoveryClient — Application version is -1: true
+2026-05-02 11:34:25.149 [main] INFO  c.netflix.discovery.DiscoveryClient — Getting all instance registry info from the eureka server
+2026-05-02 11:34:25.358 [main] INFO  c.netflix.discovery.DiscoveryClient — The response status is 200
+2026-05-02 11:34:25.360 [main] INFO  c.netflix.discovery.DiscoveryClient — Starting heartbeat executor: renew interval is: 30
+2026-05-02 11:34:25.361 [main] INFO  c.n.discovery.InstanceInfoReplicator — InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-05-02 11:34:25.361 [main] INFO  c.netflix.discovery.DiscoveryClient — Discovery Client initialized at timestamp 1777710865361 with initial instances count: 5
+2026-05-02 11:34:25.364 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry — Registering application TAVIA-API-GATEWAY with eureka with status UP
+2026-05-02 11:34:25.364 [main] INFO  c.netflix.discovery.DiscoveryClient — Saw local status change event StatusChangeEvent [timestamp=1777710865364, current=UP, previous=STARTING]
+2026-05-02 11:34:25.365 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-API-GATEWAY/10.0.0.139:tavia-api-gateway:8080: registering service...
+2026-05-02 11:34:25.390 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-API-GATEWAY/10.0.0.139:tavia-api-gateway:8080 - registration status: 204
+2026-05-02 11:34:25.476 [main] INFO  o.s.b.reactor.netty.NettyWebServer — Netty started on port 8080 (http)
+2026-05-02 11:34:25.477 [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration — Updating port to 8080
+2026-05-02 11:34:25.493 [main] INFO  c.t.gateway.ApiGatewayApplication — Started ApiGatewayApplication in 2.25 seconds (process running for 2.611)
+2026-05-02 11:39:25.150 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 11:44:25.151 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 11:49:25.151 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 11:54:25.152 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 11:59:25.153 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 12:04:25.153 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 12:09:25.154 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 12:14:25.154 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 12:19:25.160 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 12:24:25.160 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 12:29:25.164 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 12:34:25.164 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 12:35:31.358 [reactor-http-epoll-3] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/tenants
+2026-05-02 12:35:32.135 [reactor-http-epoll-3] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/tenants took 777 ms
+2026-05-02 12:35:42.763 [reactor-http-epoll-3] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/crm/auth/login
+2026-05-02 12:35:43.442 [reactor-http-epoll-3] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/crm/auth/login took 679 ms
+2026-05-02 12:35:44.324 [reactor-http-epoll-3] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/tenants
+2026-05-02 12:35:44.337 [reactor-http-epoll-3] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/tenants took 13 ms
+2026-05-02 12:35:53.954 [reactor-http-epoll-3] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/tenants
+2026-05-02 12:35:53.980 [reactor-http-epoll-3] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/tenants took 26 ms
+2026-05-02 12:35:57.305 [reactor-http-epoll-3] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/tenants
+2026-05-02 12:35:57.314 [reactor-http-epoll-3] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/tenants took 9 ms
+2026-05-02 12:35:59.351 [reactor-http-epoll-3] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/tenants
+2026-05-02 12:35:59.359 [reactor-http-epoll-3] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/tenants took 8 ms
+2026-05-02 12:36:00.712 [reactor-http-epoll-3] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/tenants
+2026-05-02 12:36:00.719 [reactor-http-epoll-3] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/tenants took 7 ms
+2026-05-02 12:36:00.806 [reactor-http-epoll-2] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/tenants
+2026-05-02 12:36:00.815 [reactor-http-epoll-2] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/tenants took 9 ms
+2026-05-02 12:36:03.067 [reactor-http-epoll-3] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/tenants
+2026-05-02 12:36:03.077 [reactor-http-epoll-3] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/tenants took 10 ms
+2026-05-02 12:36:03.159 [reactor-http-epoll-8] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/tenants
+2026-05-02 12:36:03.167 [reactor-http-epoll-8] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/tenants took 8 ms
+2026-05-02 12:36:05.438 [reactor-http-epoll-3] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/tenants
+2026-05-02 12:36:05.448 [reactor-http-epoll-3] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/tenants took 10 ms
+2026-05-02 12:36:11.160 [reactor-http-epoll-3] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/tenants
+2026-05-02 12:36:11.166 [reactor-http-epoll-3] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/tenants took 6 ms
+2026-05-02 12:36:12.695 [reactor-http-epoll-3] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/tenants
+2026-05-02 12:36:12.701 [reactor-http-epoll-3] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/tenants took 6 ms
+2026-05-02 12:36:19.019 [reactor-http-epoll-3] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/tenants
+2026-05-02 12:36:19.024 [reactor-http-epoll-3] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/tenants took 5 ms
+2026-05-02 12:36:21.164 [reactor-http-epoll-3] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/tenants
+2026-05-02 12:36:21.170 [reactor-http-epoll-3] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/tenants took 6 ms
+2026-05-02 12:36:37.762 [reactor-http-epoll-3] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/tenants
+2026-05-02 12:36:37.768 [reactor-http-epoll-3] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/tenants took 6 ms
+2026-05-02 12:36:52.532 [reactor-http-epoll-3] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/tenants
+2026-05-02 12:36:52.538 [reactor-http-epoll-3] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/tenants took 6 ms
+2026-05-02 12:36:53.815 [reactor-http-epoll-3] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/tenants
+2026-05-02 12:36:53.821 [reactor-http-epoll-3] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/tenants took 6 ms
+2026-05-02 12:38:22.244 [reactor-http-epoll-3] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/crm/auth/loyalties/807018b3-ba1c-4706-af15-1b2d1f4b3537
+2026-05-02 12:38:22.316 [reactor-http-epoll-3] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/crm/auth/loyalties/807018b3-ba1c-4706-af15-1b2d1f4b3537 took 72 ms
+2026-05-02 12:39:25.165 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 12:39:40.265 [reactor-http-epoll-3] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/tenants
+2026-05-02 12:39:40.276 [reactor-http-epoll-3] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/tenants took 11 ms
+2026-05-02 12:40:45.213 [reactor-http-epoll-3] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/crm/auth/register
+2026-05-02 12:40:45.293 [reactor-http-epoll-3] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/crm/auth/register took 80 ms
+2026-05-02 12:40:46.165 [reactor-http-epoll-3] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/tenants
+2026-05-02 12:40:46.170 [reactor-http-epoll-3] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/tenants took 5 ms
+2026-05-02 12:40:48.627 [reactor-http-epoll-3] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/tenants
+2026-05-02 12:40:48.633 [reactor-http-epoll-3] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/tenants took 6 ms
+2026-05-02 12:40:50.333 [reactor-http-epoll-3] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/tenants
+2026-05-02 12:40:50.359 [reactor-http-epoll-3] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/tenants took 26 ms
+2026-05-02 12:40:56.062 [reactor-http-epoll-3] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/tenants
+2026-05-02 12:40:56.067 [reactor-http-epoll-3] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/tenants took 5 ms
+2026-05-02 12:40:58.720 [reactor-http-epoll-3] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/tenants
+2026-05-02 12:40:58.726 [reactor-http-epoll-3] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/tenants took 6 ms
+2026-05-02 12:40:58.834 [reactor-http-epoll-1] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/tenants
+2026-05-02 12:40:58.840 [reactor-http-epoll-1] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/tenants took 6 ms
+2026-05-02 12:41:00.767 [reactor-http-epoll-3] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/tenants
+2026-05-02 12:41:00.773 [reactor-http-epoll-3] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/tenants took 6 ms
+2026-05-02 12:41:05.368 [reactor-http-epoll-3] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/crm/auth/loyalties/23806d36-39f1-4fa1-9117-c1a1d5fed7b3
+2026-05-02 12:41:05.379 [reactor-http-epoll-3] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/crm/auth/loyalties/23806d36-39f1-4fa1-9117-c1a1d5fed7b3 took 11 ms
+2026-05-02 12:44:25.165 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 12:49:25.166 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 12:54:25.166 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 12:59:25.166 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 13:04:05.877 [reactor-http-epoll-1] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/crm/customers
+2026-05-02 13:04:05.878 [reactor-http-epoll-4] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/context
+2026-05-02 13:04:05.964 [reactor-http-epoll-1] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/crm/customers took 87 ms
+2026-05-02 13:04:06.158 [reactor-http-epoll-4] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/context took 280 ms
+2026-05-02 13:04:07.073 [reactor-http-epoll-7] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/crm/customers
+2026-05-02 13:04:07.090 [reactor-http-epoll-7] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/crm/customers took 17 ms
+2026-05-02 13:04:09.120 [reactor-http-epoll-4] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/crm/customers
+2026-05-02 13:04:09.132 [reactor-http-epoll-4] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/crm/customers took 12 ms
+2026-05-02 13:04:10.587 [reactor-http-epoll-3] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/crm/customers
+2026-05-02 13:04:10.604 [reactor-http-epoll-3] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/crm/customers took 17 ms
+2026-05-02 13:04:11.627 [reactor-http-epoll-6] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/crm/customers
+2026-05-02 13:04:11.634 [reactor-http-epoll-6] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/crm/customers took 7 ms
+2026-05-02 13:04:13.649 [reactor-http-epoll-1] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/crm/customers
+2026-05-02 13:04:13.656 [reactor-http-epoll-1] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/crm/customers took 7 ms
+2026-05-02 13:04:25.167 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 13:04:25.852 [reactor-http-epoll-2] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/tenants/login
+2026-05-02 13:04:25.874 [reactor-http-epoll-2] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/tenants/login took 22 ms
+2026-05-02 13:04:26.055 [reactor-http-epoll-7] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/context
+2026-05-02 13:04:26.056 [reactor-http-epoll-6] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/crm/customers
+2026-05-02 13:04:26.067 [reactor-http-epoll-6] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/crm/customers took 11 ms
+2026-05-02 13:04:26.074 [reactor-http-epoll-7] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/context took 19 ms
+2026-05-02 13:04:27.085 [reactor-http-epoll-1] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/crm/customers
+2026-05-02 13:04:27.093 [reactor-http-epoll-1] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/crm/customers took 8 ms
+2026-05-02 13:04:29.106 [reactor-http-epoll-2] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/crm/customers
+2026-05-02 13:04:29.114 [reactor-http-epoll-2] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/crm/customers took 8 ms
+2026-05-02 13:04:31.829 [reactor-http-epoll-5] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/crm/customers
+2026-05-02 13:04:31.841 [reactor-http-epoll-5] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/crm/customers took 12 ms
+2026-05-02 13:04:32.855 [reactor-http-epoll-8] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/crm/customers
+2026-05-02 13:04:32.866 [reactor-http-epoll-8] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/crm/customers took 11 ms
+2026-05-02 13:04:34.878 [reactor-http-epoll-2] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/crm/customers
+2026-05-02 13:04:34.884 [reactor-http-epoll-2] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/crm/customers took 6 ms
+2026-05-02 13:04:37.222 [reactor-http-epoll-5] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/crm/customers
+2026-05-02 13:04:37.232 [reactor-http-epoll-5] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/crm/customers took 10 ms
+2026-05-02 13:04:38.246 [reactor-http-epoll-7] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/crm/customers
+2026-05-02 13:04:38.253 [reactor-http-epoll-7] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/crm/customers took 7 ms
+2026-05-02 13:04:40.264 [reactor-http-epoll-1] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/crm/customers
+2026-05-02 13:04:40.272 [reactor-http-epoll-1] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/crm/customers took 8 ms
+2026-05-02 13:04:45.434 [reactor-http-epoll-2] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/crm/customers
+2026-05-02 13:04:45.443 [reactor-http-epoll-2] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/crm/customers took 9 ms
+2026-05-02 13:04:45.873 [reactor-http-epoll-5] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/context
+2026-05-02 13:04:45.882 [reactor-http-epoll-5] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/context took 9 ms
+2026-05-02 13:04:46.487 [reactor-http-epoll-6] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/crm/customers
+2026-05-02 13:04:46.496 [reactor-http-epoll-6] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/crm/customers took 9 ms
+2026-05-02 13:04:48.508 [reactor-http-epoll-8] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/crm/customers
+2026-05-02 13:04:48.520 [reactor-http-epoll-8] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/crm/customers took 12 ms
+2026-05-02 13:05:15.907 [reactor-http-epoll-4] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/context
+2026-05-02 13:05:15.914 [reactor-http-epoll-4] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/context took 7 ms
+2026-05-02 13:09:25.167 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 13:14:25.167 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 13:18:12.887 [reactor-http-epoll-3] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/orders/tenant/228f8e0a-035c-47e0-8ac6-e30991748cf0
+2026-05-02 13:18:13.391 [reactor-http-epoll-3] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/orders/tenant/228f8e0a-035c-47e0-8ac6-e30991748cf0 took 504 ms
+2026-05-02 13:18:26.284 [reactor-http-epoll-6] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/orders/tenant/228f8e0a-035c-47e0-8ac6-e30991748cf0
+2026-05-02 13:18:26.301 [reactor-http-epoll-6] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/orders/tenant/228f8e0a-035c-47e0-8ac6-e30991748cf0 took 17 ms
+2026-05-02 13:19:25.171 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 13:24:25.172 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+
+********************************************************
+<<< SERVİS DURDURULDU: 2026-05-02 13:26:44
+********************************************************
+
+
+
+********************************************************
+>>> SERVİS BAŞLATILDI: 2026-05-02 13:29:08
+********************************************************
+
+Starting a Gradle Daemon, 52 busy and 9 stopped Daemons could not be reused, use --status for details
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :resolveMainClassName UP-TO-DATE
+
+> Task :bootRun
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.6)
+
+2026-05-02 13:29:25.686 [restartedMain] INFO  c.t.gateway.ApiGatewayApplication — Starting ApiGatewayApplication using Java 21.0.10 with PID 55425 (/home/tuna/Desktop/tavia_v2/tavia-api-gateway/build/classes/java/main started by tuna in /home/tuna/Desktop/tavia_v2/tavia-api-gateway)
+2026-05-02 13:29:25.690 [restartedMain] DEBUG c.t.gateway.ApiGatewayApplication — Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-02 13:29:25.691 [restartedMain] INFO  c.t.gateway.ApiGatewayApplication — No active profile set, falling back to 1 default profile: "default"
+2026-05-02 13:29:25.849 [restartedMain] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Fetching config from server at : http://localhost:8888
+2026-05-02 13:29:25.851 [restartedMain] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Located environment: name=tavia-api-gateway, profiles=[default], label=null, version=null, state=null
+2026-05-02 13:29:25.853 [restartedMain] DEBUG o.s.c.c.c.ConfigServerConfigDataLoader — Environment tavia-api-gateway has 2 property sources with 66 properties.
+2026-05-02 13:29:25.865 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor — Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-02 13:29:25.908 [background-preinit] INFO  o.h.validator.internal.util.Version — HV000001: Hibernate Validator 9.0.1.Final
+2026-05-02 13:29:27.267 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope — BeanFactory id=8ed1b725-f116-3aee-a5ef-99fa66868289
+2026-05-02 13:29:29.012 [restartedMain] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [After]
+2026-05-02 13:29:29.012 [restartedMain] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Before]
+2026-05-02 13:29:29.013 [restartedMain] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Between]
+2026-05-02 13:29:29.013 [restartedMain] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Cookie]
+2026-05-02 13:29:29.013 [restartedMain] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Header]
+2026-05-02 13:29:29.014 [restartedMain] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Host]
+2026-05-02 13:29:29.014 [restartedMain] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Method]
+2026-05-02 13:29:29.014 [restartedMain] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Path]
+2026-05-02 13:29:29.014 [restartedMain] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Query]
+2026-05-02 13:29:29.014 [restartedMain] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [ReadBody]
+2026-05-02 13:29:29.015 [restartedMain] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [RemoteAddr]
+2026-05-02 13:29:29.015 [restartedMain] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Version]
+2026-05-02 13:29:29.015 [restartedMain] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2026-05-02 13:29:29.015 [restartedMain] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Weight]
+2026-05-02 13:29:29.015 [restartedMain] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2026-05-02 13:29:29.355 [restartedMain] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration — Eureka HTTP Client uses RestClient.
+2026-05-02 13:29:29.413 [restartedMain] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger — Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-05-02 13:29:29.460 [restartedMain] INFO  o.s.c.n.eureka.InstanceInfoFactory — Setting initial instance status as: STARTING
+2026-05-02 13:29:29.496 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Initializing Eureka in region us-east-1
+2026-05-02 13:29:29.502 [restartedMain] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 13:29:29.514 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Disable delta property : false
+2026-05-02 13:29:29.515 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Single vip registry refresh property : null
+2026-05-02 13:29:29.515 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Force full registry fetch : false
+2026-05-02 13:29:29.515 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Application is null : false
+2026-05-02 13:29:29.515 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Registered Applications size is zero : true
+2026-05-02 13:29:29.515 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Application version is -1: true
+2026-05-02 13:29:29.515 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Getting all instance registry info from the eureka server
+2026-05-02 13:29:30.101 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — The response status is 200
+2026-05-02 13:29:30.104 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Starting heartbeat executor: renew interval is: 30
+2026-05-02 13:29:30.107 [restartedMain] INFO  c.n.discovery.InstanceInfoReplicator — InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-05-02 13:29:30.109 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Discovery Client initialized at timestamp 1777717770109 with initial instances count: 5
+2026-05-02 13:29:30.114 [restartedMain] INFO  o.s.c.n.e.s.EurekaServiceRegistry — Registering application TAVIA-API-GATEWAY with eureka with status UP
+2026-05-02 13:29:30.115 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Saw local status change event StatusChangeEvent [timestamp=1777717770115, current=UP, previous=STARTING]
+2026-05-02 13:29:30.118 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-API-GATEWAY/10.0.0.139:tavia-api-gateway:8080: registering service...
+2026-05-02 13:29:30.204 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-API-GATEWAY/10.0.0.139:tavia-api-gateway:8080 - registration status: 204
+2026-05-02 13:29:30.541 [restartedMain] INFO  o.s.b.reactor.netty.NettyWebServer — Netty started on port 8080 (http)
+2026-05-02 13:29:30.545 [restartedMain] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration — Updating port to 8080
+2026-05-02 13:29:30.578 [restartedMain] INFO  c.t.gateway.ApiGatewayApplication — Started ApiGatewayApplication in 6.079 seconds (process running for 6.945)
+2026-05-02 13:31:47.527 [reactor-http-epoll-4] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/orders/tenant/228f8e0a-035c-47e0-8ac6-e30991748cf0
+2026-05-02 13:31:48.592 [reactor-http-epoll-4] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/orders/tenant/228f8e0a-035c-47e0-8ac6-e30991748cf0 took 1065 ms
+2026-05-02 13:31:50.134 [reactor-http-epoll-8] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/orders/tenant/228f8e0a-035c-47e0-8ac6-e30991748cf0
+2026-05-02 13:31:50.162 [reactor-http-epoll-8] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/orders/tenant/228f8e0a-035c-47e0-8ac6-e30991748cf0 took 28 ms
+2026-05-02 13:31:53.188 [reactor-http-epoll-1] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/crm/customers
+2026-05-02 13:31:53.207 [reactor-http-epoll-3] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/context
+2026-05-02 13:31:53.469 [reactor-http-epoll-3] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/context took 262 ms
+2026-05-02 13:31:54.161 [reactor-http-epoll-1] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/crm/customers took 973 ms
+2026-05-02 13:32:04.668 [reactor-http-epoll-7] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/inventory/tenant/228f8e0a-035c-47e0-8ac6-e30991748cf0
+2026-05-02 13:32:05.465 [reactor-http-epoll-7] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/inventory/tenant/228f8e0a-035c-47e0-8ac6-e30991748cf0 took 797 ms
+2026-05-02 13:32:09.310 [reactor-http-epoll-5] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/orders/tenant/228f8e0a-035c-47e0-8ac6-e30991748cf0
+2026-05-02 13:32:09.324 [reactor-http-epoll-5] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/orders/tenant/228f8e0a-035c-47e0-8ac6-e30991748cf0 took 14 ms
+2026-05-02 13:32:10.483 [reactor-http-epoll-2] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/context
+2026-05-02 13:32:10.496 [reactor-http-epoll-2] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/context took 13 ms
+2026-05-02 13:32:16.054 [reactor-http-epoll-3] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/orders
+2026-05-02 13:32:17.469 [reactor-http-epoll-3] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/orders took 1415 ms
+2026-05-02 13:32:17.494 [reactor-http-epoll-4] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/context
+2026-05-02 13:32:17.495 [reactor-http-epoll-6] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/crm/customers
+2026-05-02 13:32:17.503 [reactor-http-epoll-4] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/context took 9 ms
+2026-05-02 13:32:17.511 [reactor-http-epoll-6] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/crm/customers took 16 ms
+2026-05-02 13:34:29.517 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 13:35:59.278 [reactor-http-epoll-8] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/context
+2026-05-02 13:35:59.278 [reactor-http-epoll-7] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/crm/customers
+2026-05-02 13:35:59.295 [reactor-http-epoll-8] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/context took 17 ms
+2026-05-02 13:35:59.348 [reactor-http-epoll-7] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/crm/customers took 70 ms
+2026-05-02 13:36:06.619 [reactor-http-epoll-3] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/orders/tenant/228f8e0a-035c-47e0-8ac6-e30991748cf0
+2026-05-02 13:36:06.642 [reactor-http-epoll-3] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/orders/tenant/228f8e0a-035c-47e0-8ac6-e30991748cf0 took 23 ms
+2026-05-02 13:38:18.787 [reactor-http-epoll-6] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/inventory/tenant/228f8e0a-035c-47e0-8ac6-e30991748cf0
+2026-05-02 13:38:18.818 [reactor-http-epoll-6] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/inventory/tenant/228f8e0a-035c-47e0-8ac6-e30991748cf0 took 31 ms
+2026-05-02 13:39:29.518 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 13:44:29.518 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 13:49:29.519 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 13:54:29.521 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 13:59:29.526 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 13:59:30.773 [reactor-http-epoll-2] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/inventory/tenant/228f8e0a-035c-47e0-8ac6-e30991748cf0
+2026-05-02 13:59:30.932 [reactor-http-epoll-2] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/inventory/tenant/228f8e0a-035c-47e0-8ac6-e30991748cf0 took 159 ms
+2026-05-02 14:00:46.526 [reactor-http-epoll-6] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/inventory/tenant/228f8e0a-035c-47e0-8ac6-e30991748cf0
+2026-05-02 14:00:46.545 [reactor-http-epoll-6] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/inventory/tenant/228f8e0a-035c-47e0-8ac6-e30991748cf0 took 19 ms

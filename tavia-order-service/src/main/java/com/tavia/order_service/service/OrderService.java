@@ -10,4 +10,6 @@ public interface OrderService {
     OrderDto createOrder(CreateOrderRequest request);
     OrderDto getOrderById(UUID id);
     List<OrderDto> getAllOrders();
+    List<OrderDto> getOrdersByTenantId(UUID tenantId);
+    long countOrdersByTenantId(UUID tenantId);
 }

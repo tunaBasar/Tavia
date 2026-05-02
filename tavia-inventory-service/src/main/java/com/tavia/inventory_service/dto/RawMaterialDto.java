@@ -1,5 +1,6 @@
 package com.tavia.inventory_service.dto;
 
+import com.tavia.inventory_service.enums.UnitType;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.PositiveOrZero;
@@ -14,19 +15,18 @@ import java.util.UUID;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class InventoryItemDto {
+public class RawMaterialDto {
     private UUID id;
 
-    @NotNull(message = "Tenant ID is required")
     private UUID tenantId;
 
-    @NotBlank(message = "Product name is required")
-    private String productName;
+    @NotBlank(message = "Raw material name is required")
+    private String name;
 
-    @NotNull(message = "Quantity is required")
-    @PositiveOrZero(message = "Quantity must be zero or positive")
-    private Double quantity;
+    @NotNull(message = "Unit type is required")
+    private UnitType unit;
 
-    @NotBlank(message = "Unit is required")
-    private String unit;
+    @NotNull(message = "Stock quantity is required")
+    @PositiveOrZero(message = "Stock quantity must be zero or positive")
+    private Double stockQuantity;
 }

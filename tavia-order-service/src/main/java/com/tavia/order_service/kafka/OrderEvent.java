@@ -7,6 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
+import java.util.List;
 import java.util.UUID;
 
 @Data
@@ -28,4 +29,17 @@ public class OrderEvent {
     private String weather;
     private String activeEvent;
     private String competitorIntensity;
+
+    // Recipe-resolved raw material deductions for inventory-service consumer
+    private List<RawMaterialDeduction> deductions;
+
+    @Data
+    @Builder
+    @NoArgsConstructor
+    @AllArgsConstructor
+    public static class RawMaterialDeduction {
+        private String rawMaterialName;
+        private Double quantity;
+        private String unit;
+    }
 }

@@ -4,6 +4,10 @@
 # 🚀 TAVIA V2 - MİKROSERVİS BAŞLATMA SIRASI
 # ==========================================
 
+# --- SİSTEM KAYNAK YÖNETİMİ (RAM SINIRLAMASI) ---
+# Her servis için Başlangıç: 128MB, Maksimum: 384MB
+SPRING_JVM_ARGS="-Xms128m -Xmx384m"
+
 SERVICES=(
   # 0. FAZ: Sistemin Beyni ve Haritası
   "tavia-config-service"
@@ -33,6 +37,7 @@ SERVICES=(
 BASE_DIR=$(pwd)
 LOG_DIR="$BASE_DIR/logs"
 PID_DIR="$BASE_DIR/pids"
+ERR_DIR="$LOG_DIR/errors"
 
 # Renkler
 GREEN='\033[0;32m'
@@ -43,7 +48,8 @@ CYAN='\033[0;36m'
 MAGENTA='\033[0;35m'
 NC='\033[0m'
 
-mkdir -p "$LOG_DIR" "$LOG_DIR/errors" "$PID_DIR"
+# Klasörleri oluştur
+mkdir -p "$LOG_DIR" "$ERR_DIR" "$PID_DIR"
 
 function build_service() {
     local svc=$1
@@ -63,21 +69,29 @@ function build_service() {
 
 function start_service() {
     local svc=$1
+    local log_file="$LOG_DIR/$svc.log"
+    local err_file="$ERR_DIR/$svc-error.log"
+    
     if [ -d "$BASE_DIR/$svc" ]; then
         if [ -f "$PID_DIR/$svc.pid" ] && ps -p $(cat "$PID_DIR/$svc.pid") > /dev/null; then
             echo -e "${YELLOW}⚠️ $svc zaten çalışıyor.${NC}"
         else
-            echo -e "${BLUE}🚀 $svc başlatılıyor...${NC}"
+            echo -e "${BLUE}🚀 $svc başlatılıyor (Max RAM: 384MB)...${NC}"
             
-            # Başlatma Damgası (>> ile ekleniyor)
-            echo -e "\n\n********************************************************" >> "$LOG_DIR/$svc.log"
-            echo -e ">>> SERVİS BAŞLATILDI: $(date '+%Y-%m-%d %H:%M:%S')" >> "$LOG_DIR/$svc.log"
-            echo -e "********************************************************\n" >> "$LOG_DIR/$svc.log"
+            # --- NORMAL LOG DAMGASI ---
+            echo -e "\n\n********************************************************" >> "$log_file"
+            echo -e ">>> SERVİS BAŞLATILDI: $(date '+%Y-%m-%d %H:%M:%S')" >> "$log_file"
+            echo -e "********************************************************\n" >> "$log_file"
+            
+            # --- ERROR LOG DAMGASI ---
+            echo -e "\n\n********************************************************" >> "$err_file"
+            echo -e ">>> SERVİS BAŞLATILDI: $(date '+%Y-%m-%d %H:%M:%S')" >> "$err_file"
+            echo -e "********************************************************\n" >> "$err_file"
             
             cd "$BASE_DIR/$svc"
             
-            # İŞTE HAYAT KURTARAN DÜZELTME BURADA: > yerine >> kullanıyoruz!
-            nohup ./gradlew bootRun >> "$LOG_DIR/$svc.log" 2>&1 &
+            # stdout (1) normal loga, stderr (2) error loga yönlendiriliyor
+            nohup ./gradlew bootRun -Dspring-boot.run.jvmArguments="$SPRING_JVM_ARGS" >> "$log_file" 2>> "$err_file" &
             local new_pid=$!
             echo $new_pid > "$PID_DIR/$svc.pid"
             
@@ -85,10 +99,10 @@ function start_service() {
             sleep 7
             
             if ! ps -p $new_pid > /dev/null; then
-                echo -e "${RED}❌ $svc ÇÖKTÜ! Başlatılamadı. Logları incele: ./tavia.sh logs $svc${NC}"
+                echo -e "${RED}❌ $svc ÇÖKTÜ! Başlatılamadı. Hata logunu incele: tail -f $err_file${NC}"
                 rm -f "$PID_DIR/$svc.pid"
-            elif grep -qi "ERROR" "$LOG_DIR/$svc.log"; then
-                echo -e "${RED}⚠️ $svc çalışıyor ama loglarda HATA (ERROR) var!${NC}"
+            elif grep -qi "ERROR" "$log_file" || [ -s "$err_file" ] && grep -qi "[a-zA-Z]" "$err_file"; then
+                echo -e "${RED}⚠️ $svc çalışıyor ama loglarda HATA (ERROR) veya uyarı var!${NC}"
             else
                 echo -e "${GREEN}✅ $svc PID: $new_pid ile aktif.${NC}"
             fi
@@ -100,14 +114,22 @@ function start_service() {
 
 function stop_service() {
     local svc=$1
+    local log_file="$LOG_DIR/$svc.log"
+    local err_file="$ERR_DIR/$svc-error.log"
+    
     if [ -f "$PID_DIR/$svc.pid" ]; then
         pid=$(cat "$PID_DIR/$svc.pid")
         echo -e "${RED}🛑 $svc durduruluyor...${NC}"
         
-        # Durdurma Damgası (>> ile ekleniyor)
-        echo -e "\n********************************************************" >> "$LOG_DIR/$svc.log"
-        echo -e "<<< SERVİS DURDURULDU: $(date '+%Y-%m-%d %H:%M:%S')" >> "$LOG_DIR/$svc.log"
-        echo -e "********************************************************\n" >> "$LOG_DIR/$svc.log"
+        # --- NORMAL LOG DAMGASI ---
+        echo -e "\n********************************************************" >> "$log_file"
+        echo -e "<<< SERVİS DURDURULDU: $(date '+%Y-%m-%d %H:%M:%S')" >> "$log_file"
+        echo -e "********************************************************\n" >> "$log_file"
+        
+        # --- ERROR LOG DAMGASI ---
+        echo -e "\n********************************************************" >> "$err_file"
+        echo -e "<<< SERVİS DURDURULDU: $(date '+%Y-%m-%d %H:%M:%S')" >> "$err_file"
+        echo -e "********************************************************\n" >> "$err_file"
         
         kill -9 $pid 2>/dev/null || true
         rm -f "$PID_DIR/$svc.pid"
@@ -156,9 +178,14 @@ case "$1" in
         done 
         ;;
     logs) 
-        tail -f "$LOG_DIR/$2.log" 
+        if [ "$3" == "error" ]; then
+            tail -f "$ERR_DIR/$2-error.log"
+        else
+            tail -f "$LOG_DIR/$2.log" 
+        fi
         ;;
     *) 
-        echo -e "${CYAN}Kullanım: ./tavia.sh {build|start|stop|status|logs} {servis-adı|all}${NC}" 
+        echo -e "${CYAN}Kullanım: ./tavia.sh {build|start|stop|status|logs} {servis-adı|all} [error]${NC}"
+        echo -e "${CYAN}Örnek Hata Logu İzleme: ./tavia.sh logs tavia-crm-service error${NC}"
         ;;
 esac

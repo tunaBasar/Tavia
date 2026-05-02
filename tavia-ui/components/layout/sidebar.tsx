@@ -6,6 +6,7 @@ import {
   LayoutDashboard,
   Users,
   ShoppingCart,
+  Package,
   Brain,
   Hexagon,
   LogOut,
@@ -30,6 +31,11 @@ const navItems = [
     label: "Orders",
     href: "/orders",
     icon: ShoppingCart,
+  },
+  {
+    label: "Inventory",
+    href: "/inventory",
+    icon: Package,
   },
   {
     label: "AI Insights",
