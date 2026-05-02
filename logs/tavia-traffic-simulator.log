@@ -374,3 +374,96 @@ Identify and stop the process that's listening on port 8080 or configure this ap
 BUILD SUCCESSFUL in 18s
 4 actionable tasks: 1 executed, 3 up-to-date
 Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.4.1/userguide/configuration_cache_enabling.html
+
+
+********************************************************
+>>> SERVİS BAŞLATILDI: 2026-05-02 14:38:30
+********************************************************
+
+Starting a Gradle Daemon, 62 busy and 1 incompatible and 1 stopped Daemons could not be reused, use --status for details
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :resolveMainClassName UP-TO-DATE
+
+> Task :bootRun
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.6)
+
+2026-05-02 14:38:37.305 [restartedMain] INFO  c.t.t.TrafficSimulatorApplication — Starting TrafficSimulatorApplication using Java 21.0.10 with PID 26980 (/home/tuna/Desktop/tavia_v2/tavia-traffic-simulator/build/classes/java/main started by tuna in /home/tuna/Desktop/tavia_v2/tavia-traffic-simulator)
+2026-05-02 14:38:37.307 [restartedMain] DEBUG c.t.t.TrafficSimulatorApplication — Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-02 14:38:37.308 [restartedMain] INFO  c.t.t.TrafficSimulatorApplication — No active profile set, falling back to 1 default profile: "default"
+2026-05-02 14:38:37.336 [restartedMain] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Fetching config from server at : http://localhost:8888
+2026-05-02 14:38:37.336 [restartedMain] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Located environment: name=tavia-traffic-simulator, profiles=[default], label=null, version=null, state=null
+2026-05-02 14:38:37.337 [restartedMain] DEBUG o.s.c.c.c.ConfigServerConfigDataLoader — Environment tavia-traffic-simulator has 2 property sources with 24 properties.
+2026-05-02 14:38:37.339 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor — Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-02 14:38:37.339 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor — For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-02 14:38:37.785 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope — BeanFactory id=37fc33d7-714e-3717-a222-65be81f8c0fe
+2026-05-02 14:38:38.026 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer — Tomcat initialized with port 8080 (http)
+2026-05-02 14:38:38.035 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol — Initializing ProtocolHandler ["http-nio-8080"]
+2026-05-02 14:38:38.036 [restartedMain] INFO  o.a.catalina.core.StandardService — Starting service [Tomcat]
+2026-05-02 14:38:38.036 [restartedMain] INFO  o.a.catalina.core.StandardEngine — Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-02 14:38:38.067 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer — Root WebApplicationContext: initialization completed in 727 ms
+2026-05-02 14:38:38.484 [restartedMain] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration — Eureka HTTP Client uses RestClient.
+2026-05-02 14:38:38.508 [restartedMain] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger — Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-05-02 14:38:38.524 [restartedMain] INFO  o.s.c.n.eureka.InstanceInfoFactory — Setting initial instance status as: STARTING
+2026-05-02 14:38:38.538 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Initializing Eureka in region us-east-1
+2026-05-02 14:38:38.540 [restartedMain] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 14:38:38.545 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Disable delta property : false
+2026-05-02 14:38:38.545 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Single vip registry refresh property : null
+2026-05-02 14:38:38.545 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Force full registry fetch : false
+2026-05-02 14:38:38.545 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Application is null : false
+2026-05-02 14:38:38.545 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Registered Applications size is zero : true
+2026-05-02 14:38:38.545 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Application version is -1: true
+2026-05-02 14:38:38.545 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Getting all instance registry info from the eureka server
+2026-05-02 14:38:38.748 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — The response status is 200
+2026-05-02 14:38:38.749 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Starting heartbeat executor: renew interval is: 30
+2026-05-02 14:38:38.751 [restartedMain] INFO  c.n.discovery.InstanceInfoReplicator — InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-05-02 14:38:38.751 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Discovery Client initialized at timestamp 1777721918751 with initial instances count: 7
+2026-05-02 14:38:38.753 [restartedMain] INFO  o.s.c.n.e.s.EurekaServiceRegistry — Registering application TAVIA-TRAFFIC-SIMULATOR with eureka with status UP
+2026-05-02 14:38:38.754 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Saw local status change event StatusChangeEvent [timestamp=1777721918754, current=UP, previous=STARTING]
+2026-05-02 14:38:38.755 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-TRAFFIC-SIMULATOR/10.0.0.139:tavia-traffic-simulator: registering service...
+2026-05-02 14:38:38.755 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol — Starting ProtocolHandler ["http-nio-8080"]
+2026-05-02 14:38:38.760 [restartedMain] INFO  o.s.c.n.e.s.EurekaServiceRegistry — Unregistering application TAVIA-TRAFFIC-SIMULATOR with eureka with status DOWN
+2026-05-02 14:38:38.760 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Saw local status change event StatusChangeEvent [timestamp=1777721918760, current=DOWN, previous=UP]
+2026-05-02 14:38:38.760 [restartedMain] WARN  o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext — Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-05-02 14:38:38.762 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Shutting down DiscoveryClient ...
+2026-05-02 14:38:38.779 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-TRAFFIC-SIMULATOR/10.0.0.139:tavia-traffic-simulator - registration status: 204
+2026-05-02 14:38:38.779 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-TRAFFIC-SIMULATOR/10.0.0.139:tavia-traffic-simulator: registering service...
+2026-05-02 14:38:38.783 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-TRAFFIC-SIMULATOR/10.0.0.139:tavia-traffic-simulator - registration status: 204
+2026-05-02 14:38:38.783 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Unregistering ...
+2026-05-02 14:38:38.788 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-TRAFFIC-SIMULATOR/10.0.0.139:tavia-traffic-simulator - deregister  status: 200
+2026-05-02 14:38:38.788 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Completed shut down of DiscoveryClient
+2026-05-02 14:38:38.795 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger — 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-05-02 14:38:38.805 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter — 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+
+BUILD SUCCESSFUL in 8s
+4 actionable tasks: 1 executed, 3 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.4.1/userguide/configuration_cache_enabling.html
+
+********************************************************
+<<< SERVİS DURDURULDU: 2026-05-02 14:48:39
+********************************************************
+

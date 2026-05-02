@@ -9,6 +9,7 @@ import type {
   CreateOrderPayload,
   CreateCustomerRequest,
   InventoryItem,
+  Product,
 } from "@/types";
 
 const BASE_URL = "/api";
@@ -193,4 +194,39 @@ export async function fetchOrderCount(tenantId: string) {
   return request<ApiResponse<number>>(`/orders/tenant/${tenantId}/count`);
 }
 
+// ─── Catalog / Product endpoints ─────────────────────────────────
+
+/**
+ * GET /api/v1/catalog/recipes/active
+ * Backend: CatalogController#getActiveRecipes(@RequestHeader("X-Tenant-ID") UUID tenantId)
+ * Returns only active (available) products for the tenant's menu.
+ */
+export async function fetchActiveProducts(tenantId: string) {
+  return request<ApiResponse<Product[]>>("/catalog/recipes/active", {
+    headers: tenantHeaders(tenantId),
+  });
+}
+
+/**
+ * GET /api/v1/catalog/recipes
+ * Backend: CatalogController#getAllRecipes(@RequestHeader("X-Tenant-ID") UUID tenantId)
+ * Returns all products (active + inactive) for the tenant catalog management view.
+ */
+export async function fetchAllProducts(tenantId: string) {
+  return request<ApiResponse<Product[]>>("/catalog/recipes", {
+    headers: tenantHeaders(tenantId),
+  });
+}
+
+/**
+ * GET /api/v1/catalog/recipes/{recipeId}
+ * Backend: CatalogController#getRecipeById(@RequestHeader("X-Tenant-ID") UUID, @PathVariable UUID)
+ */
+export async function fetchProductById(tenantId: string, productId: string) {
+  return request<ApiResponse<Product>>(`/catalog/recipes/${productId}`, {
+    headers: tenantHeaders(tenantId),
+  });
+}
+
 export { ApiError };
+

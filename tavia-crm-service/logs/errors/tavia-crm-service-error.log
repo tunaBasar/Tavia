@@ -1723,3 +1723,39 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at java.base/java.lang.Thread.run(Thread.java:1583)
 2026-05-02 13:32:16.316 [http-nio-8086-exec-2] ERROR c.t.c.e.GlobalExceptionHandler — [TraceId: ae1904b4-0cc1-46f8-995f-1e237bcb51cc] Resource Not Found: Customer not found with id: 7c9e6679-7425-40de-944b-e07fc1f90ae7
 2026-05-02 13:32:16.367 [http-nio-8086-exec-3] ERROR c.t.c.e.GlobalExceptionHandler — [TraceId: cf7446fe-ce01-425c-b08d-7d0cd4a22973] Resource Not Found: Customer not found with id: 7c9e6679-7425-40de-944b-e07fc1f90ae7
+2026-05-02 14:39:13.875 [http-nio-8086-exec-2] ERROR c.t.c.e.GlobalExceptionHandler — [TraceId: 7f251379-843d-45d1-ba13-f20d76881501] Resource Not Found: Customer not found with id: 7c9e6679-7425-40de-944b-e07fc1f90ae7
+2026-05-02 14:39:13.893 [http-nio-8086-exec-3] ERROR c.t.c.e.GlobalExceptionHandler — [TraceId: fa3c08a0-57f0-4a2c-8000-b84e439d51ae] Resource Not Found: Customer not found with id: 7c9e6679-7425-40de-944b-e07fc1f90ae7
+2026-05-02 14:39:16.173 [http-nio-8086-exec-5] ERROR c.t.c.e.GlobalExceptionHandler — [TraceId: a59aba03-8775-411d-a67b-97403074fbf0] Resource Not Found: Customer not found with id: 7c9e6679-7425-40de-944b-e07fc1f90ae7
+2026-05-02 14:39:16.179 [http-nio-8086-exec-6] ERROR c.t.c.e.GlobalExceptionHandler — [TraceId: 9d7c66e1-c587-4d1d-9aee-454802bc6cbf] Resource Not Found: Customer not found with id: 7c9e6679-7425-40de-944b-e07fc1f90ae7
+2026-05-02 14:48:42.453 [SpringApplicationShutdownHook] ERROR c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-CRM-SERVICE/10.0.0.139:tavia-crm-service:8086 - de-registration failedCannot execute request on any known server
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:919)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:900)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:453)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:411)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:237)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:200)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:193)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:387)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:134)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:209)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:795)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:745)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1500)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:704)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1493)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1246)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1207)
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:176)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1153)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:147)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:116)
+	at java.base/java.lang.Thread.run(Thread.java:1583)

@@ -9,26 +9,28 @@
 SPRING_JVM_ARGS="-Xms128m -Xmx384m"
 
 SERVICES=(
-  # 0. FAZ: Sistemin Beyni ve Haritası
+  # 0. FAZ: Sistemin Beyni ve Haritası (Altyapı)
   "tavia-config-service"
   "tavia-discovery-service"
 
-  # 1. FAZ: Çekirdek Servisler 
+  # 1. FAZ: Çekirdek Servisler (Temel Veri ve Tanımlar)
   "tavia-tenant-service"
   "tavia-inventory-service"
+  "tavia-catalog-service"   # EKLENDİ: Reçete ve ürünlerin temeli. Order'dan önce kalkmalı!
   
-  # 2. FAZ: İş Mantığı Servisleri
+  # 2. FAZ: İş Mantığı ve Otonom İcra (Operasyon)
   "tavia-crm-service" 
-  "tavia-order-service" 
+  "tavia-order-service"     # Sipariş geldiğinde catalog-service'e soracak.
+  "tavia-iot-service"       # EKLENDİ: Fiziksel üretim katmanı. Inventory'ye Kafka event'i atacak.
   
-  # 3. FAZ: Veri İşleme ve Yapay Zeka
+  # 3. FAZ: Veri İşleme ve Yapay Zeka (Analiz ve Optimizasyon)
   "tavia-context-service"
   "tavia-ai-service" 
   
-  # 4. FAZ: Ağ Geçidi 
+  # 4. FAZ: Ağ Geçidi (Dışa Açılan Kapı)
   "tavia-api-gateway"
   
-  # 5. FAZ: Simülasyon
+  # 5. FAZ: Simülasyon (Sistemi Test Eden Aktörler)
   "tavia-traffic-simulator"
 )
 

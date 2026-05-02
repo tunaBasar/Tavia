@@ -10,6 +10,7 @@ import {
   Brain,
   Hexagon,
   LogOut,
+  Coffee,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useAuthStore } from "@/lib/store/use-auth-store";
@@ -31,6 +32,11 @@ const navItems = [
     label: "Orders",
     href: "/orders",
     icon: ShoppingCart,
+  },
+  {
+    label: "Products",
+    href: "/products",
+    icon: Coffee,
   },
   {
     label: "Inventory",

@@ -167,3 +167,42 @@ export interface AiFeedEntry {
   message: string;
   type: "price_adjustment" | "discount" | "alert" | "insight";
 }
+
+// ─── Catalog / Products (Recipe-Based BOM) ───────────────────────
+
+/**
+ * Product categories from tavia-catalog-service.
+ * Maps to backend enum: com.tavia.catalog_service.enums.ProductCategory
+ */
+export type ProductCategory =
+  | "ESPRESSO_BASED"
+  | "TEA"
+  | "COLD_BEVERAGE"
+  | "FOOD"
+  | "DESSERT";
+
+/**
+ * A single ingredient in a product's recipe (Bill of Materials).
+ * Maps to backend: RecipeIngredientDto
+ */
+export interface RecipeIngredient {
+  id: string;
+  rawMaterialName: string;
+  quantity: number;
+  unit: UnitType;
+}
+
+/**
+ * A product (recipe) definition in the tenant's catalog.
+ * Maps to backend: RecipeDto
+ * Domain note: "Recipe" in backend = "Product" in tenant UX.
+ */
+export interface Product {
+  id: string;
+  productName: string;
+  displayName: string;
+  category: ProductCategory;
+  description: string | null;
+  active: boolean;
+  ingredients: RecipeIngredient[];
+}
