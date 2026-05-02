@@ -1,0 +1,1175 @@
+
+
+********************************************************
+>>> SERVİS BAŞLATILDI: 2026-05-02 20:12:26
+********************************************************
+
+Starting a Gradle Daemon, 60 busy Daemons could not be reused, use --status for details
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :resolveMainClassName UP-TO-DATE
+
+> Task :bootRun
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.0)
+
+2026-05-02T20:12:33.905+03:00  INFO 122059 --- [tavia-iot-service] [  restartedMain] c.t.i.TaviaIotServiceApplication         : Starting TaviaIotServiceApplication using Java 25.0.1 with PID 122059 (/home/tuna/Desktop/tavia_v2/tavia-iot-service/build/classes/java/main started by tuna in /home/tuna/Desktop/tavia_v2/tavia-iot-service)
+2026-05-02T20:12:33.907+03:00 DEBUG 122059 --- [tavia-iot-service] [  restartedMain] c.t.i.TaviaIotServiceApplication         : Running with Spring Boot v4.0.0, Spring v7.0.1
+2026-05-02T20:12:33.907+03:00  INFO 122059 --- [tavia-iot-service] [  restartedMain] c.t.i.TaviaIotServiceApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-05-02T20:12:33.951+03:00  INFO 122059 --- [tavia-iot-service] [  restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2026-05-02T20:12:33.951+03:00  INFO 122059 --- [tavia-iot-service] [  restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=tavia-iot-service, profiles=[default], label=null, version=null, state=null
+2026-05-02T20:12:33.951+03:00 DEBUG 122059 --- [tavia-iot-service] [  restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Environment tavia-iot-service has 2 property sources with 42 properties.
+2026-05-02T20:12:33.953+03:00  INFO 122059 --- [tavia-iot-service] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-02T20:12:33.953+03:00  INFO 122059 --- [tavia-iot-service] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-02T20:12:34.527+03:00  INFO 122059 --- [tavia-iot-service] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-02T20:12:34.540+03:00  INFO 122059 --- [tavia-iot-service] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
+2026-05-02T20:12:34.721+03:00  INFO 122059 --- [tavia-iot-service] [  restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d8ce3003-e7d9-34c6-8d63-68d317602f68
+2026-05-02T20:12:35.110+03:00  INFO 122059 --- [tavia-iot-service] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8089 (http)
+2026-05-02T20:12:35.119+03:00  INFO 122059 --- [tavia-iot-service] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-02T20:12:35.119+03:00  INFO 122059 --- [tavia-iot-service] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.14]
+2026-05-02T20:12:35.143+03:00  INFO 122059 --- [tavia-iot-service] [  restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1188 ms
+2026-05-02T20:12:35.356+03:00  INFO 122059 --- [tavia-iot-service] [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-05-02T20:12:35.389+03:00  INFO 122059 --- [tavia-iot-service] [  restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.8.Final
+2026-05-02T20:12:35.675+03:00  INFO 122059 --- [tavia-iot-service] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-02T20:12:35.697+03:00  INFO 122059 --- [tavia-iot-service] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-02T20:12:35.781+03:00  INFO 122059 --- [tavia-iot-service] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7284b068
+2026-05-02T20:12:35.782+03:00  INFO 122059 --- [tavia-iot-service] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-02T20:12:35.801+03:00  WARN 122059 --- [tavia-iot-service] [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-02T20:12:35.815+03:00  INFO 122059 --- [tavia-iot-service] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/tavia_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.17
+	Default catalog/schema: tavia_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-02T20:12:36.118+03:00  INFO 122059 --- [tavia-iot-service] [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-02T20:12:36.124+03:00 DEBUG 122059 --- [tavia-iot-service] [  restartedMain] .h.t.s.s.SchemaManagementToolCoordinator : No schema management actions found
+2026-05-02T20:12:36.126+03:00  INFO 122059 --- [tavia-iot-service] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-02T20:12:36.173+03:00  WARN 122059 --- [tavia-iot-service] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-02T20:12:36.679+03:00  INFO 122059 --- [tavia-iot-service] [  restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
+2026-05-02T20:12:36.709+03:00  WARN 122059 --- [tavia-iot-service] [  restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-05-02T20:12:36.715+03:00  INFO 122059 --- [tavia-iot-service] [  restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-02T20:12:36.774+03:00  INFO 122059 --- [tavia-iot-service] [  restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-05-02T20:12:36.789+03:00  INFO 122059 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-05-02T20:12:36.792+03:00  INFO 122059 --- [tavia-iot-service] [  restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-05-02T20:12:36.796+03:00  INFO 122059 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-05-02T20:12:36.797+03:00  INFO 122059 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-05-02T20:12:36.797+03:00  INFO 122059 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-05-02T20:12:36.797+03:00  INFO 122059 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-05-02T20:12:36.797+03:00  INFO 122059 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-05-02T20:12:36.797+03:00  INFO 122059 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-05-02T20:12:36.797+03:00  INFO 122059 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-05-02T20:12:37.016+03:00  INFO 122059 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-05-02T20:12:37.018+03:00  INFO 122059 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-05-02T20:12:37.019+03:00  INFO 122059 --- [tavia-iot-service] [  restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-05-02T20:12:37.020+03:00  INFO 122059 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1777741957019 with initial instances count: 5
+2026-05-02T20:12:37.023+03:00  INFO 122059 --- [tavia-iot-service] [  restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application TAVIA-IOT-SERVICE with eureka with status UP
+2026-05-02T20:12:37.023+03:00  INFO 122059 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1777741957023, current=UP, previous=STARTING]
+2026-05-02T20:12:37.024+03:00  INFO 122059 --- [tavia-iot-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TAVIA-IOT-SERVICE/10.0.0.139:tavia-iot-service:8089: registering service...
+2026-05-02T20:12:37.034+03:00  INFO 122059 --- [tavia-iot-service] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8089 (http) with context path '/'
+2026-05-02T20:12:37.035+03:00  INFO 122059 --- [tavia-iot-service] [  restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8089
+2026-05-02T20:12:37.049+03:00  INFO 122059 --- [tavia-iot-service] [  restartedMain] c.t.i.TaviaIotServiceApplication         : Started TaviaIotServiceApplication in 3.706 seconds (process running for 4.194)
+2026-05-02T20:12:37.052+03:00  INFO 122059 --- [tavia-iot-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TAVIA-IOT-SERVICE/10.0.0.139:tavia-iot-service:8089 - registration status: 204
+2026-05-02T20:17:36.798+03:00  INFO 122059 --- [tavia-iot-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+
+********************************************************
+<<< SERVİS DURDURULDU: 2026-05-02 20:21:57
+********************************************************
+
+
+
+********************************************************
+>>> SERVİS BAŞLATILDI: 2026-05-02 20:30:39
+********************************************************
+
+Starting a Gradle Daemon, 60 busy and 11 stopped Daemons could not be reused, use --status for details
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :resolveMainClassName UP-TO-DATE
+
+> Task :bootRun
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.0)
+
+2026-05-02T20:30:47.796+03:00  INFO 132413 --- [tavia-iot-service] [  restartedMain] c.t.i.TaviaIotServiceApplication         : Starting TaviaIotServiceApplication using Java 25.0.1 with PID 132413 (/home/tuna/Desktop/tavia_v2/tavia-iot-service/build/classes/java/main started by tuna in /home/tuna/Desktop/tavia_v2/tavia-iot-service)
+2026-05-02T20:30:47.798+03:00 DEBUG 132413 --- [tavia-iot-service] [  restartedMain] c.t.i.TaviaIotServiceApplication         : Running with Spring Boot v4.0.0, Spring v7.0.1
+2026-05-02T20:30:47.799+03:00  INFO 132413 --- [tavia-iot-service] [  restartedMain] c.t.i.TaviaIotServiceApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-05-02T20:30:47.848+03:00  INFO 132413 --- [tavia-iot-service] [  restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2026-05-02T20:30:47.848+03:00  INFO 132413 --- [tavia-iot-service] [  restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=tavia-iot-service, profiles=[default], label=null, version=null, state=null
+2026-05-02T20:30:47.848+03:00 DEBUG 132413 --- [tavia-iot-service] [  restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Environment tavia-iot-service has 2 property sources with 42 properties.
+2026-05-02T20:30:47.851+03:00  INFO 132413 --- [tavia-iot-service] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-02T20:30:47.851+03:00  INFO 132413 --- [tavia-iot-service] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-02T20:30:48.481+03:00  INFO 132413 --- [tavia-iot-service] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-02T20:30:48.495+03:00  INFO 132413 --- [tavia-iot-service] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 JPA repository interfaces.
+2026-05-02T20:30:48.696+03:00  INFO 132413 --- [tavia-iot-service] [  restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d8ce3003-e7d9-34c6-8d63-68d317602f68
+2026-05-02T20:30:49.128+03:00  INFO 132413 --- [tavia-iot-service] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8089 (http)
+2026-05-02T20:30:49.138+03:00  INFO 132413 --- [tavia-iot-service] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-02T20:30:49.138+03:00  INFO 132413 --- [tavia-iot-service] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.14]
+2026-05-02T20:30:49.164+03:00  INFO 132413 --- [tavia-iot-service] [  restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1312 ms
+2026-05-02T20:30:49.401+03:00  INFO 132413 --- [tavia-iot-service] [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-05-02T20:30:49.444+03:00  INFO 132413 --- [tavia-iot-service] [  restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.8.Final
+2026-05-02T20:30:49.756+03:00  INFO 132413 --- [tavia-iot-service] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-02T20:30:49.785+03:00  INFO 132413 --- [tavia-iot-service] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-02T20:30:49.871+03:00  INFO 132413 --- [tavia-iot-service] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@69bdf987
+2026-05-02T20:30:49.872+03:00  INFO 132413 --- [tavia-iot-service] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-02T20:30:49.892+03:00  WARN 132413 --- [tavia-iot-service] [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-02T20:30:49.906+03:00  INFO 132413 --- [tavia-iot-service] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/tavia_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.17
+	Default catalog/schema: tavia_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-02T20:30:50.219+03:00  INFO 132413 --- [tavia-iot-service] [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-02T20:30:50.227+03:00 DEBUG 132413 --- [tavia-iot-service] [  restartedMain] .h.t.s.s.SchemaManagementToolCoordinator : No schema management actions found
+2026-05-02T20:30:50.229+03:00  INFO 132413 --- [tavia-iot-service] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-02T20:30:50.279+03:00  WARN 132413 --- [tavia-iot-service] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-02T20:30:50.777+03:00  INFO 132413 --- [tavia-iot-service] [  restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
+2026-05-02T20:30:50.804+03:00  WARN 132413 --- [tavia-iot-service] [  restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-05-02T20:30:50.810+03:00  INFO 132413 --- [tavia-iot-service] [  restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-02T20:30:50.865+03:00  INFO 132413 --- [tavia-iot-service] [  restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-05-02T20:30:50.880+03:00  INFO 132413 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-05-02T20:30:50.882+03:00  INFO 132413 --- [tavia-iot-service] [  restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-05-02T20:30:50.887+03:00  INFO 132413 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-05-02T20:30:50.887+03:00  INFO 132413 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-05-02T20:30:50.887+03:00  INFO 132413 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-05-02T20:30:50.887+03:00  INFO 132413 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-05-02T20:30:50.887+03:00  INFO 132413 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-05-02T20:30:50.887+03:00  INFO 132413 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-05-02T20:30:50.887+03:00  INFO 132413 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-05-02T20:30:51.116+03:00  INFO 132413 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-05-02T20:30:51.117+03:00  INFO 132413 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-05-02T20:30:51.118+03:00  INFO 132413 --- [tavia-iot-service] [  restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-05-02T20:30:51.119+03:00  INFO 132413 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1777743051119 with initial instances count: 4
+2026-05-02T20:30:51.121+03:00  INFO 132413 --- [tavia-iot-service] [  restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application TAVIA-IOT-SERVICE with eureka with status UP
+2026-05-02T20:30:51.122+03:00  INFO 132413 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1777743051122, current=UP, previous=STARTING]
+2026-05-02T20:30:51.123+03:00  INFO 132413 --- [tavia-iot-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TAVIA-IOT-SERVICE/10.0.0.139:tavia-iot-service:8089: registering service...
+2026-05-02T20:30:51.131+03:00  INFO 132413 --- [tavia-iot-service] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8089 (http) with context path '/'
+2026-05-02T20:30:51.132+03:00  INFO 132413 --- [tavia-iot-service] [  restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8089
+2026-05-02T20:30:51.145+03:00  INFO 132413 --- [tavia-iot-service] [  restartedMain] c.t.i.TaviaIotServiceApplication         : Started TaviaIotServiceApplication in 3.948 seconds (process running for 4.433)
+2026-05-02T20:30:51.149+03:00  INFO 132413 --- [tavia-iot-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TAVIA-IOT-SERVICE/10.0.0.139:tavia-iot-service:8089 - registration status: 204
+2026-05-02T20:34:10.033+03:00  WARN 132413 --- [tavia-iot-service] [l-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@1d8d518a (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-02T20:34:16.541+03:00  WARN 132413 --- [tavia-iot-service] [l-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@59acf3ca (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-02T20:34:21.650+03:00  WARN 132413 --- [tavia-iot-service] [l-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@7fc5569e (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-02T20:34:26.754+03:00  WARN 132413 --- [tavia-iot-service] [l-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@69bdf987 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+
+
+********************************************************
+>>> SERVİS BAŞLATILDI: 2026-05-02 20:38:56
+********************************************************
+
+Starting a Gradle Daemon, 71 busy and 12 stopped Daemons could not be reused, use --status for details
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :resolveMainClassName UP-TO-DATE
+
+> Task :bootRun
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.0)
+
+2026-05-02T20:39:04.487+03:00  INFO 12733 --- [tavia-iot-service] [  restartedMain] c.t.i.TaviaIotServiceApplication         : Starting TaviaIotServiceApplication using Java 25.0.1 with PID 12733 (/home/tuna/Desktop/tavia_v2/tavia-iot-service/build/classes/java/main started by tuna in /home/tuna/Desktop/tavia_v2/tavia-iot-service)
+2026-05-02T20:39:04.489+03:00 DEBUG 12733 --- [tavia-iot-service] [  restartedMain] c.t.i.TaviaIotServiceApplication         : Running with Spring Boot v4.0.0, Spring v7.0.1
+2026-05-02T20:39:04.490+03:00  INFO 12733 --- [tavia-iot-service] [  restartedMain] c.t.i.TaviaIotServiceApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-05-02T20:39:04.533+03:00  INFO 12733 --- [tavia-iot-service] [  restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2026-05-02T20:39:04.533+03:00  INFO 12733 --- [tavia-iot-service] [  restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=tavia-iot-service, profiles=[default], label=null, version=null, state=null
+2026-05-02T20:39:04.533+03:00 DEBUG 12733 --- [tavia-iot-service] [  restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Environment tavia-iot-service has 2 property sources with 42 properties.
+2026-05-02T20:39:04.535+03:00  INFO 12733 --- [tavia-iot-service] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-02T20:39:04.535+03:00  INFO 12733 --- [tavia-iot-service] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-02T20:39:05.113+03:00  INFO 12733 --- [tavia-iot-service] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-02T20:39:05.126+03:00  INFO 12733 --- [tavia-iot-service] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
+2026-05-02T20:39:05.343+03:00  INFO 12733 --- [tavia-iot-service] [  restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d8ce3003-e7d9-34c6-8d63-68d317602f68
+2026-05-02T20:39:05.774+03:00  INFO 12733 --- [tavia-iot-service] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8089 (http)
+2026-05-02T20:39:05.784+03:00  INFO 12733 --- [tavia-iot-service] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-02T20:39:05.784+03:00  INFO 12733 --- [tavia-iot-service] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.14]
+2026-05-02T20:39:05.809+03:00  INFO 12733 --- [tavia-iot-service] [  restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1273 ms
+2026-05-02T20:39:06.054+03:00  INFO 12733 --- [tavia-iot-service] [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-05-02T20:39:06.124+03:00  INFO 12733 --- [tavia-iot-service] [  restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.8.Final
+2026-05-02T20:39:06.631+03:00  INFO 12733 --- [tavia-iot-service] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-02T20:39:06.663+03:00  INFO 12733 --- [tavia-iot-service] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-02T20:39:06.763+03:00  INFO 12733 --- [tavia-iot-service] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@69bdf987
+2026-05-02T20:39:06.764+03:00  INFO 12733 --- [tavia-iot-service] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-02T20:39:06.787+03:00  WARN 12733 --- [tavia-iot-service] [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-02T20:39:06.802+03:00  INFO 12733 --- [tavia-iot-service] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/tavia_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.17
+	Default catalog/schema: tavia_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-02T20:39:07.130+03:00  INFO 12733 --- [tavia-iot-service] [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-02T20:39:07.136+03:00 DEBUG 12733 --- [tavia-iot-service] [  restartedMain] .h.t.s.s.SchemaManagementToolCoordinator : No schema management actions found
+2026-05-02T20:39:07.138+03:00  INFO 12733 --- [tavia-iot-service] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-02T20:39:07.188+03:00  WARN 12733 --- [tavia-iot-service] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-02T20:39:07.717+03:00  INFO 12733 --- [tavia-iot-service] [  restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
+2026-05-02T20:39:07.755+03:00  WARN 12733 --- [tavia-iot-service] [  restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-05-02T20:39:07.763+03:00  INFO 12733 --- [tavia-iot-service] [  restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-02T20:39:07.833+03:00  INFO 12733 --- [tavia-iot-service] [  restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-05-02T20:39:07.851+03:00  INFO 12733 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-05-02T20:39:07.854+03:00  INFO 12733 --- [tavia-iot-service] [  restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-05-02T20:39:07.860+03:00  INFO 12733 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-05-02T20:39:07.860+03:00  INFO 12733 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-05-02T20:39:07.860+03:00  INFO 12733 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-05-02T20:39:07.860+03:00  INFO 12733 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-05-02T20:39:07.860+03:00  INFO 12733 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-05-02T20:39:07.860+03:00  INFO 12733 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-05-02T20:39:07.861+03:00  INFO 12733 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-05-02T20:39:08.132+03:00  INFO 12733 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-05-02T20:39:08.133+03:00  INFO 12733 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-05-02T20:39:08.134+03:00  INFO 12733 --- [tavia-iot-service] [  restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-05-02T20:39:08.135+03:00  INFO 12733 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1777743548135 with initial instances count: 5
+2026-05-02T20:39:08.138+03:00  INFO 12733 --- [tavia-iot-service] [  restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application TAVIA-IOT-SERVICE with eureka with status UP
+2026-05-02T20:39:08.138+03:00  INFO 12733 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1777743548138, current=UP, previous=STARTING]
+2026-05-02T20:39:08.139+03:00  INFO 12733 --- [tavia-iot-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TAVIA-IOT-SERVICE/10.0.0.139:tavia-iot-service:8089: registering service...
+2026-05-02T20:39:08.150+03:00  INFO 12733 --- [tavia-iot-service] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8089 (http) with context path '/'
+2026-05-02T20:39:08.151+03:00  INFO 12733 --- [tavia-iot-service] [  restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8089
+2026-05-02T20:39:08.167+03:00  INFO 12733 --- [tavia-iot-service] [  restartedMain] c.t.i.TaviaIotServiceApplication         : Started TaviaIotServiceApplication in 4.256 seconds (process running for 4.728)
+2026-05-02T20:39:08.172+03:00  INFO 12733 --- [tavia-iot-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TAVIA-IOT-SERVICE/10.0.0.139:tavia-iot-service:8089 - registration status: 204
+
+********************************************************
+<<< SERVİS DURDURULDU: 2026-05-02 20:41:10
+********************************************************
+
+
+
+********************************************************
+>>> SERVİS BAŞLATILDI: 2026-05-02 22:51:54
+********************************************************
+
+Starting a Gradle Daemon, 7 busy and 66 stopped Daemons could not be reused, use --status for details
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :resolveMainClassName UP-TO-DATE
+
+> Task :bootRun
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.0)
+
+2026-05-02T22:52:01.729+03:00  INFO 64537 --- [tavia-iot-service] [  restartedMain] c.t.i.TaviaIotServiceApplication         : Starting TaviaIotServiceApplication using Java 25.0.1 with PID 64537 (/home/tuna/Desktop/tavia_v2/tavia-iot-service/build/classes/java/main started by tuna in /home/tuna/Desktop/tavia_v2/tavia-iot-service)
+2026-05-02T22:52:01.731+03:00 DEBUG 64537 --- [tavia-iot-service] [  restartedMain] c.t.i.TaviaIotServiceApplication         : Running with Spring Boot v4.0.0, Spring v7.0.1
+2026-05-02T22:52:01.731+03:00  INFO 64537 --- [tavia-iot-service] [  restartedMain] c.t.i.TaviaIotServiceApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-05-02T22:52:01.771+03:00  INFO 64537 --- [tavia-iot-service] [  restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2026-05-02T22:52:01.771+03:00  INFO 64537 --- [tavia-iot-service] [  restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=tavia-iot-service, profiles=[default], label=null, version=null, state=null
+2026-05-02T22:52:01.771+03:00 DEBUG 64537 --- [tavia-iot-service] [  restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Environment tavia-iot-service has 2 property sources with 42 properties.
+2026-05-02T22:52:01.773+03:00  INFO 64537 --- [tavia-iot-service] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-02T22:52:01.773+03:00  INFO 64537 --- [tavia-iot-service] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-02T22:52:02.333+03:00  INFO 64537 --- [tavia-iot-service] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-02T22:52:02.422+03:00  INFO 64537 --- [tavia-iot-service] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 83 ms. Found 3 JPA repository interfaces.
+2026-05-02T22:52:02.609+03:00  INFO 64537 --- [tavia-iot-service] [  restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=73b2206a-fd34-3a91-bac6-b51c552f5c2c
+2026-05-02T22:52:02.939+03:00  INFO 64537 --- [tavia-iot-service] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8089 (http)
+2026-05-02T22:52:02.949+03:00  INFO 64537 --- [tavia-iot-service] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-02T22:52:02.949+03:00  INFO 64537 --- [tavia-iot-service] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.14]
+2026-05-02T22:52:02.973+03:00  INFO 64537 --- [tavia-iot-service] [  restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1199 ms
+2026-05-02T22:52:03.195+03:00  INFO 64537 --- [tavia-iot-service] [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-05-02T22:52:03.225+03:00  INFO 64537 --- [tavia-iot-service] [  restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.8.Final
+2026-05-02T22:52:03.502+03:00  INFO 64537 --- [tavia-iot-service] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-02T22:52:03.528+03:00  INFO 64537 --- [tavia-iot-service] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-02T22:52:03.605+03:00  INFO 64537 --- [tavia-iot-service] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6086bc78
+2026-05-02T22:52:03.606+03:00  INFO 64537 --- [tavia-iot-service] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-02T22:52:03.624+03:00  WARN 64537 --- [tavia-iot-service] [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-02T22:52:03.637+03:00  INFO 64537 --- [tavia-iot-service] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/tavia_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.17
+	Default catalog/schema: tavia_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-02T22:52:04.251+03:00  INFO 64537 --- [tavia-iot-service] [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-02T22:52:04.291+03:00 DEBUG 64537 --- [tavia-iot-service] [  restartedMain] org.hibernate.SQL                        : 
+    create table machine_tasks (
+        id uuid not null,
+        completed_at timestamp(6) with time zone,
+        machine_id uuid not null,
+        reference_id varchar(255) not null,
+        started_at timestamp(6) with time zone,
+        status varchar(255) not null check ((status in ('PENDING','IN_PROGRESS','COMPLETED','FAILED'))),
+        task_type varchar(255) not null check ((task_type in ('PREPARE_ORDER','FETCH_MATERIAL','CLEAN_AREA'))),
+        tenant_id uuid not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table machine_tasks (
+        id uuid not null,
+        completed_at timestamp(6) with time zone,
+        machine_id uuid not null,
+        reference_id varchar(255) not null,
+        started_at timestamp(6) with time zone,
+        status varchar(255) not null check ((status in ('PENDING','IN_PROGRESS','COMPLETED','FAILED'))),
+        task_type varchar(255) not null check ((task_type in ('PREPARE_ORDER','FETCH_MATERIAL','CLEAN_AREA'))),
+        tenant_id uuid not null,
+        primary key (id)
+    )
+2026-05-02T22:52:04.307+03:00 DEBUG 64537 --- [tavia-iot-service] [  restartedMain] org.hibernate.SQL                        : 
+    create table machine_telemetry (
+        id uuid not null,
+        battery_level float(53),
+        coordinatesx float(53),
+        coordinatesy float(53),
+        cpu_temperature float(53),
+        current_error_code varchar(255),
+        machine_id uuid not null,
+        network_signal_strength float(53),
+        sensor_payload jsonb,
+        timestamp timestamp(6) with time zone not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table machine_telemetry (
+        id uuid not null,
+        battery_level float(53),
+        coordinatesx float(53),
+        coordinatesy float(53),
+        cpu_temperature float(53),
+        current_error_code varchar(255),
+        machine_id uuid not null,
+        network_signal_strength float(53),
+        sensor_payload jsonb,
+        timestamp timestamp(6) with time zone not null,
+        primary key (id)
+    )
+2026-05-02T22:52:04.312+03:00 DEBUG 64537 --- [tavia-iot-service] [  restartedMain] org.hibernate.SQL                        : 
+    create table machines (
+        id uuid not null,
+        firmware_version varchar(255),
+        mac_address varchar(255) not null,
+        machine_type varchar(255) not null check ((machine_type in ('BREWER','FETCHER','CLEANER'))),
+        name varchar(255) not null,
+        status varchar(255) not null check ((status in ('ONLINE','OFFLINE','MAINTENANCE'))),
+        tenant_id uuid not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table machines (
+        id uuid not null,
+        firmware_version varchar(255),
+        mac_address varchar(255) not null,
+        machine_type varchar(255) not null check ((machine_type in ('BREWER','FETCHER','CLEANER'))),
+        name varchar(255) not null,
+        status varchar(255) not null check ((status in ('ONLINE','OFFLINE','MAINTENANCE'))),
+        tenant_id uuid not null,
+        primary key (id)
+    )
+2026-05-02T22:52:04.318+03:00 DEBUG 64537 --- [tavia-iot-service] [  restartedMain] org.hibernate.SQL                        : 
+    alter table if exists machines 
+       drop constraint if exists UKbcf0mskcmmk5bq45lmlwtyy1q
+Hibernate: 
+    alter table if exists machines 
+       drop constraint if exists UKbcf0mskcmmk5bq45lmlwtyy1q
+2026-05-02T22:52:04.323+03:00  WARN 64537 --- [tavia-iot-service] [  restartedMain] org.hibernate.orm.jdbc.warn              : HHH000247: ErrorCode: 0, SQLState: 00000
+2026-05-02T22:52:04.323+03:00  WARN 64537 --- [tavia-iot-service] [  restartedMain] org.hibernate.orm.jdbc.warn              : constraint "ukbcf0mskcmmk5bq45lmlwtyy1q" of relation "machines" does not exist, skipping
+2026-05-02T22:52:04.323+03:00 DEBUG 64537 --- [tavia-iot-service] [  restartedMain] org.hibernate.SQL                        : 
+    alter table if exists machines 
+       add constraint UKbcf0mskcmmk5bq45lmlwtyy1q unique (mac_address)
+Hibernate: 
+    alter table if exists machines 
+       add constraint UKbcf0mskcmmk5bq45lmlwtyy1q unique (mac_address)
+2026-05-02T22:52:04.328+03:00  INFO 64537 --- [tavia-iot-service] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-02T22:52:04.385+03:00  INFO 64537 --- [tavia-iot-service] [  restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-02T22:52:04.572+03:00  WARN 64537 --- [tavia-iot-service] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-02T22:52:04.990+03:00  INFO 64537 --- [tavia-iot-service] [  restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
+2026-05-02T22:52:05.019+03:00  WARN 64537 --- [tavia-iot-service] [  restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-05-02T22:52:05.026+03:00  INFO 64537 --- [tavia-iot-service] [  restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-02T22:52:05.085+03:00  INFO 64537 --- [tavia-iot-service] [  restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-05-02T22:52:05.099+03:00  INFO 64537 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-05-02T22:52:05.101+03:00  INFO 64537 --- [tavia-iot-service] [  restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-05-02T22:52:05.106+03:00  INFO 64537 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-05-02T22:52:05.106+03:00  INFO 64537 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-05-02T22:52:05.106+03:00  INFO 64537 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-05-02T22:52:05.106+03:00  INFO 64537 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-05-02T22:52:05.106+03:00  INFO 64537 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-05-02T22:52:05.106+03:00  INFO 64537 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-05-02T22:52:05.106+03:00  INFO 64537 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-05-02T22:52:05.310+03:00  INFO 64537 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-05-02T22:52:05.311+03:00  INFO 64537 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-05-02T22:52:05.312+03:00  INFO 64537 --- [tavia-iot-service] [  restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-05-02T22:52:05.313+03:00  INFO 64537 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1777751525312 with initial instances count: 5
+2026-05-02T22:52:05.315+03:00  INFO 64537 --- [tavia-iot-service] [  restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application TAVIA-IOT-SERVICE with eureka with status UP
+2026-05-02T22:52:05.315+03:00  INFO 64537 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1777751525315, current=UP, previous=STARTING]
+2026-05-02T22:52:05.316+03:00  INFO 64537 --- [tavia-iot-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TAVIA-IOT-SERVICE/10.0.0.139:tavia-iot-service:8089: registering service...
+2026-05-02T22:52:05.330+03:00  INFO 64537 --- [tavia-iot-service] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8089 (http) with context path '/'
+2026-05-02T22:52:05.331+03:00  INFO 64537 --- [tavia-iot-service] [  restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8089
+2026-05-02T22:52:05.344+03:00  INFO 64537 --- [tavia-iot-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TAVIA-IOT-SERVICE/10.0.0.139:tavia-iot-service:8089 - registration status: 204
+2026-05-02T22:52:05.346+03:00  INFO 64537 --- [tavia-iot-service] [  restartedMain] c.t.i.TaviaIotServiceApplication         : Started TaviaIotServiceApplication in 4.162 seconds (process running for 4.592)
+
+********************************************************
+<<< SERVİS DURDURULDU: 2026-05-02 22:54:50
+********************************************************
+
+
+
+********************************************************
+>>> SERVİS BAŞLATILDI: 2026-05-02 23:11:32
+********************************************************
+
+Starting a Gradle Daemon, 7 busy and 1 incompatible and 77 stopped Daemons could not be reused, use --status for details
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :resolveMainClassName UP-TO-DATE
+
+> Task :bootRun
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.0)
+
+2026-05-02T23:11:39.779+03:00  INFO 83655 --- [tavia-iot-service] [  restartedMain] c.t.i.TaviaIotServiceApplication         : Starting TaviaIotServiceApplication using Java 25.0.1 with PID 83655 (/home/tuna/Desktop/tavia_v2/tavia-iot-service/build/classes/java/main started by tuna in /home/tuna/Desktop/tavia_v2/tavia-iot-service)
+2026-05-02T23:11:39.781+03:00 DEBUG 83655 --- [tavia-iot-service] [  restartedMain] c.t.i.TaviaIotServiceApplication         : Running with Spring Boot v4.0.0, Spring v7.0.1
+2026-05-02T23:11:39.782+03:00  INFO 83655 --- [tavia-iot-service] [  restartedMain] c.t.i.TaviaIotServiceApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-05-02T23:11:39.824+03:00  INFO 83655 --- [tavia-iot-service] [  restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2026-05-02T23:11:39.824+03:00  INFO 83655 --- [tavia-iot-service] [  restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=tavia-iot-service, profiles=[default], label=null, version=null, state=null
+2026-05-02T23:11:39.824+03:00 DEBUG 83655 --- [tavia-iot-service] [  restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Environment tavia-iot-service has 2 property sources with 42 properties.
+2026-05-02T23:11:39.826+03:00  INFO 83655 --- [tavia-iot-service] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-02T23:11:39.826+03:00  INFO 83655 --- [tavia-iot-service] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-02T23:11:40.392+03:00  INFO 83655 --- [tavia-iot-service] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-02T23:11:40.482+03:00  INFO 83655 --- [tavia-iot-service] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 83 ms. Found 3 JPA repository interfaces.
+2026-05-02T23:11:40.673+03:00  INFO 83655 --- [tavia-iot-service] [  restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=b9554b5f-2e0c-3f07-80bc-8b3ac674bed5
+2026-05-02T23:11:40.990+03:00  INFO 83655 --- [tavia-iot-service] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8089 (http)
+2026-05-02T23:11:41.001+03:00  INFO 83655 --- [tavia-iot-service] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-02T23:11:41.001+03:00  INFO 83655 --- [tavia-iot-service] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.14]
+2026-05-02T23:11:41.026+03:00  INFO 83655 --- [tavia-iot-service] [  restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1199 ms
+2026-05-02T23:11:41.243+03:00  INFO 83655 --- [tavia-iot-service] [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-05-02T23:11:41.271+03:00  INFO 83655 --- [tavia-iot-service] [  restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.8.Final
+2026-05-02T23:11:41.552+03:00  INFO 83655 --- [tavia-iot-service] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-02T23:11:41.577+03:00  INFO 83655 --- [tavia-iot-service] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-02T23:11:41.658+03:00  INFO 83655 --- [tavia-iot-service] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@64150a46
+2026-05-02T23:11:41.659+03:00  INFO 83655 --- [tavia-iot-service] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-02T23:11:41.677+03:00  WARN 83655 --- [tavia-iot-service] [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-02T23:11:41.689+03:00  INFO 83655 --- [tavia-iot-service] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/tavia_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.17
+	Default catalog/schema: tavia_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-02T23:11:42.287+03:00  INFO 83655 --- [tavia-iot-service] [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-02T23:11:42.332+03:00  INFO 83655 --- [tavia-iot-service] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-02T23:11:42.386+03:00  INFO 83655 --- [tavia-iot-service] [  restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-02T23:11:42.583+03:00  WARN 83655 --- [tavia-iot-service] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-02T23:11:43.022+03:00  INFO 83655 --- [tavia-iot-service] [  restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
+2026-05-02T23:11:43.048+03:00  WARN 83655 --- [tavia-iot-service] [  restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-05-02T23:11:43.054+03:00  INFO 83655 --- [tavia-iot-service] [  restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-02T23:11:43.109+03:00  INFO 83655 --- [tavia-iot-service] [  restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-05-02T23:11:43.124+03:00  INFO 83655 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-05-02T23:11:43.126+03:00  INFO 83655 --- [tavia-iot-service] [  restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-05-02T23:11:43.131+03:00  INFO 83655 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-05-02T23:11:43.131+03:00  INFO 83655 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-05-02T23:11:43.131+03:00  INFO 83655 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-05-02T23:11:43.131+03:00  INFO 83655 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-05-02T23:11:43.131+03:00  INFO 83655 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-05-02T23:11:43.131+03:00  INFO 83655 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-05-02T23:11:43.131+03:00  INFO 83655 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-05-02T23:11:43.344+03:00  INFO 83655 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-05-02T23:11:43.346+03:00  INFO 83655 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-05-02T23:11:43.347+03:00  INFO 83655 --- [tavia-iot-service] [  restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-05-02T23:11:43.348+03:00  INFO 83655 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1777752703347 with initial instances count: 5
+2026-05-02T23:11:43.350+03:00  INFO 83655 --- [tavia-iot-service] [  restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application TAVIA-IOT-SERVICE with eureka with status UP
+2026-05-02T23:11:43.351+03:00  INFO 83655 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1777752703351, current=UP, previous=STARTING]
+2026-05-02T23:11:43.352+03:00  INFO 83655 --- [tavia-iot-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TAVIA-IOT-SERVICE/10.0.0.139:tavia-iot-service:8089: registering service...
+2026-05-02T23:11:43.363+03:00  INFO 83655 --- [tavia-iot-service] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8089 (http) with context path '/'
+2026-05-02T23:11:43.363+03:00  INFO 83655 --- [tavia-iot-service] [  restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8089
+2026-05-02T23:11:43.376+03:00  INFO 83655 --- [tavia-iot-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TAVIA-IOT-SERVICE/10.0.0.139:tavia-iot-service:8089 - registration status: 204
+2026-05-02T23:11:43.381+03:00  INFO 83655 --- [tavia-iot-service] [  restartedMain] c.t.i.TaviaIotServiceApplication         : Started TaviaIotServiceApplication in 4.138 seconds (process running for 4.579)
+2026-05-02T23:13:54.010+03:00  INFO 83655 --- [tavia-iot-service] [nio-8089-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-02T23:13:54.010+03:00  INFO 83655 --- [tavia-iot-service] [nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-02T23:13:54.013+03:00  INFO 83655 --- [tavia-iot-service] [nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-05-02T23:13:54.059+03:00 DEBUG 83655 --- [tavia-iot-service] [nio-8089-exec-1] c.t.iot_service.service.MachineService   : Fetching machines for tenant: 228f8e0a-035c-47e0-8ac6-e30991748cf0
+2026-05-02T23:13:54.343+03:00 DEBUG 83655 --- [tavia-iot-service] [nio-8089-exec-1] org.hibernate.SQL                        : 
+    select
+        m1_0.id,
+        m1_0.firmware_version,
+        m1_0.mac_address,
+        m1_0.machine_type,
+        m1_0.name,
+        m1_0.status,
+        m1_0.tenant_id 
+    from
+        machines m1_0 
+    where
+        m1_0.tenant_id=?
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.firmware_version,
+        m1_0.mac_address,
+        m1_0.machine_type,
+        m1_0.name,
+        m1_0.status,
+        m1_0.tenant_id 
+    from
+        machines m1_0 
+    where
+        m1_0.tenant_id=?
+2026-05-02T23:14:16.035+03:00  WARN 83655 --- [tavia-iot-service] [nio-8089-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2026-05-02T23:16:43.133+03:00  INFO 83655 --- [tavia-iot-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+
+********************************************************
+<<< SERVİS DURDURULDU: 2026-05-02 23:18:34
+********************************************************
+
+
+
+********************************************************
+>>> SERVİS BAŞLATILDI: 2026-05-02 23:27:25
+********************************************************
+
+Starting a Gradle Daemon, 7 busy and 1 incompatible and 88 stopped Daemons could not be reused, use --status for details
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :resolveMainClassName UP-TO-DATE
+
+> Task :bootRun
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.0)
+
+2026-05-02T23:27:33.255+03:00  INFO 97613 --- [tavia-iot-service] [  restartedMain] c.t.i.TaviaIotServiceApplication         : Starting TaviaIotServiceApplication using Java 25.0.1 with PID 97613 (/home/tuna/Desktop/tavia_v2/tavia-iot-service/build/classes/java/main started by tuna in /home/tuna/Desktop/tavia_v2/tavia-iot-service)
+2026-05-02T23:27:33.256+03:00 DEBUG 97613 --- [tavia-iot-service] [  restartedMain] c.t.i.TaviaIotServiceApplication         : Running with Spring Boot v4.0.0, Spring v7.0.1
+2026-05-02T23:27:33.257+03:00  INFO 97613 --- [tavia-iot-service] [  restartedMain] c.t.i.TaviaIotServiceApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-05-02T23:27:33.298+03:00  INFO 97613 --- [tavia-iot-service] [  restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2026-05-02T23:27:33.298+03:00  INFO 97613 --- [tavia-iot-service] [  restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=tavia-iot-service, profiles=[default], label=null, version=null, state=null
+2026-05-02T23:27:33.298+03:00 DEBUG 97613 --- [tavia-iot-service] [  restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Environment tavia-iot-service has 2 property sources with 42 properties.
+2026-05-02T23:27:33.300+03:00  INFO 97613 --- [tavia-iot-service] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-02T23:27:33.300+03:00  INFO 97613 --- [tavia-iot-service] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-02T23:27:33.885+03:00  INFO 97613 --- [tavia-iot-service] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-02T23:27:33.982+03:00  INFO 97613 --- [tavia-iot-service] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 91 ms. Found 3 JPA repository interfaces.
+2026-05-02T23:27:34.177+03:00  INFO 97613 --- [tavia-iot-service] [  restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=b9554b5f-2e0c-3f07-80bc-8b3ac674bed5
+2026-05-02T23:27:34.506+03:00  INFO 97613 --- [tavia-iot-service] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8089 (http)
+2026-05-02T23:27:34.515+03:00  INFO 97613 --- [tavia-iot-service] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-02T23:27:34.515+03:00  INFO 97613 --- [tavia-iot-service] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.14]
+2026-05-02T23:27:34.541+03:00  INFO 97613 --- [tavia-iot-service] [  restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1240 ms
+2026-05-02T23:27:34.764+03:00  INFO 97613 --- [tavia-iot-service] [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-05-02T23:27:34.801+03:00  INFO 97613 --- [tavia-iot-service] [  restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.8.Final
+2026-05-02T23:27:35.107+03:00  INFO 97613 --- [tavia-iot-service] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-02T23:27:35.130+03:00  INFO 97613 --- [tavia-iot-service] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-02T23:27:35.215+03:00  INFO 97613 --- [tavia-iot-service] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1783fed0
+2026-05-02T23:27:35.216+03:00  INFO 97613 --- [tavia-iot-service] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-02T23:27:35.236+03:00  WARN 97613 --- [tavia-iot-service] [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-02T23:27:35.251+03:00  INFO 97613 --- [tavia-iot-service] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/tavia_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.17
+	Default catalog/schema: tavia_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-02T23:27:35.866+03:00  INFO 97613 --- [tavia-iot-service] [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-02T23:27:35.911+03:00  INFO 97613 --- [tavia-iot-service] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-02T23:27:35.972+03:00  INFO 97613 --- [tavia-iot-service] [  restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-02T23:27:36.170+03:00  WARN 97613 --- [tavia-iot-service] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-02T23:27:36.597+03:00  INFO 97613 --- [tavia-iot-service] [  restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
+2026-05-02T23:27:36.626+03:00  WARN 97613 --- [tavia-iot-service] [  restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-05-02T23:27:36.632+03:00  INFO 97613 --- [tavia-iot-service] [  restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-02T23:27:36.683+03:00  INFO 97613 --- [tavia-iot-service] [  restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-05-02T23:27:36.698+03:00  INFO 97613 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-05-02T23:27:36.700+03:00  INFO 97613 --- [tavia-iot-service] [  restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-05-02T23:27:36.705+03:00  INFO 97613 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-05-02T23:27:36.705+03:00  INFO 97613 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-05-02T23:27:36.705+03:00  INFO 97613 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-05-02T23:27:36.705+03:00  INFO 97613 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-05-02T23:27:36.705+03:00  INFO 97613 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-05-02T23:27:36.705+03:00  INFO 97613 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-05-02T23:27:36.705+03:00  INFO 97613 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-05-02T23:27:36.922+03:00  INFO 97613 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-05-02T23:27:36.924+03:00  INFO 97613 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-05-02T23:27:36.925+03:00  INFO 97613 --- [tavia-iot-service] [  restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-05-02T23:27:36.925+03:00  INFO 97613 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1777753656925 with initial instances count: 5
+2026-05-02T23:27:36.928+03:00  INFO 97613 --- [tavia-iot-service] [  restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application TAVIA-IOT-SERVICE with eureka with status UP
+2026-05-02T23:27:36.928+03:00  INFO 97613 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1777753656928, current=UP, previous=STARTING]
+2026-05-02T23:27:36.929+03:00  INFO 97613 --- [tavia-iot-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TAVIA-IOT-SERVICE/10.0.0.139:tavia-iot-service:8089: registering service...
+2026-05-02T23:27:36.937+03:00  INFO 97613 --- [tavia-iot-service] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8089 (http) with context path '/'
+2026-05-02T23:27:36.938+03:00  INFO 97613 --- [tavia-iot-service] [  restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8089
+2026-05-02T23:27:36.951+03:00  INFO 97613 --- [tavia-iot-service] [  restartedMain] c.t.i.TaviaIotServiceApplication         : Started TaviaIotServiceApplication in 4.26 seconds (process running for 4.695)
+2026-05-02T23:27:36.953+03:00  INFO 97613 --- [tavia-iot-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TAVIA-IOT-SERVICE/10.0.0.139:tavia-iot-service:8089 - registration status: 204
+2026-05-02T23:29:55.629+03:00  INFO 97613 --- [tavia-iot-service] [nio-8089-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-02T23:29:55.629+03:00  INFO 97613 --- [tavia-iot-service] [nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-02T23:29:55.631+03:00  INFO 97613 --- [tavia-iot-service] [nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-05-02T23:29:55.684+03:00  WARN 97613 --- [tavia-iot-service] [nio-8089-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource swagger-ui/index.html for request '/swagger-ui/index.html'.]
+2026-05-02T23:29:55.723+03:00  WARN 97613 --- [tavia-iot-service] [nio-8089-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico for request '/favicon.ico'.]
+
+********************************************************
+<<< SERVİS DURDURULDU: 2026-05-02 23:30:14
+********************************************************
+
+
+
+********************************************************
+>>> SERVİS BAŞLATILDI: 2026-05-02 23:45:32
+********************************************************
+
+Starting a Gradle Daemon, 7 busy and 1 incompatible and 99 stopped Daemons could not be reused, use --status for details
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :resolveMainClassName UP-TO-DATE
+
+> Task :bootRun
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.0)
+
+2026-05-02T23:45:40.709+03:00  INFO 117685 --- [tavia-iot-service] [  restartedMain] c.t.i.TaviaIotServiceApplication         : Starting TaviaIotServiceApplication using Java 25.0.1 with PID 117685 (/home/tuna/Desktop/tavia_v2/tavia-iot-service/build/classes/java/main started by tuna in /home/tuna/Desktop/tavia_v2/tavia-iot-service)
+2026-05-02T23:45:40.711+03:00 DEBUG 117685 --- [tavia-iot-service] [  restartedMain] c.t.i.TaviaIotServiceApplication         : Running with Spring Boot v4.0.0, Spring v7.0.1
+2026-05-02T23:45:40.711+03:00  INFO 117685 --- [tavia-iot-service] [  restartedMain] c.t.i.TaviaIotServiceApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-05-02T23:45:40.743+03:00  INFO 117685 --- [tavia-iot-service] [  restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2026-05-02T23:45:40.743+03:00  INFO 117685 --- [tavia-iot-service] [  restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=tavia-iot-service, profiles=[default], label=null, version=null, state=null
+2026-05-02T23:45:40.743+03:00 DEBUG 117685 --- [tavia-iot-service] [  restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Environment tavia-iot-service has 2 property sources with 42 properties.
+2026-05-02T23:45:40.745+03:00  INFO 117685 --- [tavia-iot-service] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-02T23:45:40.745+03:00  INFO 117685 --- [tavia-iot-service] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-02T23:45:41.361+03:00  INFO 117685 --- [tavia-iot-service] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-02T23:45:41.455+03:00  INFO 117685 --- [tavia-iot-service] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 87 ms. Found 3 JPA repository interfaces.
+2026-05-02T23:45:41.638+03:00  INFO 117685 --- [tavia-iot-service] [  restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=b902e80b-6287-345a-b673-0e516cb964a3
+2026-05-02T23:45:41.967+03:00  INFO 117685 --- [tavia-iot-service] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8089 (http)
+2026-05-02T23:45:41.978+03:00  INFO 117685 --- [tavia-iot-service] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-02T23:45:41.978+03:00  INFO 117685 --- [tavia-iot-service] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.14]
+2026-05-02T23:45:42.005+03:00  INFO 117685 --- [tavia-iot-service] [  restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1260 ms
+2026-05-02T23:45:42.226+03:00  INFO 117685 --- [tavia-iot-service] [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-05-02T23:45:42.257+03:00  INFO 117685 --- [tavia-iot-service] [  restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.8.Final
+2026-05-02T23:45:42.545+03:00  INFO 117685 --- [tavia-iot-service] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-02T23:45:42.565+03:00  INFO 117685 --- [tavia-iot-service] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-02T23:45:42.641+03:00  INFO 117685 --- [tavia-iot-service] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@40956462
+2026-05-02T23:45:42.642+03:00  INFO 117685 --- [tavia-iot-service] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-02T23:45:42.659+03:00  WARN 117685 --- [tavia-iot-service] [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-02T23:45:42.672+03:00  INFO 117685 --- [tavia-iot-service] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/tavia_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.17
+	Default catalog/schema: tavia_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-02T23:45:43.252+03:00  INFO 117685 --- [tavia-iot-service] [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-02T23:45:43.298+03:00  INFO 117685 --- [tavia-iot-service] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-02T23:45:43.352+03:00  INFO 117685 --- [tavia-iot-service] [  restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-02T23:45:43.600+03:00  WARN 117685 --- [tavia-iot-service] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-02T23:45:44.107+03:00  INFO 117685 --- [tavia-iot-service] [  restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
+2026-05-02T23:45:44.133+03:00  WARN 117685 --- [tavia-iot-service] [  restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-05-02T23:45:44.137+03:00  INFO 117685 --- [tavia-iot-service] [  restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-02T23:45:44.184+03:00  INFO 117685 --- [tavia-iot-service] [  restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-05-02T23:45:44.200+03:00  INFO 117685 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-05-02T23:45:44.202+03:00  INFO 117685 --- [tavia-iot-service] [  restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-05-02T23:45:44.207+03:00  INFO 117685 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-05-02T23:45:44.207+03:00  INFO 117685 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-05-02T23:45:44.207+03:00  INFO 117685 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-05-02T23:45:44.207+03:00  INFO 117685 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-05-02T23:45:44.207+03:00  INFO 117685 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-05-02T23:45:44.207+03:00  INFO 117685 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-05-02T23:45:44.207+03:00  INFO 117685 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-05-02T23:45:44.389+03:00  INFO 117685 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-05-02T23:45:44.390+03:00  INFO 117685 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-05-02T23:45:44.391+03:00  INFO 117685 --- [tavia-iot-service] [  restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-05-02T23:45:44.392+03:00  INFO 117685 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1777754744392 with initial instances count: 5
+2026-05-02T23:45:44.395+03:00  INFO 117685 --- [tavia-iot-service] [  restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application TAVIA-IOT-SERVICE with eureka with status UP
+2026-05-02T23:45:44.395+03:00  INFO 117685 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1777754744395, current=UP, previous=STARTING]
+2026-05-02T23:45:44.396+03:00  INFO 117685 --- [tavia-iot-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TAVIA-IOT-SERVICE/10.0.0.139:tavia-iot-service:8089: registering service...
+2026-05-02T23:45:44.405+03:00  INFO 117685 --- [tavia-iot-service] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8089 (http) with context path '/'
+2026-05-02T23:45:44.405+03:00  INFO 117685 --- [tavia-iot-service] [  restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8089
+2026-05-02T23:45:44.420+03:00  INFO 117685 --- [tavia-iot-service] [  restartedMain] c.t.i.TaviaIotServiceApplication         : Started TaviaIotServiceApplication in 4.379 seconds (process running for 4.814)
+2026-05-02T23:45:44.423+03:00  INFO 117685 --- [tavia-iot-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TAVIA-IOT-SERVICE/10.0.0.139:tavia-iot-service:8089 - registration status: 204
+2026-05-02T23:45:44.464+03:00  WARN 117685 --- [tavia-iot-service] [  restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-05-02T23:45:44.464+03:00  WARN 117685 --- [tavia-iot-service] [  restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-05-02T23:48:51.182+03:00  INFO 117685 --- [tavia-iot-service] [nio-8089-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-02T23:48:51.183+03:00  INFO 117685 --- [tavia-iot-service] [nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-02T23:48:51.184+03:00  INFO 117685 --- [tavia-iot-service] [nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-05-02T23:48:51.640+03:00  INFO 117685 --- [tavia-iot-service] [nio-8089-exec-9] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 153 ms
+2026-05-02T23:49:03.350+03:00 DEBUG 117685 --- [tavia-iot-service] [io-8089-exec-10] c.t.iot_service.service.MachineService   : Fetching machines for tenant: 228f8e0a-035c-47e0-8ac6-e30991748cf0
+2026-05-02T23:49:03.639+03:00 DEBUG 117685 --- [tavia-iot-service] [io-8089-exec-10] org.hibernate.SQL                        : 
+    select
+        m1_0.id,
+        m1_0.firmware_version,
+        m1_0.mac_address,
+        m1_0.machine_type,
+        m1_0.name,
+        m1_0.status,
+        m1_0.tenant_id 
+    from
+        machines m1_0 
+    where
+        m1_0.tenant_id=?
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.firmware_version,
+        m1_0.mac_address,
+        m1_0.machine_type,
+        m1_0.name,
+        m1_0.status,
+        m1_0.tenant_id 
+    from
+        machines m1_0 
+    where
+        m1_0.tenant_id=?
+2026-05-02T23:49:39.620+03:00  WARN 117685 --- [tavia-iot-service] [nio-8089-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2026-05-02T23:50:44.212+03:00  INFO 117685 --- [tavia-iot-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-05-02T23:50:54.523+03:00  WARN 117685 --- [tavia-iot-service] [nio-8089-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2026-05-02T23:51:50.623+03:00  INFO 117685 --- [tavia-iot-service] [nio-8089-exec-8] c.t.iot_service.service.MachineService   : Registering new machine for tenant: 228f8e0a-035c-47e0-8ac6-e30991748cf0, macAddress: 00:1B:44:11:3A:B7
+2026-05-02T23:51:50.638+03:00  INFO 117685 --- [tavia-iot-service] [nio-8089-exec-8] c.t.iot_service.service.MachineService   : Successfully registered machine with id: b01cae2a-fde6-4db5-93f2-2d71a22fb7cb
+2026-05-02T23:51:50.647+03:00 DEBUG 117685 --- [tavia-iot-service] [nio-8089-exec-8] org.hibernate.SQL                        : 
+    insert 
+    into
+        machines
+        (firmware_version, mac_address, machine_type, name, status, tenant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        machines
+        (firmware_version, mac_address, machine_type, name, status, tenant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+
+********************************************************
+<<< SERVİS DURDURULDU: 2026-05-02 23:52:31
+********************************************************
+
+
+
+********************************************************
+>>> SERVİS BAŞLATILDI: 2026-05-03 00:06:33
+********************************************************
+
+Starting a Gradle Daemon, 7 busy and 1 incompatible and 33 stopped Daemons could not be reused, use --status for details
+> Task :compileJava
+> Task :processResources UP-TO-DATE
+> Task :classes
+> Task :resolveMainClassName
+
+> Task :bootRun
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.0)
+
+2026-05-03T00:06:42.768+03:00  INFO 138063 --- [tavia-iot-service] [  restartedMain] c.t.i.TaviaIotServiceApplication         : Starting TaviaIotServiceApplication using Java 25.0.1 with PID 138063 (/home/tuna/Desktop/tavia_v2/tavia-iot-service/build/classes/java/main started by tuna in /home/tuna/Desktop/tavia_v2/tavia-iot-service)
+2026-05-03T00:06:42.770+03:00 DEBUG 138063 --- [tavia-iot-service] [  restartedMain] c.t.i.TaviaIotServiceApplication         : Running with Spring Boot v4.0.0, Spring v7.0.1
+2026-05-03T00:06:42.771+03:00  INFO 138063 --- [tavia-iot-service] [  restartedMain] c.t.i.TaviaIotServiceApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-05-03T00:06:42.811+03:00  INFO 138063 --- [tavia-iot-service] [  restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2026-05-03T00:06:42.811+03:00  INFO 138063 --- [tavia-iot-service] [  restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=tavia-iot-service, profiles=[default], label=null, version=null, state=null
+2026-05-03T00:06:42.812+03:00 DEBUG 138063 --- [tavia-iot-service] [  restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Environment tavia-iot-service has 2 property sources with 42 properties.
+2026-05-03T00:06:42.813+03:00  INFO 138063 --- [tavia-iot-service] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-03T00:06:42.813+03:00  INFO 138063 --- [tavia-iot-service] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-03T00:06:43.438+03:00  INFO 138063 --- [tavia-iot-service] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-03T00:06:43.535+03:00  INFO 138063 --- [tavia-iot-service] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 87 ms. Found 3 JPA repository interfaces.
+2026-05-03T00:06:43.714+03:00  INFO 138063 --- [tavia-iot-service] [  restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=b902e80b-6287-345a-b673-0e516cb964a3
+2026-05-03T00:06:44.046+03:00  INFO 138063 --- [tavia-iot-service] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8089 (http)
+2026-05-03T00:06:44.056+03:00  INFO 138063 --- [tavia-iot-service] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-03T00:06:44.056+03:00  INFO 138063 --- [tavia-iot-service] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.14]
+2026-05-03T00:06:44.083+03:00  INFO 138063 --- [tavia-iot-service] [  restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1269 ms
+2026-05-03T00:06:44.307+03:00  INFO 138063 --- [tavia-iot-service] [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-05-03T00:06:44.338+03:00  INFO 138063 --- [tavia-iot-service] [  restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.8.Final
+2026-05-03T00:06:44.628+03:00  INFO 138063 --- [tavia-iot-service] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-03T00:06:44.649+03:00  INFO 138063 --- [tavia-iot-service] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-03T00:06:44.728+03:00  INFO 138063 --- [tavia-iot-service] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@70b3512e
+2026-05-03T00:06:44.729+03:00  INFO 138063 --- [tavia-iot-service] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-03T00:06:44.747+03:00  WARN 138063 --- [tavia-iot-service] [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-03T00:06:44.759+03:00  INFO 138063 --- [tavia-iot-service] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/tavia_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.17
+	Default catalog/schema: tavia_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-03T00:06:45.341+03:00  INFO 138063 --- [tavia-iot-service] [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-03T00:06:45.385+03:00  INFO 138063 --- [tavia-iot-service] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-03T00:06:45.442+03:00  INFO 138063 --- [tavia-iot-service] [  restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-03T00:06:45.693+03:00  WARN 138063 --- [tavia-iot-service] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-03T00:06:46.216+03:00  INFO 138063 --- [tavia-iot-service] [  restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
+2026-05-03T00:06:46.243+03:00  WARN 138063 --- [tavia-iot-service] [  restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-05-03T00:06:46.247+03:00  INFO 138063 --- [tavia-iot-service] [  restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-03T00:06:46.296+03:00  INFO 138063 --- [tavia-iot-service] [  restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-05-03T00:06:46.315+03:00  INFO 138063 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-05-03T00:06:46.317+03:00  INFO 138063 --- [tavia-iot-service] [  restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-05-03T00:06:46.322+03:00  INFO 138063 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-05-03T00:06:46.322+03:00  INFO 138063 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-05-03T00:06:46.322+03:00  INFO 138063 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-05-03T00:06:46.322+03:00  INFO 138063 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-05-03T00:06:46.322+03:00  INFO 138063 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-05-03T00:06:46.322+03:00  INFO 138063 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-05-03T00:06:46.322+03:00  INFO 138063 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-05-03T00:06:46.497+03:00  INFO 138063 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-05-03T00:06:46.498+03:00  INFO 138063 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-05-03T00:06:46.499+03:00  INFO 138063 --- [tavia-iot-service] [  restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-05-03T00:06:46.500+03:00  INFO 138063 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1777756006500 with initial instances count: 5
+2026-05-03T00:06:46.503+03:00  INFO 138063 --- [tavia-iot-service] [  restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application TAVIA-IOT-SERVICE with eureka with status UP
+2026-05-03T00:06:46.503+03:00  INFO 138063 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1777756006503, current=UP, previous=STARTING]
+2026-05-03T00:06:46.504+03:00  INFO 138063 --- [tavia-iot-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TAVIA-IOT-SERVICE/10.0.0.139:tavia-iot-service:8089: registering service...
+2026-05-03T00:06:46.514+03:00  INFO 138063 --- [tavia-iot-service] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8089 (http) with context path '/'
+2026-05-03T00:06:46.515+03:00  INFO 138063 --- [tavia-iot-service] [  restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8089
+2026-05-03T00:06:46.533+03:00  INFO 138063 --- [tavia-iot-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TAVIA-IOT-SERVICE/10.0.0.139:tavia-iot-service:8089 - registration status: 204
+2026-05-03T00:06:46.534+03:00  INFO 138063 --- [tavia-iot-service] [  restartedMain] c.t.i.TaviaIotServiceApplication         : Started TaviaIotServiceApplication in 4.441 seconds (process running for 4.896)
+2026-05-03T00:06:46.585+03:00  WARN 138063 --- [tavia-iot-service] [  restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-05-03T00:06:46.585+03:00  WARN 138063 --- [tavia-iot-service] [  restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-05-03T00:09:26.209+03:00  INFO 138063 --- [tavia-iot-service] [nio-8089-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-03T00:09:26.209+03:00  INFO 138063 --- [tavia-iot-service] [nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-03T00:09:26.212+03:00  INFO 138063 --- [tavia-iot-service] [nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-05-03T00:09:26.256+03:00 DEBUG 138063 --- [tavia-iot-service] [nio-8089-exec-1] c.t.iot_service.service.MachineService   : Fetching machines for tenant: 228f8e0a-035c-47e0-8ac6-e30991748cf0
+2026-05-03T00:09:26.539+03:00 DEBUG 138063 --- [tavia-iot-service] [nio-8089-exec-1] org.hibernate.SQL                        : 
+    select
+        m1_0.id,
+        m1_0.firmware_version,
+        m1_0.mac_address,
+        m1_0.machine_type,
+        m1_0.name,
+        m1_0.status,
+        m1_0.tenant_id 
+    from
+        machines m1_0 
+    where
+        m1_0.tenant_id=?
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.firmware_version,
+        m1_0.mac_address,
+        m1_0.machine_type,
+        m1_0.name,
+        m1_0.status,
+        m1_0.tenant_id 
+    from
+        machines m1_0 
+    where
+        m1_0.tenant_id=?
+2026-05-03T00:09:51.962+03:00  WARN 138063 --- [tavia-iot-service] [nio-8089-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `com.tavia.iot_service.domain.enums.MachineType` from String "COFFEE_MACHINE": not one of the values accepted for Enum class: [CLEANER, FETCHER, BREWER]]
+2026-05-03T00:09:57.795+03:00  WARN 138063 --- [tavia-iot-service] [nio-8089-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `com.tavia.iot_service.domain.enums.MachineType` from String "COFFEE_MACHINE": not one of the values accepted for Enum class: [CLEANER, FETCHER, BREWER]]
+2026-05-03T00:10:02.249+03:00  WARN 138063 --- [tavia-iot-service] [nio-8089-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `com.tavia.iot_service.domain.enums.MachineType` from String "GRINDER": not one of the values accepted for Enum class: [CLEANER, FETCHER, BREWER]]
+2026-05-03T00:11:46.323+03:00  INFO 138063 --- [tavia-iot-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+
+********************************************************
+<<< SERVİS DURDURULDU: 2026-05-03 00:15:43
+********************************************************
+
+
+
+********************************************************
+>>> SERVİS BAŞLATILDI: 2026-05-03 00:17:48
+********************************************************
+
+Starting a Gradle Daemon, 7 busy and 1 incompatible and 44 stopped Daemons could not be reused, use --status for details
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :resolveMainClassName UP-TO-DATE
+
+> Task :bootRun
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.0)
+
+2026-05-03T00:17:56.259+03:00  INFO 151495 --- [tavia-iot-service] [  restartedMain] c.t.i.TaviaIotServiceApplication         : Starting TaviaIotServiceApplication using Java 25.0.1 with PID 151495 (/home/tuna/Desktop/tavia_v2/tavia-iot-service/build/classes/java/main started by tuna in /home/tuna/Desktop/tavia_v2/tavia-iot-service)
+2026-05-03T00:17:56.260+03:00 DEBUG 151495 --- [tavia-iot-service] [  restartedMain] c.t.i.TaviaIotServiceApplication         : Running with Spring Boot v4.0.0, Spring v7.0.1
+2026-05-03T00:17:56.261+03:00  INFO 151495 --- [tavia-iot-service] [  restartedMain] c.t.i.TaviaIotServiceApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-05-03T00:17:56.294+03:00  INFO 151495 --- [tavia-iot-service] [  restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2026-05-03T00:17:56.294+03:00  INFO 151495 --- [tavia-iot-service] [  restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=tavia-iot-service, profiles=[default], label=null, version=null, state=null
+2026-05-03T00:17:56.294+03:00 DEBUG 151495 --- [tavia-iot-service] [  restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Environment tavia-iot-service has 2 property sources with 42 properties.
+2026-05-03T00:17:56.296+03:00  INFO 151495 --- [tavia-iot-service] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-03T00:17:56.297+03:00  INFO 151495 --- [tavia-iot-service] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-03T00:17:56.963+03:00  INFO 151495 --- [tavia-iot-service] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-03T00:17:57.076+03:00  INFO 151495 --- [tavia-iot-service] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 107 ms. Found 3 JPA repository interfaces.
+2026-05-03T00:17:57.277+03:00  INFO 151495 --- [tavia-iot-service] [  restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=b902e80b-6287-345a-b673-0e516cb964a3
+2026-05-03T00:17:57.641+03:00  INFO 151495 --- [tavia-iot-service] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8089 (http)
+2026-05-03T00:17:57.651+03:00  INFO 151495 --- [tavia-iot-service] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-03T00:17:57.651+03:00  INFO 151495 --- [tavia-iot-service] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.14]
+2026-05-03T00:17:57.678+03:00  INFO 151495 --- [tavia-iot-service] [  restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1381 ms
+2026-05-03T00:17:57.911+03:00  INFO 151495 --- [tavia-iot-service] [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-05-03T00:17:57.955+03:00  INFO 151495 --- [tavia-iot-service] [  restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.8.Final
+2026-05-03T00:17:58.296+03:00  INFO 151495 --- [tavia-iot-service] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-03T00:17:58.321+03:00  INFO 151495 --- [tavia-iot-service] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-03T00:17:58.406+03:00  INFO 151495 --- [tavia-iot-service] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1072ee2e
+2026-05-03T00:17:58.407+03:00  INFO 151495 --- [tavia-iot-service] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-03T00:17:58.426+03:00  WARN 151495 --- [tavia-iot-service] [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-03T00:17:58.440+03:00  INFO 151495 --- [tavia-iot-service] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/tavia_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.17
+	Default catalog/schema: tavia_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-03T00:17:59.061+03:00  INFO 151495 --- [tavia-iot-service] [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-03T00:17:59.106+03:00  INFO 151495 --- [tavia-iot-service] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-03T00:17:59.165+03:00  INFO 151495 --- [tavia-iot-service] [  restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-03T00:17:59.434+03:00  WARN 151495 --- [tavia-iot-service] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-03T00:18:00.000+03:00  INFO 151495 --- [tavia-iot-service] [  restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
+2026-05-03T00:18:00.027+03:00  WARN 151495 --- [tavia-iot-service] [  restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-05-03T00:18:00.031+03:00  INFO 151495 --- [tavia-iot-service] [  restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-03T00:18:00.083+03:00  INFO 151495 --- [tavia-iot-service] [  restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-05-03T00:18:00.098+03:00  INFO 151495 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-05-03T00:18:00.100+03:00  INFO 151495 --- [tavia-iot-service] [  restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-05-03T00:18:00.106+03:00  INFO 151495 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-05-03T00:18:00.106+03:00  INFO 151495 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-05-03T00:18:00.106+03:00  INFO 151495 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-05-03T00:18:00.106+03:00  INFO 151495 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-05-03T00:18:00.106+03:00  INFO 151495 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-05-03T00:18:00.106+03:00  INFO 151495 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-05-03T00:18:00.106+03:00  INFO 151495 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-05-03T00:18:00.308+03:00  INFO 151495 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-05-03T00:18:00.309+03:00  INFO 151495 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-05-03T00:18:00.311+03:00  INFO 151495 --- [tavia-iot-service] [  restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-05-03T00:18:00.312+03:00  INFO 151495 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1777756680312 with initial instances count: 5
+2026-05-03T00:18:00.315+03:00  INFO 151495 --- [tavia-iot-service] [  restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application TAVIA-IOT-SERVICE with eureka with status UP
+2026-05-03T00:18:00.315+03:00  INFO 151495 --- [tavia-iot-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1777756680315, current=UP, previous=STARTING]
+2026-05-03T00:18:00.316+03:00  INFO 151495 --- [tavia-iot-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TAVIA-IOT-SERVICE/10.0.0.139:tavia-iot-service:8089: registering service...
+2026-05-03T00:18:00.326+03:00  INFO 151495 --- [tavia-iot-service] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8089 (http) with context path '/'
+2026-05-03T00:18:00.327+03:00  INFO 151495 --- [tavia-iot-service] [  restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8089
+2026-05-03T00:18:00.341+03:00  INFO 151495 --- [tavia-iot-service] [  restartedMain] c.t.i.TaviaIotServiceApplication         : Started TaviaIotServiceApplication in 4.779 seconds (process running for 5.272)
+2026-05-03T00:18:00.347+03:00  INFO 151495 --- [tavia-iot-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TAVIA-IOT-SERVICE/10.0.0.139:tavia-iot-service:8089 - registration status: 204
+2026-05-03T00:18:00.401+03:00  WARN 151495 --- [tavia-iot-service] [  restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-05-03T00:18:00.401+03:00  WARN 151495 --- [tavia-iot-service] [  restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-05-03T00:23:00.108+03:00  INFO 151495 --- [tavia-iot-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-05-03T00:28:00.108+03:00  INFO 151495 --- [tavia-iot-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-05-03T00:33:00.109+03:00  INFO 151495 --- [tavia-iot-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-05-03T00:38:00.109+03:00  INFO 151495 --- [tavia-iot-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-05-03T00:43:00.109+03:00  INFO 151495 --- [tavia-iot-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-05-03T00:48:00.110+03:00  INFO 151495 --- [tavia-iot-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-05-03T00:53:00.110+03:00  INFO 151495 --- [tavia-iot-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-05-03T00:58:00.111+03:00  INFO 151495 --- [tavia-iot-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-05-03T01:03:00.111+03:00  INFO 151495 --- [tavia-iot-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-05-03T01:08:00.111+03:00  INFO 151495 --- [tavia-iot-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-05-03T01:13:00.112+03:00  INFO 151495 --- [tavia-iot-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-05-03T01:18:00.112+03:00  INFO 151495 --- [tavia-iot-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-05-03T01:23:00.112+03:00  INFO 151495 --- [tavia-iot-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-05-03T01:28:00.113+03:00  INFO 151495 --- [tavia-iot-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-05-03T01:29:53.467+03:00  INFO 151495 --- [tavia-iot-service] [nio-8089-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-03T01:29:53.467+03:00  INFO 151495 --- [tavia-iot-service] [nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-03T01:29:53.469+03:00  INFO 151495 --- [tavia-iot-service] [nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-05-03T01:29:53.516+03:00 DEBUG 151495 --- [tavia-iot-service] [nio-8089-exec-1] c.t.iot_service.service.MachineService   : Fetching machines for tenant: 228f8e0a-035c-47e0-8ac6-e30991748cf0
+2026-05-03T01:29:53.840+03:00 DEBUG 151495 --- [tavia-iot-service] [nio-8089-exec-1] org.hibernate.SQL                        : 
+    select
+        m1_0.id,
+        m1_0.firmware_version,
+        m1_0.mac_address,
+        m1_0.machine_type,
+        m1_0.name,
+        m1_0.status,
+        m1_0.tenant_id 
+    from
+        machines m1_0 
+    where
+        m1_0.tenant_id=?
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.firmware_version,
+        m1_0.mac_address,
+        m1_0.machine_type,
+        m1_0.name,
+        m1_0.status,
+        m1_0.tenant_id 
+    from
+        machines m1_0 
+    where
+        m1_0.tenant_id=?
+2026-05-03T01:30:28.140+03:00  INFO 151495 --- [tavia-iot-service] [nio-8089-exec-2] c.t.iot_service.service.MachineService   : Registering new machine for tenant: 228f8e0a-035c-47e0-8ac6-e30991748cf0, macAddress: 00:1B:44:11:3A:B8
+2026-05-03T01:30:28.156+03:00  INFO 151495 --- [tavia-iot-service] [nio-8089-exec-2] c.t.iot_service.service.MachineService   : Successfully registered machine with id: fe275e99-7aa5-46ae-9887-a20eaf1678c8
+2026-05-03T01:30:28.171+03:00 DEBUG 151495 --- [tavia-iot-service] [nio-8089-exec-2] org.hibernate.SQL                        : 
+    insert 
+    into
+        machines
+        (firmware_version, mac_address, machine_type, name, status, tenant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        machines
+        (firmware_version, mac_address, machine_type, name, status, tenant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+2026-05-03T01:30:28.196+03:00 DEBUG 151495 --- [tavia-iot-service] [nio-8089-exec-3] c.t.iot_service.service.MachineService   : Fetching machines for tenant: 228f8e0a-035c-47e0-8ac6-e30991748cf0
+2026-05-03T01:30:28.197+03:00 DEBUG 151495 --- [tavia-iot-service] [nio-8089-exec-3] org.hibernate.SQL                        : 
+    select
+        m1_0.id,
+        m1_0.firmware_version,
+        m1_0.mac_address,
+        m1_0.machine_type,
+        m1_0.name,
+        m1_0.status,
+        m1_0.tenant_id 
+    from
+        machines m1_0 
+    where
+        m1_0.tenant_id=?
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.firmware_version,
+        m1_0.mac_address,
+        m1_0.machine_type,
+        m1_0.name,
+        m1_0.status,
+        m1_0.tenant_id 
+    from
+        machines m1_0 
+    where
+        m1_0.tenant_id=?
+2026-05-03T01:30:47.088+03:00  INFO 151495 --- [tavia-iot-service] [nio-8089-exec-4] c.t.iot_service.service.MachineService   : Registering new machine for tenant: 228f8e0a-035c-47e0-8ac6-e30991748cf0, macAddress: 00:1B:44:11:3A:B7
+2026-05-03T01:30:47.089+03:00  INFO 151495 --- [tavia-iot-service] [nio-8089-exec-4] c.t.iot_service.service.MachineService   : Successfully registered machine with id: 5ab213a6-56c1-4fe5-af26-a8c516d5bdc2
+2026-05-03T01:30:47.090+03:00 DEBUG 151495 --- [tavia-iot-service] [nio-8089-exec-4] org.hibernate.SQL                        : 
+    insert 
+    into
+        machines
+        (firmware_version, mac_address, machine_type, name, status, tenant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        machines
+        (firmware_version, mac_address, machine_type, name, status, tenant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+2026-05-03T01:30:47.097+03:00  WARN 151495 --- [tavia-iot-service] [nio-8089-exec-4] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 0, SQLState: 23505
+2026-05-03T01:30:47.097+03:00  WARN 151495 --- [tavia-iot-service] [nio-8089-exec-4] org.hibernate.orm.jdbc.error             : ERROR: duplicate key value violates unique constraint "ukbcf0mskcmmk5bq45lmlwtyy1q"
+  Detail: Key (mac_address)=(00:1B:44:11:3A:B7) already exists.
+2026-05-03T01:30:47.118+03:00  WARN 151495 --- [tavia-iot-service] [nio-8089-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.dao.DataIntegrityViolationException: could not execute statement [ERROR: duplicate key value violates unique constraint "ukbcf0mskcmmk5bq45lmlwtyy1q"<EOL>  Detail: Key (mac_address)=(00:1B:44:11:3A:B7) already exists.] [insert into machines (firmware_version,mac_address,machine_type,name,status,tenant_id,id) values (?,?,?,?,?,?,?)]; SQL [insert into machines (firmware_version,mac_address,machine_type,name,status,tenant_id,id) values (?,?,?,?,?,?,?)]; constraint [ukbcf0mskcmmk5bq45lmlwtyy1q]]
+2026-05-03T01:30:59.743+03:00  INFO 151495 --- [tavia-iot-service] [nio-8089-exec-5] c.t.iot_service.service.MachineService   : Registering new machine for tenant: 228f8e0a-035c-47e0-8ac6-e30991748cf0, macAddress: 00:1B:44:11:3A:B9
+2026-05-03T01:30:59.744+03:00  INFO 151495 --- [tavia-iot-service] [nio-8089-exec-5] c.t.iot_service.service.MachineService   : Successfully registered machine with id: 24d765d9-02ca-499f-9f33-e103488269c6
+2026-05-03T01:30:59.745+03:00 DEBUG 151495 --- [tavia-iot-service] [nio-8089-exec-5] org.hibernate.SQL                        : 
+    insert 
+    into
+        machines
+        (firmware_version, mac_address, machine_type, name, status, tenant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        machines
+        (firmware_version, mac_address, machine_type, name, status, tenant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+2026-05-03T01:30:59.768+03:00 DEBUG 151495 --- [tavia-iot-service] [nio-8089-exec-6] c.t.iot_service.service.MachineService   : Fetching machines for tenant: 228f8e0a-035c-47e0-8ac6-e30991748cf0
+2026-05-03T01:30:59.769+03:00 DEBUG 151495 --- [tavia-iot-service] [nio-8089-exec-6] org.hibernate.SQL                        : 
+    select
+        m1_0.id,
+        m1_0.firmware_version,
+        m1_0.mac_address,
+        m1_0.machine_type,
+        m1_0.name,
+        m1_0.status,
+        m1_0.tenant_id 
+    from
+        machines m1_0 
+    where
+        m1_0.tenant_id=?
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.firmware_version,
+        m1_0.mac_address,
+        m1_0.machine_type,
+        m1_0.name,
+        m1_0.status,
+        m1_0.tenant_id 
+    from
+        machines m1_0 
+    where
+        m1_0.tenant_id=?
+
+********************************************************
+<<< SERVİS DURDURULDU: 2026-05-03 01:31:24
+********************************************************
+

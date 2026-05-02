@@ -10,6 +10,8 @@ import type {
   CreateCustomerRequest,
   InventoryItem,
   Product,
+  Machine,
+  MachineRegistrationRequest,
 } from "@/types";
 
 const BASE_URL = "/api";
@@ -31,18 +33,20 @@ async function request<T>(
 ): Promise<T> {
   const url = `${BASE_URL}${endpoint}`;
   const res = await fetch(url, {
+    ...options,
     headers: {
       "Content-Type": "application/json",
       ...options?.headers,
     },
-    ...options,
   });
 
   if (!res.ok) {
     let errorMessage = `${res.status} ${res.statusText}`;
     try {
       const errorBody = await res.json();
-      if (errorBody?.message) {
+      if (errorBody?.detail) {
+        errorMessage = errorBody.detail;
+      } else if (errorBody?.message) {
         errorMessage = errorBody.message;
       }
     } catch {
@@ -225,6 +229,34 @@ export async function fetchAllProducts(tenantId: string) {
 export async function fetchProductById(tenantId: string, productId: string) {
   return request<ApiResponse<Product>>(`/catalog/recipes/${productId}`, {
     headers: tenantHeaders(tenantId),
+  });
+}
+
+// ─── IoT / Machine endpoints ───────────────────────────────────────
+
+/**
+ * GET /api/v1/iot/machines
+ * Backend: MachineController#getMachines(@RequestHeader("X-Tenant-ID") UUID tenantId)
+ */
+export async function fetchMachines(tenantId: string) {
+  // Notice that MachineService returns List<MachineDto>, not wrapped in ApiResponse!
+  // Wait, I should check my own MachineController implementation.
+  // My controller returns `ResponseEntity.ok(machines);` so it's `Machine[]`, not `ApiResponse<Machine[]>`.
+  // Let's type it as returning `Machine[]` directly from request.
+  return request<Machine[]>("/iot/machines", {
+    headers: tenantHeaders(tenantId),
+  });
+}
+
+/**
+ * POST /api/v1/iot/machines
+ * Backend: MachineController#registerMachine(@RequestHeader("X-Tenant-ID"), @RequestBody MachineRegistrationRequest)
+ */
+export async function registerMachine(payload: MachineRegistrationRequest, tenantId: string) {
+  return request<Machine>("/iot/machines", {
+    method: "POST",
+    headers: tenantHeaders(tenantId),
+    body: JSON.stringify(payload),
   });
 }
 

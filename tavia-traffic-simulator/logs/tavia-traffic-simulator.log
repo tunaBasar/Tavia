@@ -1,409 +1,94 @@
-2026-05-02 00:18:21.671 [main] INFO  c.t.t.TrafficSimulatorApplication — Starting TrafficSimulatorApplication using Java 21.0.10 with PID 63299 (/home/tuna/Desktop/tavia_v2/tavia-traffic-simulator/build/classes/java/main started by tuna in /home/tuna/Desktop/tavia_v2/tavia-traffic-simulator)
-2026-05-02 00:18:21.676 [main] DEBUG c.t.t.TrafficSimulatorApplication — Running with Spring Boot v4.0.6, Spring v7.0.7
-2026-05-02 00:18:21.677 [main] INFO  c.t.t.TrafficSimulatorApplication — No active profile set, falling back to 1 default profile: "default"
-2026-05-02 00:18:21.714 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Fetching config from server at : http://localhost:8888
-2026-05-02 00:18:21.714 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Located environment: name=tavia-traffic-simulator, profiles=[default], label=null, version=null, state=null
-2026-05-02 00:18:21.714 [main] DEBUG o.s.c.c.c.ConfigServerConfigDataLoader — Environment tavia-traffic-simulator has 2 property sources with 24 properties.
-2026-05-02 00:18:22.194 [main] INFO  o.s.cloud.context.scope.GenericScope — BeanFactory id=40b150d2-74d1-34e8-903d-7aca02d0acf4
-2026-05-02 00:18:22.391 [main] INFO  o.s.boot.tomcat.TomcatWebServer — Tomcat initialized with port 8080 (http)
-2026-05-02 00:18:22.400 [main] INFO  o.a.coyote.http11.Http11NioProtocol — Initializing ProtocolHandler ["http-nio-8080"]
-2026-05-02 00:18:22.402 [main] INFO  o.a.catalina.core.StandardService — Starting service [Tomcat]
-2026-05-02 00:18:22.402 [main] INFO  o.a.catalina.core.StandardEngine — Starting Servlet engine: [Apache Tomcat/11.0.21]
-2026-05-02 00:18:22.440 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer — Root WebApplicationContext: initialization completed in 723 ms
-2026-05-02 00:18:22.958 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration — Eureka HTTP Client uses RestClient.
-2026-05-02 00:18:22.985 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger — Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2026-05-02 00:18:23.004 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory — Setting initial instance status as: STARTING
-2026-05-02 00:18:23.021 [main] INFO  c.netflix.discovery.DiscoveryClient — Initializing Eureka in region us-east-1
-2026-05-02 00:18:23.023 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
-2026-05-02 00:18:23.029 [main] INFO  c.netflix.discovery.DiscoveryClient — Disable delta property : false
-2026-05-02 00:18:23.029 [main] INFO  c.netflix.discovery.DiscoveryClient — Single vip registry refresh property : null
-2026-05-02 00:18:23.029 [main] INFO  c.netflix.discovery.DiscoveryClient — Force full registry fetch : false
-2026-05-02 00:18:23.029 [main] INFO  c.netflix.discovery.DiscoveryClient — Application is null : false
-2026-05-02 00:18:23.029 [main] INFO  c.netflix.discovery.DiscoveryClient — Registered Applications size is zero : true
-2026-05-02 00:18:23.029 [main] INFO  c.netflix.discovery.DiscoveryClient — Application version is -1: true
-2026-05-02 00:18:23.029 [main] INFO  c.netflix.discovery.DiscoveryClient — Getting all instance registry info from the eureka server
-2026-05-02 00:18:23.264 [main] INFO  c.netflix.discovery.DiscoveryClient — The response status is 200
-2026-05-02 00:18:23.266 [main] INFO  c.netflix.discovery.DiscoveryClient — Starting heartbeat executor: renew interval is: 30
-2026-05-02 00:18:23.267 [main] INFO  c.n.discovery.InstanceInfoReplicator — InstanceInfoReplicator onDemand update allowed rate per min is 4
-2026-05-02 00:18:23.268 [main] INFO  c.netflix.discovery.DiscoveryClient — Discovery Client initialized at timestamp 1777670303267 with initial instances count: 6
-2026-05-02 00:18:23.270 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry — Registering application TAVIA-TRAFFIC-SIMULATOR with eureka with status UP
-2026-05-02 00:18:23.270 [main] INFO  c.netflix.discovery.DiscoveryClient — Saw local status change event StatusChangeEvent [timestamp=1777670303270, current=UP, previous=STARTING]
-2026-05-02 00:18:23.272 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-TRAFFIC-SIMULATOR/10.209.184.229:tavia-traffic-simulator: registering service...
-2026-05-02 00:18:23.272 [main] INFO  o.a.coyote.http11.Http11NioProtocol — Starting ProtocolHandler ["http-nio-8080"]
-2026-05-02 00:18:23.277 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry — Unregistering application TAVIA-TRAFFIC-SIMULATOR with eureka with status DOWN
-2026-05-02 00:18:23.278 [main] INFO  c.netflix.discovery.DiscoveryClient — Saw local status change event StatusChangeEvent [timestamp=1777670303278, current=DOWN, previous=UP]
-2026-05-02 00:18:23.278 [main] WARN  o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext — Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
-2026-05-02 00:18:23.280 [main] INFO  c.netflix.discovery.DiscoveryClient — Shutting down DiscoveryClient ...
-2026-05-02 00:18:23.300 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-TRAFFIC-SIMULATOR/10.209.184.229:tavia-traffic-simulator - registration status: 204
-2026-05-02 00:18:23.301 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-TRAFFIC-SIMULATOR/10.209.184.229:tavia-traffic-simulator: registering service...
-2026-05-02 00:18:23.304 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-TRAFFIC-SIMULATOR/10.209.184.229:tavia-traffic-simulator - registration status: 204
-2026-05-02 00:18:23.305 [main] INFO  c.netflix.discovery.DiscoveryClient — Unregistering ...
-2026-05-02 00:18:23.318 [main] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-TRAFFIC-SIMULATOR/10.209.184.229:tavia-traffic-simulator - deregister  status: 200
-2026-05-02 00:18:23.318 [main] INFO  c.netflix.discovery.DiscoveryClient — Completed shut down of DiscoveryClient
-2026-05-02 00:18:23.327 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger — 
+2026-05-03 00:07:48.846 [restartedMain] INFO  c.t.t.TrafficSimulatorApplication — Starting TrafficSimulatorApplication using Java 21.0.10 with PID 139811 (/home/tuna/Desktop/tavia_v2/tavia-traffic-simulator/build/classes/java/main started by tuna in /home/tuna/Desktop/tavia_v2/tavia-traffic-simulator)
+2026-05-03 00:07:48.849 [restartedMain] DEBUG c.t.t.TrafficSimulatorApplication — Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-03 00:07:48.850 [restartedMain] INFO  c.t.t.TrafficSimulatorApplication — No active profile set, falling back to 1 default profile: "default"
+2026-05-03 00:07:48.878 [restartedMain] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Fetching config from server at : http://localhost:8888
+2026-05-03 00:07:48.878 [restartedMain] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Located environment: name=tavia-traffic-simulator, profiles=[default], label=null, version=null, state=null
+2026-05-03 00:07:48.879 [restartedMain] DEBUG o.s.c.c.c.ConfigServerConfigDataLoader — Environment tavia-traffic-simulator has 2 property sources with 24 properties.
+2026-05-03 00:07:48.881 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor — Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-03 00:07:48.881 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor — For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-03 00:07:49.265 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope — BeanFactory id=37fc33d7-714e-3717-a222-65be81f8c0fe
+2026-05-03 00:07:49.497 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer — Tomcat initialized with port 8080 (http)
+2026-05-03 00:07:49.505 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol — Initializing ProtocolHandler ["http-nio-8080"]
+2026-05-03 00:07:49.506 [restartedMain] INFO  o.a.catalina.core.StandardService — Starting service [Tomcat]
+2026-05-03 00:07:49.507 [restartedMain] INFO  o.a.catalina.core.StandardEngine — Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-03 00:07:49.531 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer — Root WebApplicationContext: initialization completed in 650 ms
+2026-05-03 00:07:49.919 [restartedMain] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration — Eureka HTTP Client uses RestClient.
+2026-05-03 00:07:49.942 [restartedMain] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger — Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-05-03 00:07:49.958 [restartedMain] INFO  o.s.c.n.eureka.InstanceInfoFactory — Setting initial instance status as: STARTING
+2026-05-03 00:07:49.972 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Initializing Eureka in region us-east-1
+2026-05-03 00:07:49.974 [restartedMain] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-03 00:07:49.979 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Disable delta property : false
+2026-05-03 00:07:49.980 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Single vip registry refresh property : null
+2026-05-03 00:07:49.980 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Force full registry fetch : false
+2026-05-03 00:07:49.980 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Application is null : false
+2026-05-03 00:07:49.980 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Registered Applications size is zero : true
+2026-05-03 00:07:49.980 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Application version is -1: true
+2026-05-03 00:07:49.980 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Getting all instance registry info from the eureka server
+2026-05-03 00:07:50.179 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — The response status is 200
+2026-05-03 00:07:50.181 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Starting heartbeat executor: renew interval is: 30
+2026-05-03 00:07:50.182 [restartedMain] INFO  c.n.discovery.InstanceInfoReplicator — InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-05-03 00:07:50.183 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Discovery Client initialized at timestamp 1777756070183 with initial instances count: 8
+2026-05-03 00:07:50.185 [restartedMain] INFO  o.s.c.n.e.s.EurekaServiceRegistry — Registering application TAVIA-TRAFFIC-SIMULATOR with eureka with status UP
+2026-05-03 00:07:50.186 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Saw local status change event StatusChangeEvent [timestamp=1777756070186, current=UP, previous=STARTING]
+2026-05-03 00:07:50.186 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-TRAFFIC-SIMULATOR/10.0.0.139:tavia-traffic-simulator: registering service...
+2026-05-03 00:07:50.187 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol — Starting ProtocolHandler ["http-nio-8080"]
+2026-05-03 00:07:50.191 [restartedMain] INFO  o.s.c.n.e.s.EurekaServiceRegistry — Unregistering application TAVIA-TRAFFIC-SIMULATOR with eureka with status DOWN
+2026-05-03 00:07:50.191 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Saw local status change event StatusChangeEvent [timestamp=1777756070191, current=DOWN, previous=UP]
+2026-05-03 00:07:50.191 [restartedMain] WARN  o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext — Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-05-03 00:07:50.193 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Shutting down DiscoveryClient ...
+2026-05-03 00:07:50.210 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-TRAFFIC-SIMULATOR/10.0.0.139:tavia-traffic-simulator - registration status: 204
+2026-05-03 00:07:50.210 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-TRAFFIC-SIMULATOR/10.0.0.139:tavia-traffic-simulator: registering service...
+2026-05-03 00:07:50.214 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-TRAFFIC-SIMULATOR/10.0.0.139:tavia-traffic-simulator - registration status: 204
+2026-05-03 00:07:50.214 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Unregistering ...
+2026-05-03 00:07:50.219 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-TRAFFIC-SIMULATOR/10.0.0.139:tavia-traffic-simulator - deregister  status: 200
+2026-05-03 00:07:50.219 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Completed shut down of DiscoveryClient
+2026-05-03 00:07:50.226 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger — 
 
 Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2026-05-02 00:30:08.718 [main] INFO  c.t.t.TrafficSimulatorApplication — Starting TrafficSimulatorApplication using Java 21.0.10 with PID 71317 (/home/tuna/Desktop/tavia_v2/tavia-traffic-simulator/build/classes/java/main started by tuna in /home/tuna/Desktop/tavia_v2/tavia-traffic-simulator)
-2026-05-02 00:30:08.721 [main] DEBUG c.t.t.TrafficSimulatorApplication — Running with Spring Boot v4.0.6, Spring v7.0.7
-2026-05-02 00:30:08.723 [main] INFO  c.t.t.TrafficSimulatorApplication — No active profile set, falling back to 1 default profile: "default"
-2026-05-02 00:30:08.779 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Fetching config from server at : http://localhost:8888
-2026-05-02 00:30:08.779 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Located environment: name=tavia-traffic-simulator, profiles=[default], label=null, version=null, state=null
-2026-05-02 00:30:08.779 [main] DEBUG o.s.c.c.c.ConfigServerConfigDataLoader — Environment tavia-traffic-simulator has 2 property sources with 24 properties.
-2026-05-02 00:30:09.438 [main] INFO  o.s.cloud.context.scope.GenericScope — BeanFactory id=40b150d2-74d1-34e8-903d-7aca02d0acf4
-2026-05-02 00:30:09.700 [main] INFO  o.s.boot.tomcat.TomcatWebServer — Tomcat initialized with port 8080 (http)
-2026-05-02 00:30:09.708 [main] INFO  o.a.coyote.http11.Http11NioProtocol — Initializing ProtocolHandler ["http-nio-8080"]
-2026-05-02 00:30:09.710 [main] INFO  o.a.catalina.core.StandardService — Starting service [Tomcat]
-2026-05-02 00:30:09.710 [main] INFO  o.a.catalina.core.StandardEngine — Starting Servlet engine: [Apache Tomcat/11.0.21]
-2026-05-02 00:30:09.750 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer — Root WebApplicationContext: initialization completed in 967 ms
-2026-05-02 00:30:10.298 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration — Eureka HTTP Client uses RestClient.
-2026-05-02 00:30:10.329 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger — Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2026-05-02 00:30:10.351 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory — Setting initial instance status as: STARTING
-2026-05-02 00:30:10.370 [main] INFO  c.netflix.discovery.DiscoveryClient — Initializing Eureka in region us-east-1
-2026-05-02 00:30:10.372 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
-2026-05-02 00:30:10.379 [main] INFO  c.netflix.discovery.DiscoveryClient — Disable delta property : false
-2026-05-02 00:30:10.379 [main] INFO  c.netflix.discovery.DiscoveryClient — Single vip registry refresh property : null
-2026-05-02 00:30:10.379 [main] INFO  c.netflix.discovery.DiscoveryClient — Force full registry fetch : false
-2026-05-02 00:30:10.379 [main] INFO  c.netflix.discovery.DiscoveryClient — Application is null : false
-2026-05-02 00:30:10.379 [main] INFO  c.netflix.discovery.DiscoveryClient — Registered Applications size is zero : true
-2026-05-02 00:30:10.379 [main] INFO  c.netflix.discovery.DiscoveryClient — Application version is -1: true
-2026-05-02 00:30:10.379 [main] INFO  c.netflix.discovery.DiscoveryClient — Getting all instance registry info from the eureka server
-2026-05-02 00:30:10.662 [main] INFO  c.netflix.discovery.DiscoveryClient — The response status is 200
-2026-05-02 00:30:10.664 [main] INFO  c.netflix.discovery.DiscoveryClient — Starting heartbeat executor: renew interval is: 30
-2026-05-02 00:30:10.665 [main] INFO  c.n.discovery.InstanceInfoReplicator — InstanceInfoReplicator onDemand update allowed rate per min is 4
-2026-05-02 00:30:10.666 [main] INFO  c.netflix.discovery.DiscoveryClient — Discovery Client initialized at timestamp 1777671010666 with initial instances count: 7
-2026-05-02 00:30:10.670 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry — Registering application TAVIA-TRAFFIC-SIMULATOR with eureka with status UP
-2026-05-02 00:30:10.670 [main] INFO  c.netflix.discovery.DiscoveryClient — Saw local status change event StatusChangeEvent [timestamp=1777671010670, current=UP, previous=STARTING]
-2026-05-02 00:30:10.672 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-TRAFFIC-SIMULATOR/10.209.184.229:tavia-traffic-simulator: registering service...
-2026-05-02 00:30:10.672 [main] INFO  o.a.coyote.http11.Http11NioProtocol — Starting ProtocolHandler ["http-nio-8080"]
-2026-05-02 00:30:10.678 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry — Unregistering application TAVIA-TRAFFIC-SIMULATOR with eureka with status DOWN
-2026-05-02 00:30:10.678 [main] INFO  c.netflix.discovery.DiscoveryClient — Saw local status change event StatusChangeEvent [timestamp=1777671010678, current=DOWN, previous=UP]
-2026-05-02 00:30:10.679 [main] WARN  o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext — Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
-2026-05-02 00:30:10.682 [main] INFO  c.netflix.discovery.DiscoveryClient — Shutting down DiscoveryClient ...
-2026-05-02 00:30:10.709 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-TRAFFIC-SIMULATOR/10.209.184.229:tavia-traffic-simulator - registration status: 204
-2026-05-02 00:30:10.709 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-TRAFFIC-SIMULATOR/10.209.184.229:tavia-traffic-simulator: registering service...
-2026-05-02 00:30:10.714 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-TRAFFIC-SIMULATOR/10.209.184.229:tavia-traffic-simulator - registration status: 204
-2026-05-02 00:30:10.714 [main] INFO  c.netflix.discovery.DiscoveryClient — Unregistering ...
-2026-05-02 00:30:10.720 [main] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-TRAFFIC-SIMULATOR/10.209.184.229:tavia-traffic-simulator - deregister  status: 200
-2026-05-02 00:30:10.720 [main] INFO  c.netflix.discovery.DiscoveryClient — Completed shut down of DiscoveryClient
-2026-05-02 00:30:10.729 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger — 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2026-05-02 00:41:24.258 [main] INFO  c.t.t.TrafficSimulatorApplication — Starting TrafficSimulatorApplication using Java 21.0.10 with PID 16568 (/home/tuna/Desktop/tavia_v2/tavia-traffic-simulator/build/classes/java/main started by tuna in /home/tuna/Desktop/tavia_v2/tavia-traffic-simulator)
-2026-05-02 00:41:24.260 [main] DEBUG c.t.t.TrafficSimulatorApplication — Running with Spring Boot v4.0.6, Spring v7.0.7
-2026-05-02 00:41:24.261 [main] INFO  c.t.t.TrafficSimulatorApplication — No active profile set, falling back to 1 default profile: "default"
-2026-05-02 00:41:24.289 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Fetching config from server at : http://localhost:8888
-2026-05-02 00:41:24.289 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Located environment: name=tavia-traffic-simulator, profiles=[default], label=null, version=null, state=null
-2026-05-02 00:41:24.289 [main] DEBUG o.s.c.c.c.ConfigServerConfigDataLoader — Environment tavia-traffic-simulator has 2 property sources with 24 properties.
-2026-05-02 00:41:24.723 [main] INFO  o.s.cloud.context.scope.GenericScope — BeanFactory id=40b150d2-74d1-34e8-903d-7aca02d0acf4
-2026-05-02 00:41:24.879 [main] INFO  o.s.boot.tomcat.TomcatWebServer — Tomcat initialized with port 8080 (http)
-2026-05-02 00:41:24.887 [main] INFO  o.a.coyote.http11.Http11NioProtocol — Initializing ProtocolHandler ["http-nio-8080"]
-2026-05-02 00:41:24.888 [main] INFO  o.a.catalina.core.StandardService — Starting service [Tomcat]
-2026-05-02 00:41:24.889 [main] INFO  o.a.catalina.core.StandardEngine — Starting Servlet engine: [Apache Tomcat/11.0.21]
-2026-05-02 00:41:24.929 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer — Root WebApplicationContext: initialization completed in 638 ms
-2026-05-02 00:41:25.342 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration — Eureka HTTP Client uses RestClient.
-2026-05-02 00:41:25.372 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger — Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2026-05-02 00:41:25.393 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory — Setting initial instance status as: STARTING
-2026-05-02 00:41:25.408 [main] INFO  c.netflix.discovery.DiscoveryClient — Initializing Eureka in region us-east-1
-2026-05-02 00:41:25.410 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
-2026-05-02 00:41:25.414 [main] INFO  c.netflix.discovery.DiscoveryClient — Disable delta property : false
-2026-05-02 00:41:25.414 [main] INFO  c.netflix.discovery.DiscoveryClient — Single vip registry refresh property : null
-2026-05-02 00:41:25.415 [main] INFO  c.netflix.discovery.DiscoveryClient — Force full registry fetch : false
-2026-05-02 00:41:25.415 [main] INFO  c.netflix.discovery.DiscoveryClient — Application is null : false
-2026-05-02 00:41:25.415 [main] INFO  c.netflix.discovery.DiscoveryClient — Registered Applications size is zero : true
-2026-05-02 00:41:25.415 [main] INFO  c.netflix.discovery.DiscoveryClient — Application version is -1: true
-2026-05-02 00:41:25.415 [main] INFO  c.netflix.discovery.DiscoveryClient — Getting all instance registry info from the eureka server
-2026-05-02 00:41:25.622 [main] INFO  c.netflix.discovery.DiscoveryClient — The response status is 200
-2026-05-02 00:41:25.623 [main] INFO  c.netflix.discovery.DiscoveryClient — Starting heartbeat executor: renew interval is: 30
-2026-05-02 00:41:25.624 [main] INFO  c.n.discovery.InstanceInfoReplicator — InstanceInfoReplicator onDemand update allowed rate per min is 4
-2026-05-02 00:41:25.625 [main] INFO  c.netflix.discovery.DiscoveryClient — Discovery Client initialized at timestamp 1777671685625 with initial instances count: 5
-2026-05-02 00:41:25.627 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry — Registering application TAVIA-TRAFFIC-SIMULATOR with eureka with status UP
-2026-05-02 00:41:25.628 [main] INFO  c.netflix.discovery.DiscoveryClient — Saw local status change event StatusChangeEvent [timestamp=1777671685628, current=UP, previous=STARTING]
-2026-05-02 00:41:25.628 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-TRAFFIC-SIMULATOR/10.209.184.229:tavia-traffic-simulator: registering service...
-2026-05-02 00:41:25.629 [main] INFO  o.a.coyote.http11.Http11NioProtocol — Starting ProtocolHandler ["http-nio-8080"]
-2026-05-02 00:41:25.633 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry — Unregistering application TAVIA-TRAFFIC-SIMULATOR with eureka with status DOWN
-2026-05-02 00:41:25.633 [main] INFO  c.netflix.discovery.DiscoveryClient — Saw local status change event StatusChangeEvent [timestamp=1777671685633, current=DOWN, previous=UP]
-2026-05-02 00:41:25.633 [main] WARN  o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext — Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
-2026-05-02 00:41:25.636 [main] INFO  c.netflix.discovery.DiscoveryClient — Shutting down DiscoveryClient ...
-2026-05-02 00:41:25.654 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-TRAFFIC-SIMULATOR/10.209.184.229:tavia-traffic-simulator - registration status: 204
-2026-05-02 00:41:25.655 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-TRAFFIC-SIMULATOR/10.209.184.229:tavia-traffic-simulator: registering service...
-2026-05-02 00:41:25.659 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-TRAFFIC-SIMULATOR/10.209.184.229:tavia-traffic-simulator - registration status: 204
-2026-05-02 00:41:25.659 [main] INFO  c.netflix.discovery.DiscoveryClient — Unregistering ...
-2026-05-02 00:41:25.664 [main] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-TRAFFIC-SIMULATOR/10.209.184.229:tavia-traffic-simulator - deregister  status: 200
-2026-05-02 00:41:25.664 [main] INFO  c.netflix.discovery.DiscoveryClient — Completed shut down of DiscoveryClient
-2026-05-02 00:41:25.673 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger — 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2026-05-02 01:48:26.438 [main] INFO  c.t.t.TrafficSimulatorApplication — Starting TrafficSimulatorApplication using Java 21.0.10 with PID 42901 (/home/tuna/Desktop/tavia_v2/tavia-traffic-simulator/build/classes/java/main started by tuna in /home/tuna/Desktop/tavia_v2/tavia-traffic-simulator)
-2026-05-02 01:48:26.440 [main] DEBUG c.t.t.TrafficSimulatorApplication — Running with Spring Boot v4.0.6, Spring v7.0.7
-2026-05-02 01:48:26.441 [main] INFO  c.t.t.TrafficSimulatorApplication — No active profile set, falling back to 1 default profile: "default"
-2026-05-02 01:48:26.471 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Fetching config from server at : http://localhost:8888
-2026-05-02 01:48:26.472 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Located environment: name=tavia-traffic-simulator, profiles=[default], label=null, version=null, state=null
-2026-05-02 01:48:26.472 [main] DEBUG o.s.c.c.c.ConfigServerConfigDataLoader — Environment tavia-traffic-simulator has 2 property sources with 24 properties.
-2026-05-02 01:48:26.847 [main] INFO  o.s.cloud.context.scope.GenericScope — BeanFactory id=40b150d2-74d1-34e8-903d-7aca02d0acf4
-2026-05-02 01:48:26.994 [main] INFO  o.s.boot.tomcat.TomcatWebServer — Tomcat initialized with port 8080 (http)
-2026-05-02 01:48:27.002 [main] INFO  o.a.coyote.http11.Http11NioProtocol — Initializing ProtocolHandler ["http-nio-8080"]
-2026-05-02 01:48:27.004 [main] INFO  o.a.catalina.core.StandardService — Starting service [Tomcat]
-2026-05-02 01:48:27.004 [main] INFO  o.a.catalina.core.StandardEngine — Starting Servlet engine: [Apache Tomcat/11.0.21]
-2026-05-02 01:48:27.046 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer — Root WebApplicationContext: initialization completed in 572 ms
-2026-05-02 01:48:27.437 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration — Eureka HTTP Client uses RestClient.
-2026-05-02 01:48:27.459 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger — Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2026-05-02 01:48:27.474 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory — Setting initial instance status as: STARTING
-2026-05-02 01:48:27.489 [main] INFO  c.netflix.discovery.DiscoveryClient — Initializing Eureka in region us-east-1
-2026-05-02 01:48:27.491 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
-2026-05-02 01:48:27.496 [main] INFO  c.netflix.discovery.DiscoveryClient — Disable delta property : false
-2026-05-02 01:48:27.496 [main] INFO  c.netflix.discovery.DiscoveryClient — Single vip registry refresh property : null
-2026-05-02 01:48:27.496 [main] INFO  c.netflix.discovery.DiscoveryClient — Force full registry fetch : false
-2026-05-02 01:48:27.496 [main] INFO  c.netflix.discovery.DiscoveryClient — Application is null : false
-2026-05-02 01:48:27.496 [main] INFO  c.netflix.discovery.DiscoveryClient — Registered Applications size is zero : true
-2026-05-02 01:48:27.496 [main] INFO  c.netflix.discovery.DiscoveryClient — Application version is -1: true
-2026-05-02 01:48:27.496 [main] INFO  c.netflix.discovery.DiscoveryClient — Getting all instance registry info from the eureka server
-2026-05-02 01:48:27.706 [main] INFO  c.netflix.discovery.DiscoveryClient — The response status is 200
-2026-05-02 01:48:27.707 [main] INFO  c.netflix.discovery.DiscoveryClient — Starting heartbeat executor: renew interval is: 30
-2026-05-02 01:48:27.708 [main] INFO  c.n.discovery.InstanceInfoReplicator — InstanceInfoReplicator onDemand update allowed rate per min is 4
-2026-05-02 01:48:27.709 [main] INFO  c.netflix.discovery.DiscoveryClient — Discovery Client initialized at timestamp 1777675707709 with initial instances count: 6
-2026-05-02 01:48:27.711 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry — Registering application TAVIA-TRAFFIC-SIMULATOR with eureka with status UP
-2026-05-02 01:48:27.711 [main] INFO  c.netflix.discovery.DiscoveryClient — Saw local status change event StatusChangeEvent [timestamp=1777675707711, current=UP, previous=STARTING]
-2026-05-02 01:48:27.712 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-TRAFFIC-SIMULATOR/10.209.184.229:tavia-traffic-simulator: registering service...
-2026-05-02 01:48:27.713 [main] INFO  o.a.coyote.http11.Http11NioProtocol — Starting ProtocolHandler ["http-nio-8080"]
-2026-05-02 01:48:27.717 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry — Unregistering application TAVIA-TRAFFIC-SIMULATOR with eureka with status DOWN
-2026-05-02 01:48:27.717 [main] INFO  c.netflix.discovery.DiscoveryClient — Saw local status change event StatusChangeEvent [timestamp=1777675707717, current=DOWN, previous=UP]
-2026-05-02 01:48:27.718 [main] WARN  o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext — Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
-2026-05-02 01:48:27.720 [main] INFO  c.netflix.discovery.DiscoveryClient — Shutting down DiscoveryClient ...
-2026-05-02 01:48:27.735 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-TRAFFIC-SIMULATOR/10.209.184.229:tavia-traffic-simulator - registration status: 204
-2026-05-02 01:48:27.736 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-TRAFFIC-SIMULATOR/10.209.184.229:tavia-traffic-simulator: registering service...
-2026-05-02 01:48:27.739 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-TRAFFIC-SIMULATOR/10.209.184.229:tavia-traffic-simulator - registration status: 204
-2026-05-02 01:48:27.740 [main] INFO  c.netflix.discovery.DiscoveryClient — Unregistering ...
-2026-05-02 01:48:27.745 [main] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-TRAFFIC-SIMULATOR/10.209.184.229:tavia-traffic-simulator - deregister  status: 200
-2026-05-02 01:48:27.745 [main] INFO  c.netflix.discovery.DiscoveryClient — Completed shut down of DiscoveryClient
-2026-05-02 01:48:27.753 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger — 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2026-05-02 02:23:10.688 [main] INFO  c.t.t.TrafficSimulatorApplication — Starting TrafficSimulatorApplication using Java 21.0.10 with PID 60819 (/home/tuna/Desktop/tavia_v2/tavia-traffic-simulator/build/classes/java/main started by tuna in /home/tuna/Desktop/tavia_v2/tavia-traffic-simulator)
-2026-05-02 02:23:10.690 [main] DEBUG c.t.t.TrafficSimulatorApplication — Running with Spring Boot v4.0.6, Spring v7.0.7
-2026-05-02 02:23:10.690 [main] INFO  c.t.t.TrafficSimulatorApplication — No active profile set, falling back to 1 default profile: "default"
-2026-05-02 02:23:10.723 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Fetching config from server at : http://localhost:8888
-2026-05-02 02:23:10.723 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Located environment: name=tavia-traffic-simulator, profiles=[default], label=null, version=null, state=null
-2026-05-02 02:23:10.723 [main] DEBUG o.s.c.c.c.ConfigServerConfigDataLoader — Environment tavia-traffic-simulator has 2 property sources with 24 properties.
-2026-05-02 02:23:11.212 [main] INFO  o.s.cloud.context.scope.GenericScope — BeanFactory id=40b150d2-74d1-34e8-903d-7aca02d0acf4
-2026-05-02 02:23:11.383 [main] INFO  o.s.boot.tomcat.TomcatWebServer — Tomcat initialized with port 8080 (http)
-2026-05-02 02:23:11.392 [main] INFO  o.a.coyote.http11.Http11NioProtocol — Initializing ProtocolHandler ["http-nio-8080"]
-2026-05-02 02:23:11.394 [main] INFO  o.a.catalina.core.StandardService — Starting service [Tomcat]
-2026-05-02 02:23:11.394 [main] INFO  o.a.catalina.core.StandardEngine — Starting Servlet engine: [Apache Tomcat/11.0.21]
-2026-05-02 02:23:11.430 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer — Root WebApplicationContext: initialization completed in 705 ms
-2026-05-02 02:23:11.971 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration — Eureka HTTP Client uses RestClient.
-2026-05-02 02:23:12.000 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger — Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2026-05-02 02:23:12.018 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory — Setting initial instance status as: STARTING
-2026-05-02 02:23:12.034 [main] INFO  c.netflix.discovery.DiscoveryClient — Initializing Eureka in region us-east-1
-2026-05-02 02:23:12.036 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
-2026-05-02 02:23:12.041 [main] INFO  c.netflix.discovery.DiscoveryClient — Disable delta property : false
-2026-05-02 02:23:12.041 [main] INFO  c.netflix.discovery.DiscoveryClient — Single vip registry refresh property : null
-2026-05-02 02:23:12.041 [main] INFO  c.netflix.discovery.DiscoveryClient — Force full registry fetch : false
-2026-05-02 02:23:12.042 [main] INFO  c.netflix.discovery.DiscoveryClient — Application is null : false
-2026-05-02 02:23:12.042 [main] INFO  c.netflix.discovery.DiscoveryClient — Registered Applications size is zero : true
-2026-05-02 02:23:12.042 [main] INFO  c.netflix.discovery.DiscoveryClient — Application version is -1: true
-2026-05-02 02:23:12.042 [main] INFO  c.netflix.discovery.DiscoveryClient — Getting all instance registry info from the eureka server
-2026-05-02 02:23:12.302 [main] INFO  c.netflix.discovery.DiscoveryClient — The response status is 200
-2026-05-02 02:23:12.304 [main] INFO  c.netflix.discovery.DiscoveryClient — Starting heartbeat executor: renew interval is: 30
-2026-05-02 02:23:12.305 [main] INFO  c.n.discovery.InstanceInfoReplicator — InstanceInfoReplicator onDemand update allowed rate per min is 4
-2026-05-02 02:23:12.306 [main] INFO  c.netflix.discovery.DiscoveryClient — Discovery Client initialized at timestamp 1777677792306 with initial instances count: 7
-2026-05-02 02:23:12.309 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry — Registering application TAVIA-TRAFFIC-SIMULATOR with eureka with status UP
-2026-05-02 02:23:12.310 [main] INFO  c.netflix.discovery.DiscoveryClient — Saw local status change event StatusChangeEvent [timestamp=1777677792310, current=UP, previous=STARTING]
-2026-05-02 02:23:12.311 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-TRAFFIC-SIMULATOR/10.209.184.229:tavia-traffic-simulator: registering service...
-2026-05-02 02:23:12.311 [main] INFO  o.a.coyote.http11.Http11NioProtocol — Starting ProtocolHandler ["http-nio-8080"]
-2026-05-02 02:23:12.317 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry — Unregistering application TAVIA-TRAFFIC-SIMULATOR with eureka with status DOWN
-2026-05-02 02:23:12.317 [main] INFO  c.netflix.discovery.DiscoveryClient — Saw local status change event StatusChangeEvent [timestamp=1777677792317, current=DOWN, previous=UP]
-2026-05-02 02:23:12.318 [main] WARN  o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext — Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
-2026-05-02 02:23:12.320 [main] INFO  c.netflix.discovery.DiscoveryClient — Shutting down DiscoveryClient ...
-2026-05-02 02:23:12.347 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-TRAFFIC-SIMULATOR/10.209.184.229:tavia-traffic-simulator - registration status: 204
-2026-05-02 02:23:12.348 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-TRAFFIC-SIMULATOR/10.209.184.229:tavia-traffic-simulator: registering service...
-2026-05-02 02:23:12.353 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-TRAFFIC-SIMULATOR/10.209.184.229:tavia-traffic-simulator - registration status: 204
-2026-05-02 02:23:12.353 [main] INFO  c.netflix.discovery.DiscoveryClient — Unregistering ...
-2026-05-02 02:23:12.361 [main] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-TRAFFIC-SIMULATOR/10.209.184.229:tavia-traffic-simulator - deregister  status: 200
-2026-05-02 02:23:12.361 [main] INFO  c.netflix.discovery.DiscoveryClient — Completed shut down of DiscoveryClient
-2026-05-02 02:23:12.373 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger — 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2026-05-02 02:31:56.751 [main] INFO  c.t.t.TrafficSimulatorApplication — Starting TrafficSimulatorApplication using Java 21.0.10 with PID 17272 (/home/tuna/Desktop/tavia_v2/tavia-traffic-simulator/build/classes/java/main started by tuna in /home/tuna/Desktop/tavia_v2/tavia-traffic-simulator)
-2026-05-02 02:31:56.757 [main] DEBUG c.t.t.TrafficSimulatorApplication — Running with Spring Boot v4.0.6, Spring v7.0.7
-2026-05-02 02:31:56.757 [main] INFO  c.t.t.TrafficSimulatorApplication — No active profile set, falling back to 1 default profile: "default"
-2026-05-02 02:31:56.785 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Fetching config from server at : http://localhost:8888
-2026-05-02 02:31:56.785 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Located environment: name=tavia-traffic-simulator, profiles=[default], label=null, version=null, state=null
-2026-05-02 02:31:56.785 [main] DEBUG o.s.c.c.c.ConfigServerConfigDataLoader — Environment tavia-traffic-simulator has 2 property sources with 24 properties.
-2026-05-02 02:31:57.191 [main] INFO  o.s.cloud.context.scope.GenericScope — BeanFactory id=40b150d2-74d1-34e8-903d-7aca02d0acf4
-2026-05-02 02:31:57.358 [main] INFO  o.s.boot.tomcat.TomcatWebServer — Tomcat initialized with port 8080 (http)
-2026-05-02 02:31:57.367 [main] INFO  o.a.coyote.http11.Http11NioProtocol — Initializing ProtocolHandler ["http-nio-8080"]
-2026-05-02 02:31:57.368 [main] INFO  o.a.catalina.core.StandardService — Starting service [Tomcat]
-2026-05-02 02:31:57.369 [main] INFO  o.a.catalina.core.StandardEngine — Starting Servlet engine: [Apache Tomcat/11.0.21]
-2026-05-02 02:31:57.402 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer — Root WebApplicationContext: initialization completed in 615 ms
-2026-05-02 02:31:57.786 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration — Eureka HTTP Client uses RestClient.
-2026-05-02 02:31:57.813 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger — Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2026-05-02 02:31:57.831 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory — Setting initial instance status as: STARTING
-2026-05-02 02:31:57.846 [main] INFO  c.netflix.discovery.DiscoveryClient — Initializing Eureka in region us-east-1
-2026-05-02 02:31:57.848 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
-2026-05-02 02:31:57.853 [main] INFO  c.netflix.discovery.DiscoveryClient — Disable delta property : false
-2026-05-02 02:31:57.853 [main] INFO  c.netflix.discovery.DiscoveryClient — Single vip registry refresh property : null
-2026-05-02 02:31:57.853 [main] INFO  c.netflix.discovery.DiscoveryClient — Force full registry fetch : false
-2026-05-02 02:31:57.853 [main] INFO  c.netflix.discovery.DiscoveryClient — Application is null : false
-2026-05-02 02:31:57.853 [main] INFO  c.netflix.discovery.DiscoveryClient — Registered Applications size is zero : true
-2026-05-02 02:31:57.853 [main] INFO  c.netflix.discovery.DiscoveryClient — Application version is -1: true
-2026-05-02 02:31:57.853 [main] INFO  c.netflix.discovery.DiscoveryClient — Getting all instance registry info from the eureka server
-2026-05-02 02:31:58.065 [main] INFO  c.netflix.discovery.DiscoveryClient — The response status is 200
-2026-05-02 02:31:58.066 [main] INFO  c.netflix.discovery.DiscoveryClient — Starting heartbeat executor: renew interval is: 30
-2026-05-02 02:31:58.067 [main] INFO  c.n.discovery.InstanceInfoReplicator — InstanceInfoReplicator onDemand update allowed rate per min is 4
-2026-05-02 02:31:58.068 [main] INFO  c.netflix.discovery.DiscoveryClient — Discovery Client initialized at timestamp 1777678318068 with initial instances count: 6
-2026-05-02 02:31:58.070 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry — Registering application TAVIA-TRAFFIC-SIMULATOR with eureka with status UP
-2026-05-02 02:31:58.071 [main] INFO  c.netflix.discovery.DiscoveryClient — Saw local status change event StatusChangeEvent [timestamp=1777678318071, current=UP, previous=STARTING]
-2026-05-02 02:31:58.072 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-TRAFFIC-SIMULATOR/10.0.0.139:tavia-traffic-simulator: registering service...
-2026-05-02 02:31:58.072 [main] INFO  o.a.coyote.http11.Http11NioProtocol — Starting ProtocolHandler ["http-nio-8080"]
-2026-05-02 02:31:58.076 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry — Unregistering application TAVIA-TRAFFIC-SIMULATOR with eureka with status DOWN
-2026-05-02 02:31:58.077 [main] INFO  c.netflix.discovery.DiscoveryClient — Saw local status change event StatusChangeEvent [timestamp=1777678318077, current=DOWN, previous=UP]
-2026-05-02 02:31:58.077 [main] WARN  o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext — Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
-2026-05-02 02:31:58.079 [main] INFO  c.netflix.discovery.DiscoveryClient — Shutting down DiscoveryClient ...
-2026-05-02 02:31:58.098 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-TRAFFIC-SIMULATOR/10.0.0.139:tavia-traffic-simulator - registration status: 204
-2026-05-02 02:31:58.099 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-TRAFFIC-SIMULATOR/10.0.0.139:tavia-traffic-simulator: registering service...
-2026-05-02 02:31:58.103 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-TRAFFIC-SIMULATOR/10.0.0.139:tavia-traffic-simulator - registration status: 204
-2026-05-02 02:31:58.104 [main] INFO  c.netflix.discovery.DiscoveryClient — Unregistering ...
-2026-05-02 02:31:58.109 [main] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-TRAFFIC-SIMULATOR/10.0.0.139:tavia-traffic-simulator - deregister  status: 200
-2026-05-02 02:31:58.110 [main] INFO  c.netflix.discovery.DiscoveryClient — Completed shut down of DiscoveryClient
-2026-05-02 02:31:58.121 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger — 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2026-05-02 11:34:40.846 [main] INFO  c.t.t.TrafficSimulatorApplication — Starting TrafficSimulatorApplication using Java 21.0.10 with PID 17644 (/home/tuna/Desktop/tavia_v2/tavia-traffic-simulator/build/classes/java/main started by tuna in /home/tuna/Desktop/tavia_v2/tavia-traffic-simulator)
-2026-05-02 11:34:40.848 [main] DEBUG c.t.t.TrafficSimulatorApplication — Running with Spring Boot v4.0.6, Spring v7.0.7
-2026-05-02 11:34:40.849 [main] INFO  c.t.t.TrafficSimulatorApplication — No active profile set, falling back to 1 default profile: "default"
-2026-05-02 11:34:40.875 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Fetching config from server at : http://localhost:8888
-2026-05-02 11:34:40.875 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Located environment: name=tavia-traffic-simulator, profiles=[default], label=null, version=null, state=null
-2026-05-02 11:34:40.875 [main] DEBUG o.s.c.c.c.ConfigServerConfigDataLoader — Environment tavia-traffic-simulator has 2 property sources with 24 properties.
-2026-05-02 11:34:41.254 [main] INFO  o.s.cloud.context.scope.GenericScope — BeanFactory id=40b150d2-74d1-34e8-903d-7aca02d0acf4
-2026-05-02 11:34:41.397 [main] INFO  o.s.boot.tomcat.TomcatWebServer — Tomcat initialized with port 8080 (http)
-2026-05-02 11:34:41.405 [main] INFO  o.a.coyote.http11.Http11NioProtocol — Initializing ProtocolHandler ["http-nio-8080"]
-2026-05-02 11:34:41.407 [main] INFO  o.a.catalina.core.StandardService — Starting service [Tomcat]
-2026-05-02 11:34:41.407 [main] INFO  o.a.catalina.core.StandardEngine — Starting Servlet engine: [Apache Tomcat/11.0.21]
-2026-05-02 11:34:41.443 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer — Root WebApplicationContext: initialization completed in 566 ms
-2026-05-02 11:34:41.823 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration — Eureka HTTP Client uses RestClient.
-2026-05-02 11:34:41.848 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger — Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2026-05-02 11:34:41.864 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory — Setting initial instance status as: STARTING
-2026-05-02 11:34:41.878 [main] INFO  c.netflix.discovery.DiscoveryClient — Initializing Eureka in region us-east-1
-2026-05-02 11:34:41.880 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
-2026-05-02 11:34:41.884 [main] INFO  c.netflix.discovery.DiscoveryClient — Disable delta property : false
-2026-05-02 11:34:41.885 [main] INFO  c.netflix.discovery.DiscoveryClient — Single vip registry refresh property : null
-2026-05-02 11:34:41.885 [main] INFO  c.netflix.discovery.DiscoveryClient — Force full registry fetch : false
-2026-05-02 11:34:41.885 [main] INFO  c.netflix.discovery.DiscoveryClient — Application is null : false
-2026-05-02 11:34:41.885 [main] INFO  c.netflix.discovery.DiscoveryClient — Registered Applications size is zero : true
-2026-05-02 11:34:41.885 [main] INFO  c.netflix.discovery.DiscoveryClient — Application version is -1: true
-2026-05-02 11:34:41.885 [main] INFO  c.netflix.discovery.DiscoveryClient — Getting all instance registry info from the eureka server
-2026-05-02 11:34:42.078 [main] INFO  c.netflix.discovery.DiscoveryClient — The response status is 200
-2026-05-02 11:34:42.079 [main] INFO  c.netflix.discovery.DiscoveryClient — Starting heartbeat executor: renew interval is: 30
-2026-05-02 11:34:42.081 [main] INFO  c.n.discovery.InstanceInfoReplicator — InstanceInfoReplicator onDemand update allowed rate per min is 4
-2026-05-02 11:34:42.081 [main] INFO  c.netflix.discovery.DiscoveryClient — Discovery Client initialized at timestamp 1777710882081 with initial instances count: 7
-2026-05-02 11:34:42.083 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry — Registering application TAVIA-TRAFFIC-SIMULATOR with eureka with status UP
-2026-05-02 11:34:42.084 [main] INFO  c.netflix.discovery.DiscoveryClient — Saw local status change event StatusChangeEvent [timestamp=1777710882084, current=UP, previous=STARTING]
-2026-05-02 11:34:42.085 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-TRAFFIC-SIMULATOR/10.0.0.139:tavia-traffic-simulator: registering service...
-2026-05-02 11:34:42.085 [main] INFO  o.a.coyote.http11.Http11NioProtocol — Starting ProtocolHandler ["http-nio-8080"]
-2026-05-02 11:34:42.089 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry — Unregistering application TAVIA-TRAFFIC-SIMULATOR with eureka with status DOWN
-2026-05-02 11:34:42.089 [main] INFO  c.netflix.discovery.DiscoveryClient — Saw local status change event StatusChangeEvent [timestamp=1777710882089, current=DOWN, previous=UP]
-2026-05-02 11:34:42.089 [main] WARN  o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext — Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
-2026-05-02 11:34:42.091 [main] INFO  c.netflix.discovery.DiscoveryClient — Shutting down DiscoveryClient ...
-2026-05-02 11:34:42.109 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-TRAFFIC-SIMULATOR/10.0.0.139:tavia-traffic-simulator - registration status: 204
-2026-05-02 11:34:42.109 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-TRAFFIC-SIMULATOR/10.0.0.139:tavia-traffic-simulator: registering service...
-2026-05-02 11:34:42.113 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-TRAFFIC-SIMULATOR/10.0.0.139:tavia-traffic-simulator - registration status: 204
-2026-05-02 11:34:42.113 [main] INFO  c.netflix.discovery.DiscoveryClient — Unregistering ...
-2026-05-02 11:34:42.118 [main] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-TRAFFIC-SIMULATOR/10.0.0.139:tavia-traffic-simulator - deregister  status: 200
-2026-05-02 11:34:42.118 [main] INFO  c.netflix.discovery.DiscoveryClient — Completed shut down of DiscoveryClient
-2026-05-02 11:34:42.129 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger — 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2026-05-02 13:29:41.223 [restartedMain] INFO  c.t.t.TrafficSimulatorApplication — Starting TrafficSimulatorApplication using Java 21.0.10 with PID 55788 (/home/tuna/Desktop/tavia_v2/tavia-traffic-simulator/build/classes/java/main started by tuna in /home/tuna/Desktop/tavia_v2/tavia-traffic-simulator)
-2026-05-02 13:29:41.229 [restartedMain] DEBUG c.t.t.TrafficSimulatorApplication — Running with Spring Boot v4.0.6, Spring v7.0.7
-2026-05-02 13:29:41.230 [restartedMain] INFO  c.t.t.TrafficSimulatorApplication — No active profile set, falling back to 1 default profile: "default"
-2026-05-02 13:29:41.280 [restartedMain] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Fetching config from server at : http://localhost:8888
-2026-05-02 13:29:41.280 [restartedMain] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Located environment: name=tavia-traffic-simulator, profiles=[default], label=null, version=null, state=null
-2026-05-02 13:29:41.280 [restartedMain] DEBUG o.s.c.c.c.ConfigServerConfigDataLoader — Environment tavia-traffic-simulator has 2 property sources with 24 properties.
-2026-05-02 13:29:41.283 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor — Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-05-02 13:29:41.284 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor — For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-05-02 13:29:42.118 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope — BeanFactory id=37fc33d7-714e-3717-a222-65be81f8c0fe
-2026-05-02 13:29:42.516 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer — Tomcat initialized with port 8080 (http)
-2026-05-02 13:29:42.529 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol — Initializing ProtocolHandler ["http-nio-8080"]
-2026-05-02 13:29:42.532 [restartedMain] INFO  o.a.catalina.core.StandardService — Starting service [Tomcat]
-2026-05-02 13:29:42.532 [restartedMain] INFO  o.a.catalina.core.StandardEngine — Starting Servlet engine: [Apache Tomcat/11.0.21]
-2026-05-02 13:29:42.574 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer — Root WebApplicationContext: initialization completed in 1290 ms
-2026-05-02 13:29:43.243 [restartedMain] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration — Eureka HTTP Client uses RestClient.
-2026-05-02 13:29:43.285 [restartedMain] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger — Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2026-05-02 13:29:43.318 [restartedMain] INFO  o.s.c.n.eureka.InstanceInfoFactory — Setting initial instance status as: STARTING
-2026-05-02 13:29:43.345 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Initializing Eureka in region us-east-1
-2026-05-02 13:29:43.348 [restartedMain] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
-2026-05-02 13:29:43.358 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Disable delta property : false
-2026-05-02 13:29:43.359 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Single vip registry refresh property : null
-2026-05-02 13:29:43.359 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Force full registry fetch : false
-2026-05-02 13:29:43.359 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Application is null : false
-2026-05-02 13:29:43.359 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Registered Applications size is zero : true
-2026-05-02 13:29:43.359 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Application version is -1: true
-2026-05-02 13:29:43.359 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Getting all instance registry info from the eureka server
-2026-05-02 13:29:43.799 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — The response status is 200
-2026-05-02 13:29:43.802 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Starting heartbeat executor: renew interval is: 30
-2026-05-02 13:29:43.804 [restartedMain] INFO  c.n.discovery.InstanceInfoReplicator — InstanceInfoReplicator onDemand update allowed rate per min is 4
-2026-05-02 13:29:43.806 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Discovery Client initialized at timestamp 1777717783806 with initial instances count: 6
-2026-05-02 13:29:43.812 [restartedMain] INFO  o.s.c.n.e.s.EurekaServiceRegistry — Registering application TAVIA-TRAFFIC-SIMULATOR with eureka with status UP
-2026-05-02 13:29:43.812 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Saw local status change event StatusChangeEvent [timestamp=1777717783812, current=UP, previous=STARTING]
-2026-05-02 13:29:43.814 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol — Starting ProtocolHandler ["http-nio-8080"]
-2026-05-02 13:29:43.814 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-TRAFFIC-SIMULATOR/10.0.0.139:tavia-traffic-simulator: registering service...
-2026-05-02 13:29:43.820 [restartedMain] INFO  o.s.c.n.e.s.EurekaServiceRegistry — Unregistering application TAVIA-TRAFFIC-SIMULATOR with eureka with status DOWN
-2026-05-02 13:29:43.820 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Saw local status change event StatusChangeEvent [timestamp=1777717783820, current=DOWN, previous=UP]
-2026-05-02 13:29:43.820 [restartedMain] WARN  o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext — Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
-2026-05-02 13:29:43.822 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Shutting down DiscoveryClient ...
-2026-05-02 13:29:43.850 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-TRAFFIC-SIMULATOR/10.0.0.139:tavia-traffic-simulator - registration status: 204
-2026-05-02 13:29:43.850 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-TRAFFIC-SIMULATOR/10.0.0.139:tavia-traffic-simulator: registering service...
-2026-05-02 13:29:43.857 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-TRAFFIC-SIMULATOR/10.0.0.139:tavia-traffic-simulator - registration status: 204
-2026-05-02 13:29:43.858 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Unregistering ...
-2026-05-02 13:29:43.866 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-TRAFFIC-SIMULATOR/10.0.0.139:tavia-traffic-simulator - deregister  status: 200
-2026-05-02 13:29:43.867 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Completed shut down of DiscoveryClient
-2026-05-02 13:29:43.880 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger — 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2026-05-02 14:38:37.305 [restartedMain] INFO  c.t.t.TrafficSimulatorApplication — Starting TrafficSimulatorApplication using Java 21.0.10 with PID 26980 (/home/tuna/Desktop/tavia_v2/tavia-traffic-simulator/build/classes/java/main started by tuna in /home/tuna/Desktop/tavia_v2/tavia-traffic-simulator)
-2026-05-02 14:38:37.307 [restartedMain] DEBUG c.t.t.TrafficSimulatorApplication — Running with Spring Boot v4.0.6, Spring v7.0.7
-2026-05-02 14:38:37.308 [restartedMain] INFO  c.t.t.TrafficSimulatorApplication — No active profile set, falling back to 1 default profile: "default"
-2026-05-02 14:38:37.336 [restartedMain] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Fetching config from server at : http://localhost:8888
-2026-05-02 14:38:37.336 [restartedMain] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Located environment: name=tavia-traffic-simulator, profiles=[default], label=null, version=null, state=null
-2026-05-02 14:38:37.337 [restartedMain] DEBUG o.s.c.c.c.ConfigServerConfigDataLoader — Environment tavia-traffic-simulator has 2 property sources with 24 properties.
-2026-05-02 14:38:37.339 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor — Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-05-02 14:38:37.339 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor — For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-05-02 14:38:37.785 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope — BeanFactory id=37fc33d7-714e-3717-a222-65be81f8c0fe
-2026-05-02 14:38:38.026 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer — Tomcat initialized with port 8080 (http)
-2026-05-02 14:38:38.035 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol — Initializing ProtocolHandler ["http-nio-8080"]
-2026-05-02 14:38:38.036 [restartedMain] INFO  o.a.catalina.core.StandardService — Starting service [Tomcat]
-2026-05-02 14:38:38.036 [restartedMain] INFO  o.a.catalina.core.StandardEngine — Starting Servlet engine: [Apache Tomcat/11.0.21]
-2026-05-02 14:38:38.067 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer — Root WebApplicationContext: initialization completed in 727 ms
-2026-05-02 14:38:38.484 [restartedMain] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration — Eureka HTTP Client uses RestClient.
-2026-05-02 14:38:38.508 [restartedMain] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger — Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2026-05-02 14:38:38.524 [restartedMain] INFO  o.s.c.n.eureka.InstanceInfoFactory — Setting initial instance status as: STARTING
-2026-05-02 14:38:38.538 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Initializing Eureka in region us-east-1
-2026-05-02 14:38:38.540 [restartedMain] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
-2026-05-02 14:38:38.545 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Disable delta property : false
-2026-05-02 14:38:38.545 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Single vip registry refresh property : null
-2026-05-02 14:38:38.545 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Force full registry fetch : false
-2026-05-02 14:38:38.545 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Application is null : false
-2026-05-02 14:38:38.545 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Registered Applications size is zero : true
-2026-05-02 14:38:38.545 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Application version is -1: true
-2026-05-02 14:38:38.545 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Getting all instance registry info from the eureka server
-2026-05-02 14:38:38.748 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — The response status is 200
-2026-05-02 14:38:38.749 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Starting heartbeat executor: renew interval is: 30
-2026-05-02 14:38:38.751 [restartedMain] INFO  c.n.discovery.InstanceInfoReplicator — InstanceInfoReplicator onDemand update allowed rate per min is 4
-2026-05-02 14:38:38.751 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Discovery Client initialized at timestamp 1777721918751 with initial instances count: 7
-2026-05-02 14:38:38.753 [restartedMain] INFO  o.s.c.n.e.s.EurekaServiceRegistry — Registering application TAVIA-TRAFFIC-SIMULATOR with eureka with status UP
-2026-05-02 14:38:38.754 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Saw local status change event StatusChangeEvent [timestamp=1777721918754, current=UP, previous=STARTING]
-2026-05-02 14:38:38.755 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-TRAFFIC-SIMULATOR/10.0.0.139:tavia-traffic-simulator: registering service...
-2026-05-02 14:38:38.755 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol — Starting ProtocolHandler ["http-nio-8080"]
-2026-05-02 14:38:38.760 [restartedMain] INFO  o.s.c.n.e.s.EurekaServiceRegistry — Unregistering application TAVIA-TRAFFIC-SIMULATOR with eureka with status DOWN
-2026-05-02 14:38:38.760 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Saw local status change event StatusChangeEvent [timestamp=1777721918760, current=DOWN, previous=UP]
-2026-05-02 14:38:38.760 [restartedMain] WARN  o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext — Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
-2026-05-02 14:38:38.762 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Shutting down DiscoveryClient ...
-2026-05-02 14:38:38.779 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-TRAFFIC-SIMULATOR/10.0.0.139:tavia-traffic-simulator - registration status: 204
-2026-05-02 14:38:38.779 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-TRAFFIC-SIMULATOR/10.0.0.139:tavia-traffic-simulator: registering service...
-2026-05-02 14:38:38.783 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-TRAFFIC-SIMULATOR/10.0.0.139:tavia-traffic-simulator - registration status: 204
-2026-05-02 14:38:38.783 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Unregistering ...
-2026-05-02 14:38:38.788 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-TRAFFIC-SIMULATOR/10.0.0.139:tavia-traffic-simulator - deregister  status: 200
-2026-05-02 14:38:38.788 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Completed shut down of DiscoveryClient
-2026-05-02 14:38:38.795 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger — 
+2026-05-03 00:19:03.424 [restartedMain] INFO  c.t.t.TrafficSimulatorApplication — Starting TrafficSimulatorApplication using Java 21.0.10 with PID 153669 (/home/tuna/Desktop/tavia_v2/tavia-traffic-simulator/build/classes/java/main started by tuna in /home/tuna/Desktop/tavia_v2/tavia-traffic-simulator)
+2026-05-03 00:19:03.426 [restartedMain] DEBUG c.t.t.TrafficSimulatorApplication — Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-03 00:19:03.426 [restartedMain] INFO  c.t.t.TrafficSimulatorApplication — No active profile set, falling back to 1 default profile: "default"
+2026-05-03 00:19:03.455 [restartedMain] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Fetching config from server at : http://localhost:8888
+2026-05-03 00:19:03.456 [restartedMain] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Located environment: name=tavia-traffic-simulator, profiles=[default], label=null, version=null, state=null
+2026-05-03 00:19:03.456 [restartedMain] DEBUG o.s.c.c.c.ConfigServerConfigDataLoader — Environment tavia-traffic-simulator has 2 property sources with 24 properties.
+2026-05-03 00:19:03.458 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor — Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-03 00:19:03.458 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor — For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-03 00:19:03.863 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope — BeanFactory id=37fc33d7-714e-3717-a222-65be81f8c0fe
+2026-05-03 00:19:04.127 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer — Tomcat initialized with port 8080 (http)
+2026-05-03 00:19:04.135 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol — Initializing ProtocolHandler ["http-nio-8080"]
+2026-05-03 00:19:04.137 [restartedMain] INFO  o.a.catalina.core.StandardService — Starting service [Tomcat]
+2026-05-03 00:19:04.137 [restartedMain] INFO  o.a.catalina.core.StandardEngine — Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-03 00:19:04.162 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer — Root WebApplicationContext: initialization completed in 704 ms
+2026-05-03 00:19:04.562 [restartedMain] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration — Eureka HTTP Client uses RestClient.
+2026-05-03 00:19:04.590 [restartedMain] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger — Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-05-03 00:19:04.606 [restartedMain] INFO  o.s.c.n.eureka.InstanceInfoFactory — Setting initial instance status as: STARTING
+2026-05-03 00:19:04.622 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Initializing Eureka in region us-east-1
+2026-05-03 00:19:04.625 [restartedMain] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-03 00:19:04.630 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Disable delta property : false
+2026-05-03 00:19:04.630 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Single vip registry refresh property : null
+2026-05-03 00:19:04.630 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Force full registry fetch : false
+2026-05-03 00:19:04.630 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Application is null : false
+2026-05-03 00:19:04.630 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Registered Applications size is zero : true
+2026-05-03 00:19:04.630 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Application version is -1: true
+2026-05-03 00:19:04.630 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Getting all instance registry info from the eureka server
+2026-05-03 00:19:04.862 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — The response status is 200
+2026-05-03 00:19:04.864 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Starting heartbeat executor: renew interval is: 30
+2026-05-03 00:19:04.865 [restartedMain] INFO  c.n.discovery.InstanceInfoReplicator — InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-05-03 00:19:04.866 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Discovery Client initialized at timestamp 1777756744866 with initial instances count: 9
+2026-05-03 00:19:04.868 [restartedMain] INFO  o.s.c.n.e.s.EurekaServiceRegistry — Registering application TAVIA-TRAFFIC-SIMULATOR with eureka with status UP
+2026-05-03 00:19:04.869 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Saw local status change event StatusChangeEvent [timestamp=1777756744869, current=UP, previous=STARTING]
+2026-05-03 00:19:04.870 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-TRAFFIC-SIMULATOR/10.0.0.139:tavia-traffic-simulator: registering service...
+2026-05-03 00:19:04.870 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol — Starting ProtocolHandler ["http-nio-8080"]
+2026-05-03 00:19:04.874 [restartedMain] INFO  o.s.c.n.e.s.EurekaServiceRegistry — Unregistering application TAVIA-TRAFFIC-SIMULATOR with eureka with status DOWN
+2026-05-03 00:19:04.875 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Saw local status change event StatusChangeEvent [timestamp=1777756744875, current=DOWN, previous=UP]
+2026-05-03 00:19:04.875 [restartedMain] WARN  o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext — Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-05-03 00:19:04.877 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Shutting down DiscoveryClient ...
+2026-05-03 00:19:04.897 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-TRAFFIC-SIMULATOR/10.0.0.139:tavia-traffic-simulator - registration status: 204
+2026-05-03 00:19:04.898 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-TRAFFIC-SIMULATOR/10.0.0.139:tavia-traffic-simulator: registering service...
+2026-05-03 00:19:04.902 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-TRAFFIC-SIMULATOR/10.0.0.139:tavia-traffic-simulator - registration status: 204
+2026-05-03 00:19:04.902 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Unregistering ...
+2026-05-03 00:19:04.967 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-TRAFFIC-SIMULATOR/10.0.0.139:tavia-traffic-simulator - deregister  status: 200
+2026-05-03 00:19:04.967 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Completed shut down of DiscoveryClient
+2026-05-03 00:19:04.975 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger — 
 
 Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.

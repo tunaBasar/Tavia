@@ -100,6 +100,48 @@ public class GlobalExceptionHandler {
         return problemDetail;
     }
 
+    @ExceptionHandler(org.springframework.http.converter.HttpMessageNotReadableException.class)
+    public ProblemDetail handleHttpMessageNotReadableException(org.springframework.http.converter.HttpMessageNotReadableException ex) {
+        String traceId = UUID.randomUUID().toString();
+        log.error("[TraceId: {}] Malformed JSON Request: {}", traceId, ex.getMessage());
+
+        ProblemDetail problemDetail = ProblemDetail.forStatusAndDetail(HttpStatus.BAD_REQUEST, "Malformed JSON request. Please check the payload format.");
+        problemDetail.setTitle("Bad Request");
+        problemDetail.setType(URI.create("https://tavia.com/errors/malformed-json"));
+        problemDetail.setProperty("traceId", traceId);
+        problemDetail.setProperty("timestamp", Instant.now());
+
+        return problemDetail;
+    }
+
+    @ExceptionHandler(jakarta.validation.ConstraintViolationException.class)
+    public ProblemDetail handleConstraintViolationException(jakarta.validation.ConstraintViolationException ex) {
+        String traceId = UUID.randomUUID().toString();
+        log.error("[TraceId: {}] Constraint Violation: {}", traceId, ex.getMessage());
+
+        ProblemDetail problemDetail = ProblemDetail.forStatusAndDetail(HttpStatus.BAD_REQUEST, "Validation failed: " + ex.getMessage());
+        problemDetail.setTitle("Constraint Violation");
+        problemDetail.setType(URI.create("https://tavia.com/errors/constraint-violation"));
+        problemDetail.setProperty("traceId", traceId);
+        problemDetail.setProperty("timestamp", Instant.now());
+
+        return problemDetail;
+    }
+
+    @ExceptionHandler(org.springframework.dao.DataIntegrityViolationException.class)
+    public ProblemDetail handleDataIntegrityViolationException(org.springframework.dao.DataIntegrityViolationException ex) {
+        String traceId = UUID.randomUUID().toString();
+        log.error("[TraceId: {}] Data Integrity Violation: {}", traceId, ex.getMessage());
+
+        ProblemDetail problemDetail = ProblemDetail.forStatusAndDetail(HttpStatus.CONFLICT, "Database constraint violation occurred.");
+        problemDetail.setTitle("Data Integrity Violation");
+        problemDetail.setType(URI.create("https://tavia.com/errors/data-integrity"));
+        problemDetail.setProperty("traceId", traceId);
+        problemDetail.setProperty("timestamp", Instant.now());
+
+        return problemDetail;
+    }
+
     @ExceptionHandler(Exception.class)
     public ProblemDetail handleGenericException(Exception ex) {
         String traceId = UUID.randomUUID().toString();

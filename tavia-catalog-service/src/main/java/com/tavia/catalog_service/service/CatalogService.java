@@ -16,12 +16,12 @@ public interface CatalogService {
      * Creates a new recipe for the given tenant.
      *
      * @param tenantId  the tenant owning this recipe
-     * @param recipeDto the recipe definition
+     * @param request   the recipe creation request without IDs
      * @return the persisted recipe
      * @throws com.tavia.catalog_service.exception.DuplicateRecipeException if a recipe
      *         with the same product name already exists for this tenant
      */
-    RecipeDto createRecipe(UUID tenantId, RecipeDto recipeDto);
+    RecipeDto createRecipe(UUID tenantId, com.tavia.catalog_service.dto.CreateRecipeRequest request);
 
     /**
      * Updates an existing recipe identified by its ID.

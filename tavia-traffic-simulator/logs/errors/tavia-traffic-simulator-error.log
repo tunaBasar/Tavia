@@ -1,4 +1,4 @@
-2026-05-02 00:18:23.337 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter — 
+2026-05-03 00:07:50.235 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter — 
 
 ***************************
 APPLICATION FAILED TO START
@@ -12,105 +12,7 @@ Action:
 
 Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
 
-2026-05-02 00:30:10.741 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter — 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Web server failed to start. Port 8080 was already in use.
-
-Action:
-
-Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
-
-2026-05-02 00:41:25.682 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter — 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Web server failed to start. Port 8080 was already in use.
-
-Action:
-
-Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
-
-2026-05-02 01:48:27.763 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter — 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Web server failed to start. Port 8080 was already in use.
-
-Action:
-
-Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
-
-2026-05-02 02:23:12.384 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter — 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Web server failed to start. Port 8080 was already in use.
-
-Action:
-
-Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
-
-2026-05-02 02:31:58.131 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter — 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Web server failed to start. Port 8080 was already in use.
-
-Action:
-
-Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
-
-2026-05-02 11:34:42.137 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter — 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Web server failed to start. Port 8080 was already in use.
-
-Action:
-
-Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
-
-2026-05-02 13:29:43.900 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter — 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Web server failed to start. Port 8080 was already in use.
-
-Action:
-
-Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
-
-2026-05-02 14:38:38.805 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter — 
+2026-05-03 00:19:04.983 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter — 
 
 ***************************
 APPLICATION FAILED TO START

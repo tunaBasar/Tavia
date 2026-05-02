@@ -206,3 +206,25 @@ export interface Product {
   active: boolean;
   ingredients: RecipeIngredient[];
 }
+
+// ─── Machines (IoT) ──────────────────────────────────────────────
+
+export type MachineType = "BREWER" | "FETCHER" | "CLEANER";
+
+export type MachineStatus = "OFFLINE" | "IDLE" | "BREWING" | "MAINTENANCE" | "ERROR";
+
+export interface Machine {
+  id: string;
+  tenantId: string;
+  name: string;
+  macAddress: string;
+  firmwareVersion: string;
+  machineType: MachineType;
+  status: MachineStatus;
+}
+
+export interface MachineRegistrationRequest {
+  name: string;
+  macAddress: string;
+  machineType: MachineType;
+}

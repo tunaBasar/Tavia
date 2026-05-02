@@ -378,3 +378,668 @@ Starting a Gradle Daemon, 59 busy and 1 incompatible and 1 stopped Daemons could
 <<< SERVİS DURDURULDU: 2026-05-02 14:48:39
 ********************************************************
 
+
+
+********************************************************
+>>> SERVİS BAŞLATILDI: 2026-05-02 20:12:43
+********************************************************
+
+Starting a Gradle Daemon, 61 busy Daemons could not be reused, use --status for details
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :resolveMainClassName UP-TO-DATE
+
+> Task :bootRun
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.6)
+
+2026-05-02 20:12:52.017 [background-preinit] INFO  o.h.validator.internal.util.Version — HV000001: Hibernate Validator 9.0.1.Final
+2026-05-02 20:12:52.058 [restartedMain] INFO  c.t.c.ContextServiceApplication — Starting ContextServiceApplication using Java 21.0.10 with PID 122506 (/home/tuna/Desktop/tavia_v2/tavia-context-service/build/classes/java/main started by tuna in /home/tuna/Desktop/tavia_v2/tavia-context-service)
+2026-05-02 20:12:52.059 [restartedMain] DEBUG c.t.c.ContextServiceApplication — Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-02 20:12:52.060 [restartedMain] INFO  c.t.c.ContextServiceApplication — No active profile set, falling back to 1 default profile: "default"
+2026-05-02 20:12:52.114 [restartedMain] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Fetching config from server at : http://localhost:8888
+2026-05-02 20:12:52.115 [restartedMain] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Located environment: name=tavia-context-service, profiles=[default], label=null, version=null, state=null
+2026-05-02 20:12:52.116 [restartedMain] DEBUG o.s.c.c.c.ConfigServerConfigDataLoader — Environment tavia-context-service has 2 property sources with 24 properties.
+2026-05-02 20:12:52.121 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor — Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-02 20:12:52.123 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor — For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-02 20:12:52.937 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope — BeanFactory id=a0a5374f-144e-39ce-bc94-334cc4ee8820
+2026-05-02 20:12:53.264 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer — Tomcat initialized with port 8087 (http)
+2026-05-02 20:12:53.274 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol — Initializing ProtocolHandler ["http-nio-8087"]
+2026-05-02 20:12:53.276 [restartedMain] INFO  o.a.catalina.core.StandardService — Starting service [Tomcat]
+2026-05-02 20:12:53.277 [restartedMain] INFO  o.a.catalina.core.StandardEngine — Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-02 20:12:53.307 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer — Root WebApplicationContext: initialization completed in 1181 ms
+2026-05-02 20:12:53.864 [restartedMain] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration — Eureka HTTP Client uses RestClient.
+2026-05-02 20:12:53.886 [restartedMain] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger — Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-05-02 20:12:53.907 [restartedMain] INFO  o.s.c.n.eureka.InstanceInfoFactory — Setting initial instance status as: STARTING
+2026-05-02 20:12:53.924 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Initializing Eureka in region us-east-1
+2026-05-02 20:12:53.926 [restartedMain] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 20:12:53.930 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Disable delta property : false
+2026-05-02 20:12:53.931 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Single vip registry refresh property : null
+2026-05-02 20:12:53.931 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Force full registry fetch : false
+2026-05-02 20:12:53.931 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Application is null : false
+2026-05-02 20:12:53.931 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Registered Applications size is zero : true
+2026-05-02 20:12:53.931 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Application version is -1: true
+2026-05-02 20:12:53.931 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Getting all instance registry info from the eureka server
+2026-05-02 20:12:54.122 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — The response status is 200
+2026-05-02 20:12:54.123 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Starting heartbeat executor: renew interval is: 30
+2026-05-02 20:12:54.125 [restartedMain] INFO  c.n.discovery.InstanceInfoReplicator — InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-05-02 20:12:54.126 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Discovery Client initialized at timestamp 1777741974126 with initial instances count: 5
+2026-05-02 20:12:54.129 [restartedMain] INFO  o.s.c.n.e.s.EurekaServiceRegistry — Registering application TAVIA-CONTEXT-SERVICE with eureka with status UP
+2026-05-02 20:12:54.129 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Saw local status change event StatusChangeEvent [timestamp=1777741974129, current=UP, previous=STARTING]
+2026-05-02 20:12:54.130 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-CONTEXT-SERVICE/10.0.0.139:tavia-context-service:8087: registering service...
+2026-05-02 20:12:54.131 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol — Starting ProtocolHandler ["http-nio-8087"]
+2026-05-02 20:12:54.139 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer — Tomcat started on port 8087 (http) with context path '/'
+2026-05-02 20:12:54.140 [restartedMain] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration — Updating port to 8087
+2026-05-02 20:12:54.149 [restartedMain] INFO  c.t.c.ContextServiceApplication — Started ContextServiceApplication in 3.013 seconds (process running for 3.504)
+2026-05-02 20:12:54.152 [restartedMain] WARN  o.s.c.events.SpringDocAppInitializer — SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-05-02 20:12:54.152 [restartedMain] WARN  o.s.c.events.SpringDocAppInitializer — SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-05-02 20:12:54.159 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-CONTEXT-SERVICE/10.0.0.139:tavia-context-service:8087 - registration status: 204
+2026-05-02 20:14:06.330 [http-nio-8087-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] — Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-02 20:14:06.332 [http-nio-8087-exec-1] INFO  o.s.web.servlet.DispatcherServlet — Initializing Servlet 'dispatcherServlet'
+2026-05-02 20:14:06.337 [http-nio-8087-exec-1] INFO  o.s.web.servlet.DispatcherServlet — Completed initialization in 5 ms
+2026-05-02 20:14:06.389 [http-nio-8087-exec-1] INFO  c.t.c.service.ContextServiceImpl — Context generated — weather: SUNNY, activeEvent: EXAM_WEEK, competitorIntensity: MEDIUM
+2026-05-02 20:17:53.932 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+
+********************************************************
+<<< SERVİS DURDURULDU: 2026-05-02 20:21:57
+********************************************************
+
+
+
+********************************************************
+>>> SERVİS BAŞLATILDI: 2026-05-02 20:30:56
+********************************************************
+
+Starting a Gradle Daemon, 61 busy and 11 stopped Daemons could not be reused, use --status for details
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :resolveMainClassName UP-TO-DATE
+
+> Task :bootRun
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.6)
+
+2026-05-02 20:31:04.638 [background-preinit] INFO  o.h.validator.internal.util.Version — HV000001: Hibernate Validator 9.0.1.Final
+2026-05-02 20:31:04.668 [restartedMain] INFO  c.t.c.ContextServiceApplication — Starting ContextServiceApplication using Java 21.0.10 with PID 132816 (/home/tuna/Desktop/tavia_v2/tavia-context-service/build/classes/java/main started by tuna in /home/tuna/Desktop/tavia_v2/tavia-context-service)
+2026-05-02 20:31:04.668 [restartedMain] DEBUG c.t.c.ContextServiceApplication — Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-02 20:31:04.669 [restartedMain] INFO  c.t.c.ContextServiceApplication — No active profile set, falling back to 1 default profile: "default"
+2026-05-02 20:31:04.700 [restartedMain] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Fetching config from server at : http://localhost:8888
+2026-05-02 20:31:04.700 [restartedMain] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Located environment: name=tavia-context-service, profiles=[default], label=null, version=null, state=null
+2026-05-02 20:31:04.700 [restartedMain] DEBUG o.s.c.c.c.ConfigServerConfigDataLoader — Environment tavia-context-service has 2 property sources with 24 properties.
+2026-05-02 20:31:04.702 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor — Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-02 20:31:04.702 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor — For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-02 20:31:05.256 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope — BeanFactory id=a0a5374f-144e-39ce-bc94-334cc4ee8820
+2026-05-02 20:31:05.498 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer — Tomcat initialized with port 8087 (http)
+2026-05-02 20:31:05.506 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol — Initializing ProtocolHandler ["http-nio-8087"]
+2026-05-02 20:31:05.508 [restartedMain] INFO  o.a.catalina.core.StandardService — Starting service [Tomcat]
+2026-05-02 20:31:05.508 [restartedMain] INFO  o.a.catalina.core.StandardEngine — Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-02 20:31:05.538 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer — Root WebApplicationContext: initialization completed in 834 ms
+2026-05-02 20:31:06.025 [restartedMain] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration — Eureka HTTP Client uses RestClient.
+2026-05-02 20:31:06.048 [restartedMain] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger — Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-05-02 20:31:06.065 [restartedMain] INFO  o.s.c.n.eureka.InstanceInfoFactory — Setting initial instance status as: STARTING
+2026-05-02 20:31:06.080 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Initializing Eureka in region us-east-1
+2026-05-02 20:31:06.082 [restartedMain] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 20:31:06.087 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Disable delta property : false
+2026-05-02 20:31:06.087 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Single vip registry refresh property : null
+2026-05-02 20:31:06.087 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Force full registry fetch : false
+2026-05-02 20:31:06.087 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Application is null : false
+2026-05-02 20:31:06.087 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Registered Applications size is zero : true
+2026-05-02 20:31:06.087 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Application version is -1: true
+2026-05-02 20:31:06.087 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Getting all instance registry info from the eureka server
+2026-05-02 20:31:06.266 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — The response status is 200
+2026-05-02 20:31:06.267 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Starting heartbeat executor: renew interval is: 30
+2026-05-02 20:31:06.268 [restartedMain] INFO  c.n.discovery.InstanceInfoReplicator — InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-05-02 20:31:06.269 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Discovery Client initialized at timestamp 1777743066269 with initial instances count: 6
+2026-05-02 20:31:06.271 [restartedMain] INFO  o.s.c.n.e.s.EurekaServiceRegistry — Registering application TAVIA-CONTEXT-SERVICE with eureka with status UP
+2026-05-02 20:31:06.271 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Saw local status change event StatusChangeEvent [timestamp=1777743066271, current=UP, previous=STARTING]
+2026-05-02 20:31:06.272 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol — Starting ProtocolHandler ["http-nio-8087"]
+2026-05-02 20:31:06.272 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-CONTEXT-SERVICE/10.0.0.139:tavia-context-service:8087: registering service...
+2026-05-02 20:31:06.286 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer — Tomcat started on port 8087 (http) with context path '/'
+2026-05-02 20:31:06.287 [restartedMain] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration — Updating port to 8087
+2026-05-02 20:31:06.298 [restartedMain] INFO  c.t.c.ContextServiceApplication — Started ContextServiceApplication in 2.394 seconds (process running for 2.791)
+2026-05-02 20:31:06.302 [restartedMain] WARN  o.s.c.events.SpringDocAppInitializer — SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-05-02 20:31:06.302 [restartedMain] WARN  o.s.c.events.SpringDocAppInitializer — SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-05-02 20:31:06.304 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-CONTEXT-SERVICE/10.0.0.139:tavia-context-service:8087 - registration status: 204
+
+
+********************************************************
+>>> SERVİS BAŞLATILDI: 2026-05-02 20:39:13
+********************************************************
+
+Starting a Gradle Daemon, 72 busy and 12 stopped Daemons could not be reused, use --status for details
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :resolveMainClassName UP-TO-DATE
+
+> Task :bootRun
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.6)
+
+2026-05-02 20:39:21.220 [background-preinit] INFO  o.h.validator.internal.util.Version — HV000001: Hibernate Validator 9.0.1.Final
+2026-05-02 20:39:21.245 [restartedMain] INFO  c.t.c.ContextServiceApplication — Starting ContextServiceApplication using Java 21.0.10 with PID 13124 (/home/tuna/Desktop/tavia_v2/tavia-context-service/build/classes/java/main started by tuna in /home/tuna/Desktop/tavia_v2/tavia-context-service)
+2026-05-02 20:39:21.245 [restartedMain] DEBUG c.t.c.ContextServiceApplication — Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-02 20:39:21.246 [restartedMain] INFO  c.t.c.ContextServiceApplication — No active profile set, falling back to 1 default profile: "default"
+2026-05-02 20:39:21.276 [restartedMain] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Fetching config from server at : http://localhost:8888
+2026-05-02 20:39:21.276 [restartedMain] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Located environment: name=tavia-context-service, profiles=[default], label=null, version=null, state=null
+2026-05-02 20:39:21.276 [restartedMain] DEBUG o.s.c.c.c.ConfigServerConfigDataLoader — Environment tavia-context-service has 2 property sources with 24 properties.
+2026-05-02 20:39:21.278 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor — Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-02 20:39:21.278 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor — For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-02 20:39:21.835 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope — BeanFactory id=a0a5374f-144e-39ce-bc94-334cc4ee8820
+2026-05-02 20:39:22.081 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer — Tomcat initialized with port 8087 (http)
+2026-05-02 20:39:22.090 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol — Initializing ProtocolHandler ["http-nio-8087"]
+2026-05-02 20:39:22.092 [restartedMain] INFO  o.a.catalina.core.StandardService — Starting service [Tomcat]
+2026-05-02 20:39:22.093 [restartedMain] INFO  o.a.catalina.core.StandardEngine — Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-02 20:39:22.121 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer — Root WebApplicationContext: initialization completed in 842 ms
+2026-05-02 20:39:22.585 [restartedMain] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration — Eureka HTTP Client uses RestClient.
+2026-05-02 20:39:22.606 [restartedMain] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger — Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-05-02 20:39:22.623 [restartedMain] INFO  o.s.c.n.eureka.InstanceInfoFactory — Setting initial instance status as: STARTING
+2026-05-02 20:39:22.637 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Initializing Eureka in region us-east-1
+2026-05-02 20:39:22.639 [restartedMain] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 20:39:22.644 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Disable delta property : false
+2026-05-02 20:39:22.644 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Single vip registry refresh property : null
+2026-05-02 20:39:22.644 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Force full registry fetch : false
+2026-05-02 20:39:22.644 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Application is null : false
+2026-05-02 20:39:22.644 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Registered Applications size is zero : true
+2026-05-02 20:39:22.644 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Application version is -1: true
+2026-05-02 20:39:22.644 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Getting all instance registry info from the eureka server
+2026-05-02 20:39:22.820 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — The response status is 200
+2026-05-02 20:39:22.822 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Starting heartbeat executor: renew interval is: 30
+2026-05-02 20:39:22.823 [restartedMain] INFO  c.n.discovery.InstanceInfoReplicator — InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-05-02 20:39:22.824 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Discovery Client initialized at timestamp 1777743562823 with initial instances count: 5
+2026-05-02 20:39:22.826 [restartedMain] INFO  o.s.c.n.e.s.EurekaServiceRegistry — Registering application TAVIA-CONTEXT-SERVICE with eureka with status UP
+2026-05-02 20:39:22.826 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Saw local status change event StatusChangeEvent [timestamp=1777743562826, current=UP, previous=STARTING]
+2026-05-02 20:39:22.831 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-CONTEXT-SERVICE/10.0.0.139:tavia-context-service:8087: registering service...
+2026-05-02 20:39:22.831 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol — Starting ProtocolHandler ["http-nio-8087"]
+2026-05-02 20:39:22.843 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer — Tomcat started on port 8087 (http) with context path '/'
+2026-05-02 20:39:22.844 [restartedMain] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration — Updating port to 8087
+2026-05-02 20:39:22.857 [restartedMain] INFO  c.t.c.ContextServiceApplication — Started ContextServiceApplication in 2.338 seconds (process running for 2.735)
+2026-05-02 20:39:22.860 [restartedMain] WARN  o.s.c.events.SpringDocAppInitializer — SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-05-02 20:39:22.861 [restartedMain] WARN  o.s.c.events.SpringDocAppInitializer — SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-05-02 20:39:22.865 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-CONTEXT-SERVICE/10.0.0.139:tavia-context-service:8087 - registration status: 204
+2026-05-02 20:40:28.444 [http-nio-8087-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] — Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-02 20:40:28.445 [http-nio-8087-exec-1] INFO  o.s.web.servlet.DispatcherServlet — Initializing Servlet 'dispatcherServlet'
+2026-05-02 20:40:28.447 [http-nio-8087-exec-1] INFO  o.s.web.servlet.DispatcherServlet — Completed initialization in 2 ms
+2026-05-02 20:40:28.477 [http-nio-8087-exec-1] INFO  c.t.c.service.ContextServiceImpl — Context generated — weather: RAINY, activeEvent: HOLIDAY, competitorIntensity: LOW
+2026-05-02 20:40:52.788 [http-nio-8087-exec-2] INFO  c.t.c.service.ContextServiceImpl — Context generated — weather: SUNNY, activeEvent: NONE, competitorIntensity: LOW
+
+********************************************************
+<<< SERVİS DURDURULDU: 2026-05-02 20:41:10
+********************************************************
+
+
+
+********************************************************
+>>> SERVİS BAŞLATILDI: 2026-05-02 22:52:11
+********************************************************
+
+Starting a Gradle Daemon, 8 busy and 66 stopped Daemons could not be reused, use --status for details
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :resolveMainClassName UP-TO-DATE
+
+> Task :bootRun
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.6)
+
+2026-05-02 22:52:18.877 [background-preinit] INFO  o.h.validator.internal.util.Version — HV000001: Hibernate Validator 9.0.1.Final
+2026-05-02 22:52:18.901 [restartedMain] INFO  c.t.c.ContextServiceApplication — Starting ContextServiceApplication using Java 21.0.10 with PID 64990 (/home/tuna/Desktop/tavia_v2/tavia-context-service/build/classes/java/main started by tuna in /home/tuna/Desktop/tavia_v2/tavia-context-service)
+2026-05-02 22:52:18.902 [restartedMain] DEBUG c.t.c.ContextServiceApplication — Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-02 22:52:18.902 [restartedMain] INFO  c.t.c.ContextServiceApplication — No active profile set, falling back to 1 default profile: "default"
+2026-05-02 22:52:18.933 [restartedMain] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Fetching config from server at : http://localhost:8888
+2026-05-02 22:52:18.933 [restartedMain] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Located environment: name=tavia-context-service, profiles=[default], label=null, version=null, state=null
+2026-05-02 22:52:18.933 [restartedMain] DEBUG o.s.c.c.c.ConfigServerConfigDataLoader — Environment tavia-context-service has 2 property sources with 24 properties.
+2026-05-02 22:52:18.935 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor — Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-02 22:52:18.935 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor — For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-02 22:52:19.476 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope — BeanFactory id=a0a5374f-144e-39ce-bc94-334cc4ee8820
+2026-05-02 22:52:19.716 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer — Tomcat initialized with port 8087 (http)
+2026-05-02 22:52:19.724 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol — Initializing ProtocolHandler ["http-nio-8087"]
+2026-05-02 22:52:19.726 [restartedMain] INFO  o.a.catalina.core.StandardService — Starting service [Tomcat]
+2026-05-02 22:52:19.726 [restartedMain] INFO  o.a.catalina.core.StandardEngine — Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-02 22:52:19.753 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer — Root WebApplicationContext: initialization completed in 818 ms
+2026-05-02 22:52:20.205 [restartedMain] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration — Eureka HTTP Client uses RestClient.
+2026-05-02 22:52:20.226 [restartedMain] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger — Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-05-02 22:52:20.246 [restartedMain] INFO  o.s.c.n.eureka.InstanceInfoFactory — Setting initial instance status as: STARTING
+2026-05-02 22:52:20.260 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Initializing Eureka in region us-east-1
+2026-05-02 22:52:20.262 [restartedMain] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 22:52:20.267 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Disable delta property : false
+2026-05-02 22:52:20.267 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Single vip registry refresh property : null
+2026-05-02 22:52:20.267 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Force full registry fetch : false
+2026-05-02 22:52:20.267 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Application is null : false
+2026-05-02 22:52:20.267 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Registered Applications size is zero : true
+2026-05-02 22:52:20.267 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Application version is -1: true
+2026-05-02 22:52:20.267 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Getting all instance registry info from the eureka server
+2026-05-02 22:52:20.433 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — The response status is 200
+2026-05-02 22:52:20.434 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Starting heartbeat executor: renew interval is: 30
+2026-05-02 22:52:20.435 [restartedMain] INFO  c.n.discovery.InstanceInfoReplicator — InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-05-02 22:52:20.436 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Discovery Client initialized at timestamp 1777751540436 with initial instances count: 5
+2026-05-02 22:52:20.438 [restartedMain] INFO  o.s.c.n.e.s.EurekaServiceRegistry — Registering application TAVIA-CONTEXT-SERVICE with eureka with status UP
+2026-05-02 22:52:20.439 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Saw local status change event StatusChangeEvent [timestamp=1777751540439, current=UP, previous=STARTING]
+2026-05-02 22:52:20.439 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-CONTEXT-SERVICE/10.0.0.139:tavia-context-service:8087: registering service...
+2026-05-02 22:52:20.440 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol — Starting ProtocolHandler ["http-nio-8087"]
+2026-05-02 22:52:20.450 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer — Tomcat started on port 8087 (http) with context path '/'
+2026-05-02 22:52:20.454 [restartedMain] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration — Updating port to 8087
+2026-05-02 22:52:20.467 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-CONTEXT-SERVICE/10.0.0.139:tavia-context-service:8087 - registration status: 204
+2026-05-02 22:52:20.469 [restartedMain] INFO  c.t.c.ContextServiceApplication — Started ContextServiceApplication in 2.368 seconds (process running for 2.754)
+2026-05-02 22:52:20.471 [restartedMain] WARN  o.s.c.events.SpringDocAppInitializer — SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-05-02 22:52:20.471 [restartedMain] WARN  o.s.c.events.SpringDocAppInitializer — SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-05-02 22:53:53.586 [http-nio-8087-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] — Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-02 22:53:53.586 [http-nio-8087-exec-1] INFO  o.s.web.servlet.DispatcherServlet — Initializing Servlet 'dispatcherServlet'
+2026-05-02 22:53:53.589 [http-nio-8087-exec-1] INFO  o.s.web.servlet.DispatcherServlet — Completed initialization in 3 ms
+2026-05-02 22:53:53.625 [http-nio-8087-exec-1] INFO  c.t.c.service.ContextServiceImpl — Context generated — weather: SUNNY, activeEvent: HOLIDAY, competitorIntensity: HIGH
+2026-05-02 22:54:20.707 [http-nio-8087-exec-2] INFO  c.t.c.service.ContextServiceImpl — Context generated — weather: CLOUDY, activeEvent: EXAM_WEEK, competitorIntensity: HIGH
+
+********************************************************
+<<< SERVİS DURDURULDU: 2026-05-02 22:54:50
+********************************************************
+
+
+
+********************************************************
+>>> SERVİS BAŞLATILDI: 2026-05-02 23:11:49
+********************************************************
+
+Starting a Gradle Daemon, 8 busy and 1 incompatible and 77 stopped Daemons could not be reused, use --status for details
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :resolveMainClassName UP-TO-DATE
+
+> Task :bootRun
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.6)
+
+2026-05-02 23:11:56.980 [background-preinit] INFO  o.h.validator.internal.util.Version — HV000001: Hibernate Validator 9.0.1.Final
+2026-05-02 23:11:57.000 [restartedMain] INFO  c.t.c.ContextServiceApplication — Starting ContextServiceApplication using Java 21.0.10 with PID 84103 (/home/tuna/Desktop/tavia_v2/tavia-context-service/build/classes/java/main started by tuna in /home/tuna/Desktop/tavia_v2/tavia-context-service)
+2026-05-02 23:11:57.000 [restartedMain] DEBUG c.t.c.ContextServiceApplication — Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-02 23:11:57.001 [restartedMain] INFO  c.t.c.ContextServiceApplication — No active profile set, falling back to 1 default profile: "default"
+2026-05-02 23:11:57.028 [restartedMain] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Fetching config from server at : http://localhost:8888
+2026-05-02 23:11:57.028 [restartedMain] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Located environment: name=tavia-context-service, profiles=[default], label=null, version=null, state=null
+2026-05-02 23:11:57.028 [restartedMain] DEBUG o.s.c.c.c.ConfigServerConfigDataLoader — Environment tavia-context-service has 2 property sources with 24 properties.
+2026-05-02 23:11:57.030 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor — Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-02 23:11:57.030 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor — For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-02 23:11:57.554 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope — BeanFactory id=a0a5374f-144e-39ce-bc94-334cc4ee8820
+2026-05-02 23:11:57.789 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer — Tomcat initialized with port 8087 (http)
+2026-05-02 23:11:57.797 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol — Initializing ProtocolHandler ["http-nio-8087"]
+2026-05-02 23:11:57.798 [restartedMain] INFO  o.a.catalina.core.StandardService — Starting service [Tomcat]
+2026-05-02 23:11:57.799 [restartedMain] INFO  o.a.catalina.core.StandardEngine — Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-02 23:11:57.825 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer — Root WebApplicationContext: initialization completed in 794 ms
+2026-05-02 23:11:58.281 [restartedMain] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration — Eureka HTTP Client uses RestClient.
+2026-05-02 23:11:58.301 [restartedMain] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger — Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-05-02 23:11:58.317 [restartedMain] INFO  o.s.c.n.eureka.InstanceInfoFactory — Setting initial instance status as: STARTING
+2026-05-02 23:11:58.331 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Initializing Eureka in region us-east-1
+2026-05-02 23:11:58.333 [restartedMain] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 23:11:58.337 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Disable delta property : false
+2026-05-02 23:11:58.337 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Single vip registry refresh property : null
+2026-05-02 23:11:58.338 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Force full registry fetch : false
+2026-05-02 23:11:58.338 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Application is null : false
+2026-05-02 23:11:58.338 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Registered Applications size is zero : true
+2026-05-02 23:11:58.338 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Application version is -1: true
+2026-05-02 23:11:58.338 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Getting all instance registry info from the eureka server
+2026-05-02 23:11:58.508 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — The response status is 200
+2026-05-02 23:11:58.509 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Starting heartbeat executor: renew interval is: 30
+2026-05-02 23:11:58.510 [restartedMain] INFO  c.n.discovery.InstanceInfoReplicator — InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-05-02 23:11:58.511 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Discovery Client initialized at timestamp 1777752718511 with initial instances count: 5
+2026-05-02 23:11:58.513 [restartedMain] INFO  o.s.c.n.e.s.EurekaServiceRegistry — Registering application TAVIA-CONTEXT-SERVICE with eureka with status UP
+2026-05-02 23:11:58.513 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Saw local status change event StatusChangeEvent [timestamp=1777752718513, current=UP, previous=STARTING]
+2026-05-02 23:11:58.514 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-CONTEXT-SERVICE/10.0.0.139:tavia-context-service:8087: registering service...
+2026-05-02 23:11:58.514 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol — Starting ProtocolHandler ["http-nio-8087"]
+2026-05-02 23:11:58.523 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer — Tomcat started on port 8087 (http) with context path '/'
+2026-05-02 23:11:58.523 [restartedMain] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration — Updating port to 8087
+2026-05-02 23:11:58.536 [restartedMain] INFO  c.t.c.ContextServiceApplication — Started ContextServiceApplication in 2.259 seconds (process running for 2.645)
+2026-05-02 23:11:58.539 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-CONTEXT-SERVICE/10.0.0.139:tavia-context-service:8087 - registration status: 204
+2026-05-02 23:11:58.540 [restartedMain] WARN  o.s.c.events.SpringDocAppInitializer — SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-05-02 23:11:58.540 [restartedMain] WARN  o.s.c.events.SpringDocAppInitializer — SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-05-02 23:13:47.899 [http-nio-8087-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] — Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-02 23:13:47.900 [http-nio-8087-exec-1] INFO  o.s.web.servlet.DispatcherServlet — Initializing Servlet 'dispatcherServlet'
+2026-05-02 23:13:47.902 [http-nio-8087-exec-1] INFO  o.s.web.servlet.DispatcherServlet — Completed initialization in 2 ms
+2026-05-02 23:13:47.928 [http-nio-8087-exec-1] INFO  c.t.c.service.ContextServiceImpl — Context generated — weather: RAINY, activeEvent: NONE, competitorIntensity: MEDIUM
+2026-05-02 23:16:58.339 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+
+********************************************************
+<<< SERVİS DURDURULDU: 2026-05-02 23:18:34
+********************************************************
+
+
+
+********************************************************
+>>> SERVİS BAŞLATILDI: 2026-05-02 23:27:43
+********************************************************
+
+Starting a Gradle Daemon, 8 busy and 1 incompatible and 88 stopped Daemons could not be reused, use --status for details
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :resolveMainClassName UP-TO-DATE
+
+> Task :bootRun
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.6)
+
+2026-05-02 23:27:50.497 [background-preinit] INFO  o.h.validator.internal.util.Version — HV000001: Hibernate Validator 9.0.1.Final
+2026-05-02 23:27:50.522 [restartedMain] INFO  c.t.c.ContextServiceApplication — Starting ContextServiceApplication using Java 21.0.10 with PID 98069 (/home/tuna/Desktop/tavia_v2/tavia-context-service/build/classes/java/main started by tuna in /home/tuna/Desktop/tavia_v2/tavia-context-service)
+2026-05-02 23:27:50.522 [restartedMain] DEBUG c.t.c.ContextServiceApplication — Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-02 23:27:50.523 [restartedMain] INFO  c.t.c.ContextServiceApplication — No active profile set, falling back to 1 default profile: "default"
+2026-05-02 23:27:50.557 [restartedMain] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Fetching config from server at : http://localhost:8888
+2026-05-02 23:27:50.557 [restartedMain] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Located environment: name=tavia-context-service, profiles=[default], label=null, version=null, state=null
+2026-05-02 23:27:50.557 [restartedMain] DEBUG o.s.c.c.c.ConfigServerConfigDataLoader — Environment tavia-context-service has 2 property sources with 24 properties.
+2026-05-02 23:27:50.559 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor — Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-02 23:27:50.560 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor — For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-02 23:27:51.083 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope — BeanFactory id=a0a5374f-144e-39ce-bc94-334cc4ee8820
+2026-05-02 23:27:51.321 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer — Tomcat initialized with port 8087 (http)
+2026-05-02 23:27:51.329 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol — Initializing ProtocolHandler ["http-nio-8087"]
+2026-05-02 23:27:51.330 [restartedMain] INFO  o.a.catalina.core.StandardService — Starting service [Tomcat]
+2026-05-02 23:27:51.330 [restartedMain] INFO  o.a.catalina.core.StandardEngine — Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-02 23:27:51.356 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer — Root WebApplicationContext: initialization completed in 796 ms
+2026-05-02 23:27:51.814 [restartedMain] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration — Eureka HTTP Client uses RestClient.
+2026-05-02 23:27:51.834 [restartedMain] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger — Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-05-02 23:27:51.850 [restartedMain] INFO  o.s.c.n.eureka.InstanceInfoFactory — Setting initial instance status as: STARTING
+2026-05-02 23:27:51.867 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Initializing Eureka in region us-east-1
+2026-05-02 23:27:51.869 [restartedMain] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 23:27:51.873 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Disable delta property : false
+2026-05-02 23:27:51.873 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Single vip registry refresh property : null
+2026-05-02 23:27:51.873 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Force full registry fetch : false
+2026-05-02 23:27:51.873 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Application is null : false
+2026-05-02 23:27:51.873 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Registered Applications size is zero : true
+2026-05-02 23:27:51.873 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Application version is -1: true
+2026-05-02 23:27:51.873 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Getting all instance registry info from the eureka server
+2026-05-02 23:27:52.046 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — The response status is 200
+2026-05-02 23:27:52.047 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Starting heartbeat executor: renew interval is: 30
+2026-05-02 23:27:52.048 [restartedMain] INFO  c.n.discovery.InstanceInfoReplicator — InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-05-02 23:27:52.049 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Discovery Client initialized at timestamp 1777753672049 with initial instances count: 5
+2026-05-02 23:27:52.051 [restartedMain] INFO  o.s.c.n.e.s.EurekaServiceRegistry — Registering application TAVIA-CONTEXT-SERVICE with eureka with status UP
+2026-05-02 23:27:52.051 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Saw local status change event StatusChangeEvent [timestamp=1777753672051, current=UP, previous=STARTING]
+2026-05-02 23:27:52.052 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol — Starting ProtocolHandler ["http-nio-8087"]
+2026-05-02 23:27:52.052 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-CONTEXT-SERVICE/10.0.0.139:tavia-context-service:8087: registering service...
+2026-05-02 23:27:52.061 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer — Tomcat started on port 8087 (http) with context path '/'
+2026-05-02 23:27:52.062 [restartedMain] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration — Updating port to 8087
+2026-05-02 23:27:52.072 [restartedMain] INFO  c.t.c.ContextServiceApplication — Started ContextServiceApplication in 2.274 seconds (process running for 2.661)
+2026-05-02 23:27:52.075 [restartedMain] WARN  o.s.c.events.SpringDocAppInitializer — SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-05-02 23:27:52.075 [restartedMain] WARN  o.s.c.events.SpringDocAppInitializer — SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-05-02 23:27:52.079 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-CONTEXT-SERVICE/10.0.0.139:tavia-context-service:8087 - registration status: 204
+
+********************************************************
+<<< SERVİS DURDURULDU: 2026-05-02 23:30:14
+********************************************************
+
+
+
+********************************************************
+>>> SERVİS BAŞLATILDI: 2026-05-02 23:45:49
+********************************************************
+
+Starting a Gradle Daemon, 8 busy and 1 incompatible and 99 stopped Daemons could not be reused, use --status for details
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :resolveMainClassName UP-TO-DATE
+
+> Task :bootRun
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.6)
+
+2026-05-02 23:45:57.491 [background-preinit] INFO  o.h.validator.internal.util.Version — HV000001: Hibernate Validator 9.0.1.Final
+2026-05-02 23:45:57.515 [restartedMain] INFO  c.t.c.ContextServiceApplication — Starting ContextServiceApplication using Java 21.0.10 with PID 118137 (/home/tuna/Desktop/tavia_v2/tavia-context-service/build/classes/java/main started by tuna in /home/tuna/Desktop/tavia_v2/tavia-context-service)
+2026-05-02 23:45:57.515 [restartedMain] DEBUG c.t.c.ContextServiceApplication — Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-02 23:45:57.516 [restartedMain] INFO  c.t.c.ContextServiceApplication — No active profile set, falling back to 1 default profile: "default"
+2026-05-02 23:45:57.543 [restartedMain] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Fetching config from server at : http://localhost:8888
+2026-05-02 23:45:57.544 [restartedMain] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Located environment: name=tavia-context-service, profiles=[default], label=null, version=null, state=null
+2026-05-02 23:45:57.544 [restartedMain] DEBUG o.s.c.c.c.ConfigServerConfigDataLoader — Environment tavia-context-service has 2 property sources with 24 properties.
+2026-05-02 23:45:57.546 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor — Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-02 23:45:57.546 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor — For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-02 23:45:58.085 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope — BeanFactory id=a0a5374f-144e-39ce-bc94-334cc4ee8820
+2026-05-02 23:45:58.328 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer — Tomcat initialized with port 8087 (http)
+2026-05-02 23:45:58.336 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol — Initializing ProtocolHandler ["http-nio-8087"]
+2026-05-02 23:45:58.337 [restartedMain] INFO  o.a.catalina.core.StandardService — Starting service [Tomcat]
+2026-05-02 23:45:58.338 [restartedMain] INFO  o.a.catalina.core.StandardEngine — Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-02 23:45:58.369 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer — Root WebApplicationContext: initialization completed in 823 ms
+2026-05-02 23:45:58.852 [restartedMain] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration — Eureka HTTP Client uses RestClient.
+2026-05-02 23:45:58.871 [restartedMain] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger — Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-05-02 23:45:58.889 [restartedMain] INFO  o.s.c.n.eureka.InstanceInfoFactory — Setting initial instance status as: STARTING
+2026-05-02 23:45:58.902 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Initializing Eureka in region us-east-1
+2026-05-02 23:45:58.905 [restartedMain] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 23:45:58.909 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Disable delta property : false
+2026-05-02 23:45:58.909 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Single vip registry refresh property : null
+2026-05-02 23:45:58.909 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Force full registry fetch : false
+2026-05-02 23:45:58.909 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Application is null : false
+2026-05-02 23:45:58.909 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Registered Applications size is zero : true
+2026-05-02 23:45:58.909 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Application version is -1: true
+2026-05-02 23:45:58.909 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Getting all instance registry info from the eureka server
+2026-05-02 23:45:59.086 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — The response status is 200
+2026-05-02 23:45:59.087 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Starting heartbeat executor: renew interval is: 30
+2026-05-02 23:45:59.088 [restartedMain] INFO  c.n.discovery.InstanceInfoReplicator — InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-05-02 23:45:59.089 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Discovery Client initialized at timestamp 1777754759089 with initial instances count: 5
+2026-05-02 23:45:59.091 [restartedMain] INFO  o.s.c.n.e.s.EurekaServiceRegistry — Registering application TAVIA-CONTEXT-SERVICE with eureka with status UP
+2026-05-02 23:45:59.091 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Saw local status change event StatusChangeEvent [timestamp=1777754759091, current=UP, previous=STARTING]
+2026-05-02 23:45:59.092 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-CONTEXT-SERVICE/10.0.0.139:tavia-context-service:8087: registering service...
+2026-05-02 23:45:59.092 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol — Starting ProtocolHandler ["http-nio-8087"]
+2026-05-02 23:45:59.100 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer — Tomcat started on port 8087 (http) with context path '/'
+2026-05-02 23:45:59.101 [restartedMain] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration — Updating port to 8087
+2026-05-02 23:45:59.121 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-CONTEXT-SERVICE/10.0.0.139:tavia-context-service:8087 - registration status: 204
+2026-05-02 23:45:59.166 [restartedMain] INFO  c.t.c.ContextServiceApplication — Started ContextServiceApplication in 2.378 seconds (process running for 2.796)
+2026-05-02 23:45:59.168 [restartedMain] WARN  o.s.c.events.SpringDocAppInitializer — SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-05-02 23:45:59.168 [restartedMain] WARN  o.s.c.events.SpringDocAppInitializer — SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-05-02 23:48:43.248 [http-nio-8087-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] — Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-02 23:48:43.249 [http-nio-8087-exec-1] INFO  o.s.web.servlet.DispatcherServlet — Initializing Servlet 'dispatcherServlet'
+2026-05-02 23:48:43.251 [http-nio-8087-exec-1] INFO  o.s.web.servlet.DispatcherServlet — Completed initialization in 1 ms
+2026-05-02 23:48:43.277 [http-nio-8087-exec-1] INFO  c.t.c.service.ContextServiceImpl — Context generated — weather: CLOUDY, activeEvent: EXAM_WEEK, competitorIntensity: MEDIUM
+2026-05-02 23:50:58.910 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+
+********************************************************
+<<< SERVİS DURDURULDU: 2026-05-02 23:52:31
+********************************************************
+
+
+
+********************************************************
+>>> SERVİS BAŞLATILDI: 2026-05-03 00:06:50
+********************************************************
+
+Starting a Gradle Daemon, 8 busy and 1 incompatible and 33 stopped Daemons could not be reused, use --status for details
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :resolveMainClassName UP-TO-DATE
+
+> Task :bootRun
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.6)
+
+2026-05-03 00:06:58.084 [background-preinit] INFO  o.h.validator.internal.util.Version — HV000001: Hibernate Validator 9.0.1.Final
+2026-05-03 00:06:58.109 [restartedMain] INFO  c.t.c.ContextServiceApplication — Starting ContextServiceApplication using Java 21.0.10 with PID 138498 (/home/tuna/Desktop/tavia_v2/tavia-context-service/build/classes/java/main started by tuna in /home/tuna/Desktop/tavia_v2/tavia-context-service)
+2026-05-03 00:06:58.110 [restartedMain] DEBUG c.t.c.ContextServiceApplication — Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-03 00:06:58.110 [restartedMain] INFO  c.t.c.ContextServiceApplication — No active profile set, falling back to 1 default profile: "default"
+2026-05-03 00:06:58.140 [restartedMain] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Fetching config from server at : http://localhost:8888
+2026-05-03 00:06:58.140 [restartedMain] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Located environment: name=tavia-context-service, profiles=[default], label=null, version=null, state=null
+2026-05-03 00:06:58.140 [restartedMain] DEBUG o.s.c.c.c.ConfigServerConfigDataLoader — Environment tavia-context-service has 2 property sources with 24 properties.
+2026-05-03 00:06:58.142 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor — Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-03 00:06:58.142 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor — For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-03 00:06:58.663 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope — BeanFactory id=a0a5374f-144e-39ce-bc94-334cc4ee8820
+2026-05-03 00:06:58.899 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer — Tomcat initialized with port 8087 (http)
+2026-05-03 00:06:58.907 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol — Initializing ProtocolHandler ["http-nio-8087"]
+2026-05-03 00:06:58.909 [restartedMain] INFO  o.a.catalina.core.StandardService — Starting service [Tomcat]
+2026-05-03 00:06:58.909 [restartedMain] INFO  o.a.catalina.core.StandardEngine — Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-03 00:06:58.938 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer — Root WebApplicationContext: initialization completed in 796 ms
+2026-05-03 00:06:59.434 [restartedMain] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration — Eureka HTTP Client uses RestClient.
+2026-05-03 00:06:59.454 [restartedMain] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger — Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-05-03 00:06:59.470 [restartedMain] INFO  o.s.c.n.eureka.InstanceInfoFactory — Setting initial instance status as: STARTING
+2026-05-03 00:06:59.487 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Initializing Eureka in region us-east-1
+2026-05-03 00:06:59.490 [restartedMain] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-03 00:06:59.497 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Disable delta property : false
+2026-05-03 00:06:59.497 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Single vip registry refresh property : null
+2026-05-03 00:06:59.497 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Force full registry fetch : false
+2026-05-03 00:06:59.497 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Application is null : false
+2026-05-03 00:06:59.497 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Registered Applications size is zero : true
+2026-05-03 00:06:59.497 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Application version is -1: true
+2026-05-03 00:06:59.497 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Getting all instance registry info from the eureka server
+2026-05-03 00:06:59.671 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — The response status is 200
+2026-05-03 00:06:59.672 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Starting heartbeat executor: renew interval is: 30
+2026-05-03 00:06:59.673 [restartedMain] INFO  c.n.discovery.InstanceInfoReplicator — InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-05-03 00:06:59.674 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Discovery Client initialized at timestamp 1777756019674 with initial instances count: 5
+2026-05-03 00:06:59.676 [restartedMain] INFO  o.s.c.n.e.s.EurekaServiceRegistry — Registering application TAVIA-CONTEXT-SERVICE with eureka with status UP
+2026-05-03 00:06:59.676 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Saw local status change event StatusChangeEvent [timestamp=1777756019676, current=UP, previous=STARTING]
+2026-05-03 00:06:59.677 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-CONTEXT-SERVICE/10.0.0.139:tavia-context-service:8087: registering service...
+2026-05-03 00:06:59.677 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol — Starting ProtocolHandler ["http-nio-8087"]
+2026-05-03 00:06:59.692 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer — Tomcat started on port 8087 (http) with context path '/'
+2026-05-03 00:06:59.693 [restartedMain] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration — Updating port to 8087
+2026-05-03 00:06:59.706 [restartedMain] INFO  c.t.c.ContextServiceApplication — Started ContextServiceApplication in 2.318 seconds (process running for 2.725)
+2026-05-03 00:06:59.707 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-CONTEXT-SERVICE/10.0.0.139:tavia-context-service:8087 - registration status: 204
+2026-05-03 00:06:59.709 [restartedMain] WARN  o.s.c.events.SpringDocAppInitializer — SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-05-03 00:06:59.709 [restartedMain] WARN  o.s.c.events.SpringDocAppInitializer — SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-05-03 00:09:24.489 [http-nio-8087-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] — Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-03 00:09:24.490 [http-nio-8087-exec-1] INFO  o.s.web.servlet.DispatcherServlet — Initializing Servlet 'dispatcherServlet'
+2026-05-03 00:09:24.493 [http-nio-8087-exec-1] INFO  o.s.web.servlet.DispatcherServlet — Completed initialization in 3 ms
+2026-05-03 00:09:24.524 [http-nio-8087-exec-1] INFO  c.t.c.service.ContextServiceImpl — Context generated — weather: RAINY, activeEvent: NONE, competitorIntensity: MEDIUM
+2026-05-03 00:11:59.498 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+
+********************************************************
+<<< SERVİS DURDURULDU: 2026-05-03 00:15:43
+********************************************************
+
+
+
+********************************************************
+>>> SERVİS BAŞLATILDI: 2026-05-03 00:18:05
+********************************************************
+
+Starting a Gradle Daemon, 8 busy and 1 incompatible and 44 stopped Daemons could not be reused, use --status for details
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :resolveMainClassName UP-TO-DATE
+
+> Task :bootRun
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.6)
+
+2026-05-03 00:18:12.618 [background-preinit] INFO  o.h.validator.internal.util.Version — HV000001: Hibernate Validator 9.0.1.Final
+2026-05-03 00:18:12.643 [restartedMain] INFO  c.t.c.ContextServiceApplication — Starting ContextServiceApplication using Java 21.0.10 with PID 152020 (/home/tuna/Desktop/tavia_v2/tavia-context-service/build/classes/java/main started by tuna in /home/tuna/Desktop/tavia_v2/tavia-context-service)
+2026-05-03 00:18:12.644 [restartedMain] DEBUG c.t.c.ContextServiceApplication — Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-03 00:18:12.644 [restartedMain] INFO  c.t.c.ContextServiceApplication — No active profile set, falling back to 1 default profile: "default"
+2026-05-03 00:18:12.678 [restartedMain] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Fetching config from server at : http://localhost:8888
+2026-05-03 00:18:12.678 [restartedMain] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Located environment: name=tavia-context-service, profiles=[default], label=null, version=null, state=null
+2026-05-03 00:18:12.678 [restartedMain] DEBUG o.s.c.c.c.ConfigServerConfigDataLoader — Environment tavia-context-service has 2 property sources with 24 properties.
+2026-05-03 00:18:12.680 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor — Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-03 00:18:12.681 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor — For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-03 00:18:13.306 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope — BeanFactory id=a0a5374f-144e-39ce-bc94-334cc4ee8820
+2026-05-03 00:18:13.560 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer — Tomcat initialized with port 8087 (http)
+2026-05-03 00:18:13.569 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol — Initializing ProtocolHandler ["http-nio-8087"]
+2026-05-03 00:18:13.571 [restartedMain] INFO  o.a.catalina.core.StandardService — Starting service [Tomcat]
+2026-05-03 00:18:13.571 [restartedMain] INFO  o.a.catalina.core.StandardEngine — Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-03 00:18:13.600 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer — Root WebApplicationContext: initialization completed in 919 ms
+2026-05-03 00:18:14.038 [restartedMain] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration — Eureka HTTP Client uses RestClient.
+2026-05-03 00:18:14.058 [restartedMain] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger — Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-05-03 00:18:14.075 [restartedMain] INFO  o.s.c.n.eureka.InstanceInfoFactory — Setting initial instance status as: STARTING
+2026-05-03 00:18:14.092 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Initializing Eureka in region us-east-1
+2026-05-03 00:18:14.094 [restartedMain] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-03 00:18:14.099 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Disable delta property : false
+2026-05-03 00:18:14.099 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Single vip registry refresh property : null
+2026-05-03 00:18:14.099 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Force full registry fetch : false
+2026-05-03 00:18:14.099 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Application is null : false
+2026-05-03 00:18:14.099 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Registered Applications size is zero : true
+2026-05-03 00:18:14.099 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Application version is -1: true
+2026-05-03 00:18:14.099 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Getting all instance registry info from the eureka server
+2026-05-03 00:18:14.270 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — The response status is 200
+2026-05-03 00:18:14.271 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Starting heartbeat executor: renew interval is: 30
+2026-05-03 00:18:14.272 [restartedMain] INFO  c.n.discovery.InstanceInfoReplicator — InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-05-03 00:18:14.273 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Discovery Client initialized at timestamp 1777756694273 with initial instances count: 5
+2026-05-03 00:18:14.275 [restartedMain] INFO  o.s.c.n.e.s.EurekaServiceRegistry — Registering application TAVIA-CONTEXT-SERVICE with eureka with status UP
+2026-05-03 00:18:14.276 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Saw local status change event StatusChangeEvent [timestamp=1777756694276, current=UP, previous=STARTING]
+2026-05-03 00:18:14.277 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-CONTEXT-SERVICE/10.0.0.139:tavia-context-service:8087: registering service...
+2026-05-03 00:18:14.277 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol — Starting ProtocolHandler ["http-nio-8087"]
+2026-05-03 00:18:14.286 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer — Tomcat started on port 8087 (http) with context path '/'
+2026-05-03 00:18:14.287 [restartedMain] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration — Updating port to 8087
+2026-05-03 00:18:14.299 [restartedMain] INFO  c.t.c.ContextServiceApplication — Started ContextServiceApplication in 2.409 seconds (process running for 2.8)
+2026-05-03 00:18:14.302 [restartedMain] WARN  o.s.c.events.SpringDocAppInitializer — SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-05-03 00:18:14.302 [restartedMain] WARN  o.s.c.events.SpringDocAppInitializer — SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-05-03 00:18:14.308 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-CONTEXT-SERVICE/10.0.0.139:tavia-context-service:8087 - registration status: 204
+2026-05-03 00:23:14.100 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-03 00:28:14.101 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-03 00:33:14.101 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-03 00:38:14.102 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-03 00:43:14.102 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-03 00:48:14.103 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-03 00:53:14.103 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-03 00:58:14.103 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-03 01:03:14.104 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-03 01:08:14.104 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-03 01:13:14.105 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-03 01:18:14.105 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-03 01:23:14.109 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-03 01:28:14.109 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-03 01:29:46.229 [http-nio-8087-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] — Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-03 01:29:46.239 [http-nio-8087-exec-1] INFO  o.s.web.servlet.DispatcherServlet — Initializing Servlet 'dispatcherServlet'
+2026-05-03 01:29:46.242 [http-nio-8087-exec-1] INFO  o.s.web.servlet.DispatcherServlet — Completed initialization in 2 ms
+2026-05-03 01:29:46.276 [http-nio-8087-exec-1] INFO  c.t.c.service.ContextServiceImpl — Context generated — weather: CLOUDY, activeEvent: NONE, competitorIntensity: MEDIUM
+2026-05-03 01:31:08.712 [http-nio-8087-exec-3] INFO  c.t.c.service.ContextServiceImpl — Context generated — weather: CLOUDY, activeEvent: EXAM_WEEK, competitorIntensity: LOW
+
+********************************************************
+<<< SERVİS DURDURULDU: 2026-05-03 01:31:24
+********************************************************
+

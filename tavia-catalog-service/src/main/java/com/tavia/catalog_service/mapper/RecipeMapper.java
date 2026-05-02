@@ -23,10 +23,18 @@ public interface RecipeMapper {
     @Mapping(target = "ingredients", ignore = true)
     Recipe toEntity(RecipeDto dto);
 
+    @Mapping(target = "id", ignore = true)
+    @Mapping(target = "ingredients", ignore = true)
+    Recipe toEntity(com.tavia.catalog_service.dto.CreateRecipeRequest request);
+
     RecipeIngredientDto toIngredientDto(RecipeIngredient entity);
 
     @Mapping(target = "recipe", ignore = true)
     RecipeIngredient toIngredientEntity(RecipeIngredientDto dto);
+
+    @Mapping(target = "id", ignore = true)
+    @Mapping(target = "recipe", ignore = true)
+    RecipeIngredient toIngredientEntity(com.tavia.catalog_service.dto.CreateRecipeIngredientRequest request);
 
     List<RecipeDto> toDtoList(List<Recipe> entities);
 

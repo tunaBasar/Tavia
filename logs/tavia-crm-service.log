@@ -1727,3 +1727,949 @@ Hibernate: select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id
 <<< SERVİS DURDURULDU: 2026-05-02 14:48:39
 ********************************************************
 
+
+
+********************************************************
+>>> SERVİS BAŞLATILDI: 2026-05-02 20:11:52
+********************************************************
+
+Starting a Gradle Daemon, 58 busy Daemons could not be reused, use --status for details
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :resolveMainClassName UP-TO-DATE
+
+> Task :bootRun
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.6)
+
+2026-05-02 20:11:59.501 [background-preinit] INFO  o.h.validator.internal.util.Version — HV000001: Hibernate Validator 9.0.1.Final
+2026-05-02 20:11:59.529 [restartedMain] INFO  c.t.c.CrmServiceApplication — Starting CrmServiceApplication using Java 21.0.10 with PID 121256 (/home/tuna/Desktop/tavia_v2/tavia-crm-service/build/classes/java/main started by tuna in /home/tuna/Desktop/tavia_v2/tavia-crm-service)
+2026-05-02 20:11:59.529 [restartedMain] DEBUG c.t.c.CrmServiceApplication — Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-02 20:11:59.530 [restartedMain] INFO  c.t.c.CrmServiceApplication — No active profile set, falling back to 1 default profile: "default"
+2026-05-02 20:11:59.558 [restartedMain] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Fetching config from server at : http://localhost:8888
+2026-05-02 20:11:59.558 [restartedMain] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Located environment: name=tavia-crm-service, profiles=[default], label=null, version=null, state=null
+2026-05-02 20:11:59.558 [restartedMain] DEBUG o.s.c.c.c.ConfigServerConfigDataLoader — Environment tavia-crm-service has 2 property sources with 34 properties.
+2026-05-02 20:11:59.560 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor — Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-02 20:11:59.560 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor — For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-02 20:12:00.092 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate — Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-02 20:12:00.188 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate — Finished Spring Data repository scanning in 90 ms. Found 2 JPA repository interfaces.
+2026-05-02 20:12:00.351 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope — BeanFactory id=89dd6eac-d973-3148-9115-123946d3a2bc
+2026-05-02 20:12:00.662 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer — Tomcat initialized with port 8086 (http)
+2026-05-02 20:12:00.671 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol — Initializing ProtocolHandler ["http-nio-8086"]
+2026-05-02 20:12:00.672 [restartedMain] INFO  o.a.catalina.core.StandardService — Starting service [Tomcat]
+2026-05-02 20:12:00.673 [restartedMain] INFO  o.a.catalina.core.StandardEngine — Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-02 20:12:00.706 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer — Root WebApplicationContext: initialization completed in 1145 ms
+2026-05-02 20:12:00.819 [restartedMain] INFO  org.hibernate.orm.jpa — HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-02 20:12:00.855 [restartedMain] INFO  org.hibernate.orm.core — HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-05-02 20:12:01.165 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo — No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-02 20:12:01.188 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource — HikariPool-1 - Starting...
+2026-05-02 20:12:01.268 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool — HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1b13bf31
+2026-05-02 20:12:01.269 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource — HikariPool-1 - Start completed.
+2026-05-02 20:12:01.289 [restartedMain] WARN  org.hibernate.orm.deprecation — HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-02 20:12:01.303 [restartedMain] INFO  o.hibernate.orm.connections.pooling — HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/tavia_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.17
+	Default catalog/schema: tavia_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-02 20:12:01.940 [restartedMain] INFO  org.hibernate.orm.core — HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-02 20:12:01.996 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean — Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-02 20:12:02.053 [restartedMain] INFO  o.s.d.j.r.q.QueryEnhancerFactories — Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-02 20:12:02.253 [restartedMain] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration — spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-02 20:12:02.658 [restartedMain] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration — Eureka HTTP Client uses RestClient.
+2026-05-02 20:12:02.685 [restartedMain] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger — Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-05-02 20:12:02.706 [restartedMain] INFO  o.s.c.n.eureka.InstanceInfoFactory — Setting initial instance status as: STARTING
+2026-05-02 20:12:02.721 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Initializing Eureka in region us-east-1
+2026-05-02 20:12:02.723 [restartedMain] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 20:12:02.728 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Disable delta property : false
+2026-05-02 20:12:02.729 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Single vip registry refresh property : null
+2026-05-02 20:12:02.729 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Force full registry fetch : false
+2026-05-02 20:12:02.729 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Application is null : false
+2026-05-02 20:12:02.729 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Registered Applications size is zero : true
+2026-05-02 20:12:02.729 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Application version is -1: true
+2026-05-02 20:12:02.729 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Getting all instance registry info from the eureka server
+2026-05-02 20:12:02.929 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — The response status is 200
+2026-05-02 20:12:02.931 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Starting heartbeat executor: renew interval is: 30
+2026-05-02 20:12:02.932 [restartedMain] INFO  c.n.discovery.InstanceInfoReplicator — InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-05-02 20:12:02.933 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Discovery Client initialized at timestamp 1777741922933 with initial instances count: 3
+2026-05-02 20:12:02.936 [restartedMain] INFO  o.s.c.n.e.s.EurekaServiceRegistry — Registering application TAVIA-CRM-SERVICE with eureka with status UP
+2026-05-02 20:12:02.936 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Saw local status change event StatusChangeEvent [timestamp=1777741922936, current=UP, previous=STARTING]
+2026-05-02 20:12:02.937 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-CRM-SERVICE/10.0.0.139:tavia-crm-service:8086: registering service...
+2026-05-02 20:12:02.937 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol — Starting ProtocolHandler ["http-nio-8086"]
+2026-05-02 20:12:02.947 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer — Tomcat started on port 8086 (http) with context path '/'
+2026-05-02 20:12:02.948 [restartedMain] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration — Updating port to 8086
+2026-05-02 20:12:02.960 [restartedMain] INFO  c.t.c.CrmServiceApplication — Started CrmServiceApplication in 4.21 seconds (process running for 4.626)
+2026-05-02 20:12:02.962 [restartedMain] WARN  o.s.c.events.SpringDocAppInitializer — SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-05-02 20:12:02.962 [restartedMain] WARN  o.s.c.events.SpringDocAppInitializer — SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-05-02 20:12:02.966 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-CRM-SERVICE/10.0.0.139:tavia-crm-service:8086 - registration status: 204
+2026-05-02 20:14:06.330 [http-nio-8086-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] — Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-02 20:14:06.331 [http-nio-8086-exec-1] INFO  o.s.web.servlet.DispatcherServlet — Initializing Servlet 'dispatcherServlet'
+2026-05-02 20:14:06.333 [http-nio-8086-exec-1] INFO  o.s.web.servlet.DispatcherServlet — Completed initialization in 1 ms
+2026-05-02 20:14:06.398 [http-nio-8086-exec-1] INFO  c.t.c.service.CustomerServiceImpl — Fetching customers, tenantId filter: 228f8e0a-035c-47e0-8ac6-e30991748cf0
+2026-05-02 20:14:06.858 [http-nio-8086-exec-1] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.tenant_id=?
+Hibernate: select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.tenant_id=?
+2026-05-02 20:14:06.977 [http-nio-8086-exec-1] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.id in (?)
+Hibernate: select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.id in (?)
+2026-05-02 20:14:06.995 [http-nio-8086-exec-1] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+Hibernate: select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-02 20:17:02.730 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+
+********************************************************
+<<< SERVİS DURDURULDU: 2026-05-02 20:21:57
+********************************************************
+
+
+
+********************************************************
+>>> SERVİS BAŞLATILDI: 2026-05-02 20:30:05
+********************************************************
+
+Starting a Gradle Daemon, 58 busy and 11 stopped Daemons could not be reused, use --status for details
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :resolveMainClassName UP-TO-DATE
+
+> Task :bootRun
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.6)
+
+2026-05-02 20:30:13.912 [background-preinit] INFO  o.h.validator.internal.util.Version — HV000001: Hibernate Validator 9.0.1.Final
+2026-05-02 20:30:13.933 [restartedMain] INFO  c.t.c.CrmServiceApplication — Starting CrmServiceApplication using Java 21.0.10 with PID 131587 (/home/tuna/Desktop/tavia_v2/tavia-crm-service/build/classes/java/main started by tuna in /home/tuna/Desktop/tavia_v2/tavia-crm-service)
+2026-05-02 20:30:13.934 [restartedMain] DEBUG c.t.c.CrmServiceApplication — Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-02 20:30:13.934 [restartedMain] INFO  c.t.c.CrmServiceApplication — No active profile set, falling back to 1 default profile: "default"
+2026-05-02 20:30:13.964 [restartedMain] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Fetching config from server at : http://localhost:8888
+2026-05-02 20:30:13.964 [restartedMain] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Located environment: name=tavia-crm-service, profiles=[default], label=null, version=null, state=null
+2026-05-02 20:30:13.964 [restartedMain] DEBUG o.s.c.c.c.ConfigServerConfigDataLoader — Environment tavia-crm-service has 2 property sources with 34 properties.
+2026-05-02 20:30:13.966 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor — Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-02 20:30:13.967 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor — For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-02 20:30:14.501 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate — Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-02 20:30:14.590 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate — Finished Spring Data repository scanning in 83 ms. Found 2 JPA repository interfaces.
+2026-05-02 20:30:14.752 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope — BeanFactory id=89dd6eac-d973-3148-9115-123946d3a2bc
+2026-05-02 20:30:15.064 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer — Tomcat initialized with port 8086 (http)
+2026-05-02 20:30:15.072 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol — Initializing ProtocolHandler ["http-nio-8086"]
+2026-05-02 20:30:15.074 [restartedMain] INFO  o.a.catalina.core.StandardService — Starting service [Tomcat]
+2026-05-02 20:30:15.074 [restartedMain] INFO  o.a.catalina.core.StandardEngine — Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-02 20:30:15.102 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer — Root WebApplicationContext: initialization completed in 1135 ms
+2026-05-02 20:30:15.216 [restartedMain] INFO  org.hibernate.orm.jpa — HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-02 20:30:15.254 [restartedMain] INFO  org.hibernate.orm.core — HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-05-02 20:30:15.607 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo — No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-02 20:30:15.638 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource — HikariPool-1 - Starting...
+2026-05-02 20:30:15.740 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool — HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@42178631
+2026-05-02 20:30:15.742 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource — HikariPool-1 - Start completed.
+2026-05-02 20:30:15.767 [restartedMain] WARN  org.hibernate.orm.deprecation — HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-02 20:30:15.786 [restartedMain] INFO  o.hibernate.orm.connections.pooling — HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/tavia_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.17
+	Default catalog/schema: tavia_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-02 20:30:16.461 [restartedMain] INFO  org.hibernate.orm.core — HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-02 20:30:16.516 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean — Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-02 20:30:16.580 [restartedMain] INFO  o.s.d.j.r.q.QueryEnhancerFactories — Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-02 20:30:16.773 [restartedMain] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration — spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-02 20:30:17.190 [restartedMain] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration — Eureka HTTP Client uses RestClient.
+2026-05-02 20:30:17.215 [restartedMain] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger — Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-05-02 20:30:17.237 [restartedMain] INFO  o.s.c.n.eureka.InstanceInfoFactory — Setting initial instance status as: STARTING
+2026-05-02 20:30:17.254 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Initializing Eureka in region us-east-1
+2026-05-02 20:30:17.257 [restartedMain] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 20:30:17.262 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Disable delta property : false
+2026-05-02 20:30:17.262 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Single vip registry refresh property : null
+2026-05-02 20:30:17.262 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Force full registry fetch : false
+2026-05-02 20:30:17.262 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Application is null : false
+2026-05-02 20:30:17.263 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Registered Applications size is zero : true
+2026-05-02 20:30:17.263 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Application version is -1: true
+2026-05-02 20:30:17.263 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Getting all instance registry info from the eureka server
+2026-05-02 20:30:17.458 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — The response status is 200
+2026-05-02 20:30:17.460 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Starting heartbeat executor: renew interval is: 30
+2026-05-02 20:30:17.461 [restartedMain] INFO  c.n.discovery.InstanceInfoReplicator — InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-05-02 20:30:17.462 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Discovery Client initialized at timestamp 1777743017461 with initial instances count: 2
+2026-05-02 20:30:17.464 [restartedMain] INFO  o.s.c.n.e.s.EurekaServiceRegistry — Registering application TAVIA-CRM-SERVICE with eureka with status UP
+2026-05-02 20:30:17.465 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Saw local status change event StatusChangeEvent [timestamp=1777743017465, current=UP, previous=STARTING]
+2026-05-02 20:30:17.466 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-CRM-SERVICE/10.0.0.139:tavia-crm-service:8086: registering service...
+2026-05-02 20:30:17.466 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol — Starting ProtocolHandler ["http-nio-8086"]
+2026-05-02 20:30:17.476 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer — Tomcat started on port 8086 (http) with context path '/'
+2026-05-02 20:30:17.477 [restartedMain] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration — Updating port to 8086
+2026-05-02 20:30:17.487 [restartedMain] INFO  c.t.c.CrmServiceApplication — Started CrmServiceApplication in 4.323 seconds (process running for 4.733)
+2026-05-02 20:30:17.490 [restartedMain] WARN  o.s.c.events.SpringDocAppInitializer — SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-05-02 20:30:17.490 [restartedMain] WARN  o.s.c.events.SpringDocAppInitializer — SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-05-02 20:30:17.494 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-CRM-SERVICE/10.0.0.139:tavia-crm-service:8086 - registration status: 204
+2026-05-02 20:33:34.396 [HikariPool-1:housekeeper] WARN  com.zaxxer.hikari.pool.PoolBase — HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@502ca6d3 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-02 20:34:20.530 [HikariPool-1:housekeeper] WARN  com.zaxxer.hikari.pool.PoolBase — HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@29a57653 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-02 20:34:25.590 [HikariPool-1:housekeeper] WARN  com.zaxxer.hikari.pool.PoolBase — HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@7ffa485b (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+
+
+********************************************************
+>>> SERVİS BAŞLATILDI: 2026-05-02 20:38:22
+********************************************************
+
+Starting a Gradle Daemon, 69 busy and 12 stopped Daemons could not be reused, use --status for details
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :resolveMainClassName UP-TO-DATE
+
+> Task :bootRun
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.6)
+
+2026-05-02 20:38:30.752 [background-preinit] INFO  o.h.validator.internal.util.Version — HV000001: Hibernate Validator 9.0.1.Final
+2026-05-02 20:38:30.779 [restartedMain] INFO  c.t.c.CrmServiceApplication — Starting CrmServiceApplication using Java 21.0.10 with PID 12064 (/home/tuna/Desktop/tavia_v2/tavia-crm-service/build/classes/java/main started by tuna in /home/tuna/Desktop/tavia_v2/tavia-crm-service)
+2026-05-02 20:38:30.779 [restartedMain] DEBUG c.t.c.CrmServiceApplication — Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-02 20:38:30.779 [restartedMain] INFO  c.t.c.CrmServiceApplication — No active profile set, falling back to 1 default profile: "default"
+2026-05-02 20:38:30.810 [restartedMain] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Fetching config from server at : http://localhost:8888
+2026-05-02 20:38:30.811 [restartedMain] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Located environment: name=tavia-crm-service, profiles=[default], label=null, version=null, state=null
+2026-05-02 20:38:30.811 [restartedMain] DEBUG o.s.c.c.c.ConfigServerConfigDataLoader — Environment tavia-crm-service has 2 property sources with 34 properties.
+2026-05-02 20:38:30.813 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor — Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-02 20:38:30.813 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor — For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-02 20:38:31.386 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate — Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-02 20:38:31.487 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate — Finished Spring Data repository scanning in 94 ms. Found 2 JPA repository interfaces.
+2026-05-02 20:38:31.665 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope — BeanFactory id=89dd6eac-d973-3148-9115-123946d3a2bc
+2026-05-02 20:38:32.001 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer — Tomcat initialized with port 8086 (http)
+2026-05-02 20:38:32.010 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol — Initializing ProtocolHandler ["http-nio-8086"]
+2026-05-02 20:38:32.012 [restartedMain] INFO  o.a.catalina.core.StandardService — Starting service [Tomcat]
+2026-05-02 20:38:32.012 [restartedMain] INFO  o.a.catalina.core.StandardEngine — Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-02 20:38:32.043 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer — Root WebApplicationContext: initialization completed in 1229 ms
+2026-05-02 20:38:32.168 [restartedMain] INFO  org.hibernate.orm.jpa — HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-02 20:38:32.206 [restartedMain] INFO  org.hibernate.orm.core — HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-05-02 20:38:32.531 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo — No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-02 20:38:32.554 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource — HikariPool-1 - Starting...
+2026-05-02 20:38:32.639 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool — HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6b2b11e
+2026-05-02 20:38:32.640 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource — HikariPool-1 - Start completed.
+2026-05-02 20:38:32.661 [restartedMain] WARN  org.hibernate.orm.deprecation — HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-02 20:38:32.676 [restartedMain] INFO  o.hibernate.orm.connections.pooling — HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/tavia_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.17
+	Default catalog/schema: tavia_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-02 20:38:33.299 [restartedMain] INFO  org.hibernate.orm.core — HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-02 20:38:33.353 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean — Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-02 20:38:33.407 [restartedMain] INFO  o.s.d.j.r.q.QueryEnhancerFactories — Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-02 20:38:33.591 [restartedMain] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration — spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-02 20:38:33.997 [restartedMain] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration — Eureka HTTP Client uses RestClient.
+2026-05-02 20:38:34.023 [restartedMain] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger — Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-05-02 20:38:34.043 [restartedMain] INFO  o.s.c.n.eureka.InstanceInfoFactory — Setting initial instance status as: STARTING
+2026-05-02 20:38:34.059 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Initializing Eureka in region us-east-1
+2026-05-02 20:38:34.061 [restartedMain] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 20:38:34.066 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Disable delta property : false
+2026-05-02 20:38:34.066 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Single vip registry refresh property : null
+2026-05-02 20:38:34.066 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Force full registry fetch : false
+2026-05-02 20:38:34.066 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Application is null : false
+2026-05-02 20:38:34.066 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Registered Applications size is zero : true
+2026-05-02 20:38:34.066 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Application version is -1: true
+2026-05-02 20:38:34.066 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Getting all instance registry info from the eureka server
+2026-05-02 20:38:34.249 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — The response status is 200
+2026-05-02 20:38:34.250 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Starting heartbeat executor: renew interval is: 30
+2026-05-02 20:38:34.251 [restartedMain] INFO  c.n.discovery.InstanceInfoReplicator — InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-05-02 20:38:34.252 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Discovery Client initialized at timestamp 1777743514252 with initial instances count: 3
+2026-05-02 20:38:34.254 [restartedMain] INFO  o.s.c.n.e.s.EurekaServiceRegistry — Registering application TAVIA-CRM-SERVICE with eureka with status UP
+2026-05-02 20:38:34.255 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Saw local status change event StatusChangeEvent [timestamp=1777743514255, current=UP, previous=STARTING]
+2026-05-02 20:38:34.256 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-CRM-SERVICE/10.0.0.139:tavia-crm-service:8086: registering service...
+2026-05-02 20:38:34.256 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol — Starting ProtocolHandler ["http-nio-8086"]
+2026-05-02 20:38:34.270 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer — Tomcat started on port 8086 (http) with context path '/'
+2026-05-02 20:38:34.271 [restartedMain] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration — Updating port to 8086
+2026-05-02 20:38:34.288 [restartedMain] INFO  c.t.c.CrmServiceApplication — Started CrmServiceApplication in 4.335 seconds (process running for 4.787)
+2026-05-02 20:38:34.291 [restartedMain] WARN  o.s.c.events.SpringDocAppInitializer — SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-05-02 20:38:34.291 [restartedMain] WARN  o.s.c.events.SpringDocAppInitializer — SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-05-02 20:38:34.297 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-CRM-SERVICE/10.0.0.139:tavia-crm-service:8086 - registration status: 204
+2026-05-02 20:40:28.443 [http-nio-8086-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] — Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-02 20:40:28.444 [http-nio-8086-exec-1] INFO  o.s.web.servlet.DispatcherServlet — Initializing Servlet 'dispatcherServlet'
+2026-05-02 20:40:28.447 [http-nio-8086-exec-1] INFO  o.s.web.servlet.DispatcherServlet — Completed initialization in 2 ms
+2026-05-02 20:40:28.483 [http-nio-8086-exec-1] INFO  c.t.c.service.CustomerServiceImpl — Fetching customers, tenantId filter: 228f8e0a-035c-47e0-8ac6-e30991748cf0
+2026-05-02 20:40:28.897 [http-nio-8086-exec-1] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.tenant_id=?
+Hibernate: select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.tenant_id=?
+2026-05-02 20:40:28.954 [http-nio-8086-exec-1] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.id in (?)
+Hibernate: select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.id in (?)
+2026-05-02 20:40:28.968 [http-nio-8086-exec-1] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+Hibernate: select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+
+********************************************************
+<<< SERVİS DURDURULDU: 2026-05-02 20:41:10
+********************************************************
+
+
+
+********************************************************
+>>> SERVİS BAŞLATILDI: 2026-05-02 22:51:20
+********************************************************
+
+Starting a Gradle Daemon, 5 busy and 66 stopped Daemons could not be reused, use --status for details
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :resolveMainClassName UP-TO-DATE
+
+> Task :bootRun
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.6)
+
+2026-05-02 22:51:27.701 [background-preinit] INFO  o.h.validator.internal.util.Version — HV000001: Hibernate Validator 9.0.1.Final
+2026-05-02 22:51:27.724 [restartedMain] INFO  c.t.c.CrmServiceApplication — Starting CrmServiceApplication using Java 21.0.10 with PID 63646 (/home/tuna/Desktop/tavia_v2/tavia-crm-service/build/classes/java/main started by tuna in /home/tuna/Desktop/tavia_v2/tavia-crm-service)
+2026-05-02 22:51:27.724 [restartedMain] DEBUG c.t.c.CrmServiceApplication — Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-02 22:51:27.725 [restartedMain] INFO  c.t.c.CrmServiceApplication — No active profile set, falling back to 1 default profile: "default"
+2026-05-02 22:51:27.752 [restartedMain] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Fetching config from server at : http://localhost:8888
+2026-05-02 22:51:27.752 [restartedMain] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Located environment: name=tavia-crm-service, profiles=[default], label=null, version=null, state=null
+2026-05-02 22:51:27.752 [restartedMain] DEBUG o.s.c.c.c.ConfigServerConfigDataLoader — Environment tavia-crm-service has 2 property sources with 34 properties.
+2026-05-02 22:51:27.754 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor — Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-02 22:51:27.754 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor — For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-02 22:51:28.261 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate — Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-02 22:51:28.350 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate — Finished Spring Data repository scanning in 83 ms. Found 2 JPA repository interfaces.
+2026-05-02 22:51:28.496 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope — BeanFactory id=89dd6eac-d973-3148-9115-123946d3a2bc
+2026-05-02 22:51:28.797 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer — Tomcat initialized with port 8086 (http)
+2026-05-02 22:51:28.807 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol — Initializing ProtocolHandler ["http-nio-8086"]
+2026-05-02 22:51:28.810 [restartedMain] INFO  o.a.catalina.core.StandardService — Starting service [Tomcat]
+2026-05-02 22:51:28.810 [restartedMain] INFO  o.a.catalina.core.StandardEngine — Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-02 22:51:28.837 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer — Root WebApplicationContext: initialization completed in 1082 ms
+2026-05-02 22:51:28.947 [restartedMain] INFO  org.hibernate.orm.jpa — HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-02 22:51:28.980 [restartedMain] INFO  org.hibernate.orm.core — HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-05-02 22:51:29.270 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo — No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-02 22:51:29.291 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource — HikariPool-1 - Starting...
+2026-05-02 22:51:29.370 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool — HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4ec00783
+2026-05-02 22:51:29.371 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource — HikariPool-1 - Start completed.
+2026-05-02 22:51:29.389 [restartedMain] WARN  org.hibernate.orm.deprecation — HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-02 22:51:29.403 [restartedMain] INFO  o.hibernate.orm.connections.pooling — HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/tavia_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.17
+	Default catalog/schema: tavia_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-02 22:51:29.970 [restartedMain] INFO  org.hibernate.orm.core — HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-02 22:51:30.023 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean — Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-02 22:51:30.077 [restartedMain] INFO  o.s.d.j.r.q.QueryEnhancerFactories — Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-02 22:51:30.255 [restartedMain] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration — spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-02 22:51:30.624 [restartedMain] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration — Eureka HTTP Client uses RestClient.
+2026-05-02 22:51:30.651 [restartedMain] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger — Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-05-02 22:51:30.671 [restartedMain] INFO  o.s.c.n.eureka.InstanceInfoFactory — Setting initial instance status as: STARTING
+2026-05-02 22:51:30.685 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Initializing Eureka in region us-east-1
+2026-05-02 22:51:30.692 [restartedMain] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 22:51:30.697 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Disable delta property : false
+2026-05-02 22:51:30.697 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Single vip registry refresh property : null
+2026-05-02 22:51:30.697 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Force full registry fetch : false
+2026-05-02 22:51:30.697 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Application is null : false
+2026-05-02 22:51:30.697 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Registered Applications size is zero : true
+2026-05-02 22:51:30.697 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Application version is -1: true
+2026-05-02 22:51:30.698 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Getting all instance registry info from the eureka server
+2026-05-02 22:51:30.876 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — The response status is 200
+2026-05-02 22:51:30.877 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Starting heartbeat executor: renew interval is: 30
+2026-05-02 22:51:30.879 [restartedMain] INFO  c.n.discovery.InstanceInfoReplicator — InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-05-02 22:51:30.880 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Discovery Client initialized at timestamp 1777751490880 with initial instances count: 3
+2026-05-02 22:51:30.883 [restartedMain] INFO  o.s.c.n.e.s.EurekaServiceRegistry — Registering application TAVIA-CRM-SERVICE with eureka with status UP
+2026-05-02 22:51:30.884 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Saw local status change event StatusChangeEvent [timestamp=1777751490884, current=UP, previous=STARTING]
+2026-05-02 22:51:30.885 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-CRM-SERVICE/10.0.0.139:tavia-crm-service:8086: registering service...
+2026-05-02 22:51:30.885 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol — Starting ProtocolHandler ["http-nio-8086"]
+2026-05-02 22:51:30.895 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer — Tomcat started on port 8086 (http) with context path '/'
+2026-05-02 22:51:30.896 [restartedMain] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration — Updating port to 8086
+2026-05-02 22:51:30.906 [restartedMain] INFO  c.t.c.CrmServiceApplication — Started CrmServiceApplication in 3.903 seconds (process running for 4.31)
+2026-05-02 22:51:30.909 [restartedMain] WARN  o.s.c.events.SpringDocAppInitializer — SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-05-02 22:51:30.909 [restartedMain] WARN  o.s.c.events.SpringDocAppInitializer — SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-05-02 22:51:30.911 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-CRM-SERVICE/10.0.0.139:tavia-crm-service:8086 - registration status: 204
+2026-05-02 22:53:53.592 [http-nio-8086-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] — Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-02 22:53:53.592 [http-nio-8086-exec-1] INFO  o.s.web.servlet.DispatcherServlet — Initializing Servlet 'dispatcherServlet'
+2026-05-02 22:53:53.596 [http-nio-8086-exec-1] INFO  o.s.web.servlet.DispatcherServlet — Completed initialization in 4 ms
+2026-05-02 22:53:53.652 [http-nio-8086-exec-1] INFO  c.t.c.service.CustomerServiceImpl — Fetching customers, tenantId filter: 228f8e0a-035c-47e0-8ac6-e30991748cf0
+2026-05-02 22:53:54.036 [http-nio-8086-exec-1] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.tenant_id=?
+Hibernate: select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.tenant_id=?
+2026-05-02 22:53:54.093 [http-nio-8086-exec-1] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.id in (?)
+Hibernate: select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.id in (?)
+2026-05-02 22:53:54.112 [http-nio-8086-exec-1] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+Hibernate: select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-02 22:54:29.619 [http-nio-8086-exec-2] INFO  c.t.c.service.CustomerServiceImpl — Fetching customers, tenantId filter: 228f8e0a-035c-47e0-8ac6-e30991748cf0
+2026-05-02 22:54:29.621 [http-nio-8086-exec-2] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.tenant_id=?
+Hibernate: select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.tenant_id=?
+2026-05-02 22:54:29.624 [http-nio-8086-exec-2] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.id in (?)
+Hibernate: select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.id in (?)
+2026-05-02 22:54:29.626 [http-nio-8086-exec-2] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+Hibernate: select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+
+********************************************************
+<<< SERVİS DURDURULDU: 2026-05-02 22:54:50
+********************************************************
+
+
+
+********************************************************
+>>> SERVİS BAŞLATILDI: 2026-05-02 23:10:58
+********************************************************
+
+Starting a Gradle Daemon, 5 busy and 1 incompatible and 77 stopped Daemons could not be reused, use --status for details
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :resolveMainClassName UP-TO-DATE
+
+> Task :bootRun
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.6)
+
+2026-05-02 23:11:05.996 [background-preinit] INFO  o.h.validator.internal.util.Version — HV000001: Hibernate Validator 9.0.1.Final
+2026-05-02 23:11:06.019 [restartedMain] INFO  c.t.c.CrmServiceApplication — Starting CrmServiceApplication using Java 21.0.10 with PID 82751 (/home/tuna/Desktop/tavia_v2/tavia-crm-service/build/classes/java/main started by tuna in /home/tuna/Desktop/tavia_v2/tavia-crm-service)
+2026-05-02 23:11:06.019 [restartedMain] DEBUG c.t.c.CrmServiceApplication — Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-02 23:11:06.020 [restartedMain] INFO  c.t.c.CrmServiceApplication — No active profile set, falling back to 1 default profile: "default"
+2026-05-02 23:11:06.048 [restartedMain] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Fetching config from server at : http://localhost:8888
+2026-05-02 23:11:06.048 [restartedMain] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Located environment: name=tavia-crm-service, profiles=[default], label=null, version=null, state=null
+2026-05-02 23:11:06.048 [restartedMain] DEBUG o.s.c.c.c.ConfigServerConfigDataLoader — Environment tavia-crm-service has 2 property sources with 34 properties.
+2026-05-02 23:11:06.051 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor — Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-02 23:11:06.051 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor — For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-02 23:11:06.558 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate — Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-02 23:11:06.646 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate — Finished Spring Data repository scanning in 82 ms. Found 2 JPA repository interfaces.
+2026-05-02 23:11:06.799 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope — BeanFactory id=89dd6eac-d973-3148-9115-123946d3a2bc
+2026-05-02 23:11:07.093 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer — Tomcat initialized with port 8086 (http)
+2026-05-02 23:11:07.101 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol — Initializing ProtocolHandler ["http-nio-8086"]
+2026-05-02 23:11:07.103 [restartedMain] INFO  o.a.catalina.core.StandardService — Starting service [Tomcat]
+2026-05-02 23:11:07.103 [restartedMain] INFO  o.a.catalina.core.StandardEngine — Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-02 23:11:07.131 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer — Root WebApplicationContext: initialization completed in 1080 ms
+2026-05-02 23:11:07.242 [restartedMain] INFO  org.hibernate.orm.jpa — HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-02 23:11:07.274 [restartedMain] INFO  org.hibernate.orm.core — HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-05-02 23:11:07.566 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo — No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-02 23:11:07.587 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource — HikariPool-1 - Starting...
+2026-05-02 23:11:07.667 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool — HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@42178631
+2026-05-02 23:11:07.668 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource — HikariPool-1 - Start completed.
+2026-05-02 23:11:07.686 [restartedMain] WARN  org.hibernate.orm.deprecation — HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-02 23:11:07.700 [restartedMain] INFO  o.hibernate.orm.connections.pooling — HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/tavia_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.17
+	Default catalog/schema: tavia_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-02 23:11:08.265 [restartedMain] INFO  org.hibernate.orm.core — HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-02 23:11:08.322 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean — Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-02 23:11:08.376 [restartedMain] INFO  o.s.d.j.r.q.QueryEnhancerFactories — Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-02 23:11:08.561 [restartedMain] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration — spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-02 23:11:08.935 [restartedMain] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration — Eureka HTTP Client uses RestClient.
+2026-05-02 23:11:08.960 [restartedMain] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger — Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-05-02 23:11:08.979 [restartedMain] INFO  o.s.c.n.eureka.InstanceInfoFactory — Setting initial instance status as: STARTING
+2026-05-02 23:11:08.993 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Initializing Eureka in region us-east-1
+2026-05-02 23:11:08.995 [restartedMain] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 23:11:09.000 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Disable delta property : false
+2026-05-02 23:11:09.000 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Single vip registry refresh property : null
+2026-05-02 23:11:09.000 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Force full registry fetch : false
+2026-05-02 23:11:09.000 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Application is null : false
+2026-05-02 23:11:09.000 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Registered Applications size is zero : true
+2026-05-02 23:11:09.000 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Application version is -1: true
+2026-05-02 23:11:09.000 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Getting all instance registry info from the eureka server
+2026-05-02 23:11:09.184 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — The response status is 200
+2026-05-02 23:11:09.185 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Starting heartbeat executor: renew interval is: 30
+2026-05-02 23:11:09.186 [restartedMain] INFO  c.n.discovery.InstanceInfoReplicator — InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-05-02 23:11:09.187 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Discovery Client initialized at timestamp 1777752669187 with initial instances count: 3
+2026-05-02 23:11:09.190 [restartedMain] INFO  o.s.c.n.e.s.EurekaServiceRegistry — Registering application TAVIA-CRM-SERVICE with eureka with status UP
+2026-05-02 23:11:09.190 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Saw local status change event StatusChangeEvent [timestamp=1777752669190, current=UP, previous=STARTING]
+2026-05-02 23:11:09.191 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-CRM-SERVICE/10.0.0.139:tavia-crm-service:8086: registering service...
+2026-05-02 23:11:09.192 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol — Starting ProtocolHandler ["http-nio-8086"]
+2026-05-02 23:11:09.205 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer — Tomcat started on port 8086 (http) with context path '/'
+2026-05-02 23:11:09.207 [restartedMain] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration — Updating port to 8086
+2026-05-02 23:11:09.224 [restartedMain] INFO  c.t.c.CrmServiceApplication — Started CrmServiceApplication in 3.945 seconds (process running for 4.358)
+2026-05-02 23:11:09.225 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-CRM-SERVICE/10.0.0.139:tavia-crm-service:8086 - registration status: 204
+2026-05-02 23:11:09.227 [restartedMain] WARN  o.s.c.events.SpringDocAppInitializer — SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-05-02 23:11:09.227 [restartedMain] WARN  o.s.c.events.SpringDocAppInitializer — SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-05-02 23:13:47.907 [http-nio-8086-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] — Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-02 23:13:47.907 [http-nio-8086-exec-1] INFO  o.s.web.servlet.DispatcherServlet — Initializing Servlet 'dispatcherServlet'
+2026-05-02 23:13:47.910 [http-nio-8086-exec-1] INFO  o.s.web.servlet.DispatcherServlet — Completed initialization in 3 ms
+2026-05-02 23:13:47.946 [http-nio-8086-exec-1] INFO  c.t.c.service.CustomerServiceImpl — Fetching customers, tenantId filter: 228f8e0a-035c-47e0-8ac6-e30991748cf0
+2026-05-02 23:13:48.336 [http-nio-8086-exec-1] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.tenant_id=?
+Hibernate: select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.tenant_id=?
+2026-05-02 23:13:48.389 [http-nio-8086-exec-1] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.id in (?)
+Hibernate: select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.id in (?)
+2026-05-02 23:13:48.404 [http-nio-8086-exec-1] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+Hibernate: select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-02 23:16:09.001 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+
+********************************************************
+<<< SERVİS DURDURULDU: 2026-05-02 23:18:34
+********************************************************
+
+
+
+********************************************************
+>>> SERVİS BAŞLATILDI: 2026-05-02 23:26:51
+********************************************************
+
+Starting a Gradle Daemon, 5 busy and 1 incompatible and 88 stopped Daemons could not be reused, use --status for details
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :resolveMainClassName UP-TO-DATE
+
+> Task :bootRun
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.6)
+
+2026-05-02 23:26:59.456 [background-preinit] INFO  o.h.validator.internal.util.Version — HV000001: Hibernate Validator 9.0.1.Final
+2026-05-02 23:26:59.478 [restartedMain] INFO  c.t.c.CrmServiceApplication — Starting CrmServiceApplication using Java 21.0.10 with PID 96715 (/home/tuna/Desktop/tavia_v2/tavia-crm-service/build/classes/java/main started by tuna in /home/tuna/Desktop/tavia_v2/tavia-crm-service)
+2026-05-02 23:26:59.479 [restartedMain] DEBUG c.t.c.CrmServiceApplication — Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-02 23:26:59.480 [restartedMain] INFO  c.t.c.CrmServiceApplication — No active profile set, falling back to 1 default profile: "default"
+2026-05-02 23:26:59.506 [restartedMain] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Fetching config from server at : http://localhost:8888
+2026-05-02 23:26:59.506 [restartedMain] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Located environment: name=tavia-crm-service, profiles=[default], label=null, version=null, state=null
+2026-05-02 23:26:59.506 [restartedMain] DEBUG o.s.c.c.c.ConfigServerConfigDataLoader — Environment tavia-crm-service has 2 property sources with 34 properties.
+2026-05-02 23:26:59.508 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor — Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-02 23:26:59.508 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor — For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-02 23:27:00.021 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate — Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-02 23:27:00.112 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate — Finished Spring Data repository scanning in 85 ms. Found 2 JPA repository interfaces.
+2026-05-02 23:27:00.268 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope — BeanFactory id=89dd6eac-d973-3148-9115-123946d3a2bc
+2026-05-02 23:27:00.569 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer — Tomcat initialized with port 8086 (http)
+2026-05-02 23:27:00.577 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol — Initializing ProtocolHandler ["http-nio-8086"]
+2026-05-02 23:27:00.579 [restartedMain] INFO  o.a.catalina.core.StandardService — Starting service [Tomcat]
+2026-05-02 23:27:00.579 [restartedMain] INFO  o.a.catalina.core.StandardEngine — Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-02 23:27:00.605 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer — Root WebApplicationContext: initialization completed in 1096 ms
+2026-05-02 23:27:00.707 [restartedMain] INFO  org.hibernate.orm.jpa — HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-02 23:27:00.740 [restartedMain] INFO  org.hibernate.orm.core — HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-05-02 23:27:01.030 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo — No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-02 23:27:01.052 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource — HikariPool-1 - Starting...
+2026-05-02 23:27:01.129 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool — HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4102f7d8
+2026-05-02 23:27:01.130 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource — HikariPool-1 - Start completed.
+2026-05-02 23:27:01.149 [restartedMain] WARN  org.hibernate.orm.deprecation — HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-02 23:27:01.163 [restartedMain] INFO  o.hibernate.orm.connections.pooling — HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/tavia_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.17
+	Default catalog/schema: tavia_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-02 23:27:01.742 [restartedMain] INFO  org.hibernate.orm.core — HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-02 23:27:01.798 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean — Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-02 23:27:01.850 [restartedMain] INFO  o.s.d.j.r.q.QueryEnhancerFactories — Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-02 23:27:02.028 [restartedMain] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration — spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-02 23:27:02.408 [restartedMain] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration — Eureka HTTP Client uses RestClient.
+2026-05-02 23:27:02.434 [restartedMain] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger — Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-05-02 23:27:02.454 [restartedMain] INFO  o.s.c.n.eureka.InstanceInfoFactory — Setting initial instance status as: STARTING
+2026-05-02 23:27:02.470 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Initializing Eureka in region us-east-1
+2026-05-02 23:27:02.472 [restartedMain] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 23:27:02.477 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Disable delta property : false
+2026-05-02 23:27:02.477 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Single vip registry refresh property : null
+2026-05-02 23:27:02.477 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Force full registry fetch : false
+2026-05-02 23:27:02.477 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Application is null : false
+2026-05-02 23:27:02.477 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Registered Applications size is zero : true
+2026-05-02 23:27:02.477 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Application version is -1: true
+2026-05-02 23:27:02.477 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Getting all instance registry info from the eureka server
+2026-05-02 23:27:02.658 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — The response status is 200
+2026-05-02 23:27:02.659 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Starting heartbeat executor: renew interval is: 30
+2026-05-02 23:27:02.660 [restartedMain] INFO  c.n.discovery.InstanceInfoReplicator — InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-05-02 23:27:02.661 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Discovery Client initialized at timestamp 1777753622661 with initial instances count: 3
+2026-05-02 23:27:02.664 [restartedMain] INFO  o.s.c.n.e.s.EurekaServiceRegistry — Registering application TAVIA-CRM-SERVICE with eureka with status UP
+2026-05-02 23:27:02.664 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Saw local status change event StatusChangeEvent [timestamp=1777753622664, current=UP, previous=STARTING]
+2026-05-02 23:27:02.665 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-CRM-SERVICE/10.0.0.139:tavia-crm-service:8086: registering service...
+2026-05-02 23:27:02.665 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol — Starting ProtocolHandler ["http-nio-8086"]
+2026-05-02 23:27:02.674 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer — Tomcat started on port 8086 (http) with context path '/'
+2026-05-02 23:27:02.675 [restartedMain] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration — Updating port to 8086
+2026-05-02 23:27:02.691 [restartedMain] INFO  c.t.c.CrmServiceApplication — Started CrmServiceApplication in 3.96 seconds (process running for 4.356)
+2026-05-02 23:27:02.691 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-CRM-SERVICE/10.0.0.139:tavia-crm-service:8086 - registration status: 204
+2026-05-02 23:27:02.693 [restartedMain] WARN  o.s.c.events.SpringDocAppInitializer — SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-05-02 23:27:02.693 [restartedMain] WARN  o.s.c.events.SpringDocAppInitializer — SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+
+********************************************************
+<<< SERVİS DURDURULDU: 2026-05-02 23:30:14
+********************************************************
+
+
+
+********************************************************
+>>> SERVİS BAŞLATILDI: 2026-05-02 23:44:58
+********************************************************
+
+Starting a Gradle Daemon, 5 busy and 1 incompatible and 99 stopped Daemons could not be reused, use --status for details
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :resolveMainClassName UP-TO-DATE
+
+> Task :bootRun
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.6)
+
+2026-05-02 23:45:06.383 [background-preinit] INFO  o.h.validator.internal.util.Version — HV000001: Hibernate Validator 9.0.1.Final
+2026-05-02 23:45:06.404 [restartedMain] INFO  c.t.c.CrmServiceApplication — Starting CrmServiceApplication using Java 21.0.10 with PID 116788 (/home/tuna/Desktop/tavia_v2/tavia-crm-service/build/classes/java/main started by tuna in /home/tuna/Desktop/tavia_v2/tavia-crm-service)
+2026-05-02 23:45:06.405 [restartedMain] DEBUG c.t.c.CrmServiceApplication — Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-02 23:45:06.406 [restartedMain] INFO  c.t.c.CrmServiceApplication — No active profile set, falling back to 1 default profile: "default"
+2026-05-02 23:45:06.434 [restartedMain] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Fetching config from server at : http://localhost:8888
+2026-05-02 23:45:06.435 [restartedMain] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Located environment: name=tavia-crm-service, profiles=[default], label=null, version=null, state=null
+2026-05-02 23:45:06.435 [restartedMain] DEBUG o.s.c.c.c.ConfigServerConfigDataLoader — Environment tavia-crm-service has 2 property sources with 34 properties.
+2026-05-02 23:45:06.437 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor — Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-02 23:45:06.437 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor — For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-02 23:45:06.950 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate — Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-02 23:45:07.039 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate — Finished Spring Data repository scanning in 83 ms. Found 2 JPA repository interfaces.
+2026-05-02 23:45:07.196 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope — BeanFactory id=89dd6eac-d973-3148-9115-123946d3a2bc
+2026-05-02 23:45:07.498 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer — Tomcat initialized with port 8086 (http)
+2026-05-02 23:45:07.506 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol — Initializing ProtocolHandler ["http-nio-8086"]
+2026-05-02 23:45:07.508 [restartedMain] INFO  o.a.catalina.core.StandardService — Starting service [Tomcat]
+2026-05-02 23:45:07.508 [restartedMain] INFO  o.a.catalina.core.StandardEngine — Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-02 23:45:07.541 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer — Root WebApplicationContext: initialization completed in 1104 ms
+2026-05-02 23:45:07.646 [restartedMain] INFO  org.hibernate.orm.jpa — HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-02 23:45:07.682 [restartedMain] INFO  org.hibernate.orm.core — HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-05-02 23:45:07.976 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo — No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-02 23:45:07.997 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource — HikariPool-1 - Starting...
+2026-05-02 23:45:08.075 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool — HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@715bba29
+2026-05-02 23:45:08.076 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource — HikariPool-1 - Start completed.
+2026-05-02 23:45:08.094 [restartedMain] WARN  org.hibernate.orm.deprecation — HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-02 23:45:08.108 [restartedMain] INFO  o.hibernate.orm.connections.pooling — HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/tavia_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.17
+	Default catalog/schema: tavia_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-02 23:45:08.690 [restartedMain] INFO  org.hibernate.orm.core — HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-02 23:45:08.745 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean — Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-02 23:45:08.807 [restartedMain] INFO  o.s.d.j.r.q.QueryEnhancerFactories — Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-02 23:45:08.989 [restartedMain] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration — spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-02 23:45:09.367 [restartedMain] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration — Eureka HTTP Client uses RestClient.
+2026-05-02 23:45:09.395 [restartedMain] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger — Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-05-02 23:45:09.415 [restartedMain] INFO  o.s.c.n.eureka.InstanceInfoFactory — Setting initial instance status as: STARTING
+2026-05-02 23:45:09.430 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Initializing Eureka in region us-east-1
+2026-05-02 23:45:09.432 [restartedMain] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-02 23:45:09.436 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Disable delta property : false
+2026-05-02 23:45:09.437 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Single vip registry refresh property : null
+2026-05-02 23:45:09.437 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Force full registry fetch : false
+2026-05-02 23:45:09.437 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Application is null : false
+2026-05-02 23:45:09.437 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Registered Applications size is zero : true
+2026-05-02 23:45:09.437 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Application version is -1: true
+2026-05-02 23:45:09.437 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Getting all instance registry info from the eureka server
+2026-05-02 23:45:09.614 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — The response status is 200
+2026-05-02 23:45:09.615 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Starting heartbeat executor: renew interval is: 30
+2026-05-02 23:45:09.616 [restartedMain] INFO  c.n.discovery.InstanceInfoReplicator — InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-05-02 23:45:09.617 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Discovery Client initialized at timestamp 1777754709617 with initial instances count: 3
+2026-05-02 23:45:09.619 [restartedMain] INFO  o.s.c.n.e.s.EurekaServiceRegistry — Registering application TAVIA-CRM-SERVICE with eureka with status UP
+2026-05-02 23:45:09.620 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Saw local status change event StatusChangeEvent [timestamp=1777754709620, current=UP, previous=STARTING]
+2026-05-02 23:45:09.621 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-CRM-SERVICE/10.0.0.139:tavia-crm-service:8086: registering service...
+2026-05-02 23:45:09.621 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol — Starting ProtocolHandler ["http-nio-8086"]
+2026-05-02 23:45:09.630 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer — Tomcat started on port 8086 (http) with context path '/'
+2026-05-02 23:45:09.636 [restartedMain] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration — Updating port to 8086
+2026-05-02 23:45:09.647 [restartedMain] INFO  c.t.c.CrmServiceApplication — Started CrmServiceApplication in 3.98 seconds (process running for 4.371)
+2026-05-02 23:45:09.650 [restartedMain] WARN  o.s.c.events.SpringDocAppInitializer — SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-05-02 23:45:09.650 [restartedMain] WARN  o.s.c.events.SpringDocAppInitializer — SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-05-02 23:45:09.650 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-CRM-SERVICE/10.0.0.139:tavia-crm-service:8086 - registration status: 204
+2026-05-02 23:48:43.257 [http-nio-8086-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] — Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-02 23:48:43.257 [http-nio-8086-exec-1] INFO  o.s.web.servlet.DispatcherServlet — Initializing Servlet 'dispatcherServlet'
+2026-05-02 23:48:43.260 [http-nio-8086-exec-1] INFO  o.s.web.servlet.DispatcherServlet — Completed initialization in 2 ms
+2026-05-02 23:48:43.304 [http-nio-8086-exec-1] INFO  c.t.c.service.CustomerServiceImpl — Fetching customers, tenantId filter: 228f8e0a-035c-47e0-8ac6-e30991748cf0
+2026-05-02 23:48:43.694 [http-nio-8086-exec-1] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.tenant_id=?
+Hibernate: select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.tenant_id=?
+2026-05-02 23:48:43.746 [http-nio-8086-exec-1] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.id in (?)
+Hibernate: select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.id in (?)
+2026-05-02 23:48:43.757 [http-nio-8086-exec-1] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+Hibernate: select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-02 23:50:09.438 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+
+********************************************************
+<<< SERVİS DURDURULDU: 2026-05-02 23:52:31
+********************************************************
+
+
+
+********************************************************
+>>> SERVİS BAŞLATILDI: 2026-05-03 00:05:59
+********************************************************
+
+Starting a Gradle Daemon, 5 busy and 1 incompatible and 33 stopped Daemons could not be reused, use --status for details
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :resolveMainClassName UP-TO-DATE
+
+> Task :bootRun
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.6)
+
+2026-05-03 00:06:07.141 [background-preinit] INFO  o.h.validator.internal.util.Version — HV000001: Hibernate Validator 9.0.1.Final
+2026-05-03 00:06:07.167 [restartedMain] INFO  c.t.c.CrmServiceApplication — Starting CrmServiceApplication using Java 21.0.10 with PID 137133 (/home/tuna/Desktop/tavia_v2/tavia-crm-service/build/classes/java/main started by tuna in /home/tuna/Desktop/tavia_v2/tavia-crm-service)
+2026-05-03 00:06:07.167 [restartedMain] DEBUG c.t.c.CrmServiceApplication — Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-03 00:06:07.168 [restartedMain] INFO  c.t.c.CrmServiceApplication — No active profile set, falling back to 1 default profile: "default"
+2026-05-03 00:06:07.197 [restartedMain] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Fetching config from server at : http://localhost:8888
+2026-05-03 00:06:07.198 [restartedMain] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Located environment: name=tavia-crm-service, profiles=[default], label=null, version=null, state=null
+2026-05-03 00:06:07.198 [restartedMain] DEBUG o.s.c.c.c.ConfigServerConfigDataLoader — Environment tavia-crm-service has 2 property sources with 34 properties.
+2026-05-03 00:06:07.200 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor — Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-03 00:06:07.200 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor — For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-03 00:06:07.713 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate — Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-03 00:06:07.801 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate — Finished Spring Data repository scanning in 81 ms. Found 2 JPA repository interfaces.
+2026-05-03 00:06:07.955 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope — BeanFactory id=89dd6eac-d973-3148-9115-123946d3a2bc
+2026-05-03 00:06:08.259 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer — Tomcat initialized with port 8086 (http)
+2026-05-03 00:06:08.268 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol — Initializing ProtocolHandler ["http-nio-8086"]
+2026-05-03 00:06:08.270 [restartedMain] INFO  o.a.catalina.core.StandardService — Starting service [Tomcat]
+2026-05-03 00:06:08.270 [restartedMain] INFO  o.a.catalina.core.StandardEngine — Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-03 00:06:08.297 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer — Root WebApplicationContext: initialization completed in 1097 ms
+2026-05-03 00:06:08.407 [restartedMain] INFO  org.hibernate.orm.jpa — HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-03 00:06:08.439 [restartedMain] INFO  org.hibernate.orm.core — HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-05-03 00:06:08.731 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo — No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-03 00:06:08.751 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource — HikariPool-1 - Starting...
+2026-05-03 00:06:08.831 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool — HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2c0c9ead
+2026-05-03 00:06:08.832 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource — HikariPool-1 - Start completed.
+2026-05-03 00:06:08.850 [restartedMain] WARN  org.hibernate.orm.deprecation — HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-03 00:06:08.864 [restartedMain] INFO  o.hibernate.orm.connections.pooling — HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/tavia_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.17
+	Default catalog/schema: tavia_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-03 00:06:09.427 [restartedMain] INFO  org.hibernate.orm.core — HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-03 00:06:09.482 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean — Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-03 00:06:09.534 [restartedMain] INFO  o.s.d.j.r.q.QueryEnhancerFactories — Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-03 00:06:09.712 [restartedMain] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration — spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-03 00:06:10.080 [restartedMain] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration — Eureka HTTP Client uses RestClient.
+2026-05-03 00:06:10.107 [restartedMain] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger — Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-05-03 00:06:10.126 [restartedMain] INFO  o.s.c.n.eureka.InstanceInfoFactory — Setting initial instance status as: STARTING
+2026-05-03 00:06:10.141 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Initializing Eureka in region us-east-1
+2026-05-03 00:06:10.143 [restartedMain] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-03 00:06:10.153 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Disable delta property : false
+2026-05-03 00:06:10.153 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Single vip registry refresh property : null
+2026-05-03 00:06:10.153 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Force full registry fetch : false
+2026-05-03 00:06:10.154 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Application is null : false
+2026-05-03 00:06:10.154 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Registered Applications size is zero : true
+2026-05-03 00:06:10.154 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Application version is -1: true
+2026-05-03 00:06:10.154 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Getting all instance registry info from the eureka server
+2026-05-03 00:06:10.327 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — The response status is 200
+2026-05-03 00:06:10.328 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Starting heartbeat executor: renew interval is: 30
+2026-05-03 00:06:10.329 [restartedMain] INFO  c.n.discovery.InstanceInfoReplicator — InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-05-03 00:06:10.330 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Discovery Client initialized at timestamp 1777755970330 with initial instances count: 3
+2026-05-03 00:06:10.332 [restartedMain] INFO  o.s.c.n.e.s.EurekaServiceRegistry — Registering application TAVIA-CRM-SERVICE with eureka with status UP
+2026-05-03 00:06:10.333 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Saw local status change event StatusChangeEvent [timestamp=1777755970333, current=UP, previous=STARTING]
+2026-05-03 00:06:10.333 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-CRM-SERVICE/10.0.0.139:tavia-crm-service:8086: registering service...
+2026-05-03 00:06:10.334 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol — Starting ProtocolHandler ["http-nio-8086"]
+2026-05-03 00:06:10.342 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer — Tomcat started on port 8086 (http) with context path '/'
+2026-05-03 00:06:10.342 [restartedMain] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration — Updating port to 8086
+2026-05-03 00:06:10.351 [restartedMain] INFO  c.t.c.CrmServiceApplication — Started CrmServiceApplication in 3.915 seconds (process running for 4.319)
+2026-05-03 00:06:10.353 [restartedMain] WARN  o.s.c.events.SpringDocAppInitializer — SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-05-03 00:06:10.353 [restartedMain] WARN  o.s.c.events.SpringDocAppInitializer — SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-05-03 00:06:10.358 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-CRM-SERVICE/10.0.0.139:tavia-crm-service:8086 - registration status: 204
+2026-05-03 00:09:24.523 [http-nio-8086-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] — Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-03 00:09:24.525 [http-nio-8086-exec-1] INFO  o.s.web.servlet.DispatcherServlet — Initializing Servlet 'dispatcherServlet'
+2026-05-03 00:09:24.530 [http-nio-8086-exec-1] INFO  o.s.web.servlet.DispatcherServlet — Completed initialization in 4 ms
+2026-05-03 00:09:24.578 [http-nio-8086-exec-1] INFO  c.t.c.service.CustomerServiceImpl — Fetching customers, tenantId filter: 228f8e0a-035c-47e0-8ac6-e30991748cf0
+2026-05-03 00:09:24.947 [http-nio-8086-exec-1] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.tenant_id=?
+Hibernate: select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.tenant_id=?
+2026-05-03 00:09:25.007 [http-nio-8086-exec-1] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.id in (?)
+Hibernate: select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.id in (?)
+2026-05-03 00:09:25.022 [http-nio-8086-exec-1] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+Hibernate: select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 00:11:10.155 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+
+********************************************************
+<<< SERVİS DURDURULDU: 2026-05-03 00:15:43
+********************************************************
+
+
+
+********************************************************
+>>> SERVİS BAŞLATILDI: 2026-05-03 00:17:14
+********************************************************
+
+Starting a Gradle Daemon, 5 busy and 1 incompatible and 44 stopped Daemons could not be reused, use --status for details
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :resolveMainClassName UP-TO-DATE
+
+> Task :bootRun
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.6)
+
+2026-05-03 00:17:21.860 [background-preinit] INFO  o.h.validator.internal.util.Version — HV000001: Hibernate Validator 9.0.1.Final
+2026-05-03 00:17:21.883 [restartedMain] INFO  c.t.c.CrmServiceApplication — Starting CrmServiceApplication using Java 21.0.10 with PID 150434 (/home/tuna/Desktop/tavia_v2/tavia-crm-service/build/classes/java/main started by tuna in /home/tuna/Desktop/tavia_v2/tavia-crm-service)
+2026-05-03 00:17:21.884 [restartedMain] DEBUG c.t.c.CrmServiceApplication — Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-03 00:17:21.884 [restartedMain] INFO  c.t.c.CrmServiceApplication — No active profile set, falling back to 1 default profile: "default"
+2026-05-03 00:17:21.913 [restartedMain] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Fetching config from server at : http://localhost:8888
+2026-05-03 00:17:21.913 [restartedMain] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Located environment: name=tavia-crm-service, profiles=[default], label=null, version=null, state=null
+2026-05-03 00:17:21.913 [restartedMain] DEBUG o.s.c.c.c.ConfigServerConfigDataLoader — Environment tavia-crm-service has 2 property sources with 34 properties.
+2026-05-03 00:17:21.916 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor — Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-03 00:17:21.916 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor — For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-03 00:17:22.432 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate — Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-03 00:17:22.518 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate — Finished Spring Data repository scanning in 81 ms. Found 2 JPA repository interfaces.
+2026-05-03 00:17:22.672 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope — BeanFactory id=89dd6eac-d973-3148-9115-123946d3a2bc
+2026-05-03 00:17:22.974 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer — Tomcat initialized with port 8086 (http)
+2026-05-03 00:17:22.983 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol — Initializing ProtocolHandler ["http-nio-8086"]
+2026-05-03 00:17:22.985 [restartedMain] INFO  o.a.catalina.core.StandardService — Starting service [Tomcat]
+2026-05-03 00:17:22.985 [restartedMain] INFO  o.a.catalina.core.StandardEngine — Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-03 00:17:23.014 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer — Root WebApplicationContext: initialization completed in 1097 ms
+2026-05-03 00:17:23.130 [restartedMain] INFO  org.hibernate.orm.jpa — HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-03 00:17:23.166 [restartedMain] INFO  org.hibernate.orm.core — HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-05-03 00:17:23.479 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo — No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-03 00:17:23.500 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource — HikariPool-1 - Starting...
+2026-05-03 00:17:23.584 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool — HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@715bba29
+2026-05-03 00:17:23.585 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource — HikariPool-1 - Start completed.
+2026-05-03 00:17:23.603 [restartedMain] WARN  org.hibernate.orm.deprecation — HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-03 00:17:23.617 [restartedMain] INFO  o.hibernate.orm.connections.pooling — HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/tavia_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.17
+	Default catalog/schema: tavia_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-03 00:17:24.222 [restartedMain] INFO  org.hibernate.orm.core — HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-03 00:17:24.280 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean — Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-03 00:17:24.333 [restartedMain] INFO  o.s.d.j.r.q.QueryEnhancerFactories — Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-03 00:17:24.511 [restartedMain] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration — spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-03 00:17:24.910 [restartedMain] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration — Eureka HTTP Client uses RestClient.
+2026-05-03 00:17:24.934 [restartedMain] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger — Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-05-03 00:17:24.954 [restartedMain] INFO  o.s.c.n.eureka.InstanceInfoFactory — Setting initial instance status as: STARTING
+2026-05-03 00:17:24.969 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Initializing Eureka in region us-east-1
+2026-05-03 00:17:24.971 [restartedMain] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-03 00:17:24.975 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Disable delta property : false
+2026-05-03 00:17:24.976 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Single vip registry refresh property : null
+2026-05-03 00:17:24.976 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Force full registry fetch : false
+2026-05-03 00:17:24.976 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Application is null : false
+2026-05-03 00:17:24.976 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Registered Applications size is zero : true
+2026-05-03 00:17:24.976 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Application version is -1: true
+2026-05-03 00:17:24.976 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Getting all instance registry info from the eureka server
+2026-05-03 00:17:25.150 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — The response status is 200
+2026-05-03 00:17:25.151 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Starting heartbeat executor: renew interval is: 30
+2026-05-03 00:17:25.153 [restartedMain] INFO  c.n.discovery.InstanceInfoReplicator — InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-05-03 00:17:25.154 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Discovery Client initialized at timestamp 1777756645154 with initial instances count: 2
+2026-05-03 00:17:25.156 [restartedMain] INFO  o.s.c.n.e.s.EurekaServiceRegistry — Registering application TAVIA-CRM-SERVICE with eureka with status UP
+2026-05-03 00:17:25.157 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Saw local status change event StatusChangeEvent [timestamp=1777756645157, current=UP, previous=STARTING]
+2026-05-03 00:17:25.158 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-CRM-SERVICE/10.0.0.139:tavia-crm-service:8086: registering service...
+2026-05-03 00:17:25.158 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol — Starting ProtocolHandler ["http-nio-8086"]
+2026-05-03 00:17:25.167 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer — Tomcat started on port 8086 (http) with context path '/'
+2026-05-03 00:17:25.167 [restartedMain] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration — Updating port to 8086
+2026-05-03 00:17:25.187 [restartedMain] INFO  c.t.c.CrmServiceApplication — Started CrmServiceApplication in 4.036 seconds (process running for 4.448)
+2026-05-03 00:17:25.190 [restartedMain] WARN  o.s.c.events.SpringDocAppInitializer — SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-05-03 00:17:25.190 [restartedMain] WARN  o.s.c.events.SpringDocAppInitializer — SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-05-03 00:17:25.191 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-CRM-SERVICE/10.0.0.139:tavia-crm-service:8086 - registration status: 204
+2026-05-03 00:22:24.977 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-03 00:27:24.981 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-03 00:32:24.981 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-03 00:37:24.982 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-03 00:42:24.982 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-03 00:47:24.983 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-03 00:52:24.983 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-03 00:57:24.983 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-03 01:02:24.984 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-03 01:07:24.984 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-03 01:12:24.985 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-03 01:17:24.985 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-03 01:22:24.989 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-03 01:27:24.990 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-03 01:29:46.231 [http-nio-8086-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] — Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-03 01:29:46.232 [http-nio-8086-exec-1] INFO  o.s.web.servlet.DispatcherServlet — Initializing Servlet 'dispatcherServlet'
+2026-05-03 01:29:46.235 [http-nio-8086-exec-1] INFO  o.s.web.servlet.DispatcherServlet — Completed initialization in 3 ms
+2026-05-03 01:29:46.283 [http-nio-8086-exec-1] INFO  c.t.c.service.CustomerServiceImpl — Fetching customers, tenantId filter: 228f8e0a-035c-47e0-8ac6-e30991748cf0
+2026-05-03 01:29:46.689 [http-nio-8086-exec-1] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.tenant_id=?
+Hibernate: select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.tenant_id=?
+2026-05-03 01:29:46.774 [http-nio-8086-exec-1] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.id in (?)
+Hibernate: select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.id in (?)
+2026-05-03 01:29:46.795 [http-nio-8086-exec-1] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+Hibernate: select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 01:31:08.189 [http-nio-8086-exec-3] INFO  c.t.c.service.CustomerServiceImpl — Fetching customers, tenantId filter: 228f8e0a-035c-47e0-8ac6-e30991748cf0
+2026-05-03 01:31:08.190 [http-nio-8086-exec-3] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.tenant_id=?
+Hibernate: select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.tenant_id=?
+2026-05-03 01:31:08.192 [http-nio-8086-exec-3] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.id in (?)
+Hibernate: select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.id in (?)
+2026-05-03 01:31:08.195 [http-nio-8086-exec-3] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+Hibernate: select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+
+********************************************************
+<<< SERVİS DURDURULDU: 2026-05-03 01:31:24
+********************************************************
+

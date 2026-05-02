@@ -35,8 +35,8 @@ public class CatalogController {
     @Operation(summary = "Create a new recipe (Bill of Materials)")
     public ResponseEntity<ApiResponse<RecipeDto>> createRecipe(
             @RequestHeader("X-Tenant-ID") UUID tenantId,
-            @Valid @RequestBody RecipeDto recipeDto) {
-        RecipeDto created = catalogService.createRecipe(tenantId, recipeDto);
+            @Valid @RequestBody com.tavia.catalog_service.dto.CreateRecipeRequest request) {
+        RecipeDto created = catalogService.createRecipe(tenantId, request);
         return new ResponseEntity<>(
                 ApiResponse.success(created, "Recipe created successfully"),
                 HttpStatus.CREATED);

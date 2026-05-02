@@ -11,6 +11,7 @@ import {
   Hexagon,
   LogOut,
   Coffee,
+  Cpu,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useAuthStore } from "@/lib/store/use-auth-store";
@@ -42,6 +43,11 @@ const navItems = [
     label: "Inventory",
     href: "/inventory",
     icon: Package,
+  },
+  {
+    label: "Machines",
+    href: "/machines",
+    icon: Cpu,
   },
   {
     label: "AI Insights",

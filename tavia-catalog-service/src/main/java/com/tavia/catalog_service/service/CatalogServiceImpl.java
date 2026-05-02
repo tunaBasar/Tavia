@@ -36,8 +36,8 @@ public class CatalogServiceImpl implements CatalogService {
 
     @Override
     @Transactional
-    public RecipeDto createRecipe(UUID tenantId, RecipeDto recipeDto) {
-        String normalizedName = recipeDto.getProductName().trim().toUpperCase();
+    public RecipeDto createRecipe(UUID tenantId, com.tavia.catalog_service.dto.CreateRecipeRequest request) {
+        String normalizedName = request.getProductName().trim().toUpperCase();
 
         // Guard: duplicate check
         if (recipeRepository.existsByTenantIdAndProductName(tenantId, normalizedName)) {
@@ -45,7 +45,7 @@ public class CatalogServiceImpl implements CatalogService {
                     "Recipe already exists for product '" + normalizedName + "' in tenant " + tenantId);
         }
 
-        Recipe recipe = recipeMapper.toEntity(recipeDto);
+        Recipe recipe = recipeMapper.toEntity(request);
         recipe.setTenantId(tenantId);
         recipe.setProductName(normalizedName);
 
@@ -54,8 +54,8 @@ public class CatalogServiceImpl implements CatalogService {
         }
 
         // Wire ingredients to the recipe (bidirectional)
-        for (RecipeIngredientDto ingredientDto : recipeDto.getIngredients()) {
-            RecipeIngredient ingredient = recipeMapper.toIngredientEntity(ingredientDto);
+        for (com.tavia.catalog_service.dto.CreateRecipeIngredientRequest ingredientRequest : request.getIngredients()) {
+            RecipeIngredient ingredient = recipeMapper.toIngredientEntity(ingredientRequest);
             recipe.addIngredient(ingredient);
         }
 
