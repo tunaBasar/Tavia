@@ -17,9 +17,6 @@ import java.util.UUID;
 @NoArgsConstructor
 @AllArgsConstructor
 public class CreateOrderRequest {
-    @NotNull(message = "Tenant ID is mandatory")
-    private UUID tenantId;
-
     private UUID customerId;
 
     @NotBlank(message = "Product name is mandatory")

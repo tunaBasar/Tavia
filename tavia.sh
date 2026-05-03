@@ -103,8 +103,8 @@ function start_service() {
             if ! ps -p $new_pid > /dev/null; then
                 echo -e "${RED}❌ $svc ÇÖKTÜ! Başlatılamadı. Hata logunu incele: tail -f $err_file${NC}"
                 rm -f "$PID_DIR/$svc.pid"
-            elif grep -qi "ERROR" "$log_file" || [ -s "$err_file" ] && grep -qi "[a-zA-Z]" "$err_file"; then
-                echo -e "${RED}⚠️ $svc çalışıyor ama loglarda HATA (ERROR) veya uyarı var!${NC}"
+            elif grep -q " ERROR " "$log_file"; then
+                echo -e "${RED}⚠️ $svc çalışıyor ama loglarda HATA (ERROR) var! Bir göz at: tail -f $log_file${NC}"
             else
                 echo -e "${GREEN}✅ $svc PID: $new_pid ile aktif.${NC}"
             fi

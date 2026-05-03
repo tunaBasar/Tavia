@@ -28,7 +28,7 @@ export function useSimulateOrder() {
         price: 45.0,
       };
 
-      return createOrder(payload);
+      return createOrder(payload, tenantId);
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["customers"] });

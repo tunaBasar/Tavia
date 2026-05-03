@@ -432,3 +432,987 @@ Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http:
 
 2026-05-03 01:31:24.389 [SpringApplicationShutdownHook] WARN  c.n.d.s.t.d.RetryableEurekaHttpClient — Request execution failed with message: I/O error on DELETE request for "http://localhost:8761/eureka/apps/TAVIA-CRM-SERVICE/10.0.0.139:tavia-crm-service:8086": Connect to http://localhost:8761 failed: Connection refused
 2026-05-03 01:31:24.407 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient — Completed shut down of DiscoveryClient
+2026-05-03 16:22:12.636 [background-preinit] INFO  o.h.validator.internal.util.Version — HV000001: Hibernate Validator 9.0.1.Final
+2026-05-03 16:22:12.659 [restartedMain] INFO  c.t.c.CrmServiceApplication — Starting CrmServiceApplication using Java 21.0.10 with PID 21930 (/home/tuna/Desktop/tavia_v2/tavia-crm-service/build/classes/java/main started by tuna in /home/tuna/Desktop/tavia_v2/tavia-crm-service)
+2026-05-03 16:22:12.659 [restartedMain] DEBUG c.t.c.CrmServiceApplication — Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-03 16:22:12.660 [restartedMain] INFO  c.t.c.CrmServiceApplication — No active profile set, falling back to 1 default profile: "default"
+2026-05-03 16:22:12.691 [restartedMain] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Fetching config from server at : http://localhost:8888
+2026-05-03 16:22:12.691 [restartedMain] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Located environment: name=tavia-crm-service, profiles=[default], label=null, version=null, state=null
+2026-05-03 16:22:12.694 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor — Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-03 16:22:12.694 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor — For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-03 16:22:13.214 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate — Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-03 16:22:13.302 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate — Finished Spring Data repository scanning in 83 ms. Found 2 JPA repository interfaces.
+2026-05-03 16:22:13.456 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope — BeanFactory id=89dd6eac-d973-3148-9115-123946d3a2bc
+2026-05-03 16:22:13.751 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer — Tomcat initialized with port 8086 (http)
+2026-05-03 16:22:13.759 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol — Initializing ProtocolHandler ["http-nio-8086"]
+2026-05-03 16:22:13.761 [restartedMain] INFO  o.a.catalina.core.StandardService — Starting service [Tomcat]
+2026-05-03 16:22:13.761 [restartedMain] INFO  o.a.catalina.core.StandardEngine — Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-03 16:22:13.788 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer — Root WebApplicationContext: initialization completed in 1093 ms
+2026-05-03 16:22:13.912 [restartedMain] INFO  org.hibernate.orm.jpa — HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-03 16:22:13.948 [restartedMain] INFO  org.hibernate.orm.core — HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-05-03 16:22:14.244 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo — No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-03 16:22:14.266 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource — HikariPool-1 - Starting...
+2026-05-03 16:22:14.348 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool — HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1751c3a5
+2026-05-03 16:22:14.349 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource — HikariPool-1 - Start completed.
+2026-05-03 16:22:14.367 [restartedMain] WARN  org.hibernate.orm.deprecation — HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-03 16:22:14.381 [restartedMain] INFO  o.hibernate.orm.connections.pooling — HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/tavia_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.17
+	Default catalog/schema: tavia_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-03 16:22:15.035 [restartedMain] INFO  org.hibernate.orm.core — HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-03 16:22:15.107 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean — Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-03 16:22:15.184 [restartedMain] INFO  o.s.d.j.r.q.QueryEnhancerFactories — Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-03 16:22:15.418 [restartedMain] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration — spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-03 16:22:15.909 [restartedMain] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration — Eureka HTTP Client uses RestClient.
+2026-05-03 16:22:15.942 [restartedMain] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger — Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-05-03 16:22:15.966 [restartedMain] INFO  o.s.c.n.eureka.InstanceInfoFactory — Setting initial instance status as: STARTING
+2026-05-03 16:22:15.984 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Initializing Eureka in region us-east-1
+2026-05-03 16:22:15.986 [restartedMain] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-03 16:22:15.994 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Disable delta property : false
+2026-05-03 16:22:15.994 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Single vip registry refresh property : null
+2026-05-03 16:22:15.994 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Force full registry fetch : false
+2026-05-03 16:22:15.994 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Application is null : false
+2026-05-03 16:22:15.994 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Registered Applications size is zero : true
+2026-05-03 16:22:15.994 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Application version is -1: true
+2026-05-03 16:22:15.994 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Getting all instance registry info from the eureka server
+2026-05-03 16:22:16.226 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — The response status is 200
+2026-05-03 16:22:16.228 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Starting heartbeat executor: renew interval is: 30
+2026-05-03 16:22:16.229 [restartedMain] INFO  c.n.discovery.InstanceInfoReplicator — InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-05-03 16:22:16.230 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Discovery Client initialized at timestamp 1777814536230 with initial instances count: 3
+2026-05-03 16:22:16.233 [restartedMain] INFO  o.s.c.n.e.s.EurekaServiceRegistry — Registering application TAVIA-CRM-SERVICE with eureka with status UP
+2026-05-03 16:22:16.233 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Saw local status change event StatusChangeEvent [timestamp=1777814536233, current=UP, previous=STARTING]
+2026-05-03 16:22:16.235 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol — Starting ProtocolHandler ["http-nio-8086"]
+2026-05-03 16:22:16.235 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-CRM-SERVICE/10.0.0.139:tavia-crm-service:8086: registering service...
+2026-05-03 16:22:16.244 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer — Tomcat started on port 8086 (http) with context path '/'
+2026-05-03 16:22:16.245 [restartedMain] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration — Updating port to 8086
+2026-05-03 16:22:16.257 [restartedMain] INFO  c.t.c.CrmServiceApplication — Started CrmServiceApplication in 4.333 seconds (process running for 4.79)
+2026-05-03 16:22:16.260 [restartedMain] WARN  o.s.c.events.SpringDocAppInitializer — SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-05-03 16:22:16.260 [restartedMain] WARN  o.s.c.events.SpringDocAppInitializer — SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-05-03 16:22:16.274 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-CRM-SERVICE/10.0.0.139:tavia-crm-service:8086 - registration status: 204
+2026-05-03 16:24:29.225 [http-nio-8086-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] — Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-03 16:24:29.225 [http-nio-8086-exec-1] INFO  o.s.web.servlet.DispatcherServlet — Initializing Servlet 'dispatcherServlet'
+2026-05-03 16:24:29.227 [http-nio-8086-exec-1] INFO  o.s.web.servlet.DispatcherServlet — Completed initialization in 1 ms
+2026-05-03 16:24:29.284 [http-nio-8086-exec-1] INFO  c.t.c.service.CustomerServiceImpl — Creating customer with email: bound1@tavia.local
+2026-05-03 16:24:29.311 [http-nio-8086-exec-1] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:29.572 [http-nio-8086-exec-1] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:29.586 [http-nio-8086-exec-1] DEBUG org.hibernate.SQL — insert into tenant_loyalty (customer_id,loyalty_level,tenant_id,total_spent,id) values (?,?,?,?,?)
+2026-05-03 16:24:29.589 [http-nio-8086-exec-1] INFO  c.t.c.service.CustomerServiceImpl — Customer created with id: 9850bca4-e46f-4a24-a01d-e8a4658f4c60
+2026-05-03 16:24:29.590 [http-nio-8086-exec-1] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:29.619 [http-nio-8086-exec-2] INFO  c.t.c.service.CustomerServiceImpl — Creating customer with email: bound2@tavia.local
+2026-05-03 16:24:29.621 [http-nio-8086-exec-2] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:29.624 [http-nio-8086-exec-2] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:29.625 [http-nio-8086-exec-2] DEBUG org.hibernate.SQL — insert into tenant_loyalty (customer_id,loyalty_level,tenant_id,total_spent,id) values (?,?,?,?,?)
+2026-05-03 16:24:29.626 [http-nio-8086-exec-2] INFO  c.t.c.service.CustomerServiceImpl — Customer created with id: 1db04b17-e324-4bab-a59e-00d8b87d71ad
+2026-05-03 16:24:29.627 [http-nio-8086-exec-2] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:29.635 [http-nio-8086-exec-3] INFO  c.t.c.service.CustomerServiceImpl — Creating customer with email: bound3@tavia.local
+2026-05-03 16:24:29.636 [http-nio-8086-exec-3] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:29.638 [http-nio-8086-exec-3] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:29.640 [http-nio-8086-exec-3] DEBUG org.hibernate.SQL — insert into tenant_loyalty (customer_id,loyalty_level,tenant_id,total_spent,id) values (?,?,?,?,?)
+2026-05-03 16:24:29.641 [http-nio-8086-exec-3] INFO  c.t.c.service.CustomerServiceImpl — Customer created with id: 863bfc57-1735-43da-9552-6bd1e070b7a3
+2026-05-03 16:24:29.641 [http-nio-8086-exec-3] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:29.648 [http-nio-8086-exec-4] INFO  c.t.c.service.CustomerServiceImpl — Creating customer with email: bound4@tavia.local
+2026-05-03 16:24:29.649 [http-nio-8086-exec-4] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:29.652 [http-nio-8086-exec-4] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:29.653 [http-nio-8086-exec-4] DEBUG org.hibernate.SQL — insert into tenant_loyalty (customer_id,loyalty_level,tenant_id,total_spent,id) values (?,?,?,?,?)
+2026-05-03 16:24:29.654 [http-nio-8086-exec-4] INFO  c.t.c.service.CustomerServiceImpl — Customer created with id: d4dfe904-d13a-404b-b267-cd3ff5b051fc
+2026-05-03 16:24:29.655 [http-nio-8086-exec-4] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:29.663 [http-nio-8086-exec-5] INFO  c.t.c.service.CustomerServiceImpl — Creating customer with email: bound5@tavia.local
+2026-05-03 16:24:29.664 [http-nio-8086-exec-5] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:29.667 [http-nio-8086-exec-5] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:29.668 [http-nio-8086-exec-5] DEBUG org.hibernate.SQL — insert into tenant_loyalty (customer_id,loyalty_level,tenant_id,total_spent,id) values (?,?,?,?,?)
+2026-05-03 16:24:29.669 [http-nio-8086-exec-5] INFO  c.t.c.service.CustomerServiceImpl — Customer created with id: 2ea6e7b5-e522-4e39-bfa3-8cc7a71f64bd
+2026-05-03 16:24:29.670 [http-nio-8086-exec-5] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:29.678 [http-nio-8086-exec-6] INFO  c.t.c.service.CustomerServiceImpl — Creating customer with email: bound6@tavia.local
+2026-05-03 16:24:29.679 [http-nio-8086-exec-6] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:29.682 [http-nio-8086-exec-6] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:29.683 [http-nio-8086-exec-6] DEBUG org.hibernate.SQL — insert into tenant_loyalty (customer_id,loyalty_level,tenant_id,total_spent,id) values (?,?,?,?,?)
+2026-05-03 16:24:29.684 [http-nio-8086-exec-6] INFO  c.t.c.service.CustomerServiceImpl — Customer created with id: f0201da7-96b2-4bb5-88fa-e96ab09b5112
+2026-05-03 16:24:29.685 [http-nio-8086-exec-6] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:29.691 [http-nio-8086-exec-7] INFO  c.t.c.service.CustomerServiceImpl — Creating customer with email: bound7@tavia.local
+2026-05-03 16:24:29.692 [http-nio-8086-exec-7] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:29.694 [http-nio-8086-exec-7] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:29.695 [http-nio-8086-exec-7] DEBUG org.hibernate.SQL — insert into tenant_loyalty (customer_id,loyalty_level,tenant_id,total_spent,id) values (?,?,?,?,?)
+2026-05-03 16:24:29.697 [http-nio-8086-exec-7] INFO  c.t.c.service.CustomerServiceImpl — Customer created with id: 45758e8c-b161-4085-9cc5-db76345e9f7c
+2026-05-03 16:24:29.697 [http-nio-8086-exec-7] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:29.704 [http-nio-8086-exec-8] INFO  c.t.c.service.CustomerServiceImpl — Creating customer with email: bound8@tavia.local
+2026-05-03 16:24:29.704 [http-nio-8086-exec-8] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:29.706 [http-nio-8086-exec-8] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:29.708 [http-nio-8086-exec-8] DEBUG org.hibernate.SQL — insert into tenant_loyalty (customer_id,loyalty_level,tenant_id,total_spent,id) values (?,?,?,?,?)
+2026-05-03 16:24:29.709 [http-nio-8086-exec-8] INFO  c.t.c.service.CustomerServiceImpl — Customer created with id: 9493f32e-e474-4020-b603-cb6cec9bbf9f
+2026-05-03 16:24:29.710 [http-nio-8086-exec-8] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:29.716 [http-nio-8086-exec-9] INFO  c.t.c.service.CustomerServiceImpl — Creating customer with email: bound9@tavia.local
+2026-05-03 16:24:29.717 [http-nio-8086-exec-9] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:29.720 [http-nio-8086-exec-9] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:29.721 [http-nio-8086-exec-9] DEBUG org.hibernate.SQL — insert into tenant_loyalty (customer_id,loyalty_level,tenant_id,total_spent,id) values (?,?,?,?,?)
+2026-05-03 16:24:29.723 [http-nio-8086-exec-9] INFO  c.t.c.service.CustomerServiceImpl — Customer created with id: 89cd1855-bdbb-4bcd-8979-cc7306a15d3d
+2026-05-03 16:24:29.723 [http-nio-8086-exec-9] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:29.730 [http-nio-8086-exec-10] INFO  c.t.c.service.CustomerServiceImpl — Creating customer with email: bound10@tavia.local
+2026-05-03 16:24:29.731 [http-nio-8086-exec-10] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:29.733 [http-nio-8086-exec-10] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:29.734 [http-nio-8086-exec-10] DEBUG org.hibernate.SQL — insert into tenant_loyalty (customer_id,loyalty_level,tenant_id,total_spent,id) values (?,?,?,?,?)
+2026-05-03 16:24:29.736 [http-nio-8086-exec-10] INFO  c.t.c.service.CustomerServiceImpl — Customer created with id: 8ea18646-0490-4586-918b-6d69f3e8da20
+2026-05-03 16:24:29.736 [http-nio-8086-exec-10] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:29.744 [http-nio-8086-exec-1] INFO  c.t.c.service.CustomerServiceImpl — Creating customer with email: bound11@tavia.local
+2026-05-03 16:24:29.745 [http-nio-8086-exec-1] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:29.747 [http-nio-8086-exec-1] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:29.748 [http-nio-8086-exec-1] DEBUG org.hibernate.SQL — insert into tenant_loyalty (customer_id,loyalty_level,tenant_id,total_spent,id) values (?,?,?,?,?)
+2026-05-03 16:24:29.750 [http-nio-8086-exec-1] INFO  c.t.c.service.CustomerServiceImpl — Customer created with id: 4c53ee84-068a-49e0-ba15-50dd64bfa7e9
+2026-05-03 16:24:29.750 [http-nio-8086-exec-1] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:29.758 [http-nio-8086-exec-2] INFO  c.t.c.service.CustomerServiceImpl — Creating customer with email: bound12@tavia.local
+2026-05-03 16:24:29.759 [http-nio-8086-exec-2] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:29.762 [http-nio-8086-exec-2] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:29.763 [http-nio-8086-exec-2] DEBUG org.hibernate.SQL — insert into tenant_loyalty (customer_id,loyalty_level,tenant_id,total_spent,id) values (?,?,?,?,?)
+2026-05-03 16:24:29.764 [http-nio-8086-exec-2] INFO  c.t.c.service.CustomerServiceImpl — Customer created with id: 79e38c0a-a871-4b3e-8a52-b0c59355c165
+2026-05-03 16:24:29.765 [http-nio-8086-exec-2] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:29.770 [http-nio-8086-exec-3] INFO  c.t.c.service.CustomerServiceImpl — Creating customer with email: bound13@tavia.local
+2026-05-03 16:24:29.771 [http-nio-8086-exec-3] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:29.773 [http-nio-8086-exec-3] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:29.774 [http-nio-8086-exec-3] DEBUG org.hibernate.SQL — insert into tenant_loyalty (customer_id,loyalty_level,tenant_id,total_spent,id) values (?,?,?,?,?)
+2026-05-03 16:24:29.776 [http-nio-8086-exec-3] INFO  c.t.c.service.CustomerServiceImpl — Customer created with id: 257f775f-47f4-4362-b7e8-0d5e8e7991e7
+2026-05-03 16:24:29.776 [http-nio-8086-exec-3] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:29.785 [http-nio-8086-exec-4] INFO  c.t.c.service.CustomerServiceImpl — Creating customer with email: bound14@tavia.local
+2026-05-03 16:24:29.786 [http-nio-8086-exec-4] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:29.788 [http-nio-8086-exec-4] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:29.789 [http-nio-8086-exec-4] DEBUG org.hibernate.SQL — insert into tenant_loyalty (customer_id,loyalty_level,tenant_id,total_spent,id) values (?,?,?,?,?)
+2026-05-03 16:24:29.790 [http-nio-8086-exec-4] INFO  c.t.c.service.CustomerServiceImpl — Customer created with id: bc8eedf1-f341-4d51-a6c1-ea18d9ac9918
+2026-05-03 16:24:29.790 [http-nio-8086-exec-4] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:29.797 [http-nio-8086-exec-5] INFO  c.t.c.service.CustomerServiceImpl — Creating customer with email: bound15@tavia.local
+2026-05-03 16:24:29.797 [http-nio-8086-exec-5] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:29.799 [http-nio-8086-exec-5] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:29.800 [http-nio-8086-exec-5] DEBUG org.hibernate.SQL — insert into tenant_loyalty (customer_id,loyalty_level,tenant_id,total_spent,id) values (?,?,?,?,?)
+2026-05-03 16:24:29.802 [http-nio-8086-exec-5] INFO  c.t.c.service.CustomerServiceImpl — Customer created with id: faf6b482-2b01-4618-99d4-fef203436c0a
+2026-05-03 16:24:29.802 [http-nio-8086-exec-5] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:29.808 [http-nio-8086-exec-6] INFO  c.t.c.service.CustomerServiceImpl — Creating customer with email: bound16@tavia.local
+2026-05-03 16:24:29.809 [http-nio-8086-exec-6] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:29.810 [http-nio-8086-exec-6] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:29.812 [http-nio-8086-exec-6] DEBUG org.hibernate.SQL — insert into tenant_loyalty (customer_id,loyalty_level,tenant_id,total_spent,id) values (?,?,?,?,?)
+2026-05-03 16:24:29.813 [http-nio-8086-exec-6] INFO  c.t.c.service.CustomerServiceImpl — Customer created with id: 29a7ae79-18e3-4201-8d41-a44cf127b6db
+2026-05-03 16:24:29.814 [http-nio-8086-exec-6] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:29.821 [http-nio-8086-exec-7] INFO  c.t.c.service.CustomerServiceImpl — Creating customer with email: bound17@tavia.local
+2026-05-03 16:24:29.822 [http-nio-8086-exec-7] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:29.823 [http-nio-8086-exec-7] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:29.824 [http-nio-8086-exec-7] DEBUG org.hibernate.SQL — insert into tenant_loyalty (customer_id,loyalty_level,tenant_id,total_spent,id) values (?,?,?,?,?)
+2026-05-03 16:24:29.825 [http-nio-8086-exec-7] INFO  c.t.c.service.CustomerServiceImpl — Customer created with id: d965a7b5-a55d-4075-bb36-450beedb3fbf
+2026-05-03 16:24:29.826 [http-nio-8086-exec-7] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:29.833 [http-nio-8086-exec-8] INFO  c.t.c.service.CustomerServiceImpl — Creating customer with email: bound18@tavia.local
+2026-05-03 16:24:29.834 [http-nio-8086-exec-8] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:29.836 [http-nio-8086-exec-8] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:29.838 [http-nio-8086-exec-8] DEBUG org.hibernate.SQL — insert into tenant_loyalty (customer_id,loyalty_level,tenant_id,total_spent,id) values (?,?,?,?,?)
+2026-05-03 16:24:29.839 [http-nio-8086-exec-8] INFO  c.t.c.service.CustomerServiceImpl — Customer created with id: 197340da-9d8c-4de3-81d4-20f3753af166
+2026-05-03 16:24:29.840 [http-nio-8086-exec-8] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:29.846 [http-nio-8086-exec-9] INFO  c.t.c.service.CustomerServiceImpl — Creating customer with email: bound19@tavia.local
+2026-05-03 16:24:29.847 [http-nio-8086-exec-9] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:29.849 [http-nio-8086-exec-9] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:29.850 [http-nio-8086-exec-9] DEBUG org.hibernate.SQL — insert into tenant_loyalty (customer_id,loyalty_level,tenant_id,total_spent,id) values (?,?,?,?,?)
+2026-05-03 16:24:29.851 [http-nio-8086-exec-9] INFO  c.t.c.service.CustomerServiceImpl — Customer created with id: f017234b-c63e-4158-a91e-089d0cc19abe
+2026-05-03 16:24:29.852 [http-nio-8086-exec-9] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:29.860 [http-nio-8086-exec-10] INFO  c.t.c.service.CustomerServiceImpl — Creating customer with email: bound20@tavia.local
+2026-05-03 16:24:29.861 [http-nio-8086-exec-10] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:29.862 [http-nio-8086-exec-10] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:29.864 [http-nio-8086-exec-10] DEBUG org.hibernate.SQL — insert into tenant_loyalty (customer_id,loyalty_level,tenant_id,total_spent,id) values (?,?,?,?,?)
+2026-05-03 16:24:29.865 [http-nio-8086-exec-10] INFO  c.t.c.service.CustomerServiceImpl — Customer created with id: 98bbf6ea-e8f6-4a68-888a-c046eab974d0
+2026-05-03 16:24:29.865 [http-nio-8086-exec-10] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:29.871 [http-nio-8086-exec-1] INFO  c.t.c.service.CustomerServiceImpl — Creating customer with email: bound21@tavia.local
+2026-05-03 16:24:29.871 [http-nio-8086-exec-1] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:29.873 [http-nio-8086-exec-1] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:29.874 [http-nio-8086-exec-1] DEBUG org.hibernate.SQL — insert into tenant_loyalty (customer_id,loyalty_level,tenant_id,total_spent,id) values (?,?,?,?,?)
+2026-05-03 16:24:29.876 [http-nio-8086-exec-1] INFO  c.t.c.service.CustomerServiceImpl — Customer created with id: 9fd65268-8d68-48dc-9dab-7bb75ffd09db
+2026-05-03 16:24:29.876 [http-nio-8086-exec-1] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:29.884 [http-nio-8086-exec-2] INFO  c.t.c.service.CustomerServiceImpl — Creating customer with email: bound22@tavia.local
+2026-05-03 16:24:29.885 [http-nio-8086-exec-2] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:29.887 [http-nio-8086-exec-2] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:29.888 [http-nio-8086-exec-2] DEBUG org.hibernate.SQL — insert into tenant_loyalty (customer_id,loyalty_level,tenant_id,total_spent,id) values (?,?,?,?,?)
+2026-05-03 16:24:29.890 [http-nio-8086-exec-2] INFO  c.t.c.service.CustomerServiceImpl — Customer created with id: 4a8a32fd-688b-4793-a92d-1622cdfc7e75
+2026-05-03 16:24:29.890 [http-nio-8086-exec-2] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:29.896 [http-nio-8086-exec-3] INFO  c.t.c.service.CustomerServiceImpl — Creating customer with email: bound23@tavia.local
+2026-05-03 16:24:29.896 [http-nio-8086-exec-3] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:29.898 [http-nio-8086-exec-3] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:29.899 [http-nio-8086-exec-3] DEBUG org.hibernate.SQL — insert into tenant_loyalty (customer_id,loyalty_level,tenant_id,total_spent,id) values (?,?,?,?,?)
+2026-05-03 16:24:29.900 [http-nio-8086-exec-3] INFO  c.t.c.service.CustomerServiceImpl — Customer created with id: dc1e5cc8-2678-4044-a968-8e63f763d551
+2026-05-03 16:24:29.901 [http-nio-8086-exec-3] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:29.908 [http-nio-8086-exec-4] INFO  c.t.c.service.CustomerServiceImpl — Creating customer with email: bound24@tavia.local
+2026-05-03 16:24:29.908 [http-nio-8086-exec-4] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:29.910 [http-nio-8086-exec-4] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:29.911 [http-nio-8086-exec-4] DEBUG org.hibernate.SQL — insert into tenant_loyalty (customer_id,loyalty_level,tenant_id,total_spent,id) values (?,?,?,?,?)
+2026-05-03 16:24:29.912 [http-nio-8086-exec-4] INFO  c.t.c.service.CustomerServiceImpl — Customer created with id: c421bc73-f187-4fff-bc4f-56613158a649
+2026-05-03 16:24:29.913 [http-nio-8086-exec-4] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:29.920 [http-nio-8086-exec-5] INFO  c.t.c.service.CustomerServiceImpl — Creating customer with email: bound25@tavia.local
+2026-05-03 16:24:29.921 [http-nio-8086-exec-5] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:29.923 [http-nio-8086-exec-5] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:29.925 [http-nio-8086-exec-5] DEBUG org.hibernate.SQL — insert into tenant_loyalty (customer_id,loyalty_level,tenant_id,total_spent,id) values (?,?,?,?,?)
+2026-05-03 16:24:29.926 [http-nio-8086-exec-5] INFO  c.t.c.service.CustomerServiceImpl — Customer created with id: edc18606-f521-4d75-8140-1f30ea8d0f47
+2026-05-03 16:24:29.926 [http-nio-8086-exec-5] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:29.932 [http-nio-8086-exec-6] INFO  c.t.c.service.CustomerServiceImpl — Creating customer with email: bound26@tavia.local
+2026-05-03 16:24:29.933 [http-nio-8086-exec-6] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:29.935 [http-nio-8086-exec-6] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:29.936 [http-nio-8086-exec-6] DEBUG org.hibernate.SQL — insert into tenant_loyalty (customer_id,loyalty_level,tenant_id,total_spent,id) values (?,?,?,?,?)
+2026-05-03 16:24:29.938 [http-nio-8086-exec-6] INFO  c.t.c.service.CustomerServiceImpl — Customer created with id: 602a2fb5-8a83-4553-9fa9-59b52595edcc
+2026-05-03 16:24:29.938 [http-nio-8086-exec-6] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:29.945 [http-nio-8086-exec-7] INFO  c.t.c.service.CustomerServiceImpl — Creating customer with email: bound27@tavia.local
+2026-05-03 16:24:29.946 [http-nio-8086-exec-7] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:29.948 [http-nio-8086-exec-7] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:29.949 [http-nio-8086-exec-7] DEBUG org.hibernate.SQL — insert into tenant_loyalty (customer_id,loyalty_level,tenant_id,total_spent,id) values (?,?,?,?,?)
+2026-05-03 16:24:29.950 [http-nio-8086-exec-7] INFO  c.t.c.service.CustomerServiceImpl — Customer created with id: be0f75ac-1ac8-4584-ac0a-484508c9e9ef
+2026-05-03 16:24:29.951 [http-nio-8086-exec-7] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:29.957 [http-nio-8086-exec-8] INFO  c.t.c.service.CustomerServiceImpl — Creating customer with email: bound28@tavia.local
+2026-05-03 16:24:29.958 [http-nio-8086-exec-8] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:29.960 [http-nio-8086-exec-8] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:29.961 [http-nio-8086-exec-8] DEBUG org.hibernate.SQL — insert into tenant_loyalty (customer_id,loyalty_level,tenant_id,total_spent,id) values (?,?,?,?,?)
+2026-05-03 16:24:29.962 [http-nio-8086-exec-8] INFO  c.t.c.service.CustomerServiceImpl — Customer created with id: 60e56243-f9ba-4bdf-b1a8-8d6a023f3397
+2026-05-03 16:24:29.962 [http-nio-8086-exec-8] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:29.969 [http-nio-8086-exec-9] INFO  c.t.c.service.CustomerServiceImpl — Creating customer with email: bound29@tavia.local
+2026-05-03 16:24:29.969 [http-nio-8086-exec-9] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:29.971 [http-nio-8086-exec-9] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:29.972 [http-nio-8086-exec-9] DEBUG org.hibernate.SQL — insert into tenant_loyalty (customer_id,loyalty_level,tenant_id,total_spent,id) values (?,?,?,?,?)
+2026-05-03 16:24:29.973 [http-nio-8086-exec-9] INFO  c.t.c.service.CustomerServiceImpl — Customer created with id: 91d33b6a-7b19-4221-893e-d50d6da784e4
+2026-05-03 16:24:29.974 [http-nio-8086-exec-9] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:29.983 [http-nio-8086-exec-10] INFO  c.t.c.service.CustomerServiceImpl — Creating customer with email: bound30@tavia.local
+2026-05-03 16:24:29.984 [http-nio-8086-exec-10] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:29.986 [http-nio-8086-exec-10] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:29.987 [http-nio-8086-exec-10] DEBUG org.hibernate.SQL — insert into tenant_loyalty (customer_id,loyalty_level,tenant_id,total_spent,id) values (?,?,?,?,?)
+2026-05-03 16:24:29.989 [http-nio-8086-exec-10] INFO  c.t.c.service.CustomerServiceImpl — Customer created with id: b8d13046-8ecb-484b-95eb-69f08b625a00
+2026-05-03 16:24:29.989 [http-nio-8086-exec-10] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:29.995 [http-nio-8086-exec-1] INFO  c.t.c.service.CustomerServiceImpl — Creating customer with email: bound31@tavia.local
+2026-05-03 16:24:29.995 [http-nio-8086-exec-1] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:29.997 [http-nio-8086-exec-1] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:29.999 [http-nio-8086-exec-1] DEBUG org.hibernate.SQL — insert into tenant_loyalty (customer_id,loyalty_level,tenant_id,total_spent,id) values (?,?,?,?,?)
+2026-05-03 16:24:30.000 [http-nio-8086-exec-1] INFO  c.t.c.service.CustomerServiceImpl — Customer created with id: eccf95c7-5f7b-4d52-8952-b03c5e1db9e9
+2026-05-03 16:24:30.000 [http-nio-8086-exec-1] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:30.007 [http-nio-8086-exec-2] INFO  c.t.c.service.CustomerServiceImpl — Creating customer with email: bound32@tavia.local
+2026-05-03 16:24:30.008 [http-nio-8086-exec-2] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:30.010 [http-nio-8086-exec-2] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:30.011 [http-nio-8086-exec-2] DEBUG org.hibernate.SQL — insert into tenant_loyalty (customer_id,loyalty_level,tenant_id,total_spent,id) values (?,?,?,?,?)
+2026-05-03 16:24:30.013 [http-nio-8086-exec-2] INFO  c.t.c.service.CustomerServiceImpl — Customer created with id: 137e25f5-df8c-40cc-8d99-41411d9b297d
+2026-05-03 16:24:30.013 [http-nio-8086-exec-2] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:30.020 [http-nio-8086-exec-3] INFO  c.t.c.service.CustomerServiceImpl — Creating customer with email: bound33@tavia.local
+2026-05-03 16:24:30.021 [http-nio-8086-exec-3] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:30.023 [http-nio-8086-exec-3] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:30.025 [http-nio-8086-exec-3] DEBUG org.hibernate.SQL — insert into tenant_loyalty (customer_id,loyalty_level,tenant_id,total_spent,id) values (?,?,?,?,?)
+2026-05-03 16:24:30.026 [http-nio-8086-exec-3] INFO  c.t.c.service.CustomerServiceImpl — Customer created with id: b9cf4fef-3e27-40c7-9853-8f40b8e83090
+2026-05-03 16:24:30.027 [http-nio-8086-exec-3] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:30.033 [http-nio-8086-exec-4] INFO  c.t.c.service.CustomerServiceImpl — Creating customer with email: bound34@tavia.local
+2026-05-03 16:24:30.033 [http-nio-8086-exec-4] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:30.035 [http-nio-8086-exec-4] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:30.035 [http-nio-8086-exec-4] DEBUG org.hibernate.SQL — insert into tenant_loyalty (customer_id,loyalty_level,tenant_id,total_spent,id) values (?,?,?,?,?)
+2026-05-03 16:24:30.036 [http-nio-8086-exec-4] INFO  c.t.c.service.CustomerServiceImpl — Customer created with id: c60474e3-a9c8-4cb2-beb9-ca672240f0a4
+2026-05-03 16:24:30.037 [http-nio-8086-exec-4] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:30.043 [http-nio-8086-exec-5] INFO  c.t.c.service.CustomerServiceImpl — Creating customer with email: bound35@tavia.local
+2026-05-03 16:24:30.044 [http-nio-8086-exec-5] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:30.046 [http-nio-8086-exec-5] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:30.047 [http-nio-8086-exec-5] DEBUG org.hibernate.SQL — insert into tenant_loyalty (customer_id,loyalty_level,tenant_id,total_spent,id) values (?,?,?,?,?)
+2026-05-03 16:24:30.048 [http-nio-8086-exec-5] INFO  c.t.c.service.CustomerServiceImpl — Customer created with id: 031f4b2e-b3de-42f1-97c0-292d2af59119
+2026-05-03 16:24:30.049 [http-nio-8086-exec-5] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:30.054 [http-nio-8086-exec-6] INFO  c.t.c.service.CustomerServiceImpl — Creating customer with email: bound36@tavia.local
+2026-05-03 16:24:30.055 [http-nio-8086-exec-6] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:30.057 [http-nio-8086-exec-6] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:30.059 [http-nio-8086-exec-6] DEBUG org.hibernate.SQL — insert into tenant_loyalty (customer_id,loyalty_level,tenant_id,total_spent,id) values (?,?,?,?,?)
+2026-05-03 16:24:30.060 [http-nio-8086-exec-6] INFO  c.t.c.service.CustomerServiceImpl — Customer created with id: d5d26563-efaf-47c3-969a-314b735114eb
+2026-05-03 16:24:30.061 [http-nio-8086-exec-6] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:30.069 [http-nio-8086-exec-7] INFO  c.t.c.service.CustomerServiceImpl — Creating customer with email: bound37@tavia.local
+2026-05-03 16:24:30.069 [http-nio-8086-exec-7] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:30.071 [http-nio-8086-exec-7] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:30.072 [http-nio-8086-exec-7] DEBUG org.hibernate.SQL — insert into tenant_loyalty (customer_id,loyalty_level,tenant_id,total_spent,id) values (?,?,?,?,?)
+2026-05-03 16:24:30.073 [http-nio-8086-exec-7] INFO  c.t.c.service.CustomerServiceImpl — Customer created with id: 40a2dc11-7c87-41e4-9ef4-39e17d12e288
+2026-05-03 16:24:30.074 [http-nio-8086-exec-7] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:30.079 [http-nio-8086-exec-8] INFO  c.t.c.service.CustomerServiceImpl — Creating customer with email: bound38@tavia.local
+2026-05-03 16:24:30.080 [http-nio-8086-exec-8] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:30.081 [http-nio-8086-exec-8] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:30.082 [http-nio-8086-exec-8] DEBUG org.hibernate.SQL — insert into tenant_loyalty (customer_id,loyalty_level,tenant_id,total_spent,id) values (?,?,?,?,?)
+2026-05-03 16:24:30.083 [http-nio-8086-exec-8] INFO  c.t.c.service.CustomerServiceImpl — Customer created with id: 23ba8199-cb52-4876-9963-1cc5465f5aae
+2026-05-03 16:24:30.083 [http-nio-8086-exec-8] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:30.089 [http-nio-8086-exec-9] INFO  c.t.c.service.CustomerServiceImpl — Creating customer with email: bound39@tavia.local
+2026-05-03 16:24:30.090 [http-nio-8086-exec-9] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:30.092 [http-nio-8086-exec-9] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:30.093 [http-nio-8086-exec-9] DEBUG org.hibernate.SQL — insert into tenant_loyalty (customer_id,loyalty_level,tenant_id,total_spent,id) values (?,?,?,?,?)
+2026-05-03 16:24:30.095 [http-nio-8086-exec-9] INFO  c.t.c.service.CustomerServiceImpl — Customer created with id: 89ecc2f4-a6d5-49ca-84f8-2a150a3cc2a2
+2026-05-03 16:24:30.095 [http-nio-8086-exec-9] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:30.100 [http-nio-8086-exec-10] INFO  c.t.c.service.CustomerServiceImpl — Creating customer with email: bound40@tavia.local
+2026-05-03 16:24:30.101 [http-nio-8086-exec-10] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:30.102 [http-nio-8086-exec-10] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:30.103 [http-nio-8086-exec-10] DEBUG org.hibernate.SQL — insert into tenant_loyalty (customer_id,loyalty_level,tenant_id,total_spent,id) values (?,?,?,?,?)
+2026-05-03 16:24:30.104 [http-nio-8086-exec-10] INFO  c.t.c.service.CustomerServiceImpl — Customer created with id: 44787d2b-c1d1-45d5-9cbb-1106d34552b3
+2026-05-03 16:24:30.104 [http-nio-8086-exec-10] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:30.110 [http-nio-8086-exec-1] INFO  c.t.c.service.CustomerServiceImpl — Creating customer with email: bound41@tavia.local
+2026-05-03 16:24:30.111 [http-nio-8086-exec-1] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:30.112 [http-nio-8086-exec-1] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:30.114 [http-nio-8086-exec-1] DEBUG org.hibernate.SQL — insert into tenant_loyalty (customer_id,loyalty_level,tenant_id,total_spent,id) values (?,?,?,?,?)
+2026-05-03 16:24:30.116 [http-nio-8086-exec-1] INFO  c.t.c.service.CustomerServiceImpl — Customer created with id: 0f546ce3-0180-4523-ad1f-85489b01a48e
+2026-05-03 16:24:30.116 [http-nio-8086-exec-1] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:30.123 [http-nio-8086-exec-2] INFO  c.t.c.service.CustomerServiceImpl — Creating customer with email: bound42@tavia.local
+2026-05-03 16:24:30.124 [http-nio-8086-exec-2] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:30.125 [http-nio-8086-exec-2] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:30.126 [http-nio-8086-exec-2] DEBUG org.hibernate.SQL — insert into tenant_loyalty (customer_id,loyalty_level,tenant_id,total_spent,id) values (?,?,?,?,?)
+2026-05-03 16:24:30.127 [http-nio-8086-exec-2] INFO  c.t.c.service.CustomerServiceImpl — Customer created with id: 5f057ea6-c564-4a66-828b-7443271dfaf8
+2026-05-03 16:24:30.127 [http-nio-8086-exec-2] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:30.135 [http-nio-8086-exec-3] INFO  c.t.c.service.CustomerServiceImpl — Creating customer with email: bound43@tavia.local
+2026-05-03 16:24:30.137 [http-nio-8086-exec-3] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:30.140 [http-nio-8086-exec-3] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:30.142 [http-nio-8086-exec-3] DEBUG org.hibernate.SQL — insert into tenant_loyalty (customer_id,loyalty_level,tenant_id,total_spent,id) values (?,?,?,?,?)
+2026-05-03 16:24:30.143 [http-nio-8086-exec-3] INFO  c.t.c.service.CustomerServiceImpl — Customer created with id: fdf646ca-237d-4835-8f02-3f01d5a93426
+2026-05-03 16:24:30.144 [http-nio-8086-exec-3] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:30.149 [http-nio-8086-exec-4] INFO  c.t.c.service.CustomerServiceImpl — Creating customer with email: bound44@tavia.local
+2026-05-03 16:24:30.150 [http-nio-8086-exec-4] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:30.151 [http-nio-8086-exec-4] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:30.152 [http-nio-8086-exec-4] DEBUG org.hibernate.SQL — insert into tenant_loyalty (customer_id,loyalty_level,tenant_id,total_spent,id) values (?,?,?,?,?)
+2026-05-03 16:24:30.153 [http-nio-8086-exec-4] INFO  c.t.c.service.CustomerServiceImpl — Customer created with id: c4e5ede3-3b4f-4489-b9e1-33e47350bb39
+2026-05-03 16:24:30.154 [http-nio-8086-exec-4] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:30.161 [http-nio-8086-exec-5] INFO  c.t.c.service.CustomerServiceImpl — Creating customer with email: bound45@tavia.local
+2026-05-03 16:24:30.162 [http-nio-8086-exec-5] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:30.163 [http-nio-8086-exec-5] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:30.164 [http-nio-8086-exec-5] DEBUG org.hibernate.SQL — insert into tenant_loyalty (customer_id,loyalty_level,tenant_id,total_spent,id) values (?,?,?,?,?)
+2026-05-03 16:24:30.165 [http-nio-8086-exec-5] INFO  c.t.c.service.CustomerServiceImpl — Customer created with id: 91a29975-d414-4dc5-87a2-2d24189dbce9
+2026-05-03 16:24:30.166 [http-nio-8086-exec-5] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:30.171 [http-nio-8086-exec-6] INFO  c.t.c.service.CustomerServiceImpl — Creating customer with email: bound46@tavia.local
+2026-05-03 16:24:30.171 [http-nio-8086-exec-6] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:30.173 [http-nio-8086-exec-6] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:30.173 [http-nio-8086-exec-6] DEBUG org.hibernate.SQL — insert into tenant_loyalty (customer_id,loyalty_level,tenant_id,total_spent,id) values (?,?,?,?,?)
+2026-05-03 16:24:30.174 [http-nio-8086-exec-6] INFO  c.t.c.service.CustomerServiceImpl — Customer created with id: 947cd66f-1476-42e6-9309-10659b88fbd4
+2026-05-03 16:24:30.174 [http-nio-8086-exec-6] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:30.180 [http-nio-8086-exec-7] INFO  c.t.c.service.CustomerServiceImpl — Creating customer with email: bound47@tavia.local
+2026-05-03 16:24:30.181 [http-nio-8086-exec-7] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:30.182 [http-nio-8086-exec-7] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:30.184 [http-nio-8086-exec-7] DEBUG org.hibernate.SQL — insert into tenant_loyalty (customer_id,loyalty_level,tenant_id,total_spent,id) values (?,?,?,?,?)
+2026-05-03 16:24:30.185 [http-nio-8086-exec-7] INFO  c.t.c.service.CustomerServiceImpl — Customer created with id: 99a0f736-6816-498b-9066-a533efec3744
+2026-05-03 16:24:30.185 [http-nio-8086-exec-7] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:30.191 [http-nio-8086-exec-8] INFO  c.t.c.service.CustomerServiceImpl — Creating customer with email: bound48@tavia.local
+2026-05-03 16:24:30.191 [http-nio-8086-exec-8] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:30.192 [http-nio-8086-exec-8] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:30.193 [http-nio-8086-exec-8] DEBUG org.hibernate.SQL — insert into tenant_loyalty (customer_id,loyalty_level,tenant_id,total_spent,id) values (?,?,?,?,?)
+2026-05-03 16:24:30.194 [http-nio-8086-exec-8] INFO  c.t.c.service.CustomerServiceImpl — Customer created with id: 3f103275-1939-4306-9f6a-a5cf539d27e9
+2026-05-03 16:24:30.194 [http-nio-8086-exec-8] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:30.200 [http-nio-8086-exec-9] INFO  c.t.c.service.CustomerServiceImpl — Creating customer with email: bound49@tavia.local
+2026-05-03 16:24:30.200 [http-nio-8086-exec-9] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:30.202 [http-nio-8086-exec-9] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:30.203 [http-nio-8086-exec-9] DEBUG org.hibernate.SQL — insert into tenant_loyalty (customer_id,loyalty_level,tenant_id,total_spent,id) values (?,?,?,?,?)
+2026-05-03 16:24:30.204 [http-nio-8086-exec-9] INFO  c.t.c.service.CustomerServiceImpl — Customer created with id: d7cec924-77fe-4812-be8d-f7a1e56ff478
+2026-05-03 16:24:30.205 [http-nio-8086-exec-9] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:30.212 [http-nio-8086-exec-10] INFO  c.t.c.service.CustomerServiceImpl — Creating customer with email: bound50@tavia.local
+2026-05-03 16:24:30.213 [http-nio-8086-exec-10] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:30.215 [http-nio-8086-exec-10] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:30.216 [http-nio-8086-exec-10] DEBUG org.hibernate.SQL — insert into tenant_loyalty (customer_id,loyalty_level,tenant_id,total_spent,id) values (?,?,?,?,?)
+2026-05-03 16:24:30.217 [http-nio-8086-exec-10] INFO  c.t.c.service.CustomerServiceImpl — Customer created with id: ec5903fb-7cdd-422d-a8e7-d898637a5482
+2026-05-03 16:24:30.217 [http-nio-8086-exec-10] DEBUG org.hibernate.SQL — select tl1_0.id,tl1_0.customer_id,tl1_0.loyalty_level,tl1_0.tenant_id,tl1_0.total_spent from tenant_loyalty tl1_0 where tl1_0.customer_id=? and tl1_0.tenant_id=?
+2026-05-03 16:24:30.230 [http-nio-8086-exec-1] INFO  c.t.c.s.CustomerAuthServiceImpl — Registering customer with email: global1@tavia.local
+2026-05-03 16:24:30.232 [http-nio-8086-exec-1] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+2026-05-03 16:24:30.235 [http-nio-8086-exec-1] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:30.236 [http-nio-8086-exec-1] INFO  c.t.c.s.CustomerAuthServiceImpl — Customer registered with id: 61624970-0108-4925-b8c7-1b20191791ae
+2026-05-03 16:24:30.243 [http-nio-8086-exec-2] INFO  c.t.c.s.CustomerAuthServiceImpl — Registering customer with email: global2@tavia.local
+2026-05-03 16:24:30.243 [http-nio-8086-exec-2] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+2026-05-03 16:24:30.245 [http-nio-8086-exec-2] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:30.246 [http-nio-8086-exec-2] INFO  c.t.c.s.CustomerAuthServiceImpl — Customer registered with id: 1d5b8e2f-3bc2-4bd2-89ba-df97984d2938
+2026-05-03 16:24:30.252 [http-nio-8086-exec-3] INFO  c.t.c.s.CustomerAuthServiceImpl — Registering customer with email: global3@tavia.local
+2026-05-03 16:24:30.252 [http-nio-8086-exec-3] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+2026-05-03 16:24:30.254 [http-nio-8086-exec-3] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:30.255 [http-nio-8086-exec-3] INFO  c.t.c.s.CustomerAuthServiceImpl — Customer registered with id: bc757e7a-98d5-47d1-8255-83bbb07918e0
+2026-05-03 16:24:30.260 [http-nio-8086-exec-4] INFO  c.t.c.s.CustomerAuthServiceImpl — Registering customer with email: global4@tavia.local
+2026-05-03 16:24:30.260 [http-nio-8086-exec-4] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+2026-05-03 16:24:30.262 [http-nio-8086-exec-4] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:30.263 [http-nio-8086-exec-4] INFO  c.t.c.s.CustomerAuthServiceImpl — Customer registered with id: 6e3c29b9-96c2-4e55-b731-20d83b3ee30e
+2026-05-03 16:24:30.268 [http-nio-8086-exec-5] INFO  c.t.c.s.CustomerAuthServiceImpl — Registering customer with email: global5@tavia.local
+2026-05-03 16:24:30.269 [http-nio-8086-exec-5] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+2026-05-03 16:24:30.270 [http-nio-8086-exec-5] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:30.271 [http-nio-8086-exec-5] INFO  c.t.c.s.CustomerAuthServiceImpl — Customer registered with id: 50a5e2d7-3cf6-4adb-a00d-b1b23016c43f
+2026-05-03 16:24:30.278 [http-nio-8086-exec-6] INFO  c.t.c.s.CustomerAuthServiceImpl — Registering customer with email: global6@tavia.local
+2026-05-03 16:24:30.279 [http-nio-8086-exec-6] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+2026-05-03 16:24:30.280 [http-nio-8086-exec-6] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:30.282 [http-nio-8086-exec-6] INFO  c.t.c.s.CustomerAuthServiceImpl — Customer registered with id: da8935ba-2dc2-47ba-b307-66c340d35f45
+2026-05-03 16:24:30.287 [http-nio-8086-exec-7] INFO  c.t.c.s.CustomerAuthServiceImpl — Registering customer with email: global7@tavia.local
+2026-05-03 16:24:30.287 [http-nio-8086-exec-7] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+2026-05-03 16:24:30.288 [http-nio-8086-exec-7] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:30.290 [http-nio-8086-exec-7] INFO  c.t.c.s.CustomerAuthServiceImpl — Customer registered with id: c4b11de6-655d-4078-bb20-a8a987868037
+2026-05-03 16:24:30.295 [http-nio-8086-exec-8] INFO  c.t.c.s.CustomerAuthServiceImpl — Registering customer with email: global8@tavia.local
+2026-05-03 16:24:30.295 [http-nio-8086-exec-8] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+2026-05-03 16:24:30.297 [http-nio-8086-exec-8] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:30.298 [http-nio-8086-exec-8] INFO  c.t.c.s.CustomerAuthServiceImpl — Customer registered with id: 2c726d0c-ddf4-4ae8-872d-2a50e823f5ad
+2026-05-03 16:24:30.303 [http-nio-8086-exec-9] INFO  c.t.c.s.CustomerAuthServiceImpl — Registering customer with email: global9@tavia.local
+2026-05-03 16:24:30.304 [http-nio-8086-exec-9] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+2026-05-03 16:24:30.305 [http-nio-8086-exec-9] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:30.306 [http-nio-8086-exec-9] INFO  c.t.c.s.CustomerAuthServiceImpl — Customer registered with id: 325bf799-b1d8-4a6d-815c-00c14acf9b6a
+2026-05-03 16:24:30.311 [http-nio-8086-exec-10] INFO  c.t.c.s.CustomerAuthServiceImpl — Registering customer with email: global10@tavia.local
+2026-05-03 16:24:30.312 [http-nio-8086-exec-10] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+2026-05-03 16:24:30.313 [http-nio-8086-exec-10] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:30.314 [http-nio-8086-exec-10] INFO  c.t.c.s.CustomerAuthServiceImpl — Customer registered with id: 17088e32-29ae-415f-945b-ce80f842b26a
+2026-05-03 16:24:30.322 [http-nio-8086-exec-1] INFO  c.t.c.s.CustomerAuthServiceImpl — Registering customer with email: global11@tavia.local
+2026-05-03 16:24:30.323 [http-nio-8086-exec-1] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+2026-05-03 16:24:30.324 [http-nio-8086-exec-1] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:30.325 [http-nio-8086-exec-1] INFO  c.t.c.s.CustomerAuthServiceImpl — Customer registered with id: 3b3b311e-b4b5-4d5c-a799-18a0031255ac
+2026-05-03 16:24:30.331 [http-nio-8086-exec-2] INFO  c.t.c.s.CustomerAuthServiceImpl — Registering customer with email: global12@tavia.local
+2026-05-03 16:24:30.331 [http-nio-8086-exec-2] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+2026-05-03 16:24:30.332 [http-nio-8086-exec-2] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:30.333 [http-nio-8086-exec-2] INFO  c.t.c.s.CustomerAuthServiceImpl — Customer registered with id: 4d6a6612-0616-4757-a1e9-0df00b3fd766
+2026-05-03 16:24:30.339 [http-nio-8086-exec-3] INFO  c.t.c.s.CustomerAuthServiceImpl — Registering customer with email: global13@tavia.local
+2026-05-03 16:24:30.340 [http-nio-8086-exec-3] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+2026-05-03 16:24:30.342 [http-nio-8086-exec-3] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:30.343 [http-nio-8086-exec-3] INFO  c.t.c.s.CustomerAuthServiceImpl — Customer registered with id: 17b8efa6-0e27-40ac-b75f-249ca0b957e1
+2026-05-03 16:24:30.349 [http-nio-8086-exec-4] INFO  c.t.c.s.CustomerAuthServiceImpl — Registering customer with email: global14@tavia.local
+2026-05-03 16:24:30.349 [http-nio-8086-exec-4] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+2026-05-03 16:24:30.350 [http-nio-8086-exec-4] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:30.352 [http-nio-8086-exec-4] INFO  c.t.c.s.CustomerAuthServiceImpl — Customer registered with id: 3391a5af-2f22-4afe-9add-f1e0e481477c
+2026-05-03 16:24:30.359 [http-nio-8086-exec-5] INFO  c.t.c.s.CustomerAuthServiceImpl — Registering customer with email: global15@tavia.local
+2026-05-03 16:24:30.360 [http-nio-8086-exec-5] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+2026-05-03 16:24:30.362 [http-nio-8086-exec-5] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:30.363 [http-nio-8086-exec-5] INFO  c.t.c.s.CustomerAuthServiceImpl — Customer registered with id: 4a703cb4-d80a-444f-928f-14c4d3425e76
+2026-05-03 16:24:30.369 [http-nio-8086-exec-6] INFO  c.t.c.s.CustomerAuthServiceImpl — Registering customer with email: global16@tavia.local
+2026-05-03 16:24:30.370 [http-nio-8086-exec-6] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+2026-05-03 16:24:30.371 [http-nio-8086-exec-6] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:30.372 [http-nio-8086-exec-6] INFO  c.t.c.s.CustomerAuthServiceImpl — Customer registered with id: 181af860-6f4c-4598-b2f6-afbde4c7c0c5
+2026-05-03 16:24:30.376 [http-nio-8086-exec-7] INFO  c.t.c.s.CustomerAuthServiceImpl — Registering customer with email: global17@tavia.local
+2026-05-03 16:24:30.377 [http-nio-8086-exec-7] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+2026-05-03 16:24:30.378 [http-nio-8086-exec-7] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:30.378 [http-nio-8086-exec-7] INFO  c.t.c.s.CustomerAuthServiceImpl — Customer registered with id: 939bddf4-f1a8-4634-95e8-79bbf9f3ba48
+2026-05-03 16:24:30.383 [http-nio-8086-exec-8] INFO  c.t.c.s.CustomerAuthServiceImpl — Registering customer with email: global18@tavia.local
+2026-05-03 16:24:30.383 [http-nio-8086-exec-8] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+2026-05-03 16:24:30.384 [http-nio-8086-exec-8] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:30.385 [http-nio-8086-exec-8] INFO  c.t.c.s.CustomerAuthServiceImpl — Customer registered with id: bae24ff2-def0-492e-a318-1698acc81b2f
+2026-05-03 16:24:30.391 [http-nio-8086-exec-9] INFO  c.t.c.s.CustomerAuthServiceImpl — Registering customer with email: global19@tavia.local
+2026-05-03 16:24:30.392 [http-nio-8086-exec-9] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+2026-05-03 16:24:30.393 [http-nio-8086-exec-9] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:30.394 [http-nio-8086-exec-9] INFO  c.t.c.s.CustomerAuthServiceImpl — Customer registered with id: b50bbb2d-701c-445e-80f8-839a69cf5874
+2026-05-03 16:24:30.400 [http-nio-8086-exec-10] INFO  c.t.c.s.CustomerAuthServiceImpl — Registering customer with email: global20@tavia.local
+2026-05-03 16:24:30.401 [http-nio-8086-exec-10] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+2026-05-03 16:24:30.402 [http-nio-8086-exec-10] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:30.405 [http-nio-8086-exec-10] INFO  c.t.c.s.CustomerAuthServiceImpl — Customer registered with id: ba08da46-4254-400c-9dcf-83af5630f642
+2026-05-03 16:24:30.411 [http-nio-8086-exec-1] INFO  c.t.c.s.CustomerAuthServiceImpl — Registering customer with email: global21@tavia.local
+2026-05-03 16:24:30.411 [http-nio-8086-exec-1] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+2026-05-03 16:24:30.412 [http-nio-8086-exec-1] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:30.414 [http-nio-8086-exec-1] INFO  c.t.c.s.CustomerAuthServiceImpl — Customer registered with id: e8b5198a-9daa-4a8d-a6eb-f14b4ed9a612
+2026-05-03 16:24:30.418 [http-nio-8086-exec-2] INFO  c.t.c.s.CustomerAuthServiceImpl — Registering customer with email: global22@tavia.local
+2026-05-03 16:24:30.419 [http-nio-8086-exec-2] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+2026-05-03 16:24:30.420 [http-nio-8086-exec-2] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:30.421 [http-nio-8086-exec-2] INFO  c.t.c.s.CustomerAuthServiceImpl — Customer registered with id: 6c519737-511c-40c9-9f79-7b720b433d51
+2026-05-03 16:24:30.428 [http-nio-8086-exec-3] INFO  c.t.c.s.CustomerAuthServiceImpl — Registering customer with email: global23@tavia.local
+2026-05-03 16:24:30.429 [http-nio-8086-exec-3] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+2026-05-03 16:24:30.431 [http-nio-8086-exec-3] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:30.433 [http-nio-8086-exec-3] INFO  c.t.c.s.CustomerAuthServiceImpl — Customer registered with id: 1bdebd2a-aa0f-4a1a-a076-383931c52a77
+2026-05-03 16:24:30.439 [http-nio-8086-exec-4] INFO  c.t.c.s.CustomerAuthServiceImpl — Registering customer with email: global24@tavia.local
+2026-05-03 16:24:30.439 [http-nio-8086-exec-4] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+2026-05-03 16:24:30.441 [http-nio-8086-exec-4] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:30.442 [http-nio-8086-exec-4] INFO  c.t.c.s.CustomerAuthServiceImpl — Customer registered with id: 70b0c760-805a-4119-912a-17fc1609b383
+2026-05-03 16:24:30.447 [http-nio-8086-exec-5] INFO  c.t.c.s.CustomerAuthServiceImpl — Registering customer with email: global25@tavia.local
+2026-05-03 16:24:30.448 [http-nio-8086-exec-5] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+2026-05-03 16:24:30.449 [http-nio-8086-exec-5] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:30.450 [http-nio-8086-exec-5] INFO  c.t.c.s.CustomerAuthServiceImpl — Customer registered with id: 27e01371-80b5-41a3-84b3-041baf7e1aca
+2026-05-03 16:24:30.456 [http-nio-8086-exec-6] INFO  c.t.c.s.CustomerAuthServiceImpl — Registering customer with email: global26@tavia.local
+2026-05-03 16:24:30.457 [http-nio-8086-exec-6] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+2026-05-03 16:24:30.458 [http-nio-8086-exec-6] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:30.460 [http-nio-8086-exec-6] INFO  c.t.c.s.CustomerAuthServiceImpl — Customer registered with id: ef8f9cce-b713-4c72-a7c0-cbea788a2989
+2026-05-03 16:24:30.465 [http-nio-8086-exec-7] INFO  c.t.c.s.CustomerAuthServiceImpl — Registering customer with email: global27@tavia.local
+2026-05-03 16:24:30.465 [http-nio-8086-exec-7] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+2026-05-03 16:24:30.466 [http-nio-8086-exec-7] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:30.467 [http-nio-8086-exec-7] INFO  c.t.c.s.CustomerAuthServiceImpl — Customer registered with id: 7fb0ca85-19a0-470a-8f65-9362d749ee38
+2026-05-03 16:24:30.471 [http-nio-8086-exec-8] INFO  c.t.c.s.CustomerAuthServiceImpl — Registering customer with email: global28@tavia.local
+2026-05-03 16:24:30.472 [http-nio-8086-exec-8] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+2026-05-03 16:24:30.475 [http-nio-8086-exec-8] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:30.476 [http-nio-8086-exec-8] INFO  c.t.c.s.CustomerAuthServiceImpl — Customer registered with id: d8fdefe0-75c7-45b9-bc56-26834ed9c99d
+2026-05-03 16:24:30.481 [http-nio-8086-exec-9] INFO  c.t.c.s.CustomerAuthServiceImpl — Registering customer with email: global29@tavia.local
+2026-05-03 16:24:30.481 [http-nio-8086-exec-9] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+2026-05-03 16:24:30.483 [http-nio-8086-exec-9] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:30.484 [http-nio-8086-exec-9] INFO  c.t.c.s.CustomerAuthServiceImpl — Customer registered with id: 5778b4ca-ea7e-4da3-a716-37f73078786c
+2026-05-03 16:24:30.489 [http-nio-8086-exec-10] INFO  c.t.c.s.CustomerAuthServiceImpl — Registering customer with email: global30@tavia.local
+2026-05-03 16:24:30.489 [http-nio-8086-exec-10] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+2026-05-03 16:24:30.490 [http-nio-8086-exec-10] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:30.492 [http-nio-8086-exec-10] INFO  c.t.c.s.CustomerAuthServiceImpl — Customer registered with id: 5373a360-8fbb-497f-949b-679f05380523
+2026-05-03 16:24:30.498 [http-nio-8086-exec-1] INFO  c.t.c.s.CustomerAuthServiceImpl — Registering customer with email: global31@tavia.local
+2026-05-03 16:24:30.498 [http-nio-8086-exec-1] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+2026-05-03 16:24:30.500 [http-nio-8086-exec-1] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:30.501 [http-nio-8086-exec-1] INFO  c.t.c.s.CustomerAuthServiceImpl — Customer registered with id: 5f91174c-7312-4b0c-879b-f26810414d09
+2026-05-03 16:24:30.506 [http-nio-8086-exec-2] INFO  c.t.c.s.CustomerAuthServiceImpl — Registering customer with email: global32@tavia.local
+2026-05-03 16:24:30.507 [http-nio-8086-exec-2] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+2026-05-03 16:24:30.508 [http-nio-8086-exec-2] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:30.509 [http-nio-8086-exec-2] INFO  c.t.c.s.CustomerAuthServiceImpl — Customer registered with id: 4888f94c-3523-4a43-b886-3f2e8b2bb8a4
+2026-05-03 16:24:30.514 [http-nio-8086-exec-3] INFO  c.t.c.s.CustomerAuthServiceImpl — Registering customer with email: global33@tavia.local
+2026-05-03 16:24:30.515 [http-nio-8086-exec-3] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+2026-05-03 16:24:30.516 [http-nio-8086-exec-3] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:30.517 [http-nio-8086-exec-3] INFO  c.t.c.s.CustomerAuthServiceImpl — Customer registered with id: bd1c4a15-25e5-4262-9f42-93293690e97b
+2026-05-03 16:24:30.523 [http-nio-8086-exec-4] INFO  c.t.c.s.CustomerAuthServiceImpl — Registering customer with email: global34@tavia.local
+2026-05-03 16:24:30.523 [http-nio-8086-exec-4] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+2026-05-03 16:24:30.524 [http-nio-8086-exec-4] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:30.525 [http-nio-8086-exec-4] INFO  c.t.c.s.CustomerAuthServiceImpl — Customer registered with id: 2858e840-be27-4ed7-8ee3-cd3b34a20a66
+2026-05-03 16:24:30.531 [http-nio-8086-exec-5] INFO  c.t.c.s.CustomerAuthServiceImpl — Registering customer with email: global35@tavia.local
+2026-05-03 16:24:30.531 [http-nio-8086-exec-5] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+2026-05-03 16:24:30.533 [http-nio-8086-exec-5] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:30.534 [http-nio-8086-exec-5] INFO  c.t.c.s.CustomerAuthServiceImpl — Customer registered with id: 03bd85d4-f2e5-4c55-a5c3-f2322f79e4ac
+2026-05-03 16:24:30.540 [http-nio-8086-exec-6] INFO  c.t.c.s.CustomerAuthServiceImpl — Registering customer with email: global36@tavia.local
+2026-05-03 16:24:30.541 [http-nio-8086-exec-6] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+2026-05-03 16:24:30.543 [http-nio-8086-exec-6] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:30.544 [http-nio-8086-exec-6] INFO  c.t.c.s.CustomerAuthServiceImpl — Customer registered with id: a15dfd3e-9f24-4adb-884e-4801d6a97452
+2026-05-03 16:24:30.550 [http-nio-8086-exec-7] INFO  c.t.c.s.CustomerAuthServiceImpl — Registering customer with email: global37@tavia.local
+2026-05-03 16:24:30.551 [http-nio-8086-exec-7] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+2026-05-03 16:24:30.552 [http-nio-8086-exec-7] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:30.553 [http-nio-8086-exec-7] INFO  c.t.c.s.CustomerAuthServiceImpl — Customer registered with id: f09703bd-6ea2-42e1-9605-7bf131d278fd
+2026-05-03 16:24:30.558 [http-nio-8086-exec-8] INFO  c.t.c.s.CustomerAuthServiceImpl — Registering customer with email: global38@tavia.local
+2026-05-03 16:24:30.558 [http-nio-8086-exec-8] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+2026-05-03 16:24:30.559 [http-nio-8086-exec-8] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:30.560 [http-nio-8086-exec-8] INFO  c.t.c.s.CustomerAuthServiceImpl — Customer registered with id: ac751310-e22b-4473-b7da-957ce769b5da
+2026-05-03 16:24:30.563 [http-nio-8086-exec-9] INFO  c.t.c.s.CustomerAuthServiceImpl — Registering customer with email: global39@tavia.local
+2026-05-03 16:24:30.564 [http-nio-8086-exec-9] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+2026-05-03 16:24:30.565 [http-nio-8086-exec-9] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:30.566 [http-nio-8086-exec-9] INFO  c.t.c.s.CustomerAuthServiceImpl — Customer registered with id: 410bf9cb-f5dc-4655-84bf-45faf9e2dbef
+2026-05-03 16:24:30.571 [http-nio-8086-exec-10] INFO  c.t.c.s.CustomerAuthServiceImpl — Registering customer with email: global40@tavia.local
+2026-05-03 16:24:30.571 [http-nio-8086-exec-10] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+2026-05-03 16:24:30.573 [http-nio-8086-exec-10] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:30.574 [http-nio-8086-exec-10] INFO  c.t.c.s.CustomerAuthServiceImpl — Customer registered with id: ace4abd3-ef83-450a-81ed-4040ad5a420a
+2026-05-03 16:24:30.579 [http-nio-8086-exec-1] INFO  c.t.c.s.CustomerAuthServiceImpl — Registering customer with email: global41@tavia.local
+2026-05-03 16:24:30.580 [http-nio-8086-exec-1] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+2026-05-03 16:24:30.581 [http-nio-8086-exec-1] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:30.582 [http-nio-8086-exec-1] INFO  c.t.c.s.CustomerAuthServiceImpl — Customer registered with id: 6e69a754-f015-40da-956e-0f7a2f124972
+2026-05-03 16:24:30.586 [http-nio-8086-exec-2] INFO  c.t.c.s.CustomerAuthServiceImpl — Registering customer with email: global42@tavia.local
+2026-05-03 16:24:30.586 [http-nio-8086-exec-2] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+2026-05-03 16:24:30.587 [http-nio-8086-exec-2] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:30.589 [http-nio-8086-exec-2] INFO  c.t.c.s.CustomerAuthServiceImpl — Customer registered with id: 283e9a82-ff1b-47a7-b6ec-2f3f5bc41838
+2026-05-03 16:24:30.593 [http-nio-8086-exec-3] INFO  c.t.c.s.CustomerAuthServiceImpl — Registering customer with email: global43@tavia.local
+2026-05-03 16:24:30.594 [http-nio-8086-exec-3] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+2026-05-03 16:24:30.595 [http-nio-8086-exec-3] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:30.597 [http-nio-8086-exec-3] INFO  c.t.c.s.CustomerAuthServiceImpl — Customer registered with id: 6d716849-e290-4650-94dd-744d5026bc4a
+2026-05-03 16:24:30.602 [http-nio-8086-exec-4] INFO  c.t.c.s.CustomerAuthServiceImpl — Registering customer with email: global44@tavia.local
+2026-05-03 16:24:30.603 [http-nio-8086-exec-4] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+2026-05-03 16:24:30.604 [http-nio-8086-exec-4] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:30.605 [http-nio-8086-exec-4] INFO  c.t.c.s.CustomerAuthServiceImpl — Customer registered with id: ca679d6c-a6da-4b59-a3cf-20396572e018
+2026-05-03 16:24:30.610 [http-nio-8086-exec-5] INFO  c.t.c.s.CustomerAuthServiceImpl — Registering customer with email: global45@tavia.local
+2026-05-03 16:24:30.611 [http-nio-8086-exec-5] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+2026-05-03 16:24:30.612 [http-nio-8086-exec-5] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:30.613 [http-nio-8086-exec-5] INFO  c.t.c.s.CustomerAuthServiceImpl — Customer registered with id: 634fb411-e121-4b4d-9a18-371b76a0ff8a
+2026-05-03 16:24:30.619 [http-nio-8086-exec-6] INFO  c.t.c.s.CustomerAuthServiceImpl — Registering customer with email: global46@tavia.local
+2026-05-03 16:24:30.620 [http-nio-8086-exec-6] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+2026-05-03 16:24:30.621 [http-nio-8086-exec-6] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:30.622 [http-nio-8086-exec-6] INFO  c.t.c.s.CustomerAuthServiceImpl — Customer registered with id: 1bf77993-9dae-469b-8f68-c0b2e1d79dd1
+2026-05-03 16:24:30.627 [http-nio-8086-exec-7] INFO  c.t.c.s.CustomerAuthServiceImpl — Registering customer with email: global47@tavia.local
+2026-05-03 16:24:30.628 [http-nio-8086-exec-7] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+2026-05-03 16:24:30.628 [http-nio-8086-exec-7] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:30.629 [http-nio-8086-exec-7] INFO  c.t.c.s.CustomerAuthServiceImpl — Customer registered with id: 1e7b38fb-74e2-4dd2-a1d1-1fe0f107625d
+2026-05-03 16:24:30.635 [http-nio-8086-exec-8] INFO  c.t.c.s.CustomerAuthServiceImpl — Registering customer with email: global48@tavia.local
+2026-05-03 16:24:30.635 [http-nio-8086-exec-8] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+2026-05-03 16:24:30.637 [http-nio-8086-exec-8] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:30.639 [http-nio-8086-exec-8] INFO  c.t.c.s.CustomerAuthServiceImpl — Customer registered with id: a839d014-c637-470d-a203-e76975501d40
+2026-05-03 16:24:30.643 [http-nio-8086-exec-9] INFO  c.t.c.s.CustomerAuthServiceImpl — Registering customer with email: global49@tavia.local
+2026-05-03 16:24:30.644 [http-nio-8086-exec-9] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+2026-05-03 16:24:30.645 [http-nio-8086-exec-9] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:30.647 [http-nio-8086-exec-9] INFO  c.t.c.s.CustomerAuthServiceImpl — Customer registered with id: f8bb159d-87fe-4f35-98ea-f600707a6419
+2026-05-03 16:24:30.652 [http-nio-8086-exec-10] INFO  c.t.c.s.CustomerAuthServiceImpl — Registering customer with email: global50@tavia.local
+2026-05-03 16:24:30.653 [http-nio-8086-exec-10] DEBUG org.hibernate.SQL — select c1_0.id,c1_0.city,c1_0.email,c1_0.name,c1_0.password_hash,c1_0.reset_token,c1_0.reset_token_expiry from customers c1_0 where c1_0.email=?
+2026-05-03 16:24:30.654 [http-nio-8086-exec-10] DEBUG org.hibernate.SQL — insert into customers (city,email,name,password_hash,reset_token,reset_token_expiry,id) values (?,?,?,?,?,?,?)
+2026-05-03 16:24:30.655 [http-nio-8086-exec-10] INFO  c.t.c.s.CustomerAuthServiceImpl — Customer registered with id: 9d8326b5-bfc4-4a51-86d0-3891a71c86c5
+2026-05-03 16:27:15.558 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-03 16:29:11.424 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServiceRegistry — Unregistering application TAVIA-CRM-SERVICE with eureka with status DOWN
+2026-05-03 16:29:11.424 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient — Saw local status change event StatusChangeEvent [timestamp=1777814951424, current=DOWN, previous=UP]
+2026-05-03 16:29:11.427 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-CRM-SERVICE/10.0.0.139:tavia-crm-service:8086: registering service...
+2026-05-03 16:29:11.435 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown — Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-03 16:29:11.441 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-CRM-SERVICE/10.0.0.139:tavia-crm-service:8086 - registration status: 204
+2026-05-03 16:29:11.447 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown — Graceful shutdown complete
+2026-05-03 16:29:11.474 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean — Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-03 16:29:11.479 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource — HikariPool-1 - Shutdown initiated...
+2026-05-03 16:29:11.483 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource — HikariPool-1 - Shutdown completed.
+2026-05-03 16:29:11.484 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient — Shutting down DiscoveryClient ...
+2026-05-03 16:29:14.485 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient — Unregistering ...
+2026-05-03 16:29:14.492 [SpringApplicationShutdownHook] INFO  c.n.d.s.t.d.RedirectingEurekaHttpClient — Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/} exception=I/O error on DELETE request for "http://localhost:8761/eureka/apps/TAVIA-CRM-SERVICE/10.0.0.139:tavia-crm-service:8086": Connect to http://localhost:8761 failed: Connection refused stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://localhost:8761/eureka/apps/TAVIA-CRM-SERVICE/10.0.0.139:tavia-crm-service:8086": Connect to http://localhost:8761 failed: Connection refused
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.createResourceAccessException(DefaultRestClient.java:779)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:624)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchange(DefaultRestClient.java:572)
+	at org.springframework.web.client.RestClient$RequestHeadersSpec.exchange(RestClient.java:747)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.executeAndExtract(DefaultRestClient.java:924)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toBodilessEntity(DefaultRestClient.java:888)
+	at org.springframework.cloud.netflix.eureka.http.RestClientEurekaHttpClient.cancel(RestClientEurekaHttpClient.java:73)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:919)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:900)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:453)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:411)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:237)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:200)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:193)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:387)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:134)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:209)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:795)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:745)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1500)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:704)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1493)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1246)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1207)
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:176)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1153)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:147)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:116)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 failed: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:694)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:226)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:497)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:168)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:112)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:87)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:80)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeWithRequestAndBody(AbstractBufferingClientHttpRequest.java:89)
+	at org.springframework.http.client.InterceptingClientHttpRequest$EndOfChainRequestExecution.execute(InterceptingClientHttpRequest.java:102)
+	at org.springframework.cloud.netflix.eureka.http.RestClientTransportClientFactory.lambda$newClient$2(RestClientTransportClientFactory.java:98)
+	at org.springframework.http.client.ClientHttpRequestInterceptor.lambda$apply$0(ClientHttpRequestInterceptor.java:89)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:73)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:50)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:80)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:614)
+	... 39 more
+
+2026-05-03 16:29:14.492 [SpringApplicationShutdownHook] WARN  c.n.d.s.t.d.RetryableEurekaHttpClient — Request execution failed with message: I/O error on DELETE request for "http://localhost:8761/eureka/apps/TAVIA-CRM-SERVICE/10.0.0.139:tavia-crm-service:8086": Connect to http://localhost:8761 failed: Connection refused
+2026-05-03 16:29:14.499 [SpringApplicationShutdownHook] INFO  c.n.d.s.t.d.RedirectingEurekaHttpClient — Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on DELETE request for "http://localhost:8761/eureka/apps/TAVIA-CRM-SERVICE/10.0.0.139:tavia-crm-service:8086": Connect to http://localhost:8761 failed: Connection refused stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://localhost:8761/eureka/apps/TAVIA-CRM-SERVICE/10.0.0.139:tavia-crm-service:8086": Connect to http://localhost:8761 failed: Connection refused
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.createResourceAccessException(DefaultRestClient.java:779)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:624)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchange(DefaultRestClient.java:572)
+	at org.springframework.web.client.RestClient$RequestHeadersSpec.exchange(RestClient.java:747)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.executeAndExtract(DefaultRestClient.java:924)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toBodilessEntity(DefaultRestClient.java:888)
+	at org.springframework.cloud.netflix.eureka.http.RestClientEurekaHttpClient.cancel(RestClientEurekaHttpClient.java:73)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:919)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:900)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:453)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:411)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:237)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:200)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:193)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:387)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:134)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:209)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:795)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:745)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1500)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:704)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1493)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1246)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1207)
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:176)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1153)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:147)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:116)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 failed: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:694)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:226)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:497)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:168)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:112)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:87)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:80)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeWithRequestAndBody(AbstractBufferingClientHttpRequest.java:89)
+	at org.springframework.http.client.InterceptingClientHttpRequest$EndOfChainRequestExecution.execute(InterceptingClientHttpRequest.java:102)
+	at org.springframework.cloud.netflix.eureka.http.RestClientTransportClientFactory.lambda$newClient$2(RestClientTransportClientFactory.java:98)
+	at org.springframework.http.client.ClientHttpRequestInterceptor.lambda$apply$0(ClientHttpRequestInterceptor.java:89)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:73)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:50)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:80)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:614)
+	... 40 more
+
+2026-05-03 16:29:14.499 [SpringApplicationShutdownHook] WARN  c.n.d.s.t.d.RetryableEurekaHttpClient — Request execution failed with message: I/O error on DELETE request for "http://localhost:8761/eureka/apps/TAVIA-CRM-SERVICE/10.0.0.139:tavia-crm-service:8086": Connect to http://localhost:8761 failed: Connection refused
+2026-05-03 16:29:14.501 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient — Completed shut down of DiscoveryClient
+2026-05-03 19:29:43.169 [background-preinit] INFO  o.h.validator.internal.util.Version — HV000001: Hibernate Validator 9.0.1.Final
+2026-05-03 19:29:43.192 [restartedMain] INFO  c.t.c.CrmServiceApplication — Starting CrmServiceApplication using Java 21.0.10 with PID 164156 (/home/tuna/Desktop/tavia_v2/tavia-crm-service/build/classes/java/main started by tuna in /home/tuna/Desktop/tavia_v2/tavia-crm-service)
+2026-05-03 19:29:43.193 [restartedMain] DEBUG c.t.c.CrmServiceApplication — Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-03 19:29:43.194 [restartedMain] INFO  c.t.c.CrmServiceApplication — No active profile set, falling back to 1 default profile: "default"
+2026-05-03 19:29:43.232 [restartedMain] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Fetching config from server at : http://localhost:8888
+2026-05-03 19:29:43.232 [restartedMain] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Located environment: name=tavia-crm-service, profiles=[default], label=null, version=null, state=null
+2026-05-03 19:29:43.235 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor — Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-03 19:29:43.235 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor — For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-03 19:29:44.048 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate — Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-03 19:29:44.166 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate — Finished Spring Data repository scanning in 109 ms. Found 2 JPA repository interfaces.
+2026-05-03 19:29:44.388 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope — BeanFactory id=89dd6eac-d973-3148-9115-123946d3a2bc
+2026-05-03 19:29:44.822 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer — Tomcat initialized with port 8086 (http)
+2026-05-03 19:29:44.832 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol — Initializing ProtocolHandler ["http-nio-8086"]
+2026-05-03 19:29:44.834 [restartedMain] INFO  o.a.catalina.core.StandardService — Starting service [Tomcat]
+2026-05-03 19:29:44.834 [restartedMain] INFO  o.a.catalina.core.StandardEngine — Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-03 19:29:44.870 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer — Root WebApplicationContext: initialization completed in 1634 ms
+2026-05-03 19:29:45.049 [restartedMain] INFO  org.hibernate.orm.jpa — HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-03 19:29:45.109 [restartedMain] INFO  org.hibernate.orm.core — HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-05-03 19:29:45.584 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo — No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-03 19:29:45.616 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource — HikariPool-1 - Starting...
+2026-05-03 19:29:45.731 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool — HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1b9b845b
+2026-05-03 19:29:45.732 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource — HikariPool-1 - Start completed.
+2026-05-03 19:29:45.759 [restartedMain] WARN  org.hibernate.orm.deprecation — HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-03 19:29:45.783 [restartedMain] INFO  o.hibernate.orm.connections.pooling — HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/tavia_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.17
+	Default catalog/schema: tavia_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-03 19:29:46.651 [restartedMain] INFO  org.hibernate.orm.core — HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-03 19:29:46.702 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean — Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-03 19:29:46.777 [restartedMain] INFO  o.s.d.j.r.q.QueryEnhancerFactories — Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-03 19:29:47.030 [restartedMain] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration — spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-03 19:29:47.571 [restartedMain] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration — Eureka HTTP Client uses RestClient.
+2026-05-03 19:29:47.602 [restartedMain] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger — Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-05-03 19:29:47.628 [restartedMain] INFO  o.s.c.n.eureka.InstanceInfoFactory — Setting initial instance status as: STARTING
+2026-05-03 19:29:47.647 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Initializing Eureka in region us-east-1
+2026-05-03 19:29:47.650 [restartedMain] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-03 19:29:47.657 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Disable delta property : false
+2026-05-03 19:29:47.657 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Single vip registry refresh property : null
+2026-05-03 19:29:47.657 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Force full registry fetch : false
+2026-05-03 19:29:47.657 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Application is null : false
+2026-05-03 19:29:47.657 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Registered Applications size is zero : true
+2026-05-03 19:29:47.658 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Application version is -1: true
+2026-05-03 19:29:47.658 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Getting all instance registry info from the eureka server
+2026-05-03 19:29:47.930 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — The response status is 200
+2026-05-03 19:29:47.932 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Starting heartbeat executor: renew interval is: 30
+2026-05-03 19:29:47.933 [restartedMain] INFO  c.n.discovery.InstanceInfoReplicator — InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-05-03 19:29:47.935 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Discovery Client initialized at timestamp 1777825787934 with initial instances count: 2
+2026-05-03 19:29:47.939 [restartedMain] INFO  o.s.c.n.e.s.EurekaServiceRegistry — Registering application TAVIA-CRM-SERVICE with eureka with status UP
+2026-05-03 19:29:47.939 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Saw local status change event StatusChangeEvent [timestamp=1777825787939, current=UP, previous=STARTING]
+2026-05-03 19:29:47.940 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-CRM-SERVICE/10.0.0.139:tavia-crm-service:8086: registering service...
+2026-05-03 19:29:47.941 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol — Starting ProtocolHandler ["http-nio-8086"]
+2026-05-03 19:29:47.955 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer — Tomcat started on port 8086 (http) with context path '/'
+2026-05-03 19:29:47.956 [restartedMain] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration — Updating port to 8086
+2026-05-03 19:29:47.973 [restartedMain] INFO  c.t.c.CrmServiceApplication — Started CrmServiceApplication in 5.802 seconds (process running for 6.391)
+2026-05-03 19:29:47.977 [restartedMain] WARN  o.s.c.events.SpringDocAppInitializer — SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-05-03 19:29:47.977 [restartedMain] WARN  o.s.c.events.SpringDocAppInitializer — SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-05-03 19:29:47.983 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-CRM-SERVICE/10.0.0.139:tavia-crm-service:8086 - registration status: 204
+2026-05-03 19:31:53.876 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServiceRegistry — Unregistering application TAVIA-CRM-SERVICE with eureka with status DOWN
+2026-05-03 19:31:53.877 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient — Saw local status change event StatusChangeEvent [timestamp=1777825913877, current=DOWN, previous=UP]
+2026-05-03 19:31:53.877 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-CRM-SERVICE/10.0.0.139:tavia-crm-service:8086: registering service...
+2026-05-03 19:31:53.882 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown — Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-03 19:31:53.902 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown — Graceful shutdown complete
+2026-05-03 19:31:53.908 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-CRM-SERVICE/10.0.0.139:tavia-crm-service:8086 - registration status: 204
+2026-05-03 19:31:53.937 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean — Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-03 19:31:53.968 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource — HikariPool-1 - Shutdown initiated...
+2026-05-03 19:31:53.972 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource — HikariPool-1 - Shutdown completed.
+2026-05-03 19:31:53.974 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient — Shutting down DiscoveryClient ...
+2026-05-03 19:31:56.976 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient — Unregistering ...
+2026-05-03 19:31:56.980 [SpringApplicationShutdownHook] INFO  c.n.d.s.t.d.RedirectingEurekaHttpClient — Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/} exception=I/O error on DELETE request for "http://localhost:8761/eureka/apps/TAVIA-CRM-SERVICE/10.0.0.139:tavia-crm-service:8086": Connect to http://localhost:8761 failed: Connection refused stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://localhost:8761/eureka/apps/TAVIA-CRM-SERVICE/10.0.0.139:tavia-crm-service:8086": Connect to http://localhost:8761 failed: Connection refused
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.createResourceAccessException(DefaultRestClient.java:779)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:624)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchange(DefaultRestClient.java:572)
+	at org.springframework.web.client.RestClient$RequestHeadersSpec.exchange(RestClient.java:747)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.executeAndExtract(DefaultRestClient.java:924)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toBodilessEntity(DefaultRestClient.java:888)
+	at org.springframework.cloud.netflix.eureka.http.RestClientEurekaHttpClient.cancel(RestClientEurekaHttpClient.java:73)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:919)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:900)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:453)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:411)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:237)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:200)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:193)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:387)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:134)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:209)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:795)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:745)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1500)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:704)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1493)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1246)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1207)
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:176)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1153)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:147)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:116)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 failed: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:694)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:226)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:497)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:168)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:112)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:87)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:80)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeWithRequestAndBody(AbstractBufferingClientHttpRequest.java:89)
+	at org.springframework.http.client.InterceptingClientHttpRequest$EndOfChainRequestExecution.execute(InterceptingClientHttpRequest.java:102)
+	at org.springframework.cloud.netflix.eureka.http.RestClientTransportClientFactory.lambda$newClient$2(RestClientTransportClientFactory.java:98)
+	at org.springframework.http.client.ClientHttpRequestInterceptor.lambda$apply$0(ClientHttpRequestInterceptor.java:89)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:73)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:50)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:80)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:614)
+	... 39 more
+
+2026-05-03 19:31:56.980 [SpringApplicationShutdownHook] WARN  c.n.d.s.t.d.RetryableEurekaHttpClient — Request execution failed with message: I/O error on DELETE request for "http://localhost:8761/eureka/apps/TAVIA-CRM-SERVICE/10.0.0.139:tavia-crm-service:8086": Connect to http://localhost:8761 failed: Connection refused
+2026-05-03 19:31:56.984 [SpringApplicationShutdownHook] INFO  c.n.d.s.t.d.RedirectingEurekaHttpClient — Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on DELETE request for "http://localhost:8761/eureka/apps/TAVIA-CRM-SERVICE/10.0.0.139:tavia-crm-service:8086": Connect to http://localhost:8761 failed: Connection refused stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://localhost:8761/eureka/apps/TAVIA-CRM-SERVICE/10.0.0.139:tavia-crm-service:8086": Connect to http://localhost:8761 failed: Connection refused
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.createResourceAccessException(DefaultRestClient.java:779)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:624)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchange(DefaultRestClient.java:572)
+	at org.springframework.web.client.RestClient$RequestHeadersSpec.exchange(RestClient.java:747)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.executeAndExtract(DefaultRestClient.java:924)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toBodilessEntity(DefaultRestClient.java:888)
+	at org.springframework.cloud.netflix.eureka.http.RestClientEurekaHttpClient.cancel(RestClientEurekaHttpClient.java:73)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:919)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:900)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:453)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:411)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:237)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:200)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:193)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:387)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:134)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:209)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:795)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:745)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1500)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:704)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1493)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1246)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1207)
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:176)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1153)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:147)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:116)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 failed: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:694)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:226)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:497)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:168)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:112)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:87)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:80)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeWithRequestAndBody(AbstractBufferingClientHttpRequest.java:89)
+	at org.springframework.http.client.InterceptingClientHttpRequest$EndOfChainRequestExecution.execute(InterceptingClientHttpRequest.java:102)
+	at org.springframework.cloud.netflix.eureka.http.RestClientTransportClientFactory.lambda$newClient$2(RestClientTransportClientFactory.java:98)
+	at org.springframework.http.client.ClientHttpRequestInterceptor.lambda$apply$0(ClientHttpRequestInterceptor.java:89)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:73)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:50)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:80)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:614)
+	... 40 more
+
+2026-05-03 19:31:56.985 [SpringApplicationShutdownHook] WARN  c.n.d.s.t.d.RetryableEurekaHttpClient — Request execution failed with message: I/O error on DELETE request for "http://localhost:8761/eureka/apps/TAVIA-CRM-SERVICE/10.0.0.139:tavia-crm-service:8086": Connect to http://localhost:8761 failed: Connection refused
+2026-05-03 19:31:56.986 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient — Completed shut down of DiscoveryClient

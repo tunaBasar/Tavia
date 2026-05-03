@@ -6,7 +6,7 @@ import { useAuthStore } from "@/lib/store/use-auth-store";
 
 /**
  * Fetches orders for the active tenant.
- * Backend endpoint: GET /api/v1/orders/tenant/{tenantId}
+ * Backend endpoint: GET /api/v1/orders (X-Tenant-ID header)
  */
 export function useOrders() {
   const tenantId = useAuthStore((s) => s.tenantId);

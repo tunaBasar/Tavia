@@ -25,7 +25,7 @@ spring:
                 maxAge: 3600
           routes:
             - id: tenant-service
-              uri: http://localhost:8081
+              uri: lb://tavia-tenant-service
               predicates:
                 - Path=/api/v1/tenants/**
               metadata:
@@ -33,15 +33,15 @@ spring:
                 response-timeout: 5000
 
             - id: order-service
-              uri: http://localhost:8082
+              uri: lb://tavia-order-service
               predicates:
-                - Path=/api/v1/orders/**,/api/v1/customers/**
+                - Path=/api/v1/orders/**
               metadata:
                 connect-timeout: 5000
                 response-timeout: 5000
 
             - id: inventory-service
-              uri: http://localhost:8083
+              uri: lb://tavia-inventory-service
               predicates:
                 - Path=/api/v1/inventory/**
               metadata:
@@ -49,7 +49,7 @@ spring:
                 response-timeout: 5000
 
             - id: ai-service
-              uri: http://localhost:8084
+              uri: lb://tavia-ai-service
               predicates:
                 - Path=/api/v1/ai/**
               metadata:
@@ -57,7 +57,7 @@ spring:
                 response-timeout: 5000
 
             - id: crm-service
-              uri: http://localhost:8086
+              uri: lb://tavia-crm-service
               predicates:
                 - Path=/api/v1/crm/**
               metadata:
@@ -65,7 +65,7 @@ spring:
                 response-timeout: 5000
 
             - id: context-service
-              uri: http://localhost:8087
+              uri: lb://tavia-context-service
               predicates:
                 - Path=/api/v1/context/**
               metadata:
@@ -73,7 +73,7 @@ spring:
                 response-timeout: 5000
 
             - id: catalog-service
-              uri: http://localhost:8088
+              uri: lb://tavia-catalog-service
               predicates:
                 - Path=/api/v1/catalog/**
               metadata:
@@ -81,7 +81,7 @@ spring:
                 response-timeout: 5000
 
             - id: iot-service
-              uri: http://localhost:8089
+              uri: lb://tavia-iot-service
               predicates:
                 - Path=/api/v1/iot/**
               metadata:

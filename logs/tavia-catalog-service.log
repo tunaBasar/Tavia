@@ -1171,3 +1171,186 @@ Hibernate: select i1_0.recipe_id,i1_0.id,i1_0.quantity,i1_0.raw_material_name,i1
 <<< SERVİS DURDURULDU: 2026-05-03 01:31:24
 ********************************************************
 
+
+
+********************************************************
+>>> SERVİS BAŞLATILDI: 2026-05-03 16:21:47
+********************************************************
+
+Starting a Gradle Daemon, 4 busy and 1 incompatible Daemons could not be reused, use --status for details
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :resolveMainClassName UP-TO-DATE
+
+> Task :bootRun
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.6)
+
+2026-05-03T16:21:55.077+03:00  INFO 21081 --- [tavia-catalog-service] [  restartedMain] c.t.c.TaviaCatalogServiceApplication     : Starting TaviaCatalogServiceApplication using Java 21.0.10 with PID 21081 (/home/tuna/Desktop/tavia_v2/tavia-catalog-service/build/classes/java/main started by tuna in /home/tuna/Desktop/tavia_v2/tavia-catalog-service)
+2026-05-03T16:21:55.079+03:00 DEBUG 21081 --- [tavia-catalog-service] [  restartedMain] c.t.c.TaviaCatalogServiceApplication     : Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-03T16:21:55.079+03:00  INFO 21081 --- [tavia-catalog-service] [  restartedMain] c.t.c.TaviaCatalogServiceApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-05-03T16:21:55.109+03:00  INFO 21081 --- [tavia-catalog-service] [  restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2026-05-03T16:21:55.109+03:00  INFO 21081 --- [tavia-catalog-service] [  restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=tavia-catalog-service, profiles=[default], label=null, version=null, state=null
+2026-05-03T16:21:55.111+03:00  INFO 21081 --- [tavia-catalog-service] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-03T16:21:55.111+03:00  INFO 21081 --- [tavia-catalog-service] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-03T16:21:55.759+03:00  INFO 21081 --- [tavia-catalog-service] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-03T16:21:55.842+03:00  INFO 21081 --- [tavia-catalog-service] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 77 ms. Found 1 JPA repository interface.
+2026-05-03T16:21:56.066+03:00  INFO 21081 --- [tavia-catalog-service] [  restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=3bce1501-5cd4-3a8b-a566-44ef5b49218e
+2026-05-03T16:21:56.406+03:00  INFO 21081 --- [tavia-catalog-service] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8088 (http)
+2026-05-03T16:21:56.416+03:00  INFO 21081 --- [tavia-catalog-service] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-03T16:21:56.416+03:00  INFO 21081 --- [tavia-catalog-service] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-03T16:21:56.444+03:00  INFO 21081 --- [tavia-catalog-service] [  restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1331 ms
+2026-05-03T16:21:56.668+03:00  INFO 21081 --- [tavia-catalog-service] [  restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-03T16:21:56.705+03:00  INFO 21081 --- [tavia-catalog-service] [  restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-05-03T16:21:57.000+03:00  INFO 21081 --- [tavia-catalog-service] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-03T16:21:57.021+03:00  INFO 21081 --- [tavia-catalog-service] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-03T16:21:57.101+03:00  INFO 21081 --- [tavia-catalog-service] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7a9644b4
+2026-05-03T16:21:57.102+03:00  INFO 21081 --- [tavia-catalog-service] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-03T16:21:57.120+03:00  WARN 21081 --- [tavia-catalog-service] [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-03T16:21:57.134+03:00  INFO 21081 --- [tavia-catalog-service] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/tavia_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.17
+	Default catalog/schema: tavia_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-03T16:21:57.756+03:00  INFO 21081 --- [tavia-catalog-service] [  restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-03T16:21:57.825+03:00  INFO 21081 --- [tavia-catalog-service] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-03T16:21:57.880+03:00  INFO 21081 --- [tavia-catalog-service] [  restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-03T16:21:58.059+03:00  WARN 21081 --- [tavia-catalog-service] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-03T16:21:58.572+03:00  INFO 21081 --- [tavia-catalog-service] [  restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
+2026-05-03T16:21:58.597+03:00  WARN 21081 --- [tavia-catalog-service] [  restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-05-03T16:21:58.601+03:00  INFO 21081 --- [tavia-catalog-service] [  restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-03T16:21:58.647+03:00  INFO 21081 --- [tavia-catalog-service] [  restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-05-03T16:21:58.662+03:00  INFO 21081 --- [tavia-catalog-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-05-03T16:21:58.664+03:00  INFO 21081 --- [tavia-catalog-service] [  restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-05-03T16:21:58.669+03:00  INFO 21081 --- [tavia-catalog-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-05-03T16:21:58.669+03:00  INFO 21081 --- [tavia-catalog-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-05-03T16:21:58.669+03:00  INFO 21081 --- [tavia-catalog-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-05-03T16:21:58.669+03:00  INFO 21081 --- [tavia-catalog-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-05-03T16:21:58.670+03:00  INFO 21081 --- [tavia-catalog-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-05-03T16:21:58.670+03:00  INFO 21081 --- [tavia-catalog-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-05-03T16:21:58.670+03:00  INFO 21081 --- [tavia-catalog-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-05-03T16:21:58.844+03:00  INFO 21081 --- [tavia-catalog-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-05-03T16:21:58.851+03:00  INFO 21081 --- [tavia-catalog-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-05-03T16:21:58.853+03:00  INFO 21081 --- [tavia-catalog-service] [  restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-05-03T16:21:58.854+03:00  INFO 21081 --- [tavia-catalog-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1777814518854 with initial instances count: 1
+2026-05-03T16:21:58.858+03:00  INFO 21081 --- [tavia-catalog-service] [  restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application TAVIA-CATALOG-SERVICE with eureka with status UP
+2026-05-03T16:21:58.859+03:00  INFO 21081 --- [tavia-catalog-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1777814518859, current=UP, previous=STARTING]
+2026-05-03T16:21:58.860+03:00  INFO 21081 --- [tavia-catalog-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TAVIA-CATALOG-SERVICE/10.0.0.139:tavia-catalog-service:8088: registering service...
+2026-05-03T16:21:58.871+03:00  INFO 21081 --- [tavia-catalog-service] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8088 (http) with context path '/'
+2026-05-03T16:21:58.871+03:00  INFO 21081 --- [tavia-catalog-service] [  restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8088
+2026-05-03T16:21:58.888+03:00  INFO 21081 --- [tavia-catalog-service] [  restartedMain] c.t.c.TaviaCatalogServiceApplication     : Started TaviaCatalogServiceApplication in 4.528 seconds (process running for 4.918)
+2026-05-03T16:21:58.892+03:00  INFO 21081 --- [tavia-catalog-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TAVIA-CATALOG-SERVICE/10.0.0.139:tavia-catalog-service:8088 - registration status: 204
+2026-05-03T16:21:58.931+03:00  WARN 21081 --- [tavia-catalog-service] [  restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-05-03T16:21:58.931+03:00  WARN 21081 --- [tavia-catalog-service] [  restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-05-03T16:26:58.233+03:00  INFO 21081 --- [tavia-catalog-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+
+********************************************************
+<<< SERVİS DURDURULDU: 2026-05-03 16:29:11
+********************************************************
+
+
+
+********************************************************
+>>> SERVİS BAŞLATILDI: 2026-05-03 19:29:15
+********************************************************
+
+Starting a Gradle Daemon, 4 busy and 3 incompatible Daemons could not be reused, use --status for details
+> Task :compileJava UP-TO-DATE
+> Task :processResources
+> Task :classes
+> Task :resolveMainClassName
+
+> Task :bootRun
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.6)
+
+2026-05-03T19:29:28.337+03:00  INFO 163735 --- [tavia-catalog-service] [  restartedMain] c.t.c.TaviaCatalogServiceApplication     : Starting TaviaCatalogServiceApplication using Java 21.0.10 with PID 163735 (/home/tuna/Desktop/tavia_v2/tavia-catalog-service/build/classes/java/main started by tuna in /home/tuna/Desktop/tavia_v2/tavia-catalog-service)
+2026-05-03T19:29:28.340+03:00 DEBUG 163735 --- [tavia-catalog-service] [  restartedMain] c.t.c.TaviaCatalogServiceApplication     : Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-03T19:29:28.340+03:00  INFO 163735 --- [tavia-catalog-service] [  restartedMain] c.t.c.TaviaCatalogServiceApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-05-03T19:29:28.388+03:00  INFO 163735 --- [tavia-catalog-service] [  restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2026-05-03T19:29:28.388+03:00  INFO 163735 --- [tavia-catalog-service] [  restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=tavia-catalog-service, profiles=[default], label=null, version=null, state=null
+2026-05-03T19:29:28.392+03:00  INFO 163735 --- [tavia-catalog-service] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-03T19:29:28.392+03:00  INFO 163735 --- [tavia-catalog-service] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-03T19:29:29.302+03:00  INFO 163735 --- [tavia-catalog-service] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-03T19:29:29.426+03:00  INFO 163735 --- [tavia-catalog-service] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 112 ms. Found 1 JPA repository interface.
+2026-05-03T19:29:29.767+03:00  INFO 163735 --- [tavia-catalog-service] [  restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=3bce1501-5cd4-3a8b-a566-44ef5b49218e
+2026-05-03T19:29:30.264+03:00  INFO 163735 --- [tavia-catalog-service] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8088 (http)
+2026-05-03T19:29:30.275+03:00  INFO 163735 --- [tavia-catalog-service] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-03T19:29:30.275+03:00  INFO 163735 --- [tavia-catalog-service] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-03T19:29:30.314+03:00  INFO 163735 --- [tavia-catalog-service] [  restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1920 ms
+2026-05-03T19:29:30.605+03:00  INFO 163735 --- [tavia-catalog-service] [  restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-03T19:29:30.651+03:00  INFO 163735 --- [tavia-catalog-service] [  restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-05-03T19:29:31.069+03:00  INFO 163735 --- [tavia-catalog-service] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-03T19:29:31.100+03:00  INFO 163735 --- [tavia-catalog-service] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-03T19:29:31.207+03:00  INFO 163735 --- [tavia-catalog-service] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4b8c109a
+2026-05-03T19:29:31.209+03:00  INFO 163735 --- [tavia-catalog-service] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-03T19:29:31.235+03:00  WARN 163735 --- [tavia-catalog-service] [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-03T19:29:31.254+03:00  INFO 163735 --- [tavia-catalog-service] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/tavia_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.17
+	Default catalog/schema: tavia_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-03T19:29:32.173+03:00  INFO 163735 --- [tavia-catalog-service] [  restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-03T19:29:32.235+03:00  INFO 163735 --- [tavia-catalog-service] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-03T19:29:32.347+03:00  INFO 163735 --- [tavia-catalog-service] [  restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-03T19:29:32.713+03:00  WARN 163735 --- [tavia-catalog-service] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-03T19:29:33.800+03:00  INFO 163735 --- [tavia-catalog-service] [  restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
+2026-05-03T19:29:33.856+03:00  WARN 163735 --- [tavia-catalog-service] [  restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-05-03T19:29:33.863+03:00  INFO 163735 --- [tavia-catalog-service] [  restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-03T19:29:33.973+03:00  INFO 163735 --- [tavia-catalog-service] [  restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-05-03T19:29:34.009+03:00  INFO 163735 --- [tavia-catalog-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-05-03T19:29:34.012+03:00  INFO 163735 --- [tavia-catalog-service] [  restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-05-03T19:29:34.024+03:00  INFO 163735 --- [tavia-catalog-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-05-03T19:29:34.024+03:00  INFO 163735 --- [tavia-catalog-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-05-03T19:29:34.025+03:00  INFO 163735 --- [tavia-catalog-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-05-03T19:29:34.025+03:00  INFO 163735 --- [tavia-catalog-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-05-03T19:29:34.025+03:00  INFO 163735 --- [tavia-catalog-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-05-03T19:29:34.025+03:00  INFO 163735 --- [tavia-catalog-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-05-03T19:29:34.025+03:00  INFO 163735 --- [tavia-catalog-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-05-03T19:29:34.405+03:00  INFO 163735 --- [tavia-catalog-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-05-03T19:29:34.407+03:00  INFO 163735 --- [tavia-catalog-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-05-03T19:29:34.409+03:00  INFO 163735 --- [tavia-catalog-service] [  restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-05-03T19:29:34.411+03:00  INFO 163735 --- [tavia-catalog-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1777825774410 with initial instances count: 2
+2026-05-03T19:29:34.416+03:00  INFO 163735 --- [tavia-catalog-service] [  restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application TAVIA-CATALOG-SERVICE with eureka with status UP
+2026-05-03T19:29:34.417+03:00  INFO 163735 --- [tavia-catalog-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1777825774417, current=UP, previous=STARTING]
+2026-05-03T19:29:34.419+03:00  INFO 163735 --- [tavia-catalog-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TAVIA-CATALOG-SERVICE/10.0.0.139:tavia-catalog-service:8088: registering service...
+2026-05-03T19:29:34.437+03:00  INFO 163735 --- [tavia-catalog-service] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8088 (http) with context path '/'
+2026-05-03T19:29:34.438+03:00  INFO 163735 --- [tavia-catalog-service] [  restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8088
+2026-05-03T19:29:34.480+03:00  INFO 163735 --- [tavia-catalog-service] [  restartedMain] c.t.c.TaviaCatalogServiceApplication     : Started TaviaCatalogServiceApplication in 7.099 seconds (process running for 7.772)
+2026-05-03T19:29:34.502+03:00  INFO 163735 --- [tavia-catalog-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TAVIA-CATALOG-SERVICE/10.0.0.139:tavia-catalog-service:8088 - registration status: 204
+2026-05-03T19:29:34.607+03:00  WARN 163735 --- [tavia-catalog-service] [  restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-05-03T19:29:34.608+03:00  WARN 163735 --- [tavia-catalog-service] [  restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+
+********************************************************
+<<< SERVİS DURDURULDU: 2026-05-03 19:31:53
+********************************************************
+

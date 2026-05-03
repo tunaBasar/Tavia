@@ -155,30 +155,26 @@ export async function fetchInventory(tenantId: string) {
 
 /**
  * POST /api/v1/orders
- * Backend: OrderController#createOrder(@Valid @RequestBody CreateOrderRequest)
- * Flat structure: tenantId, customerId, productName, quantity, price
+ * Backend: OrderController#createOrder(@RequestHeader("X-Tenant-ID"), @Valid @RequestBody CreateOrderRequest)
+ * tenantId is sent via X-Tenant-ID header; body contains customerId, productName, quantity, price.
  */
-export async function createOrder(payload: CreateOrderPayload) {
+export async function createOrder(payload: CreateOrderPayload, tenantId: string) {
+  const { tenantId: _unused, ...body } = payload as CreateOrderPayload & { tenantId?: string };
   return request<ApiResponse<Order>>("/orders", {
     method: "POST",
-    body: JSON.stringify(payload),
+    headers: tenantHeaders(tenantId),
+    body: JSON.stringify(body),
   });
 }
 
 /**
  * GET /api/v1/orders
- * Backend: OrderController#getAllOrders()
- */
-export async function fetchAllOrders() {
-  return request<ApiResponse<Order[]>>("/orders");
-}
-
-/**
- * GET /api/v1/orders/tenant/{tenantId}
- * Backend: OrderController#getOrdersByTenantId(@PathVariable UUID tenantId)
+ * Backend: OrderController#getOrdersByTenant(@RequestHeader("X-Tenant-ID") UUID tenantId)
  */
 export async function fetchOrdersByTenant(tenantId: string) {
-  return request<ApiResponse<Order[]>>(`/orders/tenant/${tenantId}`);
+  return request<ApiResponse<Order[]>>("/orders", {
+    headers: tenantHeaders(tenantId),
+  });
 }
 
 /**
@@ -190,12 +186,14 @@ export async function fetchOrderById(id: string) {
 }
 
 /**
- * GET /api/v1/orders/tenant/{tenantId}/count
- * Backend: OrderController#countOrdersByTenantId(@PathVariable UUID tenantId)
+ * GET /api/v1/orders/count
+ * Backend: OrderController#countOrdersByTenant(@RequestHeader("X-Tenant-ID") UUID tenantId)
  * Returns the total number of orders for the given tenant.
  */
 export async function fetchOrderCount(tenantId: string) {
-  return request<ApiResponse<number>>(`/orders/tenant/${tenantId}/count`);
+  return request<ApiResponse<number>>("/orders/count", {
+    headers: tenantHeaders(tenantId),
+  });
 }
 
 // ─── Catalog / Product endpoints ─────────────────────────────────

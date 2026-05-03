@@ -21,8 +21,10 @@ public class OrderController {
     private final OrderService orderService;
 
     @PostMapping
-    public ResponseEntity<ApiResponse<OrderDto>> createOrder(@Valid @RequestBody CreateOrderRequest request) {
-        OrderDto orderDto = orderService.createOrder(request);
+    public ResponseEntity<ApiResponse<OrderDto>> createOrder(
+            @RequestHeader("X-Tenant-ID") UUID tenantId,
+            @Valid @RequestBody CreateOrderRequest request) {
+        OrderDto orderDto = orderService.createOrder(tenantId, request);
         return ResponseEntity.status(HttpStatus.CREATED)
                 .body(ApiResponse.success(orderDto, "Order created successfully"));
     }
@@ -34,19 +36,15 @@ public class OrderController {
     }
 
     @GetMapping
-    public ResponseEntity<ApiResponse<List<OrderDto>>> getAllOrders() {
-        List<OrderDto> orders = orderService.getAllOrders();
-        return ResponseEntity.ok(ApiResponse.success(orders));
-    }
-
-    @GetMapping("/tenant/{tenantId}")
-    public ResponseEntity<ApiResponse<List<OrderDto>>> getOrdersByTenantId(@PathVariable UUID tenantId) {
+    public ResponseEntity<ApiResponse<List<OrderDto>>> getOrdersByTenant(
+            @RequestHeader("X-Tenant-ID") UUID tenantId) {
         List<OrderDto> orders = orderService.getOrdersByTenantId(tenantId);
         return ResponseEntity.ok(ApiResponse.success(orders));
     }
 
-    @GetMapping("/tenant/{tenantId}/count")
-    public ResponseEntity<ApiResponse<Long>> countOrdersByTenantId(@PathVariable UUID tenantId) {
+    @GetMapping("/count")
+    public ResponseEntity<ApiResponse<Long>> countOrdersByTenant(
+            @RequestHeader("X-Tenant-ID") UUID tenantId) {
         long count = orderService.countOrdersByTenantId(tenantId);
         return ResponseEntity.ok(ApiResponse.success(count, "Order count retrieved"));
     }

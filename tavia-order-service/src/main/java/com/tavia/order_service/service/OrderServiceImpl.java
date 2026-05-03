@@ -32,10 +32,10 @@ public class OrderServiceImpl implements OrderService {
     private final InventoryClient inventoryClient;
 
     @Override
-    public OrderDto createOrder(CreateOrderRequest request) {
+    public OrderDto createOrder(UUID tenantId, CreateOrderRequest request) {
         // 1. Persist the order (final product)
         Order order = Order.builder()
-                .tenantId(request.getTenantId())
+                .tenantId(tenantId)
                 .customerId(request.getCustomerId())
                 .productName(request.getProductName())
                 .quantity(request.getQuantity())
@@ -56,7 +56,7 @@ public class OrderServiceImpl implements OrderService {
         } else {
             log.info("Recipe resolved for '{}': {} raw material(s)", request.getProductName(), ingredients.size());
             // 3. Deduct raw materials via inventory-service REST call (best-effort)
-            inventoryClient.deductRawMaterials(request.getTenantId(), ingredients);
+            inventoryClient.deductRawMaterials(tenantId, ingredients);
         }
 
         // 4. Adjust tenant loyalty via CRM
@@ -74,13 +74,6 @@ public class OrderServiceImpl implements OrderService {
         Order order = orderRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Order not found with id: " + id));
         return orderMapper.toDto(order);
-    }
-
-    @Override
-    public List<OrderDto> getAllOrders() {
-        return orderRepository.findAll().stream()
-                .map(orderMapper::toDto)
-                .collect(Collectors.toList());
     }
 
     @Override

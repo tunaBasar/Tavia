@@ -6,7 +6,7 @@ import { useAuthStore } from "@/lib/store/use-auth-store";
 
 /**
  * Fetches the total order count for the active tenant.
- * Backend endpoint: GET /api/v1/orders/tenant/{tenantId}/count
+ * Backend endpoint: GET /api/v1/orders/count (X-Tenant-ID header)
  * Returns: ApiResponse<number> → unwrapped to just the count number.
  */
 export function useOrderCount() {

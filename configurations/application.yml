@@ -1,16 +1,10 @@
 logging:
   level:
     root: INFO
-    com.tavia: DEBUG
-    # Flyway neden uyanmıyor veya nereye bakıyor?
-    org.flywaydb: DEBUG
-    # Config Client ayarları gerçekten çekiyor mu?
-    org.springframework.cloud.config: DEBUG
-    # Hibernate'in tablo arama detayları
+    com.tavia: DEBUG 
+    org.flywaydb: INFO
+    org.springframework.cloud.config: INFO
     org.hibernate.SQL: DEBUG
-    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
-    org.hibernate.tool.schema: DEBUG
-
 tavia:
   cities:
     - ISTANBUL
