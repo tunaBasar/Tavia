@@ -1,0 +1,52 @@
+# ==========================================
+# TAVIA V2 - Global Root .gitignore
+# ==========================================
+
+# --- OS & IDE Araçları ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.iml
+*.swp
+
+# --- Backend (Java / Spring Boot / Gradle) ---
+.gradle/
+build/
+out/
+bin/
+# Gradle wrapper jar dosyasını tutmalıyız ki başkaları da projeyi derleyebilsin
+!gradle/wrapper/gradle-wrapper.jar
+
+# --- Loglar ve Hata Raporları ---
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# --- TAVIA UI (Next.js 16 / React 19) ---
+tavia-ui/node_modules/
+tavia-ui/.next/
+tavia-ui/out/
+tavia-ui/.env*.local
+tavia-ui/.vercel/
+
+# --- TAVIA Customer UI (Expo / React Native) ---
+tavia-customer-ui/node_modules/
+tavia-customer-ui/.expo/
+tavia-customer-ui/dist/
+tavia-customer-ui/web-build/
+# Mobil tarafta daha önce sorun yaşadığımız yerel env dosyalarını yoksay
+tavia-customer-ui/.env
+# Üretim için oluşturulacak imza dosyalarını asla repoya atma
+tavia-customer-ui/*.jks
+tavia-customer-ui/*.keystore
+tavia-customer-ui/*.p8
+tavia-customer-ui/*.p12
+
+# --- Altyapı ve Veritabanı ---
+# Eğer Docker verilerini yerel klasörlere (volume) bağladıysan onları yoksay
+pgdata/
+kafka_data/
+zookeeper_data/

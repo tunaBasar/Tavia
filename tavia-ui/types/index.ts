@@ -47,7 +47,8 @@ export interface LoginTenantRequest {
 
 /**
  * Matches backend: TenantResponse
- * Fields: id (UUID), name, city (City enum), username, subscriptionPlan, isActive, createdAt
+ * Fields: id (UUID), name, city (City enum), username, subscriptionPlan, active, createdAt
+ * Note: Backend serializes `boolean isActive` as JSON key `"active"` (Jackson 3 strips `is` prefix).
  */
 export interface Tenant {
   id: string;
@@ -55,7 +56,7 @@ export interface Tenant {
   city: City;
   username: string;
   subscriptionPlan: SubscriptionPlan;
-  isActive: boolean;
+  active: boolean;
   createdAt: string;
 }
 
@@ -205,6 +206,31 @@ export interface Product {
   description: string | null;
   active: boolean;
   ingredients: RecipeIngredient[];
+}
+
+// ─── Create Product (Recipe) Request ─────────────────────────────
+
+/**
+ * Matches backend: CreateRecipeRequest (catalog-service)
+ * Fields: productName, displayName, category, description, active, ingredients[]
+ */
+export interface CreateProductRequest {
+  productName: string;
+  displayName: string;
+  category: ProductCategory;
+  description?: string;
+  active: boolean;
+  ingredients: CreateRecipeIngredientRequest[];
+}
+
+/**
+ * Matches backend: CreateRecipeIngredientRequest (catalog-service)
+ * Fields: rawMaterialName, quantity, unit
+ */
+export interface CreateRecipeIngredientRequest {
+  rawMaterialName: string;
+  quantity: number;
+  unit: UnitType;
 }
 
 // ─── Machines (IoT) ──────────────────────────────────────────────

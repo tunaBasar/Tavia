@@ -8,6 +8,7 @@ import type {
   Order,
   CreateOrderPayload,
   CreateCustomerRequest,
+  CreateProductRequest,
   InventoryItem,
   Product,
   Machine,
@@ -227,6 +228,19 @@ export async function fetchAllProducts(tenantId: string) {
 export async function fetchProductById(tenantId: string, productId: string) {
   return request<ApiResponse<Product>>(`/catalog/recipes/${productId}`, {
     headers: tenantHeaders(tenantId),
+  });
+}
+
+/**
+ * POST /api/v1/catalog/recipes
+ * Backend: CatalogController#createRecipe(@RequestHeader("X-Tenant-ID") UUID, @Valid @RequestBody CreateRecipeRequest)
+ * Creates a new product (recipe + BOM) for the tenant's catalog.
+ */
+export async function createProduct(payload: CreateProductRequest, tenantId: string) {
+  return request<ApiResponse<Product>>("/catalog/recipes", {
+    method: "POST",
+    headers: tenantHeaders(tenantId),
+    body: JSON.stringify(payload),
   });
 }
 

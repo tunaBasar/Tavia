@@ -70,6 +70,11 @@ public class OrderEventProducer {
                 event.getOrderId(), event.getCustomerLevel(), event.getWeather(),
                 event.getActiveEvent(), event.getCompetitorIntensity(), deductions.size());
 
-        kafkaTemplate.send("order-events", event);
+        try {
+            kafkaTemplate.send("order-events", event);
+        } catch (Exception e) {
+            log.error("Circuit breaker: Kafka publish failed for order {}: {}. " +
+                    "Order will proceed — event publishing is best-effort.", event.getOrderId(), e.getMessage());
+        }
     }
 }

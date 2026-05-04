@@ -14,6 +14,8 @@ import {
   Scale,
   Box,
   Layers,
+  Plus,
+  Trash2,
 } from "lucide-react";
 import {
   Card,
@@ -24,6 +26,7 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import {
   Sheet,
   SheetContent,
@@ -31,10 +34,27 @@ import {
   SheetTitle,
   SheetDescription,
 } from "@/components/ui/sheet";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Separator } from "@/components/ui/separator";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import { toast } from "sonner";
 import { useProducts } from "@/lib/hooks/use-products";
-import type { Product, ProductCategory, UnitType } from "@/types";
+import { useCreateProduct } from "@/lib/hooks/use-create-product";
+import type { Product, ProductCategory, UnitType, CreateRecipeIngredientRequest } from "@/types";
 
 // ─── Domain Helpers ──────────────────────────────────────────────
 
@@ -97,11 +117,89 @@ function getUnitIcon(unit: UnitType) {
 
 // ─── Main Page Component ─────────────────────────────────────────
 
+const EMPTY_INGREDIENT: CreateRecipeIngredientRequest = {
+  rawMaterialName: "",
+  quantity: 0,
+  unit: "GRAM",
+};
+
 export default function ProductsPage() {
   const { data, isLoading, isError, error } = useProducts();
+  const createMutation = useCreateProduct();
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
   const [categoryFilter, setCategoryFilter] = useState<ProductCategory | "ALL">("ALL");
+  const [isCreateOpen, setIsCreateOpen] = useState(false);
+
+  // ─── Create form state ──────────────────────────────────────────
+  const [formDisplayName, setFormDisplayName] = useState("");
+  const [formCategory, setFormCategory] = useState<ProductCategory>("ESPRESSO_BASED");
+  const [formDescription, setFormDescription] = useState("");
+  const [formIngredients, setFormIngredients] = useState<CreateRecipeIngredientRequest[]>([
+    { ...EMPTY_INGREDIENT },
+  ]);
+
+  function resetForm() {
+    setFormDisplayName("");
+    setFormCategory("ESPRESSO_BASED");
+    setFormDescription("");
+    setFormIngredients([{ ...EMPTY_INGREDIENT }]);
+  }
+
+  function addIngredient() {
+    setFormIngredients((prev) => [...prev, { ...EMPTY_INGREDIENT }]);
+  }
+
+  function removeIngredient(idx: number) {
+    setFormIngredients((prev) => prev.filter((_, i) => i !== idx));
+  }
+
+  function updateIngredient(idx: number, field: keyof CreateRecipeIngredientRequest, value: string | number) {
+    setFormIngredients((prev) =>
+      prev.map((ing, i) => (i === idx ? { ...ing, [field]: value } : ing))
+    );
+  }
+
+  function onCreateSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    const trimmedName = formDisplayName.trim();
+    if (!trimmedName) {
+      toast.error("Product name is required.");
+      return;
+    }
+    const validIngredients = formIngredients.filter((ing) => ing.rawMaterialName.trim() && ing.quantity > 0);
+    if (validIngredients.length === 0) {
+      toast.error("At least one ingredient with a valid name and quantity is required.");
+      return;
+    }
+
+    createMutation.mutate(
+      {
+        productName: trimmedName.toUpperCase().replace(/\s+/g, "_"),
+        displayName: trimmedName,
+        category: formCategory,
+        description: formDescription.trim() || undefined,
+        active: true,
+        ingredients: validIngredients.map((ing) => ({
+          rawMaterialName: ing.rawMaterialName.trim(),
+          quantity: Number(ing.quantity),
+          unit: ing.unit,
+        })),
+      },
+      {
+        onSuccess: () => {
+          toast.success("Product created successfully");
+          setIsCreateOpen(false);
+          resetForm();
+        },
+        onError: (err) => {
+          toast.error("Failed to create product", {
+            description: err instanceof Error ? err.message : "Unknown error",
+          });
+        },
+      }
+    );
+  }
 
   const products = data?.data ?? [];
 
@@ -146,15 +244,140 @@ export default function ProductsPage() {
             Manage your product catalog &amp; recipes (Bill of Materials)
           </p>
         </div>
-        {!isLoading && !isError && (
-          <div className="flex items-center gap-2 rounded-lg border border-border/50 bg-card px-4 py-2">
-            <Coffee className="size-4 text-muted-foreground" />
-            <span className="text-sm font-semibold text-foreground">
-              {products.length}
-            </span>
-            <span className="text-sm text-muted-foreground">products</span>
-          </div>
-        )}
+        <div className="flex items-center gap-3">
+          {!isLoading && !isError && (
+            <div className="flex items-center gap-2 rounded-lg border border-border/50 bg-card px-4 py-2">
+              <Coffee className="size-4 text-muted-foreground" />
+              <span className="text-sm font-semibold text-foreground">
+                {products.length}
+              </span>
+              <span className="text-sm text-muted-foreground">products</span>
+            </div>
+          )}
+          <Dialog open={isCreateOpen} onOpenChange={setIsCreateOpen}>
+            <DialogTrigger render={
+              <Button>
+                <Plus className="mr-2 size-4" />
+                Add Product
+              </Button>
+            } />
+            <DialogContent className="sm:max-w-lg max-h-[90vh] overflow-y-auto">
+              <DialogHeader>
+                <DialogTitle>Create New Product</DialogTitle>
+                <DialogDescription>
+                  Define a product and its recipe (Bill of Materials).
+                </DialogDescription>
+              </DialogHeader>
+              <form onSubmit={onCreateSubmit} className="space-y-4 pt-4">
+                <div className="space-y-2">
+                  <Label htmlFor="displayName">Product Name</Label>
+                  <Input
+                    id="displayName"
+                    placeholder="e.g. Caramel Latte"
+                    value={formDisplayName}
+                    onChange={(e) => setFormDisplayName(e.target.value)}
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="category">Category</Label>
+                  <Select
+                    value={formCategory}
+                    onValueChange={(val) => val && setFormCategory(val as ProductCategory)}
+                  >
+                    <SelectTrigger id="category">
+                      <SelectValue placeholder="Select category" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="ESPRESSO_BASED">Espresso Based</SelectItem>
+                      <SelectItem value="TEA">Tea</SelectItem>
+                      <SelectItem value="COLD_BEVERAGE">Cold Beverage</SelectItem>
+                      <SelectItem value="FOOD">Food</SelectItem>
+                      <SelectItem value="DESSERT">Dessert</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="description">Description (optional)</Label>
+                  <Input
+                    id="description"
+                    placeholder="Short product description"
+                    value={formDescription}
+                    onChange={(e) => setFormDescription(e.target.value)}
+                  />
+                </div>
+
+                <Separator />
+
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between">
+                    <Label>Ingredients (BOM)</Label>
+                    <Button type="button" variant="outline" size="sm" onClick={addIngredient}>
+                      <Plus className="mr-1 size-3" /> Add
+                    </Button>
+                  </div>
+                  {formIngredients.map((ing, idx) => (
+                    <div key={idx} className="flex items-end gap-2">
+                      <div className="flex-1 space-y-1">
+                        {idx === 0 && <span className="text-xs text-muted-foreground">Material</span>}
+                        <Input
+                          placeholder="e.g. Coffee Beans"
+                          value={ing.rawMaterialName}
+                          onChange={(e) => updateIngredient(idx, "rawMaterialName", e.target.value)}
+                        />
+                      </div>
+                      <div className="w-20 space-y-1">
+                        {idx === 0 && <span className="text-xs text-muted-foreground">Qty</span>}
+                        <Input
+                          type="number"
+                          min={0}
+                          step="any"
+                          placeholder="0"
+                          value={ing.quantity || ""}
+                          onChange={(e) => updateIngredient(idx, "quantity", parseFloat(e.target.value) || 0)}
+                        />
+                      </div>
+                      <div className="w-28 space-y-1">
+                        {idx === 0 && <span className="text-xs text-muted-foreground">Unit</span>}
+                        <Select
+                          value={ing.unit}
+                          onValueChange={(val) => val && updateIngredient(idx, "unit", val)}
+                        >
+                          <SelectTrigger>
+                            <SelectValue />
+                          </SelectTrigger>
+                          <SelectContent>
+                            <SelectItem value="GRAM">Gram</SelectItem>
+                            <SelectItem value="MILLILITER">mL</SelectItem>
+                            <SelectItem value="PIECE">Piece</SelectItem>
+                          </SelectContent>
+                        </Select>
+                      </div>
+                      <Button
+                        type="button"
+                        variant="ghost"
+                        size="icon"
+                        className="size-8 text-muted-foreground hover:text-destructive"
+                        onClick={() => removeIngredient(idx)}
+                        disabled={formIngredients.length <= 1}
+                      >
+                        <Trash2 className="size-4" />
+                      </Button>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="pt-4 flex justify-end">
+                  <Button type="submit" disabled={createMutation.isPending}>
+                    {createMutation.isPending && (
+                      <Loader2 className="mr-2 size-4 animate-spin" />
+                    )}
+                    Create Product
+                  </Button>
+                </div>
+              </form>
+            </DialogContent>
+          </Dialog>
+        </div>
       </div>
 
       {/* Content */}

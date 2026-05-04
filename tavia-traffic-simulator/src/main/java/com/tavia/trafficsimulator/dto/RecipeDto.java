@@ -1,5 +1,7 @@
 package com.tavia.trafficsimulator.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.tavia.trafficsimulator.enums.ProductCategory;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -12,11 +14,12 @@ import java.util.UUID;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class RecipeDto {
     private UUID id;
     private String productName;
     private String displayName;
-    private String category;
+    private ProductCategory category;
     private String description;
     private Boolean active;
     private List<RecipeIngredientDto> ingredients;

@@ -1,5 +1,8 @@
 package com.tavia.trafficsimulator.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.tavia.trafficsimulator.enums.City;
+import com.tavia.trafficsimulator.enums.LoyaltyLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -12,11 +15,12 @@ import java.util.UUID;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class CustomerDto {
     private UUID id;
     private String name;
     private String email;
-    private String city;
-    private String loyaltyLevel;
+    private City city;
+    private LoyaltyLevel loyaltyLevel;
     private BigDecimal totalSpentInThisTenant;
 }

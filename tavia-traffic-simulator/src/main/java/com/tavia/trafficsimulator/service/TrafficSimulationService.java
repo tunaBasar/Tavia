@@ -110,7 +110,7 @@ public class TrafficSimulationService {
 
         } catch (Exception e) {
             totalFailures.incrementAndGet();
-            log.error("Simulation cycle #{} failed: {}", cycle, e.getMessage());
+            log.error("Simulation cycle #{} failed", cycle, e);
             eventBus.publish(new SimulatorEvent("CYCLE_FAILED", "Cycle #" + cycle + " failed: " + e.getMessage()));
         }
     }
@@ -186,7 +186,6 @@ public class TrafficSimulationService {
 
         try {
             CreateOrderRequest orderRequest = CreateOrderRequest.builder()
-                    .tenantId(tenantId)
                     .customerId(customer.getId())
                     .productName(recipe.getProductName())
                     .quantity(quantity)
@@ -198,14 +197,14 @@ public class TrafficSimulationService {
 
             orderClient.createOrder(tenantId.toString(), orderRequest);
             totalOrdersPlaced.incrementAndGet();
-            eventBus.publish(new SimulatorEvent("ORDER_PLACED", tenant.getCity(), tenant.getName(),
+            eventBus.publish(new SimulatorEvent("ORDER_PLACED", tenant.getCity().name(), tenant.getName(),
                     recipe.getDisplayName() + " x" + quantity + " @ " + price + " TRY \u2192 " + customer.getName()));
 
             simulateMachineTelemetry(tenant);
 
         } catch (Exception e) {
             totalFailures.incrementAndGet();
-            eventBus.publish(new SimulatorEvent("ORDER_FAILED", tenant.getCity(), tenant.getName(), e.getMessage()));
+            eventBus.publish(new SimulatorEvent("ORDER_FAILED", tenant.getCity().name(), tenant.getName(), e.getMessage()));
             log.warn("Order failed for tenant {}: {}", tenant.getName(), e.getMessage());
         }
     }
@@ -225,7 +224,7 @@ public class TrafficSimulationService {
             errorCode = "ERR_" + (100 + rng.nextInt(900));
             log.warn("\u26a0 Machine {} ({}) at tenant {} error: {}",
                     machine.getName(), machine.getMachineType(), tenant.getName(), errorCode);
-            eventBus.publish(new SimulatorEvent("MACHINE_ERROR", tenant.getCity(), tenant.getName(),
+            eventBus.publish(new SimulatorEvent("MACHINE_ERROR", tenant.getCity().name(), tenant.getName(),
                     machine.getName() + " (" + machine.getMachineType() + ") \u2192 " + errorCode));
         }
 
@@ -248,7 +247,7 @@ public class TrafficSimulationService {
 
             iotClient.sendTelemetry(tid, telemetry);
             totalTelemetrySent.incrementAndGet();
-            eventBus.publish(new SimulatorEvent("TELEMETRY_SENT", tenant.getCity(), tenant.getName(),
+            eventBus.publish(new SimulatorEvent("TELEMETRY_SENT", tenant.getCity().name(), tenant.getName(),
                     machine.getName() + " \u2192 OK"));
 
         } catch (Exception e) {
@@ -291,7 +290,7 @@ public class TrafficSimulationService {
         return cachedTenants.stream()
                 .map(t -> Map.of(
                         "name", t.getName(),
-                        "city", t.getCity() != null ? t.getCity() : "UNKNOWN",
+                        "city", t.getCity() != null ? t.getCity().name() : "UNKNOWN",
                         "active", String.valueOf(t.isActive())
                 ))
                 .toList();

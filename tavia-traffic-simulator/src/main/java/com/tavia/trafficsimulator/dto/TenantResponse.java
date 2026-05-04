@@ -1,5 +1,8 @@
 package com.tavia.trafficsimulator.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.tavia.trafficsimulator.enums.City;
+import com.tavia.trafficsimulator.enums.SubscriptionPlan;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -12,12 +15,13 @@ import java.util.UUID;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class TenantResponse {
     private UUID id;
     private String name;
-    private String city;
+    private City city;
     private String username;
-    private String subscriptionPlan;
-    private boolean isActive;
+    private SubscriptionPlan subscriptionPlan;
+    private boolean active;
     private LocalDateTime createdAt;
 }

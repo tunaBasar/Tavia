@@ -1,4 +1,4 @@
-2026-05-03 00:15:46.951 [SpringApplicationShutdownHook] ERROR c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-TENANT-SERVICE/10.0.0.139:tavia-tenant-service:8081 - de-registration failedCannot execute request on any known server
+2026-05-04 18:40:11.396 [SpringApplicationShutdownHook] ERROR c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-TENANT-SERVICE/10.90.11.230:tavia-tenant-service:8081 - de-registration failedCannot execute request on any known server
 com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
@@ -30,7 +30,7 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
 	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:116)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
-2026-05-03 01:31:24.565 [SpringApplicationShutdownHook] ERROR c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-TENANT-SERVICE/10.0.0.139:tavia-tenant-service:8081 - de-registration failedCannot execute request on any known server
+2026-05-04 20:24:17.861 [SpringApplicationShutdownHook] ERROR c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-TENANT-SERVICE/10.90.11.230:tavia-tenant-service:8081 - de-registration failedCannot execute request on any known server
 com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
@@ -62,113 +62,17 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
 	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:116)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
-2026-05-03 16:29:14.860 [SpringApplicationShutdownHook] ERROR c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-TENANT-SERVICE/10.0.0.139:tavia-tenant-service:8081 - de-registration failedCannot execute request on any known server
-com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
-	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
-	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
-	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:919)
-	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:900)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:453)
-	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:411)
-	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:237)
-	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:200)
-	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:193)
-	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:387)
-	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:134)
-	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:209)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:795)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:745)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1500)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:704)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1493)
-	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1246)
-	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1207)
-	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:176)
-	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1153)
-	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:147)
-	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
-	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:116)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-2026-05-03 19:31:56.883 [SpringApplicationShutdownHook] ERROR c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-TENANT-SERVICE/10.0.0.139:tavia-tenant-service:8081 - de-registration failedCannot execute request on any known server
-com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
-	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
-	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
-	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:919)
-	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:900)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:453)
-	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:411)
-	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:237)
-	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:200)
-	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:193)
-	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:387)
-	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:134)
-	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:209)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:795)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:745)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1500)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:704)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1493)
-	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1246)
-	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1207)
-	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:176)
-	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1153)
-	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:147)
-	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
-	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:116)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-2026-05-03 19:43:14.459 [http-nio-8081-exec-1] ERROR c.t.t.e.GlobalExceptionHandler — [TraceId: 2cce2d98-875c-4835-8b52-caf8d4d61187] Business Exception: Bu kullanici adi zaten kayitli.
-2026-05-03 19:43:14.505 [http-nio-8081-exec-2] ERROR c.t.t.e.GlobalExceptionHandler — [TraceId: 70351375-45b5-49e7-8382-8563441c3b01] Business Exception: Bu kullanici adi zaten kayitli.
-2026-05-03 19:43:14.517 [http-nio-8081-exec-3] ERROR c.t.t.e.GlobalExceptionHandler — [TraceId: 9514f4c0-89d1-4630-8e76-adbeaba9dbd1] Business Exception: Bu kullanici adi zaten kayitli.
-2026-05-03 19:43:14.530 [http-nio-8081-exec-4] ERROR c.t.t.e.GlobalExceptionHandler — [TraceId: 1cbea5f6-6020-4052-8631-18f4e121b98c] Business Exception: Bu kullanici adi zaten kayitli.
-2026-05-03 19:43:14.541 [http-nio-8081-exec-5] ERROR c.t.t.e.GlobalExceptionHandler — [TraceId: 5d8c63aa-0e17-4932-a6a8-17798abb1bdc] Business Exception: Bu kullanici adi zaten kayitli.
-2026-05-03 19:43:14.551 [http-nio-8081-exec-6] ERROR c.t.t.e.GlobalExceptionHandler — [TraceId: 7ca9a9ec-5594-4390-ab2f-8d71cd927bde] Business Exception: Bu kullanici adi zaten kayitli.
-2026-05-03 19:43:14.564 [http-nio-8081-exec-7] ERROR c.t.t.e.GlobalExceptionHandler — [TraceId: d712166b-cd1e-43c1-b00f-4eeb89361f24] Business Exception: Bu kullanici adi zaten kayitli.
-2026-05-03 19:43:14.574 [http-nio-8081-exec-8] ERROR c.t.t.e.GlobalExceptionHandler — [TraceId: 272a94e6-bed3-4a0d-acfa-e361e4240364] Business Exception: Bu kullanici adi zaten kayitli.
-2026-05-03 19:43:14.586 [http-nio-8081-exec-9] ERROR c.t.t.e.GlobalExceptionHandler — [TraceId: 9ad375a6-af4e-4474-befe-997621d8da35] Business Exception: Bu kullanici adi zaten kayitli.
-2026-05-03 19:43:14.600 [http-nio-8081-exec-10] ERROR c.t.t.e.GlobalExceptionHandler — [TraceId: f5e866e5-7b29-4c9b-b605-aff668127642] Business Exception: Bu kullanici adi zaten kayitli.
-2026-05-03 20:02:39.975 [SpringApplicationShutdownHook] ERROR c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-TENANT-SERVICE/10.0.0.139:tavia-tenant-service:8081 - de-registration failedCannot execute request on any known server
-com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
-	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
-	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
-	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:919)
-	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:900)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:453)
-	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:411)
-	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:237)
-	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:200)
-	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:193)
-	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:387)
-	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:134)
-	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:209)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:795)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:745)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1500)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:704)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1493)
-	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1246)
-	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1207)
-	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:176)
-	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1153)
-	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:147)
-	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
-	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:116)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-2026-05-03 22:17:27.089 [SpringApplicationShutdownHook] ERROR c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-TENANT-SERVICE/10.0.0.139:tavia-tenant-service:8081 - de-registration failedCannot execute request on any known server
+2026-05-04 20:45:01.120 [http-nio-8081-exec-1] ERROR c.t.t.e.GlobalExceptionHandler — [TraceId: 2343e26a-293b-485f-8669-74edc39def43] Business Exception: Bu kullanici adi zaten kayitli.
+2026-05-04 20:45:01.167 [http-nio-8081-exec-2] ERROR c.t.t.e.GlobalExceptionHandler — [TraceId: b41b8678-211d-411d-a2c0-0c46692681f1] Business Exception: Bu kullanici adi zaten kayitli.
+2026-05-04 20:45:01.179 [http-nio-8081-exec-3] ERROR c.t.t.e.GlobalExceptionHandler — [TraceId: 07b52241-a5b1-421e-8460-11878b009d2a] Business Exception: Bu kullanici adi zaten kayitli.
+2026-05-04 20:45:01.192 [http-nio-8081-exec-4] ERROR c.t.t.e.GlobalExceptionHandler — [TraceId: 206add62-315b-4be9-9b16-6f2f85d2850d] Business Exception: Bu kullanici adi zaten kayitli.
+2026-05-04 20:45:01.203 [http-nio-8081-exec-5] ERROR c.t.t.e.GlobalExceptionHandler — [TraceId: 4723db90-67ea-4bf1-a430-a972a75555bf] Business Exception: Bu kullanici adi zaten kayitli.
+2026-05-04 20:45:01.216 [http-nio-8081-exec-6] ERROR c.t.t.e.GlobalExceptionHandler — [TraceId: 435a133e-fe5e-4284-935c-1ea272edbf4a] Business Exception: Bu kullanici adi zaten kayitli.
+2026-05-04 20:45:01.226 [http-nio-8081-exec-7] ERROR c.t.t.e.GlobalExceptionHandler — [TraceId: ac851529-31be-4624-a7a6-290f717e2bd8] Business Exception: Bu kullanici adi zaten kayitli.
+2026-05-04 20:45:01.239 [http-nio-8081-exec-8] ERROR c.t.t.e.GlobalExceptionHandler — [TraceId: daea67ee-1b19-4cfd-8a51-e2c5bf79bb6a] Business Exception: Bu kullanici adi zaten kayitli.
+2026-05-04 20:45:01.248 [http-nio-8081-exec-9] ERROR c.t.t.e.GlobalExceptionHandler — [TraceId: d350b8a6-ce9e-42c7-8a83-a62f8adceda4] Business Exception: Bu kullanici adi zaten kayitli.
+2026-05-04 20:45:01.258 [http-nio-8081-exec-10] ERROR c.t.t.e.GlobalExceptionHandler — [TraceId: d997a5ad-97b8-4359-826a-c618c6703acb] Business Exception: Bu kullanici adi zaten kayitli.
+2026-05-04 20:58:08.105 [SpringApplicationShutdownHook] ERROR c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-TENANT-SERVICE/10.90.11.230:tavia-tenant-service:8081 - de-registration failedCannot execute request on any known server
 com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
