@@ -14681,3 +14681,478 @@ Starting a Gradle Daemon, 3 busy and 3 incompatible Daemons could not be reused,
 <<< SERVİS DURDURULDU: 2026-05-03 19:31:53
 ********************************************************
 
+
+
+********************************************************
+>>> SERVİS BAŞLATILDI: 2026-05-03 19:39:58
+********************************************************
+
+Starting a Gradle Daemon, 3 busy and 3 incompatible and 12 stopped Daemons could not be reused, use --status for details
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :resolveMainClassName UP-TO-DATE
+
+> Task :bootRun
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.6)
+
+2026-05-03 19:40:06.150 [background-preinit] INFO  o.h.validator.internal.util.Version — HV000001: Hibernate Validator 9.0.1.Final
+2026-05-03 19:40:06.175 [restartedMain] INFO  c.t.i.InventoryServiceApplication — Starting InventoryServiceApplication using Java 21.0.10 with PID 176062 (/home/tuna/Desktop/tavia_v2/tavia-inventory-service/build/classes/java/main started by tuna in /home/tuna/Desktop/tavia_v2/tavia-inventory-service)
+2026-05-03 19:40:06.176 [restartedMain] DEBUG c.t.i.InventoryServiceApplication — Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-03 19:40:06.176 [restartedMain] INFO  c.t.i.InventoryServiceApplication — No active profile set, falling back to 1 default profile: "default"
+2026-05-03 19:40:06.208 [restartedMain] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Fetching config from server at : http://localhost:8888
+2026-05-03 19:40:06.208 [restartedMain] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Located environment: name=tavia-inventory-service, profiles=[default], label=null, version=null, state=null
+2026-05-03 19:40:06.211 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor — Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-03 19:40:06.211 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor — For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-03 19:40:06.771 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate — Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-03 19:40:06.863 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate — Finished Spring Data repository scanning in 86 ms. Found 1 JPA repository interface.
+2026-05-03 19:40:07.033 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope — BeanFactory id=df405b57-bcf2-3004-b0a9-5b8057d907e7
+2026-05-03 19:40:07.369 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer — Tomcat initialized with port 8083 (http)
+2026-05-03 19:40:07.378 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol — Initializing ProtocolHandler ["http-nio-8083"]
+2026-05-03 19:40:07.380 [restartedMain] INFO  o.a.catalina.core.StandardService — Starting service [Tomcat]
+2026-05-03 19:40:07.380 [restartedMain] INFO  o.a.catalina.core.StandardEngine — Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-03 19:40:07.410 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer — Root WebApplicationContext: initialization completed in 1199 ms
+2026-05-03 19:40:07.523 [restartedMain] INFO  org.hibernate.orm.jpa — HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-03 19:40:07.559 [restartedMain] INFO  org.hibernate.orm.core — HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-05-03 19:40:07.861 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo — No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-03 19:40:07.883 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource — HikariPool-1 - Starting...
+2026-05-03 19:40:07.962 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool — HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1e02d3bc
+2026-05-03 19:40:07.963 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource — HikariPool-1 - Start completed.
+2026-05-03 19:40:07.981 [restartedMain] WARN  org.hibernate.orm.deprecation — HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-03 19:40:07.995 [restartedMain] INFO  o.hibernate.orm.connections.pooling — HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/tavia_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.17
+	Default catalog/schema: tavia_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-03 19:40:08.574 [restartedMain] INFO  org.hibernate.orm.core — HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-03 19:40:08.613 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean — Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-03 19:40:08.669 [restartedMain] INFO  o.s.d.j.r.q.QueryEnhancerFactories — Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-03 19:40:08.865 [restartedMain] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration — spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-03 19:40:09.296 [restartedMain] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration — Eureka HTTP Client uses RestClient.
+2026-05-03 19:40:09.320 [restartedMain] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger — Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-05-03 19:40:09.364 [restartedMain] INFO  o.s.c.n.eureka.InstanceInfoFactory — Setting initial instance status as: STARTING
+2026-05-03 19:40:09.379 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Initializing Eureka in region us-east-1
+2026-05-03 19:40:09.382 [restartedMain] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-03 19:40:09.386 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Disable delta property : false
+2026-05-03 19:40:09.387 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Single vip registry refresh property : null
+2026-05-03 19:40:09.387 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Force full registry fetch : false
+2026-05-03 19:40:09.387 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Application is null : false
+2026-05-03 19:40:09.387 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Registered Applications size is zero : true
+2026-05-03 19:40:09.387 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Application version is -1: true
+2026-05-03 19:40:09.387 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Getting all instance registry info from the eureka server
+2026-05-03 19:40:09.574 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — The response status is 200
+2026-05-03 19:40:09.575 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Starting heartbeat executor: renew interval is: 30
+2026-05-03 19:40:09.576 [restartedMain] INFO  c.n.discovery.InstanceInfoReplicator — InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-05-03 19:40:09.577 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Discovery Client initialized at timestamp 1777826409577 with initial instances count: 1
+2026-05-03 19:40:09.580 [restartedMain] INFO  o.s.c.n.e.s.EurekaServiceRegistry — Registering application TAVIA-INVENTORY-SERVICE with eureka with status UP
+2026-05-03 19:40:09.580 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Saw local status change event StatusChangeEvent [timestamp=1777826409580, current=UP, previous=STARTING]
+2026-05-03 19:40:09.581 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-INVENTORY-SERVICE/10.0.0.139:tavia-inventory-service:8083: registering service...
+2026-05-03 19:40:09.581 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol — Starting ProtocolHandler ["http-nio-8083"]
+2026-05-03 19:40:09.591 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer — Tomcat started on port 8083 (http) with context path '/'
+2026-05-03 19:40:09.592 [restartedMain] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration — Updating port to 8083
+2026-05-03 19:40:09.608 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-INVENTORY-SERVICE/10.0.0.139:tavia-inventory-service:8083 - registration status: 204
+2026-05-03 19:40:09.625 [restartedMain] INFO  o.a.k.common.config.AbstractConfig — ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-inventory-group-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = inventory-group
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.rebootstrap.trigger.ms = 300000
+	metadata.recovery.strategy = rebootstrap
+	metric.reporters = [org.apache.kafka.common.metrics.JmxReporter]
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.assertion.algorithm = RS256
+	sasl.oauthbearer.assertion.claim.aud = null
+	sasl.oauthbearer.assertion.claim.exp.seconds = 300
+	sasl.oauthbearer.assertion.claim.iss = null
+	sasl.oauthbearer.assertion.claim.jti.include = false
+	sasl.oauthbearer.assertion.claim.nbf.seconds = 60
+	sasl.oauthbearer.assertion.claim.sub = null
+	sasl.oauthbearer.assertion.file = null
+	sasl.oauthbearer.assertion.private.key.file = null
+	sasl.oauthbearer.assertion.private.key.passphrase = null
+	sasl.oauthbearer.assertion.template.file = null
+	sasl.oauthbearer.client.credentials.client.id = null
+	sasl.oauthbearer.client.credentials.client.secret = null
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.jwt.retriever.class = class org.apache.kafka.common.security.oauthbearer.DefaultJwtRetriever
+	sasl.oauthbearer.jwt.validator.class = class org.apache.kafka.common.security.oauthbearer.DefaultJwtValidator
+	sasl.oauthbearer.scope = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	share.acknowledgement.mode = implicit
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
+
+2026-05-03 19:40:09.656 [restartedMain] INFO  o.a.k.c.t.i.KafkaMetricsCollector — initializing Kafka metrics collector
+2026-05-03 19:40:09.770 [restartedMain] INFO  o.a.kafka.common.utils.AppInfoParser — Kafka version: 4.1.2
+2026-05-03 19:40:09.770 [restartedMain] INFO  o.a.kafka.common.utils.AppInfoParser — Kafka commitId: c82fd9b934b4c1e6
+2026-05-03 19:40:09.770 [restartedMain] INFO  o.a.kafka.common.utils.AppInfoParser — Kafka startTimeMs: 1777826409769
+2026-05-03 19:40:09.776 [restartedMain] INFO  o.a.k.c.c.i.ClassicKafkaConsumer — [Consumer clientId=consumer-inventory-group-1, groupId=inventory-group] Subscribed to topic(s): order-events
+2026-05-03 19:40:09.787 [restartedMain] INFO  c.t.i.InventoryServiceApplication — Started InventoryServiceApplication in 4.363 seconds (process running for 4.834)
+2026-05-03 19:40:09.789 [restartedMain] WARN  o.s.c.events.SpringDocAppInitializer — SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-05-03 19:40:09.789 [restartedMain] WARN  o.s.c.events.SpringDocAppInitializer — SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-05-03 19:40:10.064 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.Metadata — [Consumer clientId=consumer-inventory-group-1, groupId=inventory-group] Cluster ID: NqRLAES2SiuBZ-SRoDnsmQ
+2026-05-03 19:40:10.066 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator — [Consumer clientId=consumer-inventory-group-1, groupId=inventory-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null isFenced: false)
+2026-05-03 19:40:10.068 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator — [Consumer clientId=consumer-inventory-group-1, groupId=inventory-group] (Re-)joining group
+2026-05-03 19:40:10.087 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator — [Consumer clientId=consumer-inventory-group-1, groupId=inventory-group] Request joining group due to: need to re-join with the given member-id: consumer-inventory-group-1-ad89ffa5-0fac-4d9b-9084-cbb828f82fda
+2026-05-03 19:40:10.089 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator — [Consumer clientId=consumer-inventory-group-1, groupId=inventory-group] (Re-)joining group
+2026-05-03 19:40:13.101 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator — [Consumer clientId=consumer-inventory-group-1, groupId=inventory-group] Successfully joined group with generation Generation{generationId=1, memberId='consumer-inventory-group-1-ad89ffa5-0fac-4d9b-9084-cbb828f82fda', protocol='range'}
+2026-05-03 19:40:13.105 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator — [Consumer clientId=consumer-inventory-group-1, groupId=inventory-group] Finished assignment for group at generation 1: {consumer-inventory-group-1-ad89ffa5-0fac-4d9b-9084-cbb828f82fda=Assignment(partitions=[order-events-0])}
+2026-05-03 19:40:13.134 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator — [Consumer clientId=consumer-inventory-group-1, groupId=inventory-group] Successfully synced group in generation Generation{generationId=1, memberId='consumer-inventory-group-1-ad89ffa5-0fac-4d9b-9084-cbb828f82fda', protocol='range'}
+2026-05-03 19:40:13.134 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator — [Consumer clientId=consumer-inventory-group-1, groupId=inventory-group] Notifying assignor about the new Assignment(partitions=[order-events-0])
+2026-05-03 19:40:13.135 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerRebalanceListenerInvoker — [Consumer clientId=consumer-inventory-group-1, groupId=inventory-group] Adding newly assigned partitions: [order-events-0]
+2026-05-03 19:40:13.144 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator — [Consumer clientId=consumer-inventory-group-1, groupId=inventory-group] Found no committed offset for partition order-events-0
+2026-05-03 19:40:13.159 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.SubscriptionState — [Consumer clientId=consumer-inventory-group-1, groupId=inventory-group] Resetting offset for partition order-events-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null isFenced: false)], epoch=0}}.
+2026-05-03 19:40:13.160 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer — inventory-group: partitions assigned: [order-events-0]
+2026-05-03 19:45:09.388 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-03 19:50:09.389 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-03 19:55:09.389 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-03 20:00:09.390 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+
+********************************************************
+<<< SERVİS DURDURULDU: 2026-05-03 20:02:36
+********************************************************
+
+
+
+********************************************************
+>>> SERVİS BAŞLATILDI: 2026-05-03 22:00:30
+********************************************************
+
+Starting a Gradle Daemon, 3 busy and 3 incompatible Daemons could not be reused, use --status for details
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :resolveMainClassName UP-TO-DATE
+
+> Task :bootRun
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.6)
+
+2026-05-03 22:00:38.261 [background-preinit] INFO  o.h.validator.internal.util.Version — HV000001: Hibernate Validator 9.0.1.Final
+2026-05-03 22:00:38.285 [restartedMain] INFO  c.t.i.InventoryServiceApplication — Starting InventoryServiceApplication using Java 21.0.10 with PID 224689 (/home/tuna/Desktop/tavia_v2/tavia-inventory-service/build/classes/java/main started by tuna in /home/tuna/Desktop/tavia_v2/tavia-inventory-service)
+2026-05-03 22:00:38.286 [restartedMain] DEBUG c.t.i.InventoryServiceApplication — Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-03 22:00:38.287 [restartedMain] INFO  c.t.i.InventoryServiceApplication — No active profile set, falling back to 1 default profile: "default"
+2026-05-03 22:00:38.315 [restartedMain] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Fetching config from server at : http://localhost:8888
+2026-05-03 22:00:38.315 [restartedMain] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Located environment: name=tavia-inventory-service, profiles=[default], label=null, version=null, state=null
+2026-05-03 22:00:38.317 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor — Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-03 22:00:38.318 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor — For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-03 22:00:38.873 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate — Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-03 22:00:38.969 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate — Finished Spring Data repository scanning in 89 ms. Found 1 JPA repository interface.
+2026-05-03 22:00:39.144 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope — BeanFactory id=df405b57-bcf2-3004-b0a9-5b8057d907e7
+2026-05-03 22:00:39.509 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer — Tomcat initialized with port 8083 (http)
+2026-05-03 22:00:39.519 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol — Initializing ProtocolHandler ["http-nio-8083"]
+2026-05-03 22:00:39.521 [restartedMain] INFO  o.a.catalina.core.StandardService — Starting service [Tomcat]
+2026-05-03 22:00:39.521 [restartedMain] INFO  o.a.catalina.core.StandardEngine — Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-03 22:00:39.554 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer — Root WebApplicationContext: initialization completed in 1236 ms
+2026-05-03 22:00:39.706 [restartedMain] INFO  org.hibernate.orm.jpa — HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-03 22:00:39.746 [restartedMain] INFO  org.hibernate.orm.core — HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-05-03 22:00:40.085 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo — No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-03 22:00:40.111 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource — HikariPool-1 - Starting...
+2026-05-03 22:00:40.203 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool — HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@83530b9
+2026-05-03 22:00:40.204 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource — HikariPool-1 - Start completed.
+2026-05-03 22:00:40.226 [restartedMain] WARN  org.hibernate.orm.deprecation — HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-03 22:00:40.244 [restartedMain] INFO  o.hibernate.orm.connections.pooling — HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/tavia_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.17
+	Default catalog/schema: tavia_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-03 22:00:40.888 [restartedMain] INFO  org.hibernate.orm.core — HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-03 22:00:40.931 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean — Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-03 22:00:40.990 [restartedMain] INFO  o.s.d.j.r.q.QueryEnhancerFactories — Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-03 22:00:41.218 [restartedMain] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration — spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-03 22:00:41.666 [restartedMain] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration — Eureka HTTP Client uses RestClient.
+2026-05-03 22:00:41.691 [restartedMain] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger — Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-05-03 22:00:41.736 [restartedMain] INFO  o.s.c.n.eureka.InstanceInfoFactory — Setting initial instance status as: STARTING
+2026-05-03 22:00:41.751 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Initializing Eureka in region us-east-1
+2026-05-03 22:00:41.753 [restartedMain] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-03 22:00:41.759 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Disable delta property : false
+2026-05-03 22:00:41.759 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Single vip registry refresh property : null
+2026-05-03 22:00:41.759 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Force full registry fetch : false
+2026-05-03 22:00:41.759 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Application is null : false
+2026-05-03 22:00:41.759 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Registered Applications size is zero : true
+2026-05-03 22:00:41.759 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Application version is -1: true
+2026-05-03 22:00:41.759 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Getting all instance registry info from the eureka server
+2026-05-03 22:00:41.956 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — The response status is 200
+2026-05-03 22:00:41.957 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Starting heartbeat executor: renew interval is: 30
+2026-05-03 22:00:41.959 [restartedMain] INFO  c.n.discovery.InstanceInfoReplicator — InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-05-03 22:00:41.960 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Discovery Client initialized at timestamp 1777834841959 with initial instances count: 1
+2026-05-03 22:00:41.962 [restartedMain] INFO  o.s.c.n.e.s.EurekaServiceRegistry — Registering application TAVIA-INVENTORY-SERVICE with eureka with status UP
+2026-05-03 22:00:41.963 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Saw local status change event StatusChangeEvent [timestamp=1777834841963, current=UP, previous=STARTING]
+2026-05-03 22:00:41.964 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-INVENTORY-SERVICE/10.0.0.139:tavia-inventory-service:8083: registering service...
+2026-05-03 22:00:41.964 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol — Starting ProtocolHandler ["http-nio-8083"]
+2026-05-03 22:00:41.974 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer — Tomcat started on port 8083 (http) with context path '/'
+2026-05-03 22:00:41.975 [restartedMain] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration — Updating port to 8083
+2026-05-03 22:00:41.993 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-INVENTORY-SERVICE/10.0.0.139:tavia-inventory-service:8083 - registration status: 204
+2026-05-03 22:00:42.012 [restartedMain] INFO  o.a.k.common.config.AbstractConfig — ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-inventory-group-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = inventory-group
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.rebootstrap.trigger.ms = 300000
+	metadata.recovery.strategy = rebootstrap
+	metric.reporters = [org.apache.kafka.common.metrics.JmxReporter]
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.assertion.algorithm = RS256
+	sasl.oauthbearer.assertion.claim.aud = null
+	sasl.oauthbearer.assertion.claim.exp.seconds = 300
+	sasl.oauthbearer.assertion.claim.iss = null
+	sasl.oauthbearer.assertion.claim.jti.include = false
+	sasl.oauthbearer.assertion.claim.nbf.seconds = 60
+	sasl.oauthbearer.assertion.claim.sub = null
+	sasl.oauthbearer.assertion.file = null
+	sasl.oauthbearer.assertion.private.key.file = null
+	sasl.oauthbearer.assertion.private.key.passphrase = null
+	sasl.oauthbearer.assertion.template.file = null
+	sasl.oauthbearer.client.credentials.client.id = null
+	sasl.oauthbearer.client.credentials.client.secret = null
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.jwt.retriever.class = class org.apache.kafka.common.security.oauthbearer.DefaultJwtRetriever
+	sasl.oauthbearer.jwt.validator.class = class org.apache.kafka.common.security.oauthbearer.DefaultJwtValidator
+	sasl.oauthbearer.scope = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	share.acknowledgement.mode = implicit
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
+
+2026-05-03 22:00:42.050 [restartedMain] INFO  o.a.k.c.t.i.KafkaMetricsCollector — initializing Kafka metrics collector
+2026-05-03 22:00:42.174 [restartedMain] INFO  o.a.kafka.common.utils.AppInfoParser — Kafka version: 4.1.2
+2026-05-03 22:00:42.175 [restartedMain] INFO  o.a.kafka.common.utils.AppInfoParser — Kafka commitId: c82fd9b934b4c1e6
+2026-05-03 22:00:42.175 [restartedMain] INFO  o.a.kafka.common.utils.AppInfoParser — Kafka startTimeMs: 1777834842174
+2026-05-03 22:00:42.177 [restartedMain] INFO  o.a.k.c.c.i.ClassicKafkaConsumer — [Consumer clientId=consumer-inventory-group-1, groupId=inventory-group] Subscribed to topic(s): order-events
+2026-05-03 22:00:42.189 [restartedMain] INFO  c.t.i.InventoryServiceApplication — Started InventoryServiceApplication in 4.745 seconds (process running for 5.214)
+2026-05-03 22:00:42.191 [restartedMain] WARN  o.s.c.events.SpringDocAppInitializer — SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-05-03 22:00:42.191 [restartedMain] WARN  o.s.c.events.SpringDocAppInitializer — SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-05-03 22:00:42.427 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.Metadata — [Consumer clientId=consumer-inventory-group-1, groupId=inventory-group] Cluster ID: NqRLAES2SiuBZ-SRoDnsmQ
+2026-05-03 22:00:42.429 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator — [Consumer clientId=consumer-inventory-group-1, groupId=inventory-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null isFenced: false)
+2026-05-03 22:00:42.430 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator — [Consumer clientId=consumer-inventory-group-1, groupId=inventory-group] (Re-)joining group
+2026-05-03 22:00:42.439 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator — [Consumer clientId=consumer-inventory-group-1, groupId=inventory-group] Request joining group due to: need to re-join with the given member-id: consumer-inventory-group-1-fc8c02e5-451b-4183-a184-f2a44c307699
+2026-05-03 22:00:42.440 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator — [Consumer clientId=consumer-inventory-group-1, groupId=inventory-group] (Re-)joining group
+2026-05-03 22:00:45.444 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator — [Consumer clientId=consumer-inventory-group-1, groupId=inventory-group] Successfully joined group with generation Generation{generationId=1, memberId='consumer-inventory-group-1-fc8c02e5-451b-4183-a184-f2a44c307699', protocol='range'}
+2026-05-03 22:00:45.448 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator — [Consumer clientId=consumer-inventory-group-1, groupId=inventory-group] Finished assignment for group at generation 1: {consumer-inventory-group-1-fc8c02e5-451b-4183-a184-f2a44c307699=Assignment(partitions=[order-events-0])}
+2026-05-03 22:00:45.452 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator — [Consumer clientId=consumer-inventory-group-1, groupId=inventory-group] Successfully synced group in generation Generation{generationId=1, memberId='consumer-inventory-group-1-fc8c02e5-451b-4183-a184-f2a44c307699', protocol='range'}
+2026-05-03 22:00:45.453 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator — [Consumer clientId=consumer-inventory-group-1, groupId=inventory-group] Notifying assignor about the new Assignment(partitions=[order-events-0])
+2026-05-03 22:00:45.454 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerRebalanceListenerInvoker — [Consumer clientId=consumer-inventory-group-1, groupId=inventory-group] Adding newly assigned partitions: [order-events-0]
+2026-05-03 22:00:45.458 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator — [Consumer clientId=consumer-inventory-group-1, groupId=inventory-group] Found no committed offset for partition order-events-0
+2026-05-03 22:00:45.466 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.SubscriptionState — [Consumer clientId=consumer-inventory-group-1, groupId=inventory-group] Resetting offset for partition order-events-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null isFenced: false)], epoch=0}}.
+2026-05-03 22:00:45.467 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer — inventory-group: partitions assigned: [order-events-0]
+2026-05-03 22:05:41.760 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-03 22:10:41.764 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-03 22:11:44.316 [http-nio-8083-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] — Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-03 22:11:44.317 [http-nio-8083-exec-1] INFO  o.s.web.servlet.DispatcherServlet — Initializing Servlet 'dispatcherServlet'
+2026-05-03 22:11:44.385 [http-nio-8083-exec-1] INFO  o.s.web.servlet.DispatcherServlet — Completed initialization in 68 ms
+2026-05-03 22:11:44.559 [http-nio-8083-exec-1] INFO  c.t.i.service.InventoryServiceImpl — Fetching raw materials for tenant 228f8e0a-035c-47e0-8ac6-e30991748cf0
+2026-05-03 22:11:45.345 [http-nio-8083-exec-1] DEBUG org.hibernate.SQL — select rm1_0.id,rm1_0.name,rm1_0.stock_quantity,rm1_0.tenant_id,rm1_0.unit from raw_materials rm1_0 where rm1_0.tenant_id=?
+Hibernate: select rm1_0.id,rm1_0.name,rm1_0.stock_quantity,rm1_0.tenant_id,rm1_0.unit from raw_materials rm1_0 where rm1_0.tenant_id=?
+2026-05-03 22:14:28.236 [http-nio-8083-exec-3] INFO  c.t.i.service.InventoryServiceImpl — Fetching raw materials for tenant 2153a249-d0b9-4880-bf7b-09ca4b19bb6e
+2026-05-03 22:14:28.237 [http-nio-8083-exec-3] DEBUG org.hibernate.SQL — select rm1_0.id,rm1_0.name,rm1_0.stock_quantity,rm1_0.tenant_id,rm1_0.unit from raw_materials rm1_0 where rm1_0.tenant_id=?
+Hibernate: select rm1_0.id,rm1_0.name,rm1_0.stock_quantity,rm1_0.tenant_id,rm1_0.unit from raw_materials rm1_0 where rm1_0.tenant_id=?
+2026-05-03 22:15:41.765 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-03 22:16:31.625 [http-nio-8083-exec-5] INFO  c.t.i.service.InventoryServiceImpl — Fetching raw materials for tenant 4fd3b6e6-8346-4b7d-a462-0d9cfc159a58
+2026-05-03 22:16:31.627 [http-nio-8083-exec-5] DEBUG org.hibernate.SQL — select rm1_0.id,rm1_0.name,rm1_0.stock_quantity,rm1_0.tenant_id,rm1_0.unit from raw_materials rm1_0 where rm1_0.tenant_id=?
+Hibernate: select rm1_0.id,rm1_0.name,rm1_0.stock_quantity,rm1_0.tenant_id,rm1_0.unit from raw_materials rm1_0 where rm1_0.tenant_id=?
+
+********************************************************
+<<< SERVİS DURDURULDU: 2026-05-03 22:17:26
+********************************************************
+

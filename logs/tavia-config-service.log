@@ -1005,3 +1005,134 @@ Starting a Gradle Daemon, 1 incompatible Daemon could not be reused, use --statu
 <<< SERVİS DURDURULDU: 2026-05-03 19:31:53
 ********************************************************
 
+
+
+********************************************************
+>>> SERVİS BAŞLATILDI: 2026-05-03 19:39:06
+********************************************************
+
+Starting a Gradle Daemon, 4 incompatible and 12 stopped Daemons could not be reused, use --status for details
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :resolveMainClassName UP-TO-DATE
+
+> Task :bootRun
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.6)
+
+2026-05-03 19:39:14.278 [background-preinit] INFO  o.h.validator.internal.util.Version — HV000001: Hibernate Validator 9.0.1.Final
+2026-05-03 19:39:14.307 [restartedMain] INFO  c.t.c.TaviaConfigServiceApplication — Starting TaviaConfigServiceApplication using Java 21.0.10 with PID 173837 (/home/tuna/Desktop/tavia_v2/tavia-config-service/build/classes/java/main started by tuna in /home/tuna/Desktop/tavia_v2/tavia-config-service)
+2026-05-03 19:39:14.308 [restartedMain] INFO  c.t.c.TaviaConfigServiceApplication — The following 1 profile is active: "native"
+2026-05-03 19:39:14.335 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor — Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-03 19:39:14.335 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor — For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-03 19:39:14.763 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope — BeanFactory id=9879608e-2dbf-3546-8a14-32cb3b604218
+2026-05-03 19:39:15.038 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer — Tomcat initialized with port 8888 (http)
+2026-05-03 19:39:15.046 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol — Initializing ProtocolHandler ["http-nio-8888"]
+2026-05-03 19:39:15.047 [restartedMain] INFO  o.a.catalina.core.StandardService — Starting service [Tomcat]
+2026-05-03 19:39:15.047 [restartedMain] INFO  o.a.catalina.core.StandardEngine — Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-03 19:39:15.073 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer — Root WebApplicationContext: initialization completed in 738 ms
+2026-05-03 19:39:15.487 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol — Starting ProtocolHandler ["http-nio-8888"]
+2026-05-03 19:39:15.498 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer — Tomcat started on port 8888 (http) with context path '/'
+2026-05-03 19:39:15.553 [restartedMain] INFO  c.t.c.TaviaConfigServiceApplication — Started TaviaConfigServiceApplication in 1.668 seconds (process running for 2.073)
+2026-05-03 19:39:31.823 [http-nio-8888-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] — Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-03 19:39:31.823 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet — Initializing Servlet 'dispatcherServlet'
+2026-05-03 19:39:31.824 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet — Completed initialization in 1 ms
+2026-05-03 19:39:31.858 [http-nio-8888-exec-1] INFO  o.s.c.c.s.e.NativeEnvironmentRepository — Adding property source: Config resource 'file [/home/tuna/Desktop/tavia_v2/configurations/application.yml]' via location 'file:///home/tuna/Desktop/tavia_v2/configurations/'
+2026-05-03 19:39:50.319 [http-nio-8888-exec-2] INFO  o.s.c.c.s.e.NativeEnvironmentRepository — Adding property source: Config resource 'file [/home/tuna/Desktop/tavia_v2/configurations/tavia-tenant-service.yml]' via location 'file:///home/tuna/Desktop/tavia_v2/configurations/'
+2026-05-03 19:39:50.319 [http-nio-8888-exec-2] INFO  o.s.c.c.s.e.NativeEnvironmentRepository — Adding property source: Config resource 'file [/home/tuna/Desktop/tavia_v2/configurations/application.yml]' via location 'file:///home/tuna/Desktop/tavia_v2/configurations/'
+2026-05-03 19:40:05.921 [http-nio-8888-exec-3] INFO  o.s.c.c.s.e.NativeEnvironmentRepository — Adding property source: Config resource 'file [/home/tuna/Desktop/tavia_v2/configurations/tavia-inventory-service.yml]' via location 'file:///home/tuna/Desktop/tavia_v2/configurations/'
+2026-05-03 19:40:05.921 [http-nio-8888-exec-3] INFO  o.s.c.c.s.e.NativeEnvironmentRepository — Adding property source: Config resource 'file [/home/tuna/Desktop/tavia_v2/configurations/application.yml]' via location 'file:///home/tuna/Desktop/tavia_v2/configurations/'
+2026-05-03 19:40:23.232 [http-nio-8888-exec-4] INFO  o.s.c.c.s.e.NativeEnvironmentRepository — Adding property source: Config resource 'file [/home/tuna/Desktop/tavia_v2/configurations/tavia-catalog-service.yml]' via location 'file:///home/tuna/Desktop/tavia_v2/configurations/'
+2026-05-03 19:40:23.232 [http-nio-8888-exec-4] INFO  o.s.c.c.s.e.NativeEnvironmentRepository — Adding property source: Config resource 'file [/home/tuna/Desktop/tavia_v2/configurations/application.yml]' via location 'file:///home/tuna/Desktop/tavia_v2/configurations/'
+2026-05-03 19:40:40.031 [http-nio-8888-exec-6] INFO  o.s.c.c.s.e.NativeEnvironmentRepository — Adding property source: Config resource 'file [/home/tuna/Desktop/tavia_v2/configurations/tavia-crm-service.yml]' via location 'file:///home/tuna/Desktop/tavia_v2/configurations/'
+2026-05-03 19:40:40.031 [http-nio-8888-exec-6] INFO  o.s.c.c.s.e.NativeEnvironmentRepository — Adding property source: Config resource 'file [/home/tuna/Desktop/tavia_v2/configurations/application.yml]' via location 'file:///home/tuna/Desktop/tavia_v2/configurations/'
+2026-05-03 19:40:57.417 [http-nio-8888-exec-8] INFO  o.s.c.c.s.e.NativeEnvironmentRepository — Adding property source: Config resource 'file [/home/tuna/Desktop/tavia_v2/configurations/tavia-order-service.yml]' via location 'file:///home/tuna/Desktop/tavia_v2/configurations/'
+2026-05-03 19:40:57.417 [http-nio-8888-exec-8] INFO  o.s.c.c.s.e.NativeEnvironmentRepository — Adding property source: Config resource 'file [/home/tuna/Desktop/tavia_v2/configurations/application.yml]' via location 'file:///home/tuna/Desktop/tavia_v2/configurations/'
+2026-05-03 19:41:18.295 [http-nio-8888-exec-10] INFO  o.s.c.c.s.e.NativeEnvironmentRepository — Adding property source: Config resource 'file [/home/tuna/Desktop/tavia_v2/configurations/tavia-iot-service.yml]' via location 'file:///home/tuna/Desktop/tavia_v2/configurations/'
+2026-05-03 19:41:18.295 [http-nio-8888-exec-10] INFO  o.s.c.c.s.e.NativeEnvironmentRepository — Adding property source: Config resource 'file [/home/tuna/Desktop/tavia_v2/configurations/application.yml]' via location 'file:///home/tuna/Desktop/tavia_v2/configurations/'
+2026-05-03 19:41:34.594 [http-nio-8888-exec-2] INFO  o.s.c.c.s.e.NativeEnvironmentRepository — Adding property source: Config resource 'file [/home/tuna/Desktop/tavia_v2/configurations/tavia-context-service.yml]' via location 'file:///home/tuna/Desktop/tavia_v2/configurations/'
+2026-05-03 19:41:34.594 [http-nio-8888-exec-2] INFO  o.s.c.c.s.e.NativeEnvironmentRepository — Adding property source: Config resource 'file [/home/tuna/Desktop/tavia_v2/configurations/application.yml]' via location 'file:///home/tuna/Desktop/tavia_v2/configurations/'
+2026-05-03 19:41:51.492 [http-nio-8888-exec-4] INFO  o.s.c.c.s.e.NativeEnvironmentRepository — Adding property source: Config resource 'file [/home/tuna/Desktop/tavia_v2/configurations/tavia-ai-service.yml]' via location 'file:///home/tuna/Desktop/tavia_v2/configurations/'
+2026-05-03 19:41:51.492 [http-nio-8888-exec-4] INFO  o.s.c.c.s.e.NativeEnvironmentRepository — Adding property source: Config resource 'file [/home/tuna/Desktop/tavia_v2/configurations/application.yml]' via location 'file:///home/tuna/Desktop/tavia_v2/configurations/'
+2026-05-03 19:42:07.719 [http-nio-8888-exec-6] INFO  o.s.c.c.s.e.NativeEnvironmentRepository — Adding property source: Config resource 'file [/home/tuna/Desktop/tavia_v2/configurations/tavia-api-gateway.yml]' via location 'file:///home/tuna/Desktop/tavia_v2/configurations/'
+2026-05-03 19:42:07.719 [http-nio-8888-exec-6] INFO  o.s.c.c.s.e.NativeEnvironmentRepository — Adding property source: Config resource 'file [/home/tuna/Desktop/tavia_v2/configurations/application.yml]' via location 'file:///home/tuna/Desktop/tavia_v2/configurations/'
+2026-05-03 19:42:24.820 [http-nio-8888-exec-8] INFO  o.s.c.c.s.e.NativeEnvironmentRepository — Adding property source: Config resource 'file [/home/tuna/Desktop/tavia_v2/configurations/tavia-traffic-simulator.yml]' via location 'file:///home/tuna/Desktop/tavia_v2/configurations/'
+2026-05-03 19:42:24.820 [http-nio-8888-exec-8] INFO  o.s.c.c.s.e.NativeEnvironmentRepository — Adding property source: Config resource 'file [/home/tuna/Desktop/tavia_v2/configurations/application.yml]' via location 'file:///home/tuna/Desktop/tavia_v2/configurations/'
+
+********************************************************
+<<< SERVİS DURDURULDU: 2026-05-03 20:02:36
+********************************************************
+
+
+
+********************************************************
+>>> SERVİS BAŞLATILDI: 2026-05-03 21:59:39
+********************************************************
+
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :resolveMainClassName UP-TO-DATE
+
+> Task :bootRun
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.6)
+
+2026-05-03 21:59:41.261 [background-preinit] INFO  o.h.validator.internal.util.Version — HV000001: Hibernate Validator 9.0.1.Final
+2026-05-03 21:59:41.308 [restartedMain] INFO  c.t.c.TaviaConfigServiceApplication — Starting TaviaConfigServiceApplication using Java 21.0.10 with PID 223229 (/home/tuna/Desktop/tavia_v2/tavia-config-service/build/classes/java/main started by tuna in /home/tuna/Desktop/tavia_v2/tavia-config-service)
+2026-05-03 21:59:41.310 [restartedMain] INFO  c.t.c.TaviaConfigServiceApplication — The following 1 profile is active: "native"
+2026-05-03 21:59:41.366 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor — Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-03 21:59:41.367 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor — For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-03 21:59:42.096 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope — BeanFactory id=9879608e-2dbf-3546-8a14-32cb3b604218
+2026-05-03 21:59:42.433 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer — Tomcat initialized with port 8888 (http)
+2026-05-03 21:59:42.442 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol — Initializing ProtocolHandler ["http-nio-8888"]
+2026-05-03 21:59:42.445 [restartedMain] INFO  o.a.catalina.core.StandardService — Starting service [Tomcat]
+2026-05-03 21:59:42.445 [restartedMain] INFO  o.a.catalina.core.StandardEngine — Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-03 21:59:42.477 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer — Root WebApplicationContext: initialization completed in 1109 ms
+2026-05-03 21:59:42.931 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol — Starting ProtocolHandler ["http-nio-8888"]
+2026-05-03 21:59:42.941 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer — Tomcat started on port 8888 (http) with context path '/'
+2026-05-03 21:59:42.955 [restartedMain] INFO  c.t.c.TaviaConfigServiceApplication — Started TaviaConfigServiceApplication in 2.128 seconds (process running for 2.592)
+2026-05-03 22:00:03.176 [http-nio-8888-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] — Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-03 22:00:03.176 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet — Initializing Servlet 'dispatcherServlet'
+2026-05-03 22:00:03.177 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet — Completed initialization in 1 ms
+2026-05-03 22:00:03.211 [http-nio-8888-exec-1] INFO  o.s.c.c.s.e.NativeEnvironmentRepository — Adding property source: Config resource 'file [/home/tuna/Desktop/tavia_v2/configurations/application.yml]' via location 'file:///home/tuna/Desktop/tavia_v2/configurations/'
+2026-05-03 22:00:20.689 [http-nio-8888-exec-2] INFO  o.s.c.c.s.e.NativeEnvironmentRepository — Adding property source: Config resource 'file [/home/tuna/Desktop/tavia_v2/configurations/tavia-tenant-service.yml]' via location 'file:///home/tuna/Desktop/tavia_v2/configurations/'
+2026-05-03 22:00:20.689 [http-nio-8888-exec-2] INFO  o.s.c.c.s.e.NativeEnvironmentRepository — Adding property source: Config resource 'file [/home/tuna/Desktop/tavia_v2/configurations/application.yml]' via location 'file:///home/tuna/Desktop/tavia_v2/configurations/'
+2026-05-03 22:00:38.018 [http-nio-8888-exec-3] INFO  o.s.c.c.s.e.NativeEnvironmentRepository — Adding property source: Config resource 'file [/home/tuna/Desktop/tavia_v2/configurations/tavia-inventory-service.yml]' via location 'file:///home/tuna/Desktop/tavia_v2/configurations/'
+2026-05-03 22:00:38.018 [http-nio-8888-exec-3] INFO  o.s.c.c.s.e.NativeEnvironmentRepository — Adding property source: Config resource 'file [/home/tuna/Desktop/tavia_v2/configurations/application.yml]' via location 'file:///home/tuna/Desktop/tavia_v2/configurations/'
+2026-05-03 22:00:55.196 [http-nio-8888-exec-4] INFO  o.s.c.c.s.e.NativeEnvironmentRepository — Adding property source: Config resource 'file [/home/tuna/Desktop/tavia_v2/configurations/tavia-catalog-service.yml]' via location 'file:///home/tuna/Desktop/tavia_v2/configurations/'
+2026-05-03 22:00:55.196 [http-nio-8888-exec-4] INFO  o.s.c.c.s.e.NativeEnvironmentRepository — Adding property source: Config resource 'file [/home/tuna/Desktop/tavia_v2/configurations/application.yml]' via location 'file:///home/tuna/Desktop/tavia_v2/configurations/'
+2026-05-03 22:01:11.239 [http-nio-8888-exec-6] INFO  o.s.c.c.s.e.NativeEnvironmentRepository — Adding property source: Config resource 'file [/home/tuna/Desktop/tavia_v2/configurations/tavia-crm-service.yml]' via location 'file:///home/tuna/Desktop/tavia_v2/configurations/'
+2026-05-03 22:01:11.239 [http-nio-8888-exec-6] INFO  o.s.c.c.s.e.NativeEnvironmentRepository — Adding property source: Config resource 'file [/home/tuna/Desktop/tavia_v2/configurations/application.yml]' via location 'file:///home/tuna/Desktop/tavia_v2/configurations/'
+2026-05-03 22:01:28.503 [http-nio-8888-exec-8] INFO  o.s.c.c.s.e.NativeEnvironmentRepository — Adding property source: Config resource 'file [/home/tuna/Desktop/tavia_v2/configurations/tavia-order-service.yml]' via location 'file:///home/tuna/Desktop/tavia_v2/configurations/'
+2026-05-03 22:01:28.503 [http-nio-8888-exec-8] INFO  o.s.c.c.s.e.NativeEnvironmentRepository — Adding property source: Config resource 'file [/home/tuna/Desktop/tavia_v2/configurations/application.yml]' via location 'file:///home/tuna/Desktop/tavia_v2/configurations/'
+2026-05-03 22:01:45.560 [http-nio-8888-exec-10] INFO  o.s.c.c.s.e.NativeEnvironmentRepository — Adding property source: Config resource 'file [/home/tuna/Desktop/tavia_v2/configurations/tavia-iot-service.yml]' via location 'file:///home/tuna/Desktop/tavia_v2/configurations/'
+2026-05-03 22:01:45.560 [http-nio-8888-exec-10] INFO  o.s.c.c.s.e.NativeEnvironmentRepository — Adding property source: Config resource 'file [/home/tuna/Desktop/tavia_v2/configurations/application.yml]' via location 'file:///home/tuna/Desktop/tavia_v2/configurations/'
+2026-05-03 22:02:01.980 [http-nio-8888-exec-2] INFO  o.s.c.c.s.e.NativeEnvironmentRepository — Adding property source: Config resource 'file [/home/tuna/Desktop/tavia_v2/configurations/tavia-context-service.yml]' via location 'file:///home/tuna/Desktop/tavia_v2/configurations/'
+2026-05-03 22:02:01.980 [http-nio-8888-exec-2] INFO  o.s.c.c.s.e.NativeEnvironmentRepository — Adding property source: Config resource 'file [/home/tuna/Desktop/tavia_v2/configurations/application.yml]' via location 'file:///home/tuna/Desktop/tavia_v2/configurations/'
+2026-05-03 22:02:19.214 [http-nio-8888-exec-4] INFO  o.s.c.c.s.e.NativeEnvironmentRepository — Adding property source: Config resource 'file [/home/tuna/Desktop/tavia_v2/configurations/tavia-ai-service.yml]' via location 'file:///home/tuna/Desktop/tavia_v2/configurations/'
+2026-05-03 22:02:19.218 [http-nio-8888-exec-4] INFO  o.s.c.c.s.e.NativeEnvironmentRepository — Adding property source: Config resource 'file [/home/tuna/Desktop/tavia_v2/configurations/application.yml]' via location 'file:///home/tuna/Desktop/tavia_v2/configurations/'
+2026-05-03 22:02:35.734 [http-nio-8888-exec-6] INFO  o.s.c.c.s.e.NativeEnvironmentRepository — Adding property source: Config resource 'file [/home/tuna/Desktop/tavia_v2/configurations/tavia-api-gateway.yml]' via location 'file:///home/tuna/Desktop/tavia_v2/configurations/'
+2026-05-03 22:02:35.734 [http-nio-8888-exec-6] INFO  o.s.c.c.s.e.NativeEnvironmentRepository — Adding property source: Config resource 'file [/home/tuna/Desktop/tavia_v2/configurations/application.yml]' via location 'file:///home/tuna/Desktop/tavia_v2/configurations/'
+2026-05-03 22:02:55.228 [http-nio-8888-exec-8] INFO  o.s.c.c.s.e.NativeEnvironmentRepository — Adding property source: Config resource 'file [/home/tuna/Desktop/tavia_v2/configurations/tavia-traffic-simulator.yml]' via location 'file:///home/tuna/Desktop/tavia_v2/configurations/'
+2026-05-03 22:02:55.228 [http-nio-8888-exec-8] INFO  o.s.c.c.s.e.NativeEnvironmentRepository — Adding property source: Config resource 'file [/home/tuna/Desktop/tavia_v2/configurations/application.yml]' via location 'file:///home/tuna/Desktop/tavia_v2/configurations/'
+
+********************************************************
+<<< SERVİS DURDURULDU: 2026-05-03 22:17:26
+********************************************************
+
