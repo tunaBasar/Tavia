@@ -1,0 +1,56 @@
+# ==========================================
+# TAVIA V2 - Example Configuration Template
+# ==========================================
+# CRITICAL SECURITY RULE: Do NOT put actual credentials in this file.
+# This file serves as a reference for the required configuration properties.
+# Actual configuration files (e.g., application.yml, tavia-order-service.yml)
+# must be created locally and are ignored by git to prevent credential leaks.
+
+spring:
+  datasource:
+    # URL to your local or remote PostgreSQL instance
+    url: jdbc:postgresql://localhost:5432/tavia_db
+    # Your database username
+    username: YOUR_DB_USERNAME_HERE
+    # Your database password
+    password: YOUR_DB_PASSWORD_HERE
+    driver-class-name: org.postgresql.Driver
+
+  kafka:
+    # Kafka bootstrap servers
+    bootstrap-servers: localhost:9092
+    consumer:
+      # Default consumer group ID
+      group-id: tavia-default-group
+      auto-offset-reset: earliest
+
+eureka:
+  client:
+    service-url:
+      # URL to the Eureka Discovery Service
+      defaultZone: http://localhost:8761/eureka/
+
+tavia:
+  security:
+    jwt:
+      # The secret key used for signing JWT tokens. Must be at least 256 bits (32 characters).
+      secret: secret-key-placeholder-must-be-long-enough
+
+  multi-tenancy:
+    # Ensure X-Tenant-ID header is enforced
+    tenant-id-header-validation: true
+
+  cities:
+    # Allowed cities array (Must adhere to the 12-city enum invariant)
+    - ISTANBUL
+    - ANKARA
+    - IZMIR
+    - BURSA
+    - ANTALYA
+    - ADANA
+    - KONYA
+    - SANLIURFA
+    - GAZIANTEP
+    - KOCAELI
+    - ESKISEHIR
+    - ISPARTA

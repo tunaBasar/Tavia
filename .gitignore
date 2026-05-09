@@ -50,3 +50,15 @@ tavia-customer-ui/*.p12
 pgdata/
 kafka_data/
 zookeeper_data/
+
+# --- Security & Configurations ---
+configurations/*.yml
+configurations/*.yaml
+!configurations/example.yml
+
+db-seed.js
+GEMINI.md
+project-srs.md
+.windsurfrules
+.cursorrules
+tavia.sh
