@@ -20,21 +20,27 @@ public class MachineTelemetry {
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
-    @Column(nullable = false)
+    @Column(name = "machine_id", nullable = false)
     private UUID machineId;
 
     @Column(nullable = false)
     private Instant timestamp;
 
+    @Column(name = "battery_level")
     private Double batteryLevel;
+    @Column(name = "cpu_temperature")
     private Double cpuTemperature;
+    @Column(name = "coordinates_x")
     private Double coordinatesX;
+    @Column(name = "coordinates_y")
     private Double coordinatesY;
+    @Column(name = "network_signal_strength")
     private Double networkSignalStrength;
     
+    @Column(name = "current_error_code")
     private String currentErrorCode;
 
     @JdbcTypeCode(SqlTypes.JSON)
-    @Column(columnDefinition = "jsonb")
+    @Column(name = "sensor_payload", columnDefinition = "jsonb")
     private Map<String, Object> sensorPayload;
 }

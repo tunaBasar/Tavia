@@ -6,5 +6,5 @@ spring:
   cloud:
     config:
       discovery:
-        enabled: true
+        enabled: false
         service-id: tavia-config-service

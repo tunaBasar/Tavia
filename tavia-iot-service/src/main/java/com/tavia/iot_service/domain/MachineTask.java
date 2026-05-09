@@ -19,23 +19,25 @@ public class MachineTask {
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
-    @Column(nullable = false)
+    @Column(name = "machine_id", nullable = false)
     private UUID machineId;
 
-    @Column(nullable = false)
+    @Column(name = "tenant_id", nullable = false)
     private UUID tenantId;
 
     @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
+    @Column(name = "task_type", nullable = false)
     private TaskType taskType;
 
-    @Column(nullable = false)
+    @Column(name = "reference_id", nullable = false)
     private String referenceId;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private TaskStatus status;
 
+    @Column(name = "started_at")
     private Instant startedAt;
+    @Column(name = "completed_at")
     private Instant completedAt;
 }

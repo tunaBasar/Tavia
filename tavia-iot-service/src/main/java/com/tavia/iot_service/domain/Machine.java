@@ -18,19 +18,20 @@ public class Machine {
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
-    @Column(nullable = false)
+    @Column(name = "tenant_id", nullable = false)
     private UUID tenantId;
 
     @Column(nullable = false)
     private String name;
 
-    @Column(nullable = false, unique = true)
+    @Column(name = "mac_address", nullable = false, unique = true)
     private String macAddress;
 
+    @Column(name = "firmware_version")
     private String firmwareVersion;
 
     @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
+    @Column(name = "machine_type", nullable = false)
     private MachineType machineType;
 
     @Enumerated(EnumType.STRING)

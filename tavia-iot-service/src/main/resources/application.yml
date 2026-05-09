@@ -3,28 +3,9 @@ spring:
     name: tavia-iot-service
   config:
     import: "optional:configserver:http://localhost:8888"
-  kafka:
-    bootstrap-servers: localhost:9092
-    producer:
-      key-serializer: org.apache.kafka.common.serialization.StringSerializer
-      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
-      properties:
-        enable.idempotence: true
-        acks: all
-  datasource:
-    url: jdbc:postgresql://localhost:5432/tavia_db
-    username: postgres
-    password: password
-  jpa:
-    hibernate:
-      ddl-auto: update
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.PostgreSQLDialect
-        format_sql: true
-    show-sql: true
 
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
+

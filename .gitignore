@@ -61,4 +61,5 @@ GEMINI.md
 project-srs.md
 .windsurfrules
 .cursorrules
-tavia.sh
+logs/*
+pids/*

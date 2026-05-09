@@ -3,9 +3,11 @@
 ## Project Overview
 TAVIA V2 is an advanced Global Loyalty Ecosystem and Autonomous Smart Cafe Platform built for the year 2026. The architecture is designed to support high-scale operations, multi-tenancy, and autonomous features. The platform is strategically founded on three primary pillars:
 
-1. **Tenant Profit Optimization AI**: Analyzes real-world temporal data (weather, events, holidays, competitor occupancy) to optimize dynamic pricing, provide context-aware discounts, and forecast raw material inventory dynamically.
+1. **Tenant Profit Optimization AI**: Analyzes real-world temporal data (weather, events, holidays, competitor occupancy) to optimize dynamic pricing, provide context-aware discounts, and forecast raw material inventory dynamically. Acts as an "Autonomous Command Center" utilizing predictive maintenance capabilities.
 2. **Customer Experience AI**: Manages mobile app interactions (built with React Native/Expo), delivering context-aware discovery, personalized coupons, and localized loyalty rewards.
 3. **IoT Autonomous Execution**: Autonomous smart machines prepare orders and brew coffee while emitting telemetry and consumption events. The architecture is fundamentally event-driven to support real-time physical reality synchronization.
+
+*Note: The project runs highly optimized for local development (Lazy init, SerialGC) so developers aren't intimidated by the 12+ microservices.*
 
 ## High-Level Architecture Flow
 
@@ -30,6 +32,7 @@ graph TD
         Context[tavia-context-service :8087]
         AI[tavia-ai-service :8084]
         IoT[tavia-iot-service :8089]
+        Supply[tavia-supply-service :8090]
     end
 
     ConfigServer -.-> |Feeds Config| API_Gateway
@@ -80,6 +83,7 @@ graph TD
 | **Language** | Java | 21 |
 | **Cloud** | Spring Cloud | 2025.1.1 |
 | **Database** | PostgreSQL | 15 |
+| **Cache** | Redis | 7-alpine |
 | **Event Bus** | Kafka | Confluent 7.4.0 |
 | **Mapping** | MapStruct | 1.5.5.Final |
 | **API Gateway** | Spring Cloud Gateway | 2025.1.1 (WebFlux) |

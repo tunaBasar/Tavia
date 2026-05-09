@@ -3,5 +3,7 @@ package com.tavia.trafficsimulator.enums;
 public enum ProductCategory {
     ESPRESSO_BASED,
     TEA,
-    COLD_BEVERAGE
+    COLD_BEVERAGE,
+    FOOD,
+    DESSERT
 }
