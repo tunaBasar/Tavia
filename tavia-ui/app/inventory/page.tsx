@@ -1,11 +1,13 @@
 "use client";
 
+import { useState } from "react";
 import {
   Package,
   Loader2,
   AlertCircle,
   Boxes,
   ArrowUpDown,
+  Plus,
 } from "lucide-react";
 import {
   Card,
@@ -14,7 +16,28 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { toast } from "sonner";
 import { useInventory } from "@/lib/hooks/use-inventory";
+import { useCreateInventory } from "@/lib/hooks/use-create-inventory";
+import type { UnitType } from "@/types";
 
 /**
  * Returns a visual indicator for stock health.
@@ -37,6 +60,51 @@ function stockGradient(stockQuantity: number) {
 
 export default function InventoryPage() {
   const { data, isLoading, isError, error } = useInventory();
+  const createMutation = useCreateInventory();
+  
+  const [isCreateOpen, setIsCreateOpen] = useState(false);
+  const [formName, setFormName] = useState("");
+  const [formQuantity, setFormQuantity] = useState<number | "">("");
+  const [formUnit, setFormUnit] = useState<UnitType>("GRAM");
+
+  function resetForm() {
+    setFormName("");
+    setFormQuantity("");
+    setFormUnit("GRAM");
+  }
+
+  function onCreateSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    const trimmedName = formName.trim();
+    if (!trimmedName) {
+      toast.error("Material name is required.");
+      return;
+    }
+    if (formQuantity === "" || Number(formQuantity) < 0) {
+      toast.error("Valid quantity is required.");
+      return;
+    }
+
+    createMutation.mutate(
+      {
+        name: trimmedName,
+        stockQuantity: Number(formQuantity),
+        unit: formUnit,
+      },
+      {
+        onSuccess: () => {
+          toast.success("Raw material added successfully");
+          setIsCreateOpen(false);
+          resetForm();
+        },
+        onError: (err) => {
+          toast.error("Failed to add raw material", {
+            description: err instanceof Error ? err.message : "Unknown error",
+          });
+        },
+      }
+    );
+  }
 
   const items = data?.data ?? [];
 
@@ -52,15 +120,80 @@ export default function InventoryPage() {
             Raw material stock levels for your cafe
           </p>
         </div>
-        {!isLoading && !isError && (
-          <div className="flex items-center gap-2 rounded-lg border border-border/50 bg-card px-4 py-2">
-            <Boxes className="size-4 text-muted-foreground" />
-            <span className="text-sm font-semibold text-foreground">
-              {items.length}
-            </span>
-            <span className="text-sm text-muted-foreground">raw materials</span>
-          </div>
-        )}
+        <div className="flex items-center gap-3">
+          {!isLoading && !isError && (
+            <div className="flex items-center gap-2 rounded-lg border border-border/50 bg-card px-4 py-2">
+              <Boxes className="size-4 text-muted-foreground" />
+              <span className="text-sm font-semibold text-foreground">
+                {items.length}
+              </span>
+              <span className="text-sm text-muted-foreground">raw materials</span>
+            </div>
+          )}
+          <Dialog open={isCreateOpen} onOpenChange={setIsCreateOpen}>
+            <DialogTrigger render={
+              <Button>
+                <Plus className="mr-2 size-4" />
+                Add Raw Material
+              </Button>
+            } />
+            <DialogContent className="sm:max-w-[425px]">
+              <DialogHeader>
+                <DialogTitle>Add Raw Material</DialogTitle>
+                <DialogDescription>
+                  Add a new raw material to your inventory.
+                </DialogDescription>
+              </DialogHeader>
+              <form onSubmit={onCreateSubmit} className="space-y-4 pt-4">
+                <div className="space-y-2">
+                  <Label htmlFor="name">Material Name</Label>
+                  <Input
+                    id="name"
+                    placeholder="e.g. Milk"
+                    value={formName}
+                    onChange={(e) => setFormName(e.target.value)}
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="quantity">Initial Quantity</Label>
+                  <Input
+                    id="quantity"
+                    type="number"
+                    min={0}
+                    step="any"
+                    placeholder="0"
+                    value={formQuantity}
+                    onChange={(e) => setFormQuantity(e.target.value ? parseFloat(e.target.value) : "")}
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="unit">Unit</Label>
+                  <Select
+                    value={formUnit}
+                    onValueChange={(val) => val && setFormUnit(val as UnitType)}
+                  >
+                    <SelectTrigger id="unit">
+                      <SelectValue placeholder="Select unit" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="GRAM">Gram</SelectItem>
+                      <SelectItem value="MILLILITER">mL</SelectItem>
+                      <SelectItem value="PIECE">Piece</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+                <div className="pt-4 flex justify-end">
+                  <Button type="submit" disabled={createMutation.isPending}>
+                    {createMutation.isPending && (
+                      <Loader2 className="mr-2 size-4 animate-spin" />
+                    )}
+                    Add Material
+                  </Button>
+                </div>
+              </form>
+            </DialogContent>
+          </Dialog>
+        </div>
       </div>
 
       {/* Content */}

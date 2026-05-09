@@ -54,6 +54,7 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { toast } from "sonner";
 import { useProducts } from "@/lib/hooks/use-products";
 import { useCreateProduct } from "@/lib/hooks/use-create-product";
+import { useInventory } from "@/lib/hooks/use-inventory";
 import type { Product, ProductCategory, UnitType, CreateRecipeIngredientRequest } from "@/types";
 
 // ─── Domain Helpers ──────────────────────────────────────────────
@@ -125,6 +126,8 @@ const EMPTY_INGREDIENT: CreateRecipeIngredientRequest = {
 
 export default function ProductsPage() {
   const { data, isLoading, isError, error } = useProducts();
+  const { data: inventoryData } = useInventory();
+  const inventoryItems = inventoryData?.data ?? [];
   const createMutation = useCreateProduct();
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
@@ -319,11 +322,21 @@ export default function ProductsPage() {
                     <div key={idx} className="flex items-end gap-2">
                       <div className="flex-1 space-y-1">
                         {idx === 0 && <span className="text-xs text-muted-foreground">Material</span>}
-                        <Input
-                          placeholder="e.g. Coffee Beans"
+                        <Select
                           value={ing.rawMaterialName}
-                          onChange={(e) => updateIngredient(idx, "rawMaterialName", e.target.value)}
-                        />
+                          onValueChange={(val) => updateIngredient(idx, "rawMaterialName", val || "")}
+                        >
+                          <SelectTrigger>
+                            <SelectValue placeholder="Select material" />
+                          </SelectTrigger>
+                          <SelectContent>
+                            {inventoryItems.map((item) => (
+                              <SelectItem key={item.id} value={item.name}>
+                                {item.name}
+                              </SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
                       </div>
                       <div className="w-20 space-y-1">
                         {idx === 0 && <span className="text-xs text-muted-foreground">Qty</span>}

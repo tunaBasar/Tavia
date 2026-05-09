@@ -49,7 +49,7 @@ public class OrderServiceImpl implements OrderService {
 
         // 2. Resolve recipe: translate final product → raw material ingredients
         List<RecipeIngredient> ingredients = recipeResolutionService.resolveRecipe(
-                request.getProductName(), request.getQuantity());
+                tenantId, request.getProductName(), request.getQuantity());
 
         if (ingredients.isEmpty()) {
             log.warn("No recipe found for product '{}'. Skipping inventory deduction.", request.getProductName());

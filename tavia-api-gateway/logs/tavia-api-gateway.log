@@ -4564,3 +4564,1441 @@ Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http:
 
 2026-05-09 15:09:26.046 [SpringApplicationShutdownHook] WARN  c.n.d.s.t.d.RetryableEurekaHttpClient — Request execution failed with message: I/O error on DELETE request for "http://localhost:8761/eureka/apps/TAVIA-API-GATEWAY/10.0.0.139:tavia-api-gateway:8080": Connect to http://localhost:8761 failed: Connection refused
 2026-05-09 15:09:26.046 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient — Completed shut down of DiscoveryClient
+2026-05-09 15:28:19.148 [restartedMain] INFO  c.t.gateway.ApiGatewayApplication — Starting ApiGatewayApplication using Java 21.0.10 with PID 233981 (/home/tuna/Desktop/tavia_v2/tavia-api-gateway/build/classes/java/main started by tuna in /home/tuna/Desktop/tavia_v2/tavia-api-gateway)
+2026-05-09 15:28:19.149 [restartedMain] DEBUG c.t.gateway.ApiGatewayApplication — Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-09 15:28:19.150 [restartedMain] INFO  c.t.gateway.ApiGatewayApplication — No active profile set, falling back to 1 default profile: "default"
+2026-05-09 15:28:19.180 [restartedMain] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Fetching config from server at : http://localhost:8888
+2026-05-09 15:28:19.180 [restartedMain] INFO  o.s.c.c.c.ConfigServerConfigDataLoader — Located environment: name=tavia-api-gateway, profiles=[default], label=null, version=null, state=null
+2026-05-09 15:28:19.182 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor — Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-09 15:28:19.202 [background-preinit] INFO  o.h.validator.internal.util.Version — HV000001: Hibernate Validator 9.0.1.Final
+2026-05-09 15:28:19.695 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope — BeanFactory id=8ed1b725-f116-3aee-a5ef-99fa66868289
+2026-05-09 15:28:20.083 [restartedMain] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration — Eureka HTTP Client uses RestClient.
+2026-05-09 15:28:20.099 [restartedMain] INFO  o.s.c.n.eureka.InstanceInfoFactory — Setting initial instance status as: STARTING
+2026-05-09 15:28:20.122 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Initializing Eureka in region us-east-1
+2026-05-09 15:28:20.124 [restartedMain] INFO  c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-09 15:28:20.129 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Disable delta property : false
+2026-05-09 15:28:20.129 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Single vip registry refresh property : null
+2026-05-09 15:28:20.130 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Force full registry fetch : false
+2026-05-09 15:28:20.130 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Application is null : false
+2026-05-09 15:28:20.130 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Registered Applications size is zero : true
+2026-05-09 15:28:20.130 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Application version is -1: true
+2026-05-09 15:28:20.130 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Getting all instance registry info from the eureka server
+2026-05-09 15:28:20.385 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — The response status is 200
+2026-05-09 15:28:20.386 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Starting heartbeat executor: renew interval is: 30
+2026-05-09 15:28:20.387 [restartedMain] INFO  c.n.discovery.InstanceInfoReplicator — InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-05-09 15:28:20.388 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Discovery Client initialized at timestamp 1778329700388 with initial instances count: 8
+2026-05-09 15:28:20.390 [restartedMain] INFO  o.s.c.n.e.s.EurekaServiceRegistry — Registering application TAVIA-API-GATEWAY with eureka with status UP
+2026-05-09 15:28:20.390 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient — Saw local status change event StatusChangeEvent [timestamp=1778329700390, current=UP, previous=STARTING]
+2026-05-09 15:28:20.391 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-API-GATEWAY/10.0.0.139:tavia-api-gateway:8080: registering service...
+2026-05-09 15:28:20.416 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-API-GATEWAY/10.0.0.139:tavia-api-gateway:8080 - registration status: 204
+2026-05-09 15:28:20.654 [restartedMain] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [After]
+2026-05-09 15:28:20.654 [restartedMain] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Before]
+2026-05-09 15:28:20.654 [restartedMain] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Between]
+2026-05-09 15:28:20.654 [restartedMain] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Cookie]
+2026-05-09 15:28:20.654 [restartedMain] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Header]
+2026-05-09 15:28:20.655 [restartedMain] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Host]
+2026-05-09 15:28:20.655 [restartedMain] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Method]
+2026-05-09 15:28:20.655 [restartedMain] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Path]
+2026-05-09 15:28:20.655 [restartedMain] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Query]
+2026-05-09 15:28:20.655 [restartedMain] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [ReadBody]
+2026-05-09 15:28:20.655 [restartedMain] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [RemoteAddr]
+2026-05-09 15:28:20.655 [restartedMain] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Version]
+2026-05-09 15:28:20.655 [restartedMain] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2026-05-09 15:28:20.655 [restartedMain] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Weight]
+2026-05-09 15:28:20.655 [restartedMain] INFO  o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2026-05-09 15:28:20.784 [restartedMain] INFO  o.s.b.reactor.netty.NettyWebServer — Netty started on port 8080 (http)
+2026-05-09 15:28:20.787 [restartedMain] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration — Updating port to 8080
+2026-05-09 15:28:20.879 [restartedMain] INFO  c.t.gateway.ApiGatewayApplication — Started ApiGatewayApplication in 2.4 seconds (process running for 2.884)
+2026-05-09 15:29:10.116 [reactor-http-epoll-4] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/orders/count
+2026-05-09 15:29:10.116 [reactor-http-epoll-2] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/context
+2026-05-09 15:29:10.116 [reactor-http-epoll-3] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/crm/customers
+2026-05-09 15:29:10.723 [reactor-http-epoll-2] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/context took 607 ms
+2026-05-09 15:29:11.052 [reactor-http-epoll-4] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/orders/count took 936 ms
+2026-05-09 15:29:11.127 [reactor-http-epoll-3] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/crm/customers took 1011 ms
+2026-05-09 15:29:13.187 [reactor-http-epoll-8] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/orders
+2026-05-09 15:29:15.761 [reactor-http-epoll-8] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/orders took 2574 ms
+2026-05-09 15:29:15.779 [reactor-http-epoll-6] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/context
+2026-05-09 15:29:15.779 [reactor-http-epoll-1] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/crm/customers
+2026-05-09 15:29:15.783 [reactor-http-epoll-2] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/orders/count
+2026-05-09 15:29:15.786 [reactor-http-epoll-6] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/context took 7 ms
+2026-05-09 15:29:15.796 [reactor-http-epoll-2] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/orders/count took 13 ms
+2026-05-09 15:29:15.810 [reactor-http-epoll-1] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/crm/customers took 31 ms
+2026-05-09 15:29:21.841 [reactor-http-epoll-3] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/iot/machines
+2026-05-09 15:29:22.140 [reactor-http-epoll-5] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/inventory/tenant/d6ec66d8-de92-4973-821c-e7c8dd410cfd
+2026-05-09 15:29:22.206 [reactor-http-epoll-5] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/inventory/tenant/d6ec66d8-de92-4973-821c-e7c8dd410cfd took 66 ms
+2026-05-09 15:29:22.538 [reactor-http-epoll-1] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/catalog/recipes
+2026-05-09 15:29:22.819 [reactor-http-epoll-3] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/iot/machines took 978 ms
+2026-05-09 15:29:23.427 [reactor-http-epoll-1] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/catalog/recipes took 889 ms
+2026-05-09 15:30:19.495 [reactor-http-epoll-2] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/orders
+2026-05-09 15:30:19.525 [reactor-http-epoll-2] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/orders took 30 ms
+2026-05-09 15:30:20.154 [reactor-http-epoll-5] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/catalog/recipes
+2026-05-09 15:30:20.179 [reactor-http-epoll-5] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/catalog/recipes took 25 ms
+2026-05-09 15:30:37.660 [reactor-http-epoll-7] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/inventory/tenant/d6ec66d8-de92-4973-821c-e7c8dd410cfd
+2026-05-09 15:30:37.675 [reactor-http-epoll-7] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/inventory/tenant/d6ec66d8-de92-4973-821c-e7c8dd410cfd took 15 ms
+2026-05-09 15:31:00.519 [reactor-http-epoll-6] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/orders
+2026-05-09 15:31:00.529 [reactor-http-epoll-6] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/orders took 10 ms
+2026-05-09 15:31:04.518 [reactor-http-epoll-2] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/catalog/recipes
+2026-05-09 15:31:04.542 [reactor-http-epoll-2] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/catalog/recipes took 24 ms
+2026-05-09 15:31:14.832 [reactor-http-epoll-3] INFO  c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/inventory/tenant/d6ec66d8-de92-4973-821c-e7c8dd410cfd
+2026-05-09 15:31:14.845 [reactor-http-epoll-3] INFO  c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/inventory/tenant/d6ec66d8-de92-4973-821c-e7c8dd410cfd took 13 ms
+2026-05-09 15:32:25.203 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServiceRegistry — Unregistering application TAVIA-API-GATEWAY with eureka with status DOWN
+2026-05-09 15:32:25.203 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient — Saw local status change event StatusChangeEvent [timestamp=1778329945203, current=DOWN, previous=UP]
+2026-05-09 15:32:25.208 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-API-GATEWAY/10.0.0.139:tavia-api-gateway:8080: registering service...
+2026-05-09 15:32:25.244 [SpringApplicationShutdownHook] INFO  o.s.b.reactor.netty.GracefulShutdown — Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-09 15:32:25.262 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.n.d.s.t.d.RedirectingEurekaHttpClient — Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/} exception=I/O error on POST request for "http://localhost:8761/eureka/apps/TAVIA-API-GATEWAY": Connect to http://localhost:8761 failed: Connection refused stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:8761/eureka/apps/TAVIA-API-GATEWAY": Connect to http://localhost:8761 failed: Connection refused
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.createResourceAccessException(DefaultRestClient.java:779)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:624)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchange(DefaultRestClient.java:572)
+	at org.springframework.web.client.RestClient$RequestHeadersSpec.exchange(RestClient.java:747)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.executeAndExtract(DefaultRestClient.java:924)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toBodilessEntity(DefaultRestClient.java:888)
+	at org.springframework.cloud.netflix.eureka.http.RestClientEurekaHttpClient.register(RestClientEurekaHttpClient.java:64)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:828)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125)
+	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 failed: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:694)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:226)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:497)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:168)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:112)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:87)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:80)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeWithRequestAndBody(AbstractBufferingClientHttpRequest.java:89)
+	at org.springframework.http.client.InterceptingClientHttpRequest$EndOfChainRequestExecution.execute(InterceptingClientHttpRequest.java:102)
+	at org.springframework.cloud.netflix.eureka.http.RestClientTransportClientFactory.lambda$newClient$2(RestClientTransportClientFactory.java:98)
+	at org.springframework.http.client.ClientHttpRequestInterceptor.lambda$apply$0(ClientHttpRequestInterceptor.java:89)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:73)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:50)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:80)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:614)
+	... 23 more
+
+2026-05-09 15:32:25.265 [DiscoveryClient-InstanceInfoReplicator-%d] WARN  c.n.d.s.t.d.RetryableEurekaHttpClient — Request execution failed with message: I/O error on POST request for "http://localhost:8761/eureka/apps/TAVIA-API-GATEWAY": Connect to http://localhost:8761 failed: Connection refused
+2026-05-09 15:32:25.277 [netty-shutdown] INFO  o.s.b.reactor.netty.GracefulShutdown — Graceful shutdown complete
+2026-05-09 15:32:25.348 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.n.d.s.t.d.RedirectingEurekaHttpClient — Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on POST request for "http://localhost:8761/eureka/apps/TAVIA-API-GATEWAY": Connect to http://localhost:8761 failed: Connection refused stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:8761/eureka/apps/TAVIA-API-GATEWAY": Connect to http://localhost:8761 failed: Connection refused
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.createResourceAccessException(DefaultRestClient.java:779)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:624)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchange(DefaultRestClient.java:572)
+	at org.springframework.web.client.RestClient$RequestHeadersSpec.exchange(RestClient.java:747)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.executeAndExtract(DefaultRestClient.java:924)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toBodilessEntity(DefaultRestClient.java:888)
+	at org.springframework.cloud.netflix.eureka.http.RestClientEurekaHttpClient.register(RestClientEurekaHttpClient.java:64)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:828)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125)
+	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 failed: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:694)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:226)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:497)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:168)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:112)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:87)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:80)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeWithRequestAndBody(AbstractBufferingClientHttpRequest.java:89)
+	at org.springframework.http.client.InterceptingClientHttpRequest$EndOfChainRequestExecution.execute(InterceptingClientHttpRequest.java:102)
+	at org.springframework.cloud.netflix.eureka.http.RestClientTransportClientFactory.lambda$newClient$2(RestClientTransportClientFactory.java:98)
+	at org.springframework.http.client.ClientHttpRequestInterceptor.lambda$apply$0(ClientHttpRequestInterceptor.java:89)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:73)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:50)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:80)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:614)
+	... 24 more
+
+2026-05-09 15:32:25.350 [DiscoveryClient-InstanceInfoReplicator-%d] WARN  c.n.d.s.t.d.RetryableEurekaHttpClient — Request execution failed with message: I/O error on POST request for "http://localhost:8761/eureka/apps/TAVIA-API-GATEWAY": Connect to http://localhost:8761 failed: Connection refused
+2026-05-09 15:32:25.351 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient — Shutting down DiscoveryClient ...
+2026-05-09 15:32:25.353 [DiscoveryClient-InstanceInfoReplicator-%d] WARN  c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-API-GATEWAY/10.0.0.139:tavia-api-gateway:8080 - registration failed Cannot execute request on any known server
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:828)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125)
+	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-05-09 15:32:25.365 [DiscoveryClient-InstanceInfoReplicator-%d] WARN  c.n.discovery.InstanceInfoReplicator — There was a problem with the instance info replicator
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:828)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125)
+	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-05-09 15:32:25.366 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient — Unregistering ...
+2026-05-09 15:32:25.395 [SpringApplicationShutdownHook] INFO  c.n.d.s.t.d.RedirectingEurekaHttpClient — Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on DELETE request for "http://localhost:8761/eureka/apps/TAVIA-API-GATEWAY/10.0.0.139:tavia-api-gateway:8080": Connect to http://localhost:8761 failed: Connection refused stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://localhost:8761/eureka/apps/TAVIA-API-GATEWAY/10.0.0.139:tavia-api-gateway:8080": Connect to http://localhost:8761 failed: Connection refused
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.createResourceAccessException(DefaultRestClient.java:779)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:624)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchange(DefaultRestClient.java:572)
+	at org.springframework.web.client.RestClient$RequestHeadersSpec.exchange(RestClient.java:747)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.executeAndExtract(DefaultRestClient.java:924)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toBodilessEntity(DefaultRestClient.java:888)
+	at org.springframework.cloud.netflix.eureka.http.RestClientEurekaHttpClient.cancel(RestClientEurekaHttpClient.java:73)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:919)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:900)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:453)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:411)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:237)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:200)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:193)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:387)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:134)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:209)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:795)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:745)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1500)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:704)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1493)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1246)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1207)
+	at org.springframework.boot.web.server.reactive.context.ReactiveWebServerApplicationContext.doClose(ReactiveWebServerApplicationContext.java:158)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1153)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:147)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:116)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 failed: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:694)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:226)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:497)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:168)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:112)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:87)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:80)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeWithRequestAndBody(AbstractBufferingClientHttpRequest.java:89)
+	at org.springframework.http.client.InterceptingClientHttpRequest$EndOfChainRequestExecution.execute(InterceptingClientHttpRequest.java:102)
+	at org.springframework.cloud.netflix.eureka.http.RestClientTransportClientFactory.lambda$newClient$2(RestClientTransportClientFactory.java:98)
+	at org.springframework.http.client.ClientHttpRequestInterceptor.lambda$apply$0(ClientHttpRequestInterceptor.java:89)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:73)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:50)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:80)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:614)
+	... 40 more
+
+2026-05-09 15:32:25.396 [SpringApplicationShutdownHook] WARN  c.n.d.s.t.d.RetryableEurekaHttpClient — Request execution failed with message: I/O error on DELETE request for "http://localhost:8761/eureka/apps/TAVIA-API-GATEWAY/10.0.0.139:tavia-api-gateway:8080": Connect to http://localhost:8761 failed: Connection refused
+2026-05-09 15:32:25.398 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient — Completed shut down of DiscoveryClient
+2026-05-09 16:29:24.332 [restartedMain] INFO  [traceId=, spanId=] c.t.gateway.ApiGatewayApplication — Starting ApiGatewayApplication using Java 21.0.10 with PID 253743 (/home/tuna/Desktop/tavia_v2/tavia-api-gateway/build/classes/java/main started by tuna in /home/tuna/Desktop/tavia_v2/tavia-api-gateway)
+2026-05-09 16:29:24.333 [restartedMain] DEBUG [traceId=, spanId=] c.t.gateway.ApiGatewayApplication — Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-09 16:29:24.334 [restartedMain] INFO  [traceId=, spanId=] c.t.gateway.ApiGatewayApplication — No active profile set, falling back to 1 default profile: "default"
+2026-05-09 16:29:24.362 [restartedMain] INFO  [traceId=, spanId=] o.s.c.c.c.ConfigServerConfigDataLoader — Fetching config from server at : http://localhost:8888
+2026-05-09 16:29:24.362 [restartedMain] INFO  [traceId=, spanId=] o.s.c.c.c.ConfigServerConfigDataLoader — Located environment: name=tavia-api-gateway, profiles=[default], label=null, version=null, state=null
+2026-05-09 16:29:24.364 [restartedMain] INFO  [traceId=, spanId=] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor — Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-09 16:29:24.381 [background-preinit] INFO  [traceId=, spanId=] o.h.validator.internal.util.Version — HV000001: Hibernate Validator 9.0.1.Final
+2026-05-09 16:29:24.867 [restartedMain] INFO  [traceId=, spanId=] o.s.cloud.context.scope.GenericScope — BeanFactory id=8ed1b725-f116-3aee-a5ef-99fa66868289
+2026-05-09 16:29:25.317 [restartedMain] INFO  [traceId=, spanId=] o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration — Eureka HTTP Client uses RestClient.
+2026-05-09 16:29:25.334 [restartedMain] INFO  [traceId=, spanId=] o.s.c.n.eureka.InstanceInfoFactory — Setting initial instance status as: STARTING
+2026-05-09 16:29:25.358 [restartedMain] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — Initializing Eureka in region us-east-1
+2026-05-09 16:29:25.360 [restartedMain] INFO  [traceId=, spanId=] c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-09 16:29:25.366 [restartedMain] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — Disable delta property : false
+2026-05-09 16:29:25.366 [restartedMain] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — Single vip registry refresh property : null
+2026-05-09 16:29:25.366 [restartedMain] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — Force full registry fetch : false
+2026-05-09 16:29:25.366 [restartedMain] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — Application is null : false
+2026-05-09 16:29:25.366 [restartedMain] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — Registered Applications size is zero : true
+2026-05-09 16:29:25.366 [restartedMain] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — Application version is -1: true
+2026-05-09 16:29:25.366 [restartedMain] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — Getting all instance registry info from the eureka server
+2026-05-09 16:29:25.947 [restartedMain] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — The response status is 200
+2026-05-09 16:29:25.948 [restartedMain] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — Starting heartbeat executor: renew interval is: 30
+2026-05-09 16:29:25.949 [restartedMain] INFO  [traceId=, spanId=] c.n.discovery.InstanceInfoReplicator — InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-05-09 16:29:25.950 [restartedMain] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — Discovery Client initialized at timestamp 1778333365950 with initial instances count: 0
+2026-05-09 16:29:25.953 [restartedMain] INFO  [traceId=, spanId=] o.s.c.n.e.s.EurekaServiceRegistry — Registering application TAVIA-API-GATEWAY with eureka with status UP
+2026-05-09 16:29:25.953 [restartedMain] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — Saw local status change event StatusChangeEvent [timestamp=1778333365953, current=UP, previous=STARTING]
+2026-05-09 16:29:25.954 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-API-GATEWAY/10.0.0.139:tavia-api-gateway:8080: registering service...
+2026-05-09 16:29:26.021 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-API-GATEWAY/10.0.0.139:tavia-api-gateway:8080 - registration status: 204
+2026-05-09 16:29:26.226 [restartedMain] INFO  [traceId=, spanId=] o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [After]
+2026-05-09 16:29:26.226 [restartedMain] INFO  [traceId=, spanId=] o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Before]
+2026-05-09 16:29:26.226 [restartedMain] INFO  [traceId=, spanId=] o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Between]
+2026-05-09 16:29:26.226 [restartedMain] INFO  [traceId=, spanId=] o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Cookie]
+2026-05-09 16:29:26.226 [restartedMain] INFO  [traceId=, spanId=] o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Header]
+2026-05-09 16:29:26.226 [restartedMain] INFO  [traceId=, spanId=] o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Host]
+2026-05-09 16:29:26.226 [restartedMain] INFO  [traceId=, spanId=] o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Method]
+2026-05-09 16:29:26.226 [restartedMain] INFO  [traceId=, spanId=] o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Path]
+2026-05-09 16:29:26.226 [restartedMain] INFO  [traceId=, spanId=] o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Query]
+2026-05-09 16:29:26.226 [restartedMain] INFO  [traceId=, spanId=] o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [ReadBody]
+2026-05-09 16:29:26.227 [restartedMain] INFO  [traceId=, spanId=] o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [RemoteAddr]
+2026-05-09 16:29:26.227 [restartedMain] INFO  [traceId=, spanId=] o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Version]
+2026-05-09 16:29:26.227 [restartedMain] INFO  [traceId=, spanId=] o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2026-05-09 16:29:26.227 [restartedMain] INFO  [traceId=, spanId=] o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Weight]
+2026-05-09 16:29:26.227 [restartedMain] INFO  [traceId=, spanId=] o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2026-05-09 16:29:26.350 [restartedMain] INFO  [traceId=, spanId=] o.s.b.reactor.netty.NettyWebServer — Netty started on port 8080 (http)
+2026-05-09 16:29:26.352 [restartedMain] INFO  [traceId=, spanId=] o.s.c.n.e.s.EurekaAutoServiceRegistration — Updating port to 8080
+2026-05-09 16:29:26.403 [restartedMain] INFO  [traceId=, spanId=] c.t.gateway.ApiGatewayApplication — Started ApiGatewayApplication in 2.701 seconds (process running for 3.098)
+2026-05-09 16:29:39.332 [reactor-http-epoll-2] INFO  [traceId=, spanId=] c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/crm/auth/register
+2026-05-09 16:29:39.393 [reactor-http-epoll-2] WARN  [traceId=, spanId=] o.s.c.l.core.RoundRobinLoadBalancer — No servers available for service: tavia-crm-service
+2026-05-09 16:29:52.213 [reactor-http-epoll-3] INFO  [traceId=, spanId=] c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/crm/auth/register
+2026-05-09 16:29:52.214 [reactor-http-epoll-3] WARN  [traceId=, spanId=] o.s.c.l.core.RoundRobinLoadBalancer — No servers available for service: tavia-crm-service
+2026-05-09 16:29:55.949 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — Disable delta property : false
+2026-05-09 16:29:55.949 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — Single vip registry refresh property : null
+2026-05-09 16:29:55.949 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — Force full registry fetch : false
+2026-05-09 16:29:55.949 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — Application is null : false
+2026-05-09 16:29:55.949 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — Registered Applications size is zero : true
+2026-05-09 16:29:55.949 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — Application version is -1: false
+2026-05-09 16:29:55.949 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — Getting all instance registry info from the eureka server
+2026-05-09 16:29:55.965 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — The response status is 200
+2026-05-09 16:30:02.785 [reactor-http-epoll-4] INFO  [traceId=, spanId=] c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/crm/auth/register
+2026-05-09 16:30:02.786 [reactor-http-epoll-4] WARN  [traceId=, spanId=] o.s.c.l.core.RoundRobinLoadBalancer — No servers available for service: tavia-crm-service
+2026-05-09 16:34:25.367 [AsyncResolver-bootstrap-executor-%d] INFO  [traceId=, spanId=] c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-09 16:39:25.368 [AsyncResolver-bootstrap-executor-%d] INFO  [traceId=, spanId=] c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-09 16:41:55.844 [SpringApplicationShutdownHook] INFO  [traceId=, spanId=] o.s.c.n.e.s.EurekaServiceRegistry — Unregistering application TAVIA-API-GATEWAY with eureka with status DOWN
+2026-05-09 16:41:55.845 [SpringApplicationShutdownHook] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — Saw local status change event StatusChangeEvent [timestamp=1778334115845, current=DOWN, previous=UP]
+2026-05-09 16:41:55.846 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-API-GATEWAY/10.0.0.139:tavia-api-gateway:8080: registering service...
+2026-05-09 16:41:55.848 [SpringApplicationShutdownHook] INFO  [traceId=, spanId=] o.s.b.reactor.netty.GracefulShutdown — Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-09 16:41:55.851 [netty-shutdown] INFO  [traceId=, spanId=] o.s.b.reactor.netty.GracefulShutdown — Graceful shutdown complete
+2026-05-09 16:41:55.854 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-API-GATEWAY/10.0.0.139:tavia-api-gateway:8080 - registration status: 204
+2026-05-09 16:41:55.863 [SpringApplicationShutdownHook] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — Shutting down DiscoveryClient ...
+2026-05-09 16:41:56.061 [DiscoveryClient-HeartbeatExecutor-%d] INFO  [traceId=, spanId=] o.a.h.c.h.i.c.HttpRequestRetryExec — ex-0000000052 recoverable I/O exception (org.apache.hc.core5.http.NoHttpResponseException) caught when sending request to http://localhost:8761;request will be automatically re-executed in 0 MILLISECONDS (exec count 2)
+2026-05-09 16:41:56.064 [DiscoveryClient-HeartbeatExecutor-%d] INFO  [traceId=, spanId=] c.n.d.s.t.d.RedirectingEurekaHttpClient — Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/} exception=I/O error on PUT request for "http://localhost:8761/eureka/apps/TAVIA-API-GATEWAY/10.0.0.139:tavia-api-gateway:8080": Connect to http://localhost:8761 failed: Connection refused stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on PUT request for "http://localhost:8761/eureka/apps/TAVIA-API-GATEWAY/10.0.0.139:tavia-api-gateway:8080": Connect to http://localhost:8761 failed: Connection refused
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.createResourceAccessException(DefaultRestClient.java:779)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:624)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchange(DefaultRestClient.java:572)
+	at org.springframework.web.client.RestClient$RequestHeadersSpec.exchange(RestClient.java:747)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.executeAndExtract(DefaultRestClient.java:924)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toEntityInternal(DefaultRestClient.java:870)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toEntity(DefaultRestClient.java:859)
+	at org.springframework.cloud.netflix.eureka.http.RestClientEurekaHttpClient.sendHeartBeat(RestClientEurekaHttpClient.java:91)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:845)
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1403)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 failed: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:694)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:226)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:497)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:168)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:112)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:87)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:80)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeWithRequestAndBody(AbstractBufferingClientHttpRequest.java:89)
+	at org.springframework.http.client.InterceptingClientHttpRequest$EndOfChainRequestExecution.execute(InterceptingClientHttpRequest.java:102)
+	at org.springframework.cloud.netflix.eureka.http.RestClientTransportClientFactory.lambda$newClient$2(RestClientTransportClientFactory.java:98)
+	at org.springframework.http.client.ClientHttpRequestInterceptor.lambda$apply$0(ClientHttpRequestInterceptor.java:89)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:73)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:50)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:80)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:614)
+	... 22 more
+
+2026-05-09 16:41:56.064 [DiscoveryClient-HeartbeatExecutor-%d] WARN  [traceId=, spanId=] c.n.d.s.t.d.RetryableEurekaHttpClient — Request execution failed with message: I/O error on PUT request for "http://localhost:8761/eureka/apps/TAVIA-API-GATEWAY/10.0.0.139:tavia-api-gateway:8080": Connect to http://localhost:8761 failed: Connection refused
+2026-05-09 16:41:56.067 [DiscoveryClient-HeartbeatExecutor-%d] INFO  [traceId=, spanId=] c.n.d.s.t.d.RedirectingEurekaHttpClient — Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on PUT request for "http://localhost:8761/eureka/apps/TAVIA-API-GATEWAY/10.0.0.139:tavia-api-gateway:8080": Connect to http://localhost:8761 failed: Connection refused stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on PUT request for "http://localhost:8761/eureka/apps/TAVIA-API-GATEWAY/10.0.0.139:tavia-api-gateway:8080": Connect to http://localhost:8761 failed: Connection refused
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.createResourceAccessException(DefaultRestClient.java:779)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:624)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchange(DefaultRestClient.java:572)
+	at org.springframework.web.client.RestClient$RequestHeadersSpec.exchange(RestClient.java:747)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.executeAndExtract(DefaultRestClient.java:924)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toEntityInternal(DefaultRestClient.java:870)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toEntity(DefaultRestClient.java:859)
+	at org.springframework.cloud.netflix.eureka.http.RestClientEurekaHttpClient.sendHeartBeat(RestClientEurekaHttpClient.java:91)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:845)
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1403)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 failed: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:694)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:226)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:497)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:168)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:112)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:87)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:80)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeWithRequestAndBody(AbstractBufferingClientHttpRequest.java:89)
+	at org.springframework.http.client.InterceptingClientHttpRequest$EndOfChainRequestExecution.execute(InterceptingClientHttpRequest.java:102)
+	at org.springframework.cloud.netflix.eureka.http.RestClientTransportClientFactory.lambda$newClient$2(RestClientTransportClientFactory.java:98)
+	at org.springframework.http.client.ClientHttpRequestInterceptor.lambda$apply$0(ClientHttpRequestInterceptor.java:89)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:73)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:50)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:80)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:614)
+	... 23 more
+
+2026-05-09 16:41:56.070 [DiscoveryClient-HeartbeatExecutor-%d] WARN  [traceId=, spanId=] c.n.d.s.t.d.RetryableEurekaHttpClient — Request execution failed with message: I/O error on PUT request for "http://localhost:8761/eureka/apps/TAVIA-API-GATEWAY/10.0.0.139:tavia-api-gateway:8080": Connect to http://localhost:8761 failed: Connection refused
+2026-05-09 16:41:56.070 [DiscoveryClient-HeartbeatExecutor-%d] ERROR [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-API-GATEWAY/10.0.0.139:tavia-api-gateway:8080 - was unable to send heartbeat!
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:845)
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1403)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-05-09 16:41:56.169 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  [traceId=, spanId=] c.n.d.s.t.d.RedirectingEurekaHttpClient — Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/} exception=I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 failed: Connection refused stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 failed: Connection refused
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.createResourceAccessException(DefaultRestClient.java:779)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:624)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchange(DefaultRestClient.java:572)
+	at org.springframework.web.client.RestClient$RequestHeadersSpec.exchange(RestClient.java:747)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.executeAndExtract(DefaultRestClient.java:924)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toEntityInternal(DefaultRestClient.java:870)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toEntity(DefaultRestClient.java:859)
+	at org.springframework.cloud.netflix.eureka.http.RestClientEurekaHttpClient.getApplicationsInternal(RestClientEurekaHttpClient.java:201)
+	at org.springframework.cloud.netflix.eureka.http.RestClientEurekaHttpClient.getDelta(RestClientEurekaHttpClient.java:142)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.DiscoveryClient.getAndUpdateDelta(DiscoveryClient.java:1080)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:963)
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1474)
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1442)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 failed: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:694)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:226)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:497)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:168)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:112)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:87)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:80)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeWithRequestAndBody(AbstractBufferingClientHttpRequest.java:89)
+	at org.springframework.http.client.InterceptingClientHttpRequest$EndOfChainRequestExecution.execute(InterceptingClientHttpRequest.java:102)
+	at org.springframework.cloud.netflix.eureka.http.RestClientTransportClientFactory.lambda$newClient$2(RestClientTransportClientFactory.java:98)
+	at org.springframework.http.client.ClientHttpRequestInterceptor.lambda$apply$0(ClientHttpRequestInterceptor.java:89)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:73)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:50)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:80)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:614)
+	... 25 more
+
+2026-05-09 16:41:56.170 [DiscoveryClient-CacheRefreshExecutor-%d] WARN  [traceId=, spanId=] c.n.d.s.t.d.RetryableEurekaHttpClient — Request execution failed with message: I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 failed: Connection refused
+2026-05-09 16:41:56.172 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  [traceId=, spanId=] c.n.d.s.t.d.RedirectingEurekaHttpClient — Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 failed: Connection refused stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 failed: Connection refused
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.createResourceAccessException(DefaultRestClient.java:779)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:624)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchange(DefaultRestClient.java:572)
+	at org.springframework.web.client.RestClient$RequestHeadersSpec.exchange(RestClient.java:747)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.executeAndExtract(DefaultRestClient.java:924)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toEntityInternal(DefaultRestClient.java:870)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toEntity(DefaultRestClient.java:859)
+	at org.springframework.cloud.netflix.eureka.http.RestClientEurekaHttpClient.getApplicationsInternal(RestClientEurekaHttpClient.java:201)
+	at org.springframework.cloud.netflix.eureka.http.RestClientEurekaHttpClient.getDelta(RestClientEurekaHttpClient.java:142)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.DiscoveryClient.getAndUpdateDelta(DiscoveryClient.java:1080)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:963)
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1474)
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1442)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 failed: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:694)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:226)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:497)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:168)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:112)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:87)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:80)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeWithRequestAndBody(AbstractBufferingClientHttpRequest.java:89)
+	at org.springframework.http.client.InterceptingClientHttpRequest$EndOfChainRequestExecution.execute(InterceptingClientHttpRequest.java:102)
+	at org.springframework.cloud.netflix.eureka.http.RestClientTransportClientFactory.lambda$newClient$2(RestClientTransportClientFactory.java:98)
+	at org.springframework.http.client.ClientHttpRequestInterceptor.lambda$apply$0(ClientHttpRequestInterceptor.java:89)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:73)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:50)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:80)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:614)
+	... 26 more
+
+2026-05-09 16:41:56.172 [DiscoveryClient-CacheRefreshExecutor-%d] WARN  [traceId=, spanId=] c.n.d.s.t.d.RetryableEurekaHttpClient — Request execution failed with message: I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 failed: Connection refused
+2026-05-09 16:41:56.172 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-API-GATEWAY/10.0.0.139:tavia-api-gateway:8080 - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server stacktrace = com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.DiscoveryClient.getAndUpdateDelta(DiscoveryClient.java:1080)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:963)
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1474)
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1442)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+2026-05-09 16:41:58.864 [SpringApplicationShutdownHook] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — Unregistering ...
+2026-05-09 16:41:58.867 [SpringApplicationShutdownHook] INFO  [traceId=, spanId=] c.n.d.s.t.d.RedirectingEurekaHttpClient — Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on DELETE request for "http://localhost:8761/eureka/apps/TAVIA-API-GATEWAY/10.0.0.139:tavia-api-gateway:8080": Connect to http://localhost:8761 failed: Connection refused stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://localhost:8761/eureka/apps/TAVIA-API-GATEWAY/10.0.0.139:tavia-api-gateway:8080": Connect to http://localhost:8761 failed: Connection refused
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.createResourceAccessException(DefaultRestClient.java:779)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:624)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchange(DefaultRestClient.java:572)
+	at org.springframework.web.client.RestClient$RequestHeadersSpec.exchange(RestClient.java:747)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.executeAndExtract(DefaultRestClient.java:924)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toBodilessEntity(DefaultRestClient.java:888)
+	at org.springframework.cloud.netflix.eureka.http.RestClientEurekaHttpClient.cancel(RestClientEurekaHttpClient.java:73)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:919)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:900)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:453)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:411)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:237)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:200)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:193)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:387)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:134)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:209)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:795)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:745)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1500)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:704)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1493)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1246)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1207)
+	at org.springframework.boot.web.server.reactive.context.ReactiveWebServerApplicationContext.doClose(ReactiveWebServerApplicationContext.java:158)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1153)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:147)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:116)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 failed: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:694)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:226)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:497)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:168)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:112)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:87)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:80)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeWithRequestAndBody(AbstractBufferingClientHttpRequest.java:89)
+	at org.springframework.http.client.InterceptingClientHttpRequest$EndOfChainRequestExecution.execute(InterceptingClientHttpRequest.java:102)
+	at org.springframework.cloud.netflix.eureka.http.RestClientTransportClientFactory.lambda$newClient$2(RestClientTransportClientFactory.java:98)
+	at org.springframework.http.client.ClientHttpRequestInterceptor.lambda$apply$0(ClientHttpRequestInterceptor.java:89)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:73)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:50)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:80)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:614)
+	... 40 more
+
+2026-05-09 16:41:58.867 [SpringApplicationShutdownHook] WARN  [traceId=, spanId=] c.n.d.s.t.d.RetryableEurekaHttpClient — Request execution failed with message: I/O error on DELETE request for "http://localhost:8761/eureka/apps/TAVIA-API-GATEWAY/10.0.0.139:tavia-api-gateway:8080": Connect to http://localhost:8761 failed: Connection refused
+2026-05-09 16:41:58.867 [SpringApplicationShutdownHook] ERROR [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-API-GATEWAY/10.0.0.139:tavia-api-gateway:8080 - de-registration failedCannot execute request on any known server
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:919)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:900)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:453)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:411)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:237)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:200)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:193)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:387)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:134)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:209)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:795)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:745)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1500)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:704)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1493)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1246)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1207)
+	at org.springframework.boot.web.server.reactive.context.ReactiveWebServerApplicationContext.doClose(ReactiveWebServerApplicationContext.java:158)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1153)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:147)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:116)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-05-09 16:41:58.868 [SpringApplicationShutdownHook] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — Completed shut down of DiscoveryClient
+2026-05-09 16:45:16.824 [restartedMain] INFO  [traceId=, spanId=] c.t.gateway.ApiGatewayApplication — Starting ApiGatewayApplication using Java 21.0.10 with PID 263769 (/home/tuna/Desktop/tavia_v2/tavia-api-gateway/build/classes/java/main started by tuna in /home/tuna/Desktop/tavia_v2/tavia-api-gateway)
+2026-05-09 16:45:16.825 [restartedMain] DEBUG [traceId=, spanId=] c.t.gateway.ApiGatewayApplication — Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-09 16:45:16.826 [restartedMain] INFO  [traceId=, spanId=] c.t.gateway.ApiGatewayApplication — No active profile set, falling back to 1 default profile: "default"
+2026-05-09 16:45:16.853 [restartedMain] INFO  [traceId=, spanId=] o.s.c.c.c.ConfigServerConfigDataLoader — Fetching config from server at : http://localhost:8888
+2026-05-09 16:45:16.853 [restartedMain] INFO  [traceId=, spanId=] o.s.c.c.c.ConfigServerConfigDataLoader — Located environment: name=tavia-api-gateway, profiles=[default], label=null, version=null, state=null
+2026-05-09 16:45:16.855 [restartedMain] INFO  [traceId=, spanId=] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor — Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-09 16:45:16.873 [background-preinit] INFO  [traceId=, spanId=] o.h.validator.internal.util.Version — HV000001: Hibernate Validator 9.0.1.Final
+2026-05-09 16:45:17.309 [restartedMain] INFO  [traceId=, spanId=] o.s.cloud.context.scope.GenericScope — BeanFactory id=8ed1b725-f116-3aee-a5ef-99fa66868289
+2026-05-09 16:45:17.658 [restartedMain] INFO  [traceId=, spanId=] o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration — Eureka HTTP Client uses RestClient.
+2026-05-09 16:45:17.671 [restartedMain] INFO  [traceId=, spanId=] o.s.c.n.eureka.InstanceInfoFactory — Setting initial instance status as: STARTING
+2026-05-09 16:45:17.692 [restartedMain] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — Initializing Eureka in region us-east-1
+2026-05-09 16:45:17.694 [restartedMain] INFO  [traceId=, spanId=] c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-09 16:45:17.698 [restartedMain] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — Disable delta property : false
+2026-05-09 16:45:17.698 [restartedMain] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — Single vip registry refresh property : null
+2026-05-09 16:45:17.699 [restartedMain] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — Force full registry fetch : false
+2026-05-09 16:45:17.699 [restartedMain] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — Application is null : false
+2026-05-09 16:45:17.699 [restartedMain] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — Registered Applications size is zero : true
+2026-05-09 16:45:17.699 [restartedMain] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — Application version is -1: true
+2026-05-09 16:45:17.699 [restartedMain] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — Getting all instance registry info from the eureka server
+2026-05-09 16:45:17.937 [restartedMain] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — The response status is 200
+2026-05-09 16:45:17.939 [restartedMain] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — Starting heartbeat executor: renew interval is: 30
+2026-05-09 16:45:17.940 [restartedMain] INFO  [traceId=, spanId=] c.n.discovery.InstanceInfoReplicator — InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-05-09 16:45:17.940 [restartedMain] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — Discovery Client initialized at timestamp 1778334317940 with initial instances count: 8
+2026-05-09 16:45:17.942 [restartedMain] INFO  [traceId=, spanId=] o.s.c.n.e.s.EurekaServiceRegistry — Registering application TAVIA-API-GATEWAY with eureka with status UP
+2026-05-09 16:45:17.943 [restartedMain] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — Saw local status change event StatusChangeEvent [timestamp=1778334317943, current=UP, previous=STARTING]
+2026-05-09 16:45:17.943 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-API-GATEWAY/10.0.0.139:tavia-api-gateway:8080: registering service...
+2026-05-09 16:45:17.965 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-API-GATEWAY/10.0.0.139:tavia-api-gateway:8080 - registration status: 204
+2026-05-09 16:45:18.170 [restartedMain] INFO  [traceId=, spanId=] o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [After]
+2026-05-09 16:45:18.171 [restartedMain] INFO  [traceId=, spanId=] o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Before]
+2026-05-09 16:45:18.171 [restartedMain] INFO  [traceId=, spanId=] o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Between]
+2026-05-09 16:45:18.171 [restartedMain] INFO  [traceId=, spanId=] o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Cookie]
+2026-05-09 16:45:18.171 [restartedMain] INFO  [traceId=, spanId=] o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Header]
+2026-05-09 16:45:18.171 [restartedMain] INFO  [traceId=, spanId=] o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Host]
+2026-05-09 16:45:18.171 [restartedMain] INFO  [traceId=, spanId=] o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Method]
+2026-05-09 16:45:18.171 [restartedMain] INFO  [traceId=, spanId=] o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Path]
+2026-05-09 16:45:18.171 [restartedMain] INFO  [traceId=, spanId=] o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Query]
+2026-05-09 16:45:18.171 [restartedMain] INFO  [traceId=, spanId=] o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [ReadBody]
+2026-05-09 16:45:18.171 [restartedMain] INFO  [traceId=, spanId=] o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [RemoteAddr]
+2026-05-09 16:45:18.171 [restartedMain] INFO  [traceId=, spanId=] o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Version]
+2026-05-09 16:45:18.171 [restartedMain] INFO  [traceId=, spanId=] o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2026-05-09 16:45:18.171 [restartedMain] INFO  [traceId=, spanId=] o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Weight]
+2026-05-09 16:45:18.171 [restartedMain] INFO  [traceId=, spanId=] o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2026-05-09 16:45:18.277 [restartedMain] INFO  [traceId=, spanId=] o.s.b.reactor.netty.NettyWebServer — Netty started on port 8080 (http)
+2026-05-09 16:45:18.279 [restartedMain] INFO  [traceId=, spanId=] o.s.c.n.e.s.EurekaAutoServiceRegistration — Updating port to 8080
+2026-05-09 16:45:18.330 [restartedMain] INFO  [traceId=, spanId=] c.t.gateway.ApiGatewayApplication — Started ApiGatewayApplication in 2.083 seconds (process running for 2.457)
+2026-05-09 16:48:16.738 [reactor-http-epoll-3] INFO  [traceId=, spanId=] c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/context
+2026-05-09 16:48:16.738 [reactor-http-epoll-2] INFO  [traceId=, spanId=] c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/crm/customers
+2026-05-09 16:48:16.738 [reactor-http-epoll-4] INFO  [traceId=, spanId=] c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/orders/count
+2026-05-09 16:48:17.074 [reactor-http-epoll-2] INFO  [traceId=, spanId=] c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/crm/customers took 336 ms
+2026-05-09 16:48:17.212 [reactor-http-epoll-3] INFO  [traceId=, spanId=] c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/context took 474 ms
+2026-05-09 16:48:17.455 [reactor-http-epoll-4] INFO  [traceId=, spanId=] c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/orders/count took 717 ms
+2026-05-09 16:48:32.943 [reactor-http-epoll-1] INFO  [traceId=, spanId=] c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/context
+2026-05-09 16:48:32.943 [reactor-http-epoll-8] INFO  [traceId=, spanId=] c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/crm/customers
+2026-05-09 16:48:32.945 [reactor-http-epoll-6] INFO  [traceId=, spanId=] c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/orders/count
+2026-05-09 16:48:32.951 [reactor-http-epoll-1] INFO  [traceId=, spanId=] c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/context took 8 ms
+2026-05-09 16:48:32.957 [reactor-http-epoll-6] INFO  [traceId=, spanId=] c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/orders/count took 12 ms
+2026-05-09 16:48:32.965 [reactor-http-epoll-8] INFO  [traceId=, spanId=] c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/crm/customers took 22 ms
+2026-05-09 16:49:27.869 [reactor-http-epoll-2] INFO  [traceId=, spanId=] c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/tenants/login
+2026-05-09 16:49:28.148 [reactor-http-epoll-2] INFO  [traceId=, spanId=] c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/tenants/login took 279 ms
+2026-05-09 16:49:31.539 [reactor-http-epoll-5] INFO  [traceId=, spanId=] c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/tenants/login
+2026-05-09 16:49:31.547 [reactor-http-epoll-5] INFO  [traceId=, spanId=] c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/tenants/login took 8 ms
+2026-05-09 16:49:31.668 [reactor-http-epoll-7] INFO  [traceId=, spanId=] c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/crm/customers
+2026-05-09 16:49:31.668 [reactor-http-epoll-8] INFO  [traceId=, spanId=] c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/context
+2026-05-09 16:49:31.668 [reactor-http-epoll-1] INFO  [traceId=, spanId=] c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/orders/count
+2026-05-09 16:49:31.675 [reactor-http-epoll-8] INFO  [traceId=, spanId=] c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/context took 7 ms
+2026-05-09 16:49:31.680 [reactor-http-epoll-1] INFO  [traceId=, spanId=] c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/orders/count took 12 ms
+2026-05-09 16:49:31.693 [reactor-http-epoll-7] INFO  [traceId=, spanId=] c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/crm/customers took 25 ms
+2026-05-09 16:49:33.314 [reactor-http-epoll-6] INFO  [traceId=, spanId=] c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/orders
+2026-05-09 16:49:33.335 [reactor-http-epoll-6] INFO  [traceId=, spanId=] c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/orders took 21 ms
+2026-05-09 16:49:37.918 [reactor-http-epoll-2] INFO  [traceId=, spanId=] c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/catalog/recipes
+2026-05-09 16:49:37.962 [reactor-http-epoll-2] INFO  [traceId=, spanId=] c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/catalog/recipes took 44 ms
+2026-05-09 16:49:57.039 [reactor-http-epoll-4] INFO  [traceId=, spanId=] c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/inventory/tenant/d6ec66d8-de92-4973-821c-e7c8dd410cfd
+2026-05-09 16:49:57.075 [reactor-http-epoll-4] INFO  [traceId=, spanId=] c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/inventory/tenant/d6ec66d8-de92-4973-821c-e7c8dd410cfd took 36 ms
+2026-05-09 16:50:17.700 [AsyncResolver-bootstrap-executor-%d] INFO  [traceId=, spanId=] c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-09 16:53:32.684 [SpringApplicationShutdownHook] INFO  [traceId=, spanId=] o.s.c.n.e.s.EurekaServiceRegistry — Unregistering application TAVIA-API-GATEWAY with eureka with status DOWN
+2026-05-09 16:53:32.684 [SpringApplicationShutdownHook] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — Saw local status change event StatusChangeEvent [timestamp=1778334812684, current=DOWN, previous=UP]
+2026-05-09 16:53:32.685 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-API-GATEWAY/10.0.0.139:tavia-api-gateway:8080: registering service...
+2026-05-09 16:53:32.688 [SpringApplicationShutdownHook] INFO  [traceId=, spanId=] o.s.b.reactor.netty.GracefulShutdown — Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-09 16:53:32.702 [netty-shutdown] INFO  [traceId=, spanId=] o.s.b.reactor.netty.GracefulShutdown — Graceful shutdown complete
+2026-05-09 16:53:32.710 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-API-GATEWAY/10.0.0.139:tavia-api-gateway:8080 - registration status: 204
+2026-05-09 16:53:32.741 [SpringApplicationShutdownHook] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — Shutting down DiscoveryClient ...
+2026-05-09 16:53:35.749 [SpringApplicationShutdownHook] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — Unregistering ...
+2026-05-09 16:53:35.755 [SpringApplicationShutdownHook] INFO  [traceId=, spanId=] c.n.d.s.t.d.RedirectingEurekaHttpClient — Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/} exception=I/O error on DELETE request for "http://localhost:8761/eureka/apps/TAVIA-API-GATEWAY/10.0.0.139:tavia-api-gateway:8080": Connect to http://localhost:8761 failed: Connection refused stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://localhost:8761/eureka/apps/TAVIA-API-GATEWAY/10.0.0.139:tavia-api-gateway:8080": Connect to http://localhost:8761 failed: Connection refused
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.createResourceAccessException(DefaultRestClient.java:779)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:624)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchange(DefaultRestClient.java:572)
+	at org.springframework.web.client.RestClient$RequestHeadersSpec.exchange(RestClient.java:747)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.executeAndExtract(DefaultRestClient.java:924)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toBodilessEntity(DefaultRestClient.java:888)
+	at org.springframework.cloud.netflix.eureka.http.RestClientEurekaHttpClient.cancel(RestClientEurekaHttpClient.java:73)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:919)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:900)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:453)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:411)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:237)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:200)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:193)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:387)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:134)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:209)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:795)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:745)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1500)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:704)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1493)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1246)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1207)
+	at org.springframework.boot.web.server.reactive.context.ReactiveWebServerApplicationContext.doClose(ReactiveWebServerApplicationContext.java:158)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1153)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:147)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:116)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 failed: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:694)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:226)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:497)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:168)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:112)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:87)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:80)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeWithRequestAndBody(AbstractBufferingClientHttpRequest.java:89)
+	at org.springframework.http.client.InterceptingClientHttpRequest$EndOfChainRequestExecution.execute(InterceptingClientHttpRequest.java:102)
+	at org.springframework.cloud.netflix.eureka.http.RestClientTransportClientFactory.lambda$newClient$2(RestClientTransportClientFactory.java:98)
+	at org.springframework.http.client.ClientHttpRequestInterceptor.lambda$apply$0(ClientHttpRequestInterceptor.java:89)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:73)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:50)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:80)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:614)
+	... 39 more
+
+2026-05-09 16:53:35.755 [SpringApplicationShutdownHook] WARN  [traceId=, spanId=] c.n.d.s.t.d.RetryableEurekaHttpClient — Request execution failed with message: I/O error on DELETE request for "http://localhost:8761/eureka/apps/TAVIA-API-GATEWAY/10.0.0.139:tavia-api-gateway:8080": Connect to http://localhost:8761 failed: Connection refused
+2026-05-09 16:53:35.761 [SpringApplicationShutdownHook] INFO  [traceId=, spanId=] c.n.d.s.t.d.RedirectingEurekaHttpClient — Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on DELETE request for "http://localhost:8761/eureka/apps/TAVIA-API-GATEWAY/10.0.0.139:tavia-api-gateway:8080": Connect to http://localhost:8761 failed: Connection refused stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://localhost:8761/eureka/apps/TAVIA-API-GATEWAY/10.0.0.139:tavia-api-gateway:8080": Connect to http://localhost:8761 failed: Connection refused
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.createResourceAccessException(DefaultRestClient.java:779)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:624)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchange(DefaultRestClient.java:572)
+	at org.springframework.web.client.RestClient$RequestHeadersSpec.exchange(RestClient.java:747)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.executeAndExtract(DefaultRestClient.java:924)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toBodilessEntity(DefaultRestClient.java:888)
+	at org.springframework.cloud.netflix.eureka.http.RestClientEurekaHttpClient.cancel(RestClientEurekaHttpClient.java:73)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:919)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:900)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:453)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:411)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:237)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:200)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:193)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:387)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:134)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:209)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:795)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:745)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1500)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:704)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1493)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1246)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1207)
+	at org.springframework.boot.web.server.reactive.context.ReactiveWebServerApplicationContext.doClose(ReactiveWebServerApplicationContext.java:158)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1153)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:147)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:116)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 failed: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:694)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:226)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:497)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:168)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:112)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:87)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:80)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeWithRequestAndBody(AbstractBufferingClientHttpRequest.java:89)
+	at org.springframework.http.client.InterceptingClientHttpRequest$EndOfChainRequestExecution.execute(InterceptingClientHttpRequest.java:102)
+	at org.springframework.cloud.netflix.eureka.http.RestClientTransportClientFactory.lambda$newClient$2(RestClientTransportClientFactory.java:98)
+	at org.springframework.http.client.ClientHttpRequestInterceptor.lambda$apply$0(ClientHttpRequestInterceptor.java:89)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:73)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:50)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:80)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:614)
+	... 40 more
+
+2026-05-09 16:53:35.761 [SpringApplicationShutdownHook] WARN  [traceId=, spanId=] c.n.d.s.t.d.RetryableEurekaHttpClient — Request execution failed with message: I/O error on DELETE request for "http://localhost:8761/eureka/apps/TAVIA-API-GATEWAY/10.0.0.139:tavia-api-gateway:8080": Connect to http://localhost:8761 failed: Connection refused
+2026-05-09 16:53:35.761 [SpringApplicationShutdownHook] ERROR [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-API-GATEWAY/10.0.0.139:tavia-api-gateway:8080 - de-registration failedCannot execute request on any known server
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:919)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:900)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:453)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:411)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:237)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:200)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:193)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:387)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:134)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:209)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:795)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:745)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1500)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:704)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1493)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1246)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1207)
+	at org.springframework.boot.web.server.reactive.context.ReactiveWebServerApplicationContext.doClose(ReactiveWebServerApplicationContext.java:158)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1153)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:147)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:116)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-05-09 16:53:35.763 [SpringApplicationShutdownHook] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — Completed shut down of DiscoveryClient
+2026-05-09 17:09:16.246 [restartedMain] INFO  [traceId=, spanId=] c.t.gateway.ApiGatewayApplication — Starting ApiGatewayApplication using Java 21.0.10 with PID 277863 (/home/tuna/Desktop/tavia_v2/tavia-api-gateway/build/classes/java/main started by tuna in /home/tuna/Desktop/tavia_v2/tavia-api-gateway)
+2026-05-09 17:09:16.247 [restartedMain] DEBUG [traceId=, spanId=] c.t.gateway.ApiGatewayApplication — Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-09 17:09:16.248 [restartedMain] INFO  [traceId=, spanId=] c.t.gateway.ApiGatewayApplication — No active profile set, falling back to 1 default profile: "default"
+2026-05-09 17:09:16.276 [restartedMain] INFO  [traceId=, spanId=] o.s.c.c.c.ConfigServerConfigDataLoader — Fetching config from server at : http://localhost:8888
+2026-05-09 17:09:16.276 [restartedMain] INFO  [traceId=, spanId=] o.s.c.c.c.ConfigServerConfigDataLoader — Located environment: name=tavia-api-gateway, profiles=[default], label=null, version=null, state=null
+2026-05-09 17:09:16.278 [restartedMain] INFO  [traceId=, spanId=] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor — Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-09 17:09:16.295 [background-preinit] INFO  [traceId=, spanId=] o.h.validator.internal.util.Version — HV000001: Hibernate Validator 9.0.1.Final
+2026-05-09 17:09:16.732 [restartedMain] INFO  [traceId=, spanId=] o.s.cloud.context.scope.GenericScope — BeanFactory id=8ed1b725-f116-3aee-a5ef-99fa66868289
+2026-05-09 17:09:17.095 [restartedMain] INFO  [traceId=, spanId=] o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration — Eureka HTTP Client uses RestClient.
+2026-05-09 17:09:17.113 [restartedMain] INFO  [traceId=, spanId=] o.s.c.n.eureka.InstanceInfoFactory — Setting initial instance status as: STARTING
+2026-05-09 17:09:17.140 [restartedMain] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — Initializing Eureka in region us-east-1
+2026-05-09 17:09:17.142 [restartedMain] INFO  [traceId=, spanId=] c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-09 17:09:17.146 [restartedMain] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — Disable delta property : false
+2026-05-09 17:09:17.147 [restartedMain] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — Single vip registry refresh property : null
+2026-05-09 17:09:17.147 [restartedMain] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — Force full registry fetch : false
+2026-05-09 17:09:17.147 [restartedMain] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — Application is null : false
+2026-05-09 17:09:17.147 [restartedMain] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — Registered Applications size is zero : true
+2026-05-09 17:09:17.147 [restartedMain] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — Application version is -1: true
+2026-05-09 17:09:17.147 [restartedMain] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — Getting all instance registry info from the eureka server
+2026-05-09 17:09:17.390 [restartedMain] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — The response status is 200
+2026-05-09 17:09:17.391 [restartedMain] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — Starting heartbeat executor: renew interval is: 30
+2026-05-09 17:09:17.392 [restartedMain] INFO  [traceId=, spanId=] c.n.discovery.InstanceInfoReplicator — InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-05-09 17:09:17.393 [restartedMain] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — Discovery Client initialized at timestamp 1778335757393 with initial instances count: 8
+2026-05-09 17:09:17.395 [restartedMain] INFO  [traceId=, spanId=] o.s.c.n.e.s.EurekaServiceRegistry — Registering application TAVIA-API-GATEWAY with eureka with status UP
+2026-05-09 17:09:17.396 [restartedMain] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — Saw local status change event StatusChangeEvent [timestamp=1778335757396, current=UP, previous=STARTING]
+2026-05-09 17:09:17.397 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-API-GATEWAY/10.0.0.139:tavia-api-gateway:8080: registering service...
+2026-05-09 17:09:17.423 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-API-GATEWAY/10.0.0.139:tavia-api-gateway:8080 - registration status: 204
+2026-05-09 17:09:17.631 [restartedMain] INFO  [traceId=, spanId=] o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [After]
+2026-05-09 17:09:17.632 [restartedMain] INFO  [traceId=, spanId=] o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Before]
+2026-05-09 17:09:17.632 [restartedMain] INFO  [traceId=, spanId=] o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Between]
+2026-05-09 17:09:17.632 [restartedMain] INFO  [traceId=, spanId=] o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Cookie]
+2026-05-09 17:09:17.632 [restartedMain] INFO  [traceId=, spanId=] o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Header]
+2026-05-09 17:09:17.632 [restartedMain] INFO  [traceId=, spanId=] o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Host]
+2026-05-09 17:09:17.632 [restartedMain] INFO  [traceId=, spanId=] o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Method]
+2026-05-09 17:09:17.632 [restartedMain] INFO  [traceId=, spanId=] o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Path]
+2026-05-09 17:09:17.632 [restartedMain] INFO  [traceId=, spanId=] o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Query]
+2026-05-09 17:09:17.632 [restartedMain] INFO  [traceId=, spanId=] o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [ReadBody]
+2026-05-09 17:09:17.632 [restartedMain] INFO  [traceId=, spanId=] o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [RemoteAddr]
+2026-05-09 17:09:17.632 [restartedMain] INFO  [traceId=, spanId=] o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Version]
+2026-05-09 17:09:17.632 [restartedMain] INFO  [traceId=, spanId=] o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2026-05-09 17:09:17.632 [restartedMain] INFO  [traceId=, spanId=] o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [Weight]
+2026-05-09 17:09:17.633 [restartedMain] INFO  [traceId=, spanId=] o.s.c.g.r.RouteDefinitionRouteLocator — Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2026-05-09 17:09:17.739 [restartedMain] INFO  [traceId=, spanId=] o.s.b.reactor.netty.NettyWebServer — Netty started on port 8080 (http)
+2026-05-09 17:09:17.741 [restartedMain] INFO  [traceId=, spanId=] o.s.c.n.e.s.EurekaAutoServiceRegistration — Updating port to 8080
+2026-05-09 17:09:17.794 [restartedMain] INFO  [traceId=, spanId=] c.t.gateway.ApiGatewayApplication — Started ApiGatewayApplication in 2.147 seconds (process running for 2.529)
+2026-05-09 17:10:22.308 [reactor-http-epoll-2] INFO  [traceId=, spanId=] c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/context
+2026-05-09 17:10:22.308 [reactor-http-epoll-4] INFO  [traceId=, spanId=] c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/crm/customers
+2026-05-09 17:10:22.308 [reactor-http-epoll-3] INFO  [traceId=, spanId=] c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/orders/count
+2026-05-09 17:10:22.652 [reactor-http-epoll-4] INFO  [traceId=, spanId=] c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/crm/customers took 344 ms
+2026-05-09 17:10:22.825 [reactor-http-epoll-2] INFO  [traceId=, spanId=] c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/context took 517 ms
+2026-05-09 17:10:23.091 [reactor-http-epoll-3] INFO  [traceId=, spanId=] c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/orders/count took 783 ms
+2026-05-09 17:10:24.906 [reactor-http-epoll-8] INFO  [traceId=, spanId=] c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/orders
+2026-05-09 17:10:25.035 [reactor-http-epoll-8] INFO  [traceId=, spanId=] c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/orders took 129 ms
+2026-05-09 17:11:34.206 [reactor-http-epoll-1] INFO  [traceId=, spanId=] c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/orders
+2026-05-09 17:11:34.217 [reactor-http-epoll-1] INFO  [traceId=, spanId=] c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/orders took 11 ms
+2026-05-09 17:11:38.990 [reactor-http-epoll-2] INFO  [traceId=, spanId=] c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/catalog/recipes
+2026-05-09 17:11:39.026 [reactor-http-epoll-2] INFO  [traceId=, spanId=] c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/catalog/recipes took 36 ms
+2026-05-09 17:11:48.372 [reactor-http-epoll-6] INFO  [traceId=, spanId=] c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/inventory/tenant/d6ec66d8-de92-4973-821c-e7c8dd410cfd
+2026-05-09 17:11:48.416 [reactor-http-epoll-6] INFO  [traceId=, spanId=] c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/inventory/tenant/d6ec66d8-de92-4973-821c-e7c8dd410cfd took 44 ms
+2026-05-09 17:12:01.617 [reactor-http-epoll-1] INFO  [traceId=, spanId=] c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/inventory/tenant/d6ec66d8-de92-4973-821c-e7c8dd410cfd
+2026-05-09 17:12:01.627 [reactor-http-epoll-1] INFO  [traceId=, spanId=] c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/inventory/tenant/d6ec66d8-de92-4973-821c-e7c8dd410cfd took 10 ms
+2026-05-09 17:12:23.761 [reactor-http-epoll-5] INFO  [traceId=, spanId=] c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/iot/machines
+2026-05-09 17:12:23.790 [reactor-http-epoll-5] INFO  [traceId=, spanId=] c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/iot/machines took 29 ms
+2026-05-09 17:12:30.654 [reactor-http-epoll-4] INFO  [traceId=, spanId=] c.tavia.gateway.filter.LoggingFilter — Incoming request to path: /api/v1/catalog/recipes
+2026-05-09 17:12:30.669 [reactor-http-epoll-4] INFO  [traceId=, spanId=] c.tavia.gateway.filter.LoggingFilter — Response from path: /api/v1/catalog/recipes took 15 ms
+2026-05-09 17:14:17.148 [AsyncResolver-bootstrap-executor-%d] INFO  [traceId=, spanId=] c.n.d.s.r.aws.ConfigClusterResolver — Resolving eureka endpoints via configuration
+2026-05-09 17:14:31.675 [SpringApplicationShutdownHook] INFO  [traceId=, spanId=] o.s.c.n.e.s.EurekaServiceRegistry — Unregistering application TAVIA-API-GATEWAY with eureka with status DOWN
+2026-05-09 17:14:31.675 [SpringApplicationShutdownHook] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — Saw local status change event StatusChangeEvent [timestamp=1778336071675, current=DOWN, previous=UP]
+2026-05-09 17:14:31.685 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-API-GATEWAY/10.0.0.139:tavia-api-gateway:8080: registering service...
+2026-05-09 17:14:31.690 [SpringApplicationShutdownHook] INFO  [traceId=, spanId=] o.s.b.reactor.netty.GracefulShutdown — Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-09 17:14:31.709 [netty-shutdown] INFO  [traceId=, spanId=] o.s.b.reactor.netty.GracefulShutdown — Graceful shutdown complete
+2026-05-09 17:14:31.717 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  [traceId=, spanId=] c.n.d.s.t.d.RedirectingEurekaHttpClient — Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/} exception=I/O error on POST request for "http://localhost:8761/eureka/apps/TAVIA-API-GATEWAY": Connect to http://localhost:8761 failed: Connection refused stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:8761/eureka/apps/TAVIA-API-GATEWAY": Connect to http://localhost:8761 failed: Connection refused
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.createResourceAccessException(DefaultRestClient.java:779)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:624)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchange(DefaultRestClient.java:572)
+	at org.springframework.web.client.RestClient$RequestHeadersSpec.exchange(RestClient.java:747)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.executeAndExtract(DefaultRestClient.java:924)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toBodilessEntity(DefaultRestClient.java:888)
+	at org.springframework.cloud.netflix.eureka.http.RestClientEurekaHttpClient.register(RestClientEurekaHttpClient.java:64)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:828)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125)
+	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 failed: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:694)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:226)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:497)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:168)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:112)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:87)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:80)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeWithRequestAndBody(AbstractBufferingClientHttpRequest.java:89)
+	at org.springframework.http.client.InterceptingClientHttpRequest$EndOfChainRequestExecution.execute(InterceptingClientHttpRequest.java:102)
+	at org.springframework.cloud.netflix.eureka.http.RestClientTransportClientFactory.lambda$newClient$2(RestClientTransportClientFactory.java:98)
+	at org.springframework.http.client.ClientHttpRequestInterceptor.lambda$apply$0(ClientHttpRequestInterceptor.java:89)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:73)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:50)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:80)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:614)
+	... 23 more
+
+2026-05-09 17:14:31.719 [DiscoveryClient-InstanceInfoReplicator-%d] WARN  [traceId=, spanId=] c.n.d.s.t.d.RetryableEurekaHttpClient — Request execution failed with message: I/O error on POST request for "http://localhost:8761/eureka/apps/TAVIA-API-GATEWAY": Connect to http://localhost:8761 failed: Connection refused
+2026-05-09 17:14:31.741 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  [traceId=, spanId=] c.n.d.s.t.d.RedirectingEurekaHttpClient — Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on POST request for "http://localhost:8761/eureka/apps/TAVIA-API-GATEWAY": Connect to http://localhost:8761 failed: Connection refused stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:8761/eureka/apps/TAVIA-API-GATEWAY": Connect to http://localhost:8761 failed: Connection refused
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.createResourceAccessException(DefaultRestClient.java:779)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:624)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchange(DefaultRestClient.java:572)
+	at org.springframework.web.client.RestClient$RequestHeadersSpec.exchange(RestClient.java:747)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.executeAndExtract(DefaultRestClient.java:924)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toBodilessEntity(DefaultRestClient.java:888)
+	at org.springframework.cloud.netflix.eureka.http.RestClientEurekaHttpClient.register(RestClientEurekaHttpClient.java:64)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:828)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125)
+	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 failed: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:694)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:226)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:497)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:168)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:112)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:87)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:80)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeWithRequestAndBody(AbstractBufferingClientHttpRequest.java:89)
+	at org.springframework.http.client.InterceptingClientHttpRequest$EndOfChainRequestExecution.execute(InterceptingClientHttpRequest.java:102)
+	at org.springframework.cloud.netflix.eureka.http.RestClientTransportClientFactory.lambda$newClient$2(RestClientTransportClientFactory.java:98)
+	at org.springframework.http.client.ClientHttpRequestInterceptor.lambda$apply$0(ClientHttpRequestInterceptor.java:89)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:73)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:50)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:80)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:614)
+	... 24 more
+
+2026-05-09 17:14:31.741 [DiscoveryClient-InstanceInfoReplicator-%d] WARN  [traceId=, spanId=] c.n.d.s.t.d.RetryableEurekaHttpClient — Request execution failed with message: I/O error on POST request for "http://localhost:8761/eureka/apps/TAVIA-API-GATEWAY": Connect to http://localhost:8761 failed: Connection refused
+2026-05-09 17:14:31.741 [DiscoveryClient-InstanceInfoReplicator-%d] WARN  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-API-GATEWAY/10.0.0.139:tavia-api-gateway:8080 - registration failed Cannot execute request on any known server
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:828)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125)
+	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-05-09 17:14:31.747 [DiscoveryClient-InstanceInfoReplicator-%d] WARN  [traceId=, spanId=] c.n.discovery.InstanceInfoReplicator — There was a problem with the instance info replicator
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:828)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125)
+	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-05-09 17:14:31.794 [SpringApplicationShutdownHook] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — Shutting down DiscoveryClient ...
+2026-05-09 17:14:34.795 [SpringApplicationShutdownHook] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — Unregistering ...
+2026-05-09 17:14:34.798 [SpringApplicationShutdownHook] INFO  [traceId=, spanId=] c.n.d.s.t.d.RedirectingEurekaHttpClient — Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on DELETE request for "http://localhost:8761/eureka/apps/TAVIA-API-GATEWAY/10.0.0.139:tavia-api-gateway:8080": Connect to http://localhost:8761 failed: Connection refused stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://localhost:8761/eureka/apps/TAVIA-API-GATEWAY/10.0.0.139:tavia-api-gateway:8080": Connect to http://localhost:8761 failed: Connection refused
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.createResourceAccessException(DefaultRestClient.java:779)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:624)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchange(DefaultRestClient.java:572)
+	at org.springframework.web.client.RestClient$RequestHeadersSpec.exchange(RestClient.java:747)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.executeAndExtract(DefaultRestClient.java:924)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toBodilessEntity(DefaultRestClient.java:888)
+	at org.springframework.cloud.netflix.eureka.http.RestClientEurekaHttpClient.cancel(RestClientEurekaHttpClient.java:73)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:919)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:900)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:453)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:411)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:237)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:200)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:193)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:387)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:134)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:209)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:795)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:745)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1500)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:704)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1493)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1246)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1207)
+	at org.springframework.boot.web.server.reactive.context.ReactiveWebServerApplicationContext.doClose(ReactiveWebServerApplicationContext.java:158)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1153)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:147)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:116)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 failed: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:694)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:226)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:497)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:168)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:112)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:87)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:80)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeWithRequestAndBody(AbstractBufferingClientHttpRequest.java:89)
+	at org.springframework.http.client.InterceptingClientHttpRequest$EndOfChainRequestExecution.execute(InterceptingClientHttpRequest.java:102)
+	at org.springframework.cloud.netflix.eureka.http.RestClientTransportClientFactory.lambda$newClient$2(RestClientTransportClientFactory.java:98)
+	at org.springframework.http.client.ClientHttpRequestInterceptor.lambda$apply$0(ClientHttpRequestInterceptor.java:89)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:73)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:50)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:80)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:614)
+	... 40 more
+
+2026-05-09 17:14:34.798 [SpringApplicationShutdownHook] WARN  [traceId=, spanId=] c.n.d.s.t.d.RetryableEurekaHttpClient — Request execution failed with message: I/O error on DELETE request for "http://localhost:8761/eureka/apps/TAVIA-API-GATEWAY/10.0.0.139:tavia-api-gateway:8080": Connect to http://localhost:8761 failed: Connection refused
+2026-05-09 17:14:34.798 [SpringApplicationShutdownHook] ERROR [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — DiscoveryClient_TAVIA-API-GATEWAY/10.0.0.139:tavia-api-gateway:8080 - de-registration failedCannot execute request on any known server
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:919)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:900)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:453)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:411)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:237)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:200)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:193)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:387)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:134)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:209)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:795)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:745)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1500)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:704)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1493)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1246)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1207)
+	at org.springframework.boot.web.server.reactive.context.ReactiveWebServerApplicationContext.doClose(ReactiveWebServerApplicationContext.java:158)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1153)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:147)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:116)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-05-09 17:14:34.799 [SpringApplicationShutdownHook] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — Completed shut down of DiscoveryClient

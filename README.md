@@ -3,9 +3,11 @@
 ## Project Overview
 TAVIA V2 is an advanced Global Loyalty Ecosystem and Autonomous Smart Cafe Platform built for the year 2026. The architecture is designed to support high-scale operations, multi-tenancy, and autonomous features. The platform is strategically founded on three primary pillars:
 
-1. **Tenant Profit Optimization AI**: Analyzes real-world temporal data (weather, events, holidays, competitor occupancy) to optimize dynamic pricing, provide context-aware discounts, and forecast raw material inventory dynamically. Acts as an "Autonomous Command Center" utilizing predictive maintenance capabilities.
-2. **Customer Experience AI**: Manages mobile app interactions (built with React Native/Expo), delivering context-aware discovery, personalized coupons, and localized loyalty rewards.
-3. **IoT Autonomous Execution**: Autonomous smart machines prepare orders and brew coffee while emitting telemetry and consumption events. The architecture is fundamentally event-driven to support real-time physical reality synchronization.
+1. **Hybrid Multi-Agent AI Architecture**:
+   - **Customer Experience Agent (NLP/Chatbot)**: Handled by the Gemini API (Cloud LLM) for zero local VRAM footprint. Manages mobile app interactions (built with React Native/Expo), delivering context-aware discovery, personalized coupons, localized loyalty rewards, and customer support conversations.
+   - **Tenant Profit Optimization Agent (Tabular ML)**: Analyzes real-world temporal data (weather, events, holidays, competitor occupancy) to optimize dynamic pricing and forecast raw material inventory dynamically. Powered by lightweight, CPU-based ML frameworks (Scikit-Learn/FastAPI) inside `tavia-ml-engine`.
+2. **Hardware-Optimized Operations**: Operates under strict physical hardware constraints (16GB RAM, 4GB VRAM) by strictly forbidding local LLMs and routing NLP tasks to Cloud APIs, ensuring absolute system stability without OOM crashes.
+3. **IoT Autonomous Execution**: Autonomous smart machines prepare orders and brew coffee while emitting telemetry and consumption events. The architecture is fundamentally event-driven to support real-time physical reality synchronization, functioning as an "Autonomous Command Center" utilizing predictive maintenance capabilities.
 
 *Note: The project runs highly optimized for local development (Lazy init, SerialGC) so developers aren't intimidated by the 12+ microservices.*
 

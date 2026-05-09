@@ -59,6 +59,7 @@ public class InventoryClient {
             inventoryClient.post()
                     .uri("/api/v1/inventory/deduct")
                     .header("X-Tenant-ID", tenantId.toString())
+                    .contentType(org.springframework.http.MediaType.APPLICATION_JSON)
                     .body(requestBody)
                     .retrieve()
                     .toBodilessEntity();

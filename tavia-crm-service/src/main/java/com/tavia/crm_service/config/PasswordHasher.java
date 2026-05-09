@@ -16,7 +16,11 @@ public class PasswordHasher {
 
     public String hash(String rawPassword) {
         byte[] salt = new byte[SALT_LENGTH];
-        new SecureRandom().nextBytes(salt);
+        try {
+            SecureRandom.getInstance("SHA1PRNG").nextBytes(salt);
+        } catch (NoSuchAlgorithmException e) {
+            new SecureRandom().nextBytes(salt);
+        }
         byte[] hash = computeHash(rawPassword, salt);
         return Base64.getEncoder().encodeToString(salt) + ":" + Base64.getEncoder().encodeToString(hash);
     }

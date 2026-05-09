@@ -8,6 +8,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 import java.util.stream.Collectors;
 
 /**
@@ -71,7 +72,7 @@ public class MockRecipeResolutionService implements RecipeResolutionService {
     }
 
     @Override
-    public List<RecipeIngredient> resolveRecipe(String productName, int quantity) {
+    public List<RecipeIngredient> resolveRecipe(UUID tenantId, String productName, int quantity) {
         if (productName == null || productName.isBlank()) {
             log.warn("Attempted to resolve recipe for null/blank product name");
             return Collections.emptyList();
@@ -99,7 +100,7 @@ public class MockRecipeResolutionService implements RecipeResolutionService {
     }
 
     @Override
-    public boolean hasRecipe(String productName) {
+    public boolean hasRecipe(UUID tenantId, String productName) {
         if (productName == null) {
             return false;
         }

@@ -152,6 +152,21 @@ export async function fetchInventory(tenantId: string) {
   );
 }
 
+/**
+ * POST /api/v1/inventory
+ * Backend: InventoryController#addOrUpdateStock(@RequestHeader("X-Tenant-ID"), @RequestBody RawMaterialDto)
+ */
+export async function createInventoryItem(
+  payload: Omit<InventoryItem, "id" | "lastRestocked" | "tenantId">,
+  tenantId: string
+) {
+  return request<ApiResponse<InventoryItem>>("/inventory", {
+    method: "POST",
+    headers: tenantHeaders(tenantId),
+    body: JSON.stringify(payload),
+  });
+}
+
 // ─── Order endpoints ─────────────────────────────────────────────
 
 /**

@@ -1,52 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  TAVIA V2 — Centralized Logback Configuration
+  TAVIA V2 — Simplified Logback Configuration
   ==============================================
-  Log Routing Strategy:
-    • INFO / DEBUG / WARN  →  logs/${SERVICE_NAME}.log
-    • ERROR               →  logs/errors/${SERVICE_NAME}-error.log
-    • All levels          →  STDOUT (console)
-
-  Uses Spring Boot's logback-spring.xml extension to resolve
-  ${spring.application.name} at bootstrap time.
+  All logs are routed to STDOUT and a single file for simplicity.
+  Trace/Correlation IDs are included per project-srs.md guidelines.
 -->
 <configuration>
-
-    <!-- Resolve service name from Spring Boot application config -->
     <springProperty scope="context" name="SERVICE_NAME"
                     source="spring.application.name"
                     defaultValue="tavia-service"/>
 
-    <!-- Shared log directory (relative to project root where gradlew runs) -->
     <property name="LOG_DIR" value="logs"/>
-    <property name="ERROR_LOG_DIR" value="logs/errors"/>
-
-    <!-- ─── Log Pattern ───────────────────────────────────────────── -->
+    
+    <!-- Sector Standard Pattern: Includes TraceID for Observability -->
     <property name="LOG_PATTERN"
-              value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} — %msg%n"/>
+              value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level [traceId=%X{traceId:-}, spanId=%X{spanId:-}] %logger{36} — %msg%n"/>
 
-    <!-- ─── CONSOLE Appender ──────────────────────────────────────── -->
     <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
             <pattern>${LOG_PATTERN}</pattern>
         </encoder>
     </appender>
 
-    <!-- ─── STANDARD FILE Appender (INFO, DEBUG, WARN) ────────────── -->
     <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>${LOG_DIR}/${SERVICE_NAME}.log</file>
-
-        <!-- Only accept non-ERROR levels -->
-        <filter class="ch.qos.logback.classic.filter.LevelFilter">
-            <level>ERROR</level>
-            <onMatch>DENY</onMatch>
-            <onMismatch>ACCEPT</onMismatch>
-        </filter>
-
         <encoder>
             <pattern>${LOG_PATTERN}</pattern>
         </encoder>
-
         <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
             <fileNamePattern>${LOG_DIR}/archive/${SERVICE_NAME}-%d{yyyy-MM-dd}.%i.log.gz</fileNamePattern>
             <maxFileSize>50MB</maxFileSize>
@@ -55,32 +35,8 @@
         </rollingPolicy>
     </appender>
 
-    <!-- ─── ERROR FILE Appender (ERROR only) ──────────────────────── -->
-    <appender name="ERROR_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>${ERROR_LOG_DIR}/${SERVICE_NAME}-error.log</file>
-
-        <!-- Only accept ERROR level -->
-        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
-            <level>ERROR</level>
-        </filter>
-
-        <encoder>
-            <pattern>${LOG_PATTERN}</pattern>
-        </encoder>
-
-        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
-            <fileNamePattern>${ERROR_LOG_DIR}/archive/${SERVICE_NAME}-error-%d{yyyy-MM-dd}.%i.log.gz</fileNamePattern>
-            <maxFileSize>20MB</maxFileSize>
-            <maxHistory>60</maxHistory>
-            <totalSizeCap>500MB</totalSizeCap>
-        </rollingPolicy>
-    </appender>
-
-    <!-- ─── Root Logger ───────────────────────────────────────────── -->
     <root level="INFO">
         <appender-ref ref="CONSOLE"/>
         <appender-ref ref="FILE"/>
-        <appender-ref ref="ERROR_FILE"/>
     </root>
-
 </configuration>

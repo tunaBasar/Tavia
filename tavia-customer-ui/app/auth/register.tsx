@@ -40,11 +40,11 @@ export default function RegisterScreen() {
                 <Pressable style={s.sel} onPress={() => setShowCities(!showCities)}>
                   <Text style={s.selT}>📍 {CityDisplayLabels[selectedCity]}</Text><Text style={s.arr}>{showCities ? '▲' : '▼'}</Text>
                 </Pressable>
-                {showCities && <View style={s.cl}>{ALL_CITIES.map(c => (
+                {showCities && <ScrollView style={s.cl} nestedScrollEnabled={true}>{ALL_CITIES.map(c => (
                   <Pressable key={c} style={[s.co, c===selectedCity && s.cos]} onPress={() => {setSelectedCity(c);setShowCities(false);}}>
                     <Text style={[s.cot, c===selectedCity && s.cots]}>{CityDisplayLabels[c]}</Text>
                   </Pressable>
-                ))}</View>}
+                ))}</ScrollView>}
               </View>
               {error && <View style={s.eb}><Text style={s.et}>{error}</Text></View>}
               <Pressable style={({pressed}) => [s.btn, pressed && s.bp, isLoading && s.bd]} onPress={handleRegister} disabled={isLoading}>
