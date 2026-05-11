@@ -55,6 +55,15 @@ public class CustomerAuthController {
         return ResponseEntity.ok(ApiResponse.success("Password reset successful", null));
     }
 
+    @PostMapping("/{customerId}/change-password")
+    @Operation(summary = "Change password for an authenticated customer")
+    public ResponseEntity<ApiResponse<Void>> changePassword(
+            @PathVariable UUID customerId,
+            @Valid @RequestBody ChangePasswordRequest request) {
+        customerAuthService.changePassword(customerId, request);
+        return ResponseEntity.ok(ApiResponse.success("Password changed successfully", null));
+    }
+
     @GetMapping("/loyalties/{customerId}")
     @Operation(summary = "Get all tenant loyalties for a customer (profile screen)")
     public ResponseEntity<ApiResponse<List<TenantLoyaltyDto>>> getCustomerLoyalties(

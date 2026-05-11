@@ -68,9 +68,9 @@ const styles = StyleSheet.create({
     borderColor: 'rgba(255, 255, 255, 0.12)',
   },
   pillSelected: {
-    backgroundColor: '#6C63FF',
-    borderColor: '#6C63FF',
-    shadowColor: '#6C63FF',
+    backgroundColor: '#6B9E78',
+    borderColor: '#6B9E78',
+    shadowColor: '#6B9E78',
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.35,
     shadowRadius: 8,

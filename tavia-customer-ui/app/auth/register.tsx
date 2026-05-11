@@ -60,7 +60,7 @@ export default function RegisterScreen() {
 }
 
 const s = StyleSheet.create({
-  root:{flex:1,backgroundColor:'#0F0F1A'},safe:{flex:1},flex:{flex:1},
+  root:{flex:1,backgroundColor:'#1C2520'},safe:{flex:1},flex:{flex:1},
   scroll:{flexGrow:1,justifyContent:'center',paddingHorizontal:24,paddingVertical:20},
   hdr:{marginBottom:32},t1:{fontSize:30,fontWeight:'800',color:'#FFF',letterSpacing:-0.5},t2:{fontSize:15,color:'rgba(255,255,255,0.4)',marginTop:6},
   form:{gap:16},ig:{gap:6},lb:{fontSize:13,fontWeight:'600',color:'rgba(255,255,255,0.5)',textTransform:'uppercase',letterSpacing:0.5},
@@ -69,10 +69,10 @@ const s = StyleSheet.create({
   selT:{fontSize:16,color:'#FFF'},arr:{fontSize:12,color:'rgba(255,255,255,0.4)'},
   cl:{backgroundColor:'rgba(30,30,50,0.95)',borderRadius:12,borderWidth:1,borderColor:'rgba(255,255,255,0.08)',maxHeight:200},
   co:{paddingHorizontal:16,paddingVertical:12,borderBottomWidth:1,borderBottomColor:'rgba(255,255,255,0.04)'},
-  cos:{backgroundColor:'rgba(108,99,255,0.15)'},cot:{fontSize:14,color:'rgba(255,255,255,0.6)'},cots:{color:'#6C63FF',fontWeight:'700'},
+  cos:{backgroundColor:'rgba(107,158,120,0.15)'},cot:{fontSize:14,color:'rgba(255,255,255,0.6)'},cots:{color:'#6B9E78',fontWeight:'700'},
   eb:{backgroundColor:'rgba(239,68,68,0.12)',borderRadius:10,paddingHorizontal:14,paddingVertical:10,borderWidth:1,borderColor:'rgba(239,68,68,0.2)'},
   et:{color:'#EF4444',fontSize:13,fontWeight:'500'},
-  btn:{backgroundColor:'#6C63FF',borderRadius:12,paddingVertical:16,alignItems:'center',marginTop:8,shadowColor:'#6C63FF',shadowOffset:{width:0,height:6},shadowOpacity:0.35,shadowRadius:12,elevation:8},
+  btn:{backgroundColor:'#6B9E78',borderRadius:12,paddingVertical:16,alignItems:'center',marginTop:8,shadowColor:'#6B9E78',shadowOffset:{width:0,height:6},shadowOpacity:0.35,shadowRadius:12,elevation:8},
   bp:{opacity:0.85},bd:{opacity:0.6},bt:{color:'#FFF',fontSize:16,fontWeight:'700'},
-  ft:{flexDirection:'row',justifyContent:'center',marginTop:28,paddingBottom:24},ftx:{color:'rgba(255,255,255,0.4)',fontSize:14},fl:{color:'#6C63FF',fontSize:14,fontWeight:'700'},
+  ft:{flexDirection:'row',justifyContent:'center',marginTop:28,paddingBottom:24},ftx:{color:'rgba(255,255,255,0.4)',fontSize:14},fl:{color:'#6B9E78',fontSize:14,fontWeight:'700'},
 });

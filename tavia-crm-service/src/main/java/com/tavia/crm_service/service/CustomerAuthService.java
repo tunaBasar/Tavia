@@ -10,5 +10,6 @@ public interface CustomerAuthService {
     CustomerAuthResponse login(CustomerLoginRequest request);
     void requestPasswordReset(ForgotPasswordRequest request);
     void resetPassword(ResetPasswordRequest request);
+    void changePassword(UUID customerId, ChangePasswordRequest request);
     List<TenantLoyaltyDto> getCustomerLoyalties(UUID customerId);
 }

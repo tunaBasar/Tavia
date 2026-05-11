@@ -94,7 +94,7 @@ export default function DiscoveryScreen() {
         {/* Loading state */}
         {isLoading && tenants.length === 0 ? (
           <View style={styles.loadingContainer}>
-            <ActivityIndicator size="large" color="#6C63FF" />
+            <ActivityIndicator size="large" color="#6B9E78" />
             <Text style={styles.loadingText}>Finding cafes…</Text>
           </View>
         ) : (
@@ -109,8 +109,8 @@ export default function DiscoveryScreen() {
               <RefreshControl
                 refreshing={isLoading}
                 onRefresh={handleRefresh}
-                tintColor="#6C63FF"
-                colors={['#6C63FF']}
+                tintColor="#6B9E78"
+                colors={['#6B9E78']}
               />
             }
           />
@@ -123,7 +123,7 @@ export default function DiscoveryScreen() {
 const styles = StyleSheet.create({
   root: {
     flex: 1,
-    backgroundColor: '#0F0F1A',
+    backgroundColor: '#1C2520',
   },
   safe: {
     flex: 1,

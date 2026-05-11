@@ -7,17 +7,6 @@ interface CafeCardProps {
   tenant: TenantSummary;
 }
 
-const PLAN_COLORS: Record<SubscriptionPlan, string> = {
-  [SubscriptionPlan.BASIC]: '#4A9EFF',
-  [SubscriptionPlan.PRO]: '#A855F7',
-  [SubscriptionPlan.ENTERPRISE]: '#F59E0B',
-};
-
-const PLAN_LABELS: Record<SubscriptionPlan, string> = {
-  [SubscriptionPlan.BASIC]: 'Basic',
-  [SubscriptionPlan.PRO]: 'Pro',
-  [SubscriptionPlan.ENTERPRISE]: 'Enterprise',
-};
 
 /** Placeholder cafe image — deterministic based on tenant name hash */
 const CAFE_IMAGES = [
@@ -36,38 +25,46 @@ function getImageForTenant(name: string): string {
   return CAFE_IMAGES[Math.abs(hash) % CAFE_IMAGES.length];
 }
 
+import { TouchableOpacity } from 'react-native';
+import { useActiveTenantStore } from '@/store/useActiveTenantStore';
+
 export function CafeCard({ tenant }: CafeCardProps) {
-  const planColor = PLAN_COLORS[tenant.subscriptionPlan] ?? '#4A9EFF';
-  const planLabel = PLAN_LABELS[tenant.subscriptionPlan] ?? tenant.subscriptionPlan;
+
+  
+  const activeTenantId = useActiveTenantStore((state) => state.activeTenantId);
+  const setActiveTenantId = useActiveTenantStore((state) => state.setActiveTenantId);
+  const isActiveTenant = activeTenantId === tenant.id;
 
   return (
-    <View style={styles.card}>
-      {/* Cafe Image (left) */}
-      <Image
-        source={{ uri: getImageForTenant(tenant.name) }}
-        style={styles.image}
-        contentFit="cover"
-        placeholder={{ blurhash: 'L6PZfSi_.AyE_3t7t7R**0o#DgR4' }}
-        transition={300}
-      />
+    <TouchableOpacity 
+      activeOpacity={0.7} 
+      onPress={() => setActiveTenantId(tenant.id)}
+    >
+      <View style={[styles.card, isActiveTenant && styles.activeCard]}>
+        {/* Cafe Image (left) */}
+        <Image
+          source={{ uri: getImageForTenant(tenant.name) }}
+          style={styles.image}
+          contentFit="cover"
+          placeholder={{ blurhash: 'L6PZfSi_.AyE_3t7t7R**0o#DgR4' }}
+          transition={300}
+        />
 
-      {/* Info (right) */}
-      <View style={styles.info}>
-        <View style={styles.topRow}>
-          <Text style={styles.name} numberOfLines={1}>{tenant.name}</Text>
-          <View style={[styles.statusDot, { backgroundColor: tenant.isActive ? '#22C55E' : '#EF4444' }]} />
-        </View>
-
-        <Text style={styles.city}>📍 {CityDisplayLabels[tenant.city]}</Text>
-
-        <View style={styles.bottomRow}>
-          <View style={[styles.planBadge, { backgroundColor: planColor + '22' }]}>
-            <Text style={[styles.planText, { color: planColor }]}>{planLabel}</Text>
+        {/* Info (right) */}
+        <View style={styles.info}>
+          <View style={styles.topRow}>
+            <Text style={styles.name} numberOfLines={1}>{tenant.name}</Text>
+            <View style={[styles.statusDot, { backgroundColor: tenant.isActive ? '#22C55E' : '#EF4444' }]} />
           </View>
-          <Text style={styles.statusLabel}>{tenant.isActive ? 'Open' : 'Closed'}</Text>
+
+          <Text style={styles.city}>📍 {CityDisplayLabels[tenant.city]}</Text>
+
+          <View style={styles.bottomRow}>
+            <Text style={styles.statusLabel}>{isActiveTenant ? 'Selected' : (tenant.isActive ? 'Open' : 'Closed')}</Text>
+          </View>
         </View>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 }
 
@@ -120,19 +117,14 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     marginTop: 4,
   },
-  planBadge: {
-    paddingHorizontal: 10,
-    paddingVertical: 3,
-    borderRadius: 6,
-  },
-  planText: {
-    fontSize: 11,
-    fontWeight: '700',
-    letterSpacing: 0.5,
-  },
+
   statusLabel: {
     fontSize: 11,
     fontWeight: '600',
     color: 'rgba(255, 255, 255, 0.35)',
+  },
+  activeCard: {
+    borderColor: '#6B9E78',
+    backgroundColor: 'rgba(108, 99, 255, 0.1)',
   },
 });

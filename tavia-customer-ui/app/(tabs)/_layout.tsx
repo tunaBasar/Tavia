@@ -8,12 +8,12 @@ export default function TabLayout() {
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: '#6C63FF',
+        tabBarActiveTintColor: '#6B9E78',
         tabBarInactiveTintColor: 'rgba(255, 255, 255, 0.35)',
         headerShown: false,
         tabBarButton: HapticTab,
         tabBarStyle: {
-          backgroundColor: '#0F0F1A',
+          backgroundColor: '#1C2520',
           borderTopColor: 'rgba(255, 255, 255, 0.06)',
           borderTopWidth: 1,
           elevation: 0,
@@ -45,6 +45,13 @@ export default function TabLayout() {
         options={{
           title: 'Profile',
           tabBarIcon: ({ color }) => <IconSymbol size={24} name="person.fill" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="chat"
+        options={{
+          title: 'AI Assistant',
+          tabBarIcon: ({ color }) => <IconSymbol size={24} name="chat.bubble.fill" color={color} />,
         }}
       />
       <Tabs.Screen

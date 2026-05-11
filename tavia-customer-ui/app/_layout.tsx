@@ -1,4 +1,4 @@
-import { DarkTheme, ThemeProvider } from '@react-navigation/native';
+import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
 import { Stack, useRouter, useSegments, useRootNavigationState } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { useEffect } from 'react';
@@ -6,15 +6,26 @@ import { ActivityIndicator, StyleSheet, View } from 'react-native';
 import 'react-native-reanimated';
 
 import { useCustomerAuthStore } from '@/store/useCustomerAuthStore';
+import { useThemeStore } from '@/store/useThemeStore';
 
-/** Custom dark theme to match Tavia brand */
+/** Custom dark theme to match Tavia brand (Earthy Cafe Palette) */
 const TaviaDark = {
   ...DarkTheme,
   colors: {
     ...DarkTheme.colors,
-    background: '#0F0F1A',
-    card: '#0F0F1A',
-    primary: '#6C63FF',
+    background: '#1C2520',
+    card: '#1C2520',
+    primary: '#6B9E78',
+  },
+};
+
+const TaviaLight = {
+  ...DefaultTheme,
+  colors: {
+    ...DefaultTheme.colors,
+    background: '#FAFAFA',
+    card: '#FAFAFA',
+    primary: '#2E5F3E',
   },
 };
 
@@ -24,6 +35,7 @@ export const unstable_settings = {
 
 export default function RootLayout() {
   const { customer, isHydrated } = useCustomerAuthStore();
+  const { theme } = useThemeStore();
   const segments = useSegments();
   const router = useRouter();
   const rootNavigationState = useRootNavigationState();
@@ -47,18 +59,18 @@ export default function RootLayout() {
 
   // DİKKAT: Artık erken "return" yok! Stack her zaman render ediliyor.
   return (
-    <ThemeProvider value={TaviaDark}>
+    <ThemeProvider value={theme === 'dark' ? TaviaDark : TaviaLight}>
       <Stack>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name="auth" options={{ headerShown: false }} />
         <Stack.Screen name="modal" options={{ presentation: 'modal', title: 'Modal' }} />
       </Stack>
-      <StatusBar style="light" />
+      <StatusBar style={theme === 'dark' ? "light" : "dark"} />
 
       {/* Zustand hazır olana kadar ekranı kapatan yükleme katmanı */}
       {!isHydrated && (
         <View style={[StyleSheet.absoluteFill, styles.splash]}>
-          <ActivityIndicator size="large" color="#6C63FF" />
+          <ActivityIndicator size="large" color={theme === 'dark' ? "#6B9E78" : "#2E5F3E"} />
         </View>
       )}
     </ThemeProvider>
@@ -67,7 +79,7 @@ export default function RootLayout() {
 
 const styles = StyleSheet.create({
   splash: {
-    backgroundColor: '#0F0F1A',
+    backgroundColor: '#1C2520',
     justifyContent: 'center',
     alignItems: 'center',
     zIndex: 999,

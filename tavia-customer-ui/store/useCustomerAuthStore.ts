@@ -98,8 +98,13 @@ import { isAxiosError } from 'axios';
 
 /** Extract a user-friendly error message from Axios errors */
 function extractErrorMessage(err: unknown, fallback: string): string {
-  if (isAxiosError(err) && err.response?.data?.message) {
-    return err.response.data.message;
+  if (isAxiosError(err) && err.response?.data) {
+    if (err.response.data.detail) {
+      return err.response.data.detail;
+    }
+    if (err.response.data.message) {
+      return err.response.data.message;
+    }
   }
   if (err instanceof Error) {
     return err.message;

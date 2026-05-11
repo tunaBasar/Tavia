@@ -122,6 +122,23 @@ public class CustomerAuthServiceImpl implements CustomerAuthService {
     }
 
     @Override
+    public void changePassword(UUID customerId, ChangePasswordRequest request) {
+        log.info("Attempting to change password for customer: {}", customerId);
+
+        Customer customer = customerRepository.findById(customerId)
+                .orElseThrow(() -> new ResourceNotFoundException("Customer not found"));
+
+        if (!passwordHasher.verify(request.getCurrentPassword(), customer.getPasswordHash())) {
+            throw new IllegalArgumentException("Current password is incorrect");
+        }
+
+        customer.setPasswordHash(passwordHasher.hash(request.getNewPassword()));
+        customerRepository.save(customer);
+
+        log.info("Password successfully changed for customer: {}", customer.getId());
+    }
+
+    @Override
     public List<TenantLoyaltyDto> getCustomerLoyalties(UUID customerId) {
         log.info("Fetching loyalties for customer: {}", customerId);
 

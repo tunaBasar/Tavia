@@ -1,6 +1,8 @@
 import axios from 'axios';
 import Constants from 'expo-constants';
 
+import { NativeModules } from 'react-native';
+
 /**
  * Centralized Axios instance for the Tavia Customer App.
  * Points to the API Gateway (port 8080).
@@ -8,11 +10,6 @@ import Constants from 'expo-constants';
  * Dynamically resolves the host machine's LAN IP from the Expo dev server
  * so that physical devices, emulators, and simulators all work without
  * hardcoded addresses.
- *
- * Resolution chain:
- *  1. `EXPO_PUBLIC_API_URL` env var (explicit override, e.g. for staging)
- *  2. Expo's `expoGoConfig.debuggerHost` (auto-detected LAN IP from dev server)
- *  3. Fallback to `localhost` (web / CI)
  */
 function resolveBaseUrl(): string {
   // 1. Explicit override via environment variable
@@ -20,17 +17,28 @@ function resolveBaseUrl(): string {
     ?? process.env.EXPO_PUBLIC_API_URL;
   if (envUrl) return envUrl;
 
-  // 2. Extract host IP from Expo dev server's debuggerHost (format: "IP:PORT")
-  const debuggerHost =
+  // 2. Extract host IP dynamically from the URL that successfully loaded the app
+  // This bypasses missing debuggerHost/hostUri bugs in SDK 54+ on physical devices
+  const scriptURL = NativeModules.SourceCode?.scriptURL || Constants.experienceUrl;
+  if (typeof scriptURL === 'string') {
+    const match = scriptURL.match(/\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b/);
+    if (match) {
+      return `http://${match[0]}:8080`;
+    }
+  }
+
+  // 3. Legacy Fallbacks for edge cases
+  const devHost =
+    Constants.expoConfig?.hostUri ??
     Constants.expoGoConfig?.debuggerHost ??
     (Constants as Record<string, unknown>).debuggerHost;
 
-  if (typeof debuggerHost === 'string' && debuggerHost.length > 0) {
-    const host = debuggerHost.split(':')[0];
+  if (typeof devHost === 'string' && devHost.length > 0) {
+    const host = devHost.split(':')[0];
     return `http://${host}:8080`;
   }
 
-  // 3. Fallback for web or non-dev environments
+  // 4. Fallback for web or non-dev environments
   return 'http://localhost:8080';
 }
 
@@ -48,5 +56,21 @@ const api = axios.create({
     'Bypass-Tunnel-Reminder': 'true'
   },
 });
+
+api.interceptors.request.use(
+  (config) => {
+    // Import dynamically to avoid circular dependencies
+    const { useActiveTenantStore } = require('@/store/useActiveTenantStore');
+    const { useCustomerAuthStore } = require('@/store/useCustomerAuthStore');
+    
+    const activeTenantId = useActiveTenantStore.getState().activeTenantId;
+    if (activeTenantId) {
+      config.headers['X-Tenant-ID'] = activeTenantId;
+    }
+
+    return config;
+  },
+  (error) => Promise.reject(error)
+);
 
 export default api;
