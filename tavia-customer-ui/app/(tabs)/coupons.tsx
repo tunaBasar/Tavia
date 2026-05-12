@@ -3,6 +3,8 @@ import {
   FlatList, Pressable, StyleSheet, Text, TextInput, View, Alert,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { useThemeStore } from '@/store/useThemeStore';
+import { Colors } from '@/constants/theme';
 import { Coupon } from '@/types';
 
 /** UI-local mock coupons for design — will be replaced with real API */
@@ -14,6 +16,8 @@ const MOCK_COUPONS: Coupon[] = [
 ];
 
 export default function CouponsScreen() {
+  const { theme } = useThemeStore();
+  const activeColors = Colors[theme];
   const [promoCode, setPromoCode] = useState('');
   const [coupons] = useState<Coupon[]>(MOCK_COUPONS);
 
@@ -26,18 +30,18 @@ export default function CouponsScreen() {
   const renderCoupon = ({ item }: { item: Coupon }) => (
     <View style={[styles.coupon, item.isUsed && styles.couponUsed]}>
       <View style={styles.couponLeft}>
-        <View style={[styles.discountBadge, item.isUsed && styles.discountBadgeUsed]}>
+        <View style={[styles.discountBadge, { backgroundColor: activeColors.tint }, item.isUsed && styles.discountBadgeUsed]}>
           <Text style={[styles.discountText, item.isUsed && styles.discountTextUsed]}>{item.discount}</Text>
         </View>
       </View>
       <View style={styles.couponRight}>
         <View style={styles.couponTop}>
-          <Text style={[styles.couponTitle, item.isUsed && styles.textUsed]}>{item.title}</Text>
+          <Text style={[styles.couponTitle, { color: activeColors.text }, item.isUsed && styles.textUsed]}>{item.title}</Text>
           {item.isUsed && <View style={styles.usedBadge}><Text style={styles.usedText}>Used</Text></View>}
         </View>
         <Text style={[styles.couponDesc, item.isUsed && styles.textUsed]} numberOfLines={2}>{item.description}</Text>
         <View style={styles.couponFooter}>
-          <Text style={styles.couponCode}>{item.code}</Text>
+          <Text style={[styles.couponCode, { color: activeColors.tint }]}>{item.code}</Text>
           <Text style={styles.couponExpiry}>Expires {item.expiresAt}</Text>
         </View>
       </View>
@@ -45,24 +49,24 @@ export default function CouponsScreen() {
   );
 
   return (
-    <View style={styles.root}>
+    <View style={[styles.root, { backgroundColor: activeColors.background }]}>
       <SafeAreaView style={styles.safe} edges={['top']}>
         <View style={styles.header}>
-          <Text style={styles.headerTitle}>Coupons</Text>
-          <Text style={styles.headerSub}>Redeem promo codes and browse deals</Text>
+          <Text style={[styles.headerTitle, { color: activeColors.text }]}>Coupons</Text>
+          <Text style={[styles.headerSub, { color: activeColors.text }]}>Redeem promo codes and browse deals</Text>
         </View>
 
         {/* Promo Code Input */}
         <View style={styles.promoSection}>
           <TextInput
-            style={styles.promoInput}
+            style={[styles.promoInput, { color: activeColors.text, borderColor: activeColors.border }]}
             placeholder="Enter promo code"
-            placeholderTextColor="rgba(255,255,255,0.25)"
+            placeholderTextColor={theme === 'dark' ? "rgba(255,255,255,0.25)" : "rgba(62,39,35,0.4)"}
             autoCapitalize="characters"
             value={promoCode}
             onChangeText={setPromoCode}
           />
-          <Pressable style={({pressed}) => [styles.promoBtn, pressed && styles.promoBtnP]} onPress={handleApplyPromo}>
+          <Pressable style={({pressed}) => [styles.promoBtn, { backgroundColor: activeColors.tint }, pressed && styles.promoBtnP]} onPress={handleApplyPromo}>
             <Text style={styles.promoBtnText}>Apply</Text>
           </Pressable>
         </View>
@@ -70,8 +74,8 @@ export default function CouponsScreen() {
         <View style={styles.divider} />
 
         <View style={styles.sectionHeader}>
-          <Text style={styles.sectionTitle}>Active Deals</Text>
-          <Text style={styles.sectionCount}>{coupons.filter(c => !c.isUsed).length} available</Text>
+          <Text style={[styles.sectionTitle, { color: activeColors.text }]}>Active Deals</Text>
+          <Text style={[styles.sectionCount, { color: activeColors.text }]}>{coupons.filter(c => !c.isUsed).length} available</Text>
         </View>
 
         <FlatList
@@ -87,8 +91,8 @@ export default function CouponsScreen() {
 }
 
 const styles = StyleSheet.create({
-  root:{flex:1,backgroundColor:'#1C2520'},safe:{flex:1},
-  header:{paddingHorizontal:20,paddingTop:12,paddingBottom:4},headerTitle:{fontSize:28,fontWeight:'800',color:'#FFF'},headerSub:{fontSize:14,color:'rgba(255,255,255,0.4)',marginTop:4},
+  root:{flex:1},safe:{flex:1},
+  header:{paddingHorizontal:20,paddingTop:12,paddingBottom:4},headerTitle:{fontSize:28,fontWeight:'800'},headerSub:{fontSize:14,opacity:0.6,marginTop:4},
   promoSection:{flexDirection:'row',paddingHorizontal:16,paddingVertical:16,gap:10},
   promoInput:{flex:1,backgroundColor:'rgba(255,255,255,0.06)',borderRadius:12,paddingHorizontal:16,paddingVertical:12,fontSize:15,color:'#FFF',borderWidth:1,borderColor:'rgba(255,255,255,0.08)',letterSpacing:1},
   promoBtn:{backgroundColor:'#6B9E78',borderRadius:12,paddingHorizontal:20,justifyContent:'center',shadowColor:'#6B9E78',shadowOffset:{width:0,height:4},shadowOpacity:0.3,shadowRadius:8,elevation:6},

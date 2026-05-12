@@ -8,7 +8,8 @@ import { router } from 'expo-router';
 import { useCustomerAuthStore } from '@/store/useCustomerAuthStore';
 import { useThemeStore } from '@/store/useThemeStore';
 import api from '@/lib/axios';
-import { ApiResponse, CityDisplayLabels, City, LoyaltyLevel, TenantLoyaltyDto } from '@/types';
+import { ApiResponse, CityDisplayLabels, City, LoyaltyLevel, TenantLoyaltyDto, TenantSummary } from '@/types';
+import { Colors } from '@/constants/theme';
 
 const LOYALTY_COLORS: Record<LoyaltyLevel, string> = {
   [LoyaltyLevel.BRONZE]: '#CD7F32',
@@ -35,21 +36,30 @@ export default function ProfileScreen() {
   const [newPassword, setNewPassword] = useState('');
 
   const isDark = theme === 'dark';
-  const textColor = isDark ? '#FFF' : '#3E2723';
+  const c = Colors[theme];
+  const textColor = c.text;
   const subTextColor = isDark ? 'rgba(255,255,255,0.5)' : 'rgba(62,39,35,0.6)';
-  const bgColor = isDark ? '#1C2520' : '#FAFAFA';
-  const cardColor = isDark ? 'rgba(255,255,255,0.06)' : '#FFF';
-  const borderColor = isDark ? 'rgba(255,255,255,0.08)' : '#E0E0E0';
-  const primaryColor = isDark ? '#6B9E78' : '#2E5F3E';
+  const bgColor = c.background;
+  const cardColor = c.card;
+  const borderColor = c.border;
+  const primaryColor = c.tint;
 
-  const fetchLoyalties = useCallback(async () => {
+  const [tenantsMap, setTenantsMap] = useState<Record<string, string>>({});
+
+  const fetchLoyaltiesAndTenants = useCallback(async () => {
     if (!customer) return;
     setIsLoading(true);
     try {
-      const res = await api.get<ApiResponse<TenantLoyaltyDto[]>>(
-        `/api/v1/crm/auth/loyalties/${customer.id}`
-      );
-      setLoyalties(res.data.data ?? []);
+      const [loyaltiesRes, tenantsRes] = await Promise.all([
+        api.get<ApiResponse<TenantLoyaltyDto[]>>(`/api/v1/crm/auth/loyalties/${customer.id}`),
+        api.get<ApiResponse<TenantSummary[]>>(`/api/v1/tenants`)
+      ]);
+      setLoyalties(loyaltiesRes.data.data ?? []);
+      const mapping: Record<string, string> = {};
+      (tenantsRes.data.data || []).forEach((t: TenantSummary) => {
+        mapping[t.id] = t.name;
+      });
+      setTenantsMap(mapping);
     } catch {
       setLoyalties([]);
     } finally {
@@ -57,7 +67,7 @@ export default function ProfileScreen() {
     }
   }, [customer]);
 
-  useEffect(() => { fetchLoyalties(); }, [fetchLoyalties]);
+  useEffect(() => { fetchLoyaltiesAndTenants(); }, [fetchLoyaltiesAndTenants]);
 
   const handleUpdateName = async () => {
     if (!customer || !newName.trim()) return;
@@ -93,7 +103,7 @@ export default function ProfileScreen() {
     <View style={[styles.root, { backgroundColor: bgColor }]}>
       <SafeAreaView style={styles.safe} edges={['top']}>
         <View style={styles.header}><Text style={[styles.headerTitle, { color: textColor }]}>Profile</Text></View>
-        <ScrollView contentContainerStyle={styles.scrollContent}>
+        <ScrollView contentContainerStyle={styles.scrollContent} refreshControl={<RefreshControl refreshing={isLoading} onRefresh={fetchLoyaltiesAndTenants} tintColor={primaryColor} />}>
           {/* User Info Card */}
           <View style={[styles.userCard, { backgroundColor: cardColor, borderColor }]}>
             <View style={[styles.avatar, { backgroundColor: primaryColor }]}>
@@ -116,6 +126,35 @@ export default function ProfileScreen() {
               thumbColor={'#f4f3f4'}
             />
           </View>
+
+          {/* Loyalties Section */}
+          <View style={styles.sectionHeader}>
+            <Text style={[styles.sectionTitle, { color: textColor }]}>My Memberships</Text>
+            <Text style={[styles.sectionCount, { color: subTextColor }]}>{loyalties.length} cafe{loyalties.length !== 1 ? 's' : ''}</Text>
+          </View>
+          
+          {loyalties.length === 0 && !isLoading ? (
+            <View style={styles.emptyContainer}>
+              <Text style={styles.emptyIcon}>🏪</Text>
+              <Text style={[styles.emptyTitle, { color: textColor }]}>No memberships yet</Text>
+              <Text style={[styles.emptySub, { color: subTextColor }]}>Visit a Tavia cafe to start earning loyalty rewards!</Text>
+            </View>
+          ) : (
+            loyalties.map((item) => (
+              <View key={item.id} style={[styles.loyaltyCard, { backgroundColor: cardColor, borderColor }]}>
+                <Text style={styles.loyaltyIcon}>{LOYALTY_ICONS[item.loyaltyLevel]}</Text>
+                <View style={styles.loyaltyInfo}>
+                  <Text style={[styles.loyaltyLevel, { color: textColor }]}>{item.loyaltyLevel} Tier - {tenantsMap[item.tenantId] || `Cafe ${item.tenantId.slice(0, 8)}`}</Text>
+                  <Text style={[styles.loyaltyTenant, { color: subTextColor }]}>Spent: ₺{Number(item.totalSpent).toLocaleString()}</Text>
+                </View>
+                <View style={styles.loyaltyRight}>
+                  <Text style={[styles.loyaltyBadge, { color: LOYALTY_COLORS[item.loyaltyLevel] }]}>
+                    {item.loyaltyLevel}
+                  </Text>
+                </View>
+              </View>
+            ))
+          )}
 
           {/* Change Username */}
           <View style={[styles.settingsCard, { backgroundColor: cardColor, borderColor, flexDirection: 'column', alignItems: 'flex-start' }]}>
@@ -184,5 +223,11 @@ const styles = StyleSheet.create({
   input:{borderWidth:1,borderRadius:8,paddingHorizontal:12,paddingVertical:10,fontSize:14},
   actionBtn:{paddingHorizontal:16,justifyContent:'center',alignItems:'center',borderRadius:8},
   actionBtnText:{color:'#FFF',fontWeight:'600'},
+  sectionHeader:{flexDirection:'row',justifyContent:'space-between',alignItems:'center',paddingHorizontal:20,paddingTop:20,paddingBottom:10},
+  sectionTitle:{fontSize:18,fontWeight:'700'},sectionCount:{fontSize:13,fontWeight:'600'},
+  loyaltyCard:{flexDirection:'row',alignItems:'center',borderRadius:12,marginHorizontal:16,marginBottom:8,padding:14,borderWidth:1},
+  loyaltyIcon:{fontSize:28,marginRight:12},loyaltyInfo:{flex:1},loyaltyLevel:{fontSize:14,fontWeight:'600'},loyaltyTenant:{fontSize:11,marginTop:2},
+  loyaltyRight:{alignItems:'flex-end'},loyaltyBadge:{fontSize:11,fontWeight:'800',letterSpacing:0.5},
+  emptyContainer:{alignItems:'center',paddingTop:20,paddingBottom:12},emptyIcon:{fontSize:40,marginBottom:8},emptyTitle:{fontSize:16,fontWeight:'700',marginBottom:4},emptySub:{fontSize:12,textAlign:'center',paddingHorizontal:40},
   logoutSection:{padding:16, marginTop: 12},logoutBtn:{backgroundColor:'rgba(239,68,68,0.12)',borderRadius:12,paddingVertical:14,alignItems:'center',borderWidth:1,borderColor:'rgba(239,68,68,0.2)'},logoutPressed:{opacity:0.7},logoutText:{color:'#EF4444',fontSize:15,fontWeight:'700'},
 });

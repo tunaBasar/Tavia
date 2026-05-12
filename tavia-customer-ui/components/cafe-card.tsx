@@ -27,20 +27,28 @@ function getImageForTenant(name: string): string {
 
 import { TouchableOpacity } from 'react-native';
 import { useActiveTenantStore } from '@/store/useActiveTenantStore';
+import { useThemeStore } from '@/store/useThemeStore';
+import { Colors } from '@/constants/theme';
 
 export function CafeCard({ tenant }: CafeCardProps) {
+  const { theme } = useThemeStore();
+  const c = Colors[theme];
+  const isDark = theme === 'dark';
 
-  
   const activeTenantId = useActiveTenantStore((state) => state.activeTenantId);
   const setActiveTenantId = useActiveTenantStore((state) => state.setActiveTenantId);
   const isActiveTenant = activeTenantId === tenant.id;
 
   return (
-    <TouchableOpacity 
-      activeOpacity={0.7} 
+    <TouchableOpacity
+      activeOpacity={0.7}
       onPress={() => setActiveTenantId(tenant.id)}
     >
-      <View style={[styles.card, isActiveTenant && styles.activeCard]}>
+      <View style={[
+        styles.card,
+        { backgroundColor: c.card, borderColor: c.border },
+        isActiveTenant && { borderColor: c.tint, backgroundColor: isDark ? 'rgba(93,64,55,0.25)' : 'rgba(93,64,55,0.08)' },
+      ]}>
         {/* Cafe Image (left) */}
         <Image
           source={{ uri: getImageForTenant(tenant.name) }}
@@ -53,14 +61,16 @@ export function CafeCard({ tenant }: CafeCardProps) {
         {/* Info (right) */}
         <View style={styles.info}>
           <View style={styles.topRow}>
-            <Text style={styles.name} numberOfLines={1}>{tenant.name}</Text>
+            <Text style={[styles.name, { color: c.text }]} numberOfLines={1}>{tenant.name}</Text>
             <View style={[styles.statusDot, { backgroundColor: tenant.isActive ? '#22C55E' : '#EF4444' }]} />
           </View>
 
-          <Text style={styles.city}>📍 {CityDisplayLabels[tenant.city]}</Text>
+          <Text style={[styles.city, { color: c.icon }]}>📍 {CityDisplayLabels[tenant.city]}</Text>
 
           <View style={styles.bottomRow}>
-            <Text style={styles.statusLabel}>{isActiveTenant ? 'Selected' : (tenant.isActive ? 'Open' : 'Closed')}</Text>
+            <Text style={[styles.statusLabel, { color: isActiveTenant ? c.tint : c.icon }]}>
+              {isActiveTenant ? '✓ Selected' : (tenant.isActive ? 'Open' : 'Closed')}
+            </Text>
           </View>
         </View>
       </View>
@@ -71,12 +81,10 @@ export function CafeCard({ tenant }: CafeCardProps) {
 const styles = StyleSheet.create({
   card: {
     flexDirection: 'row',
-    backgroundColor: 'rgba(255, 255, 255, 0.06)',
     borderRadius: 16,
     marginHorizontal: 16,
     marginBottom: 12,
     borderWidth: 1,
-    borderColor: 'rgba(255, 255, 255, 0.08)',
     overflow: 'hidden',
   },
   image: {
@@ -97,7 +105,6 @@ const styles = StyleSheet.create({
   name: {
     fontSize: 16,
     fontWeight: '700',
-    color: '#FFFFFF',
     flex: 1,
     marginRight: 8,
   },
@@ -108,7 +115,6 @@ const styles = StyleSheet.create({
   },
   city: {
     fontSize: 13,
-    color: 'rgba(255, 255, 255, 0.5)',
     marginTop: 2,
   },
   bottomRow: {
@@ -117,14 +123,8 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     marginTop: 4,
   },
-
   statusLabel: {
     fontSize: 11,
     fontWeight: '600',
-    color: 'rgba(255, 255, 255, 0.35)',
-  },
-  activeCard: {
-    borderColor: '#6B9E78',
-    backgroundColor: 'rgba(108, 99, 255, 0.1)',
   },
 });

@@ -11,6 +11,8 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { StatusBar } from 'expo-status-bar';
 
 import { useDiscoveryStore } from '@/store/useDiscoveryStore';
+import { useThemeStore } from '@/store/useThemeStore';
+import { Colors } from '@/constants/theme';
 import { CitySelector } from '@/components/city-selector';
 import { CafeCard } from '@/components/cafe-card';
 import { TenantSummary, CityDisplayLabels } from '@/types';
@@ -24,6 +26,8 @@ export default function DiscoveryScreen() {
     setCity,
     fetchTenants,
   } = useDiscoveryStore();
+  const { theme } = useThemeStore();
+  const activeColors = Colors[theme];
 
   // Fetch tenants whenever the selected city changes
   useEffect(() => {
@@ -61,14 +65,14 @@ export default function DiscoveryScreen() {
   }, [isLoading, error, selectedCity]);
 
   return (
-    <View style={styles.root}>
-      <StatusBar style="light" />
+    <View style={[styles.root, { backgroundColor: activeColors.background }]}>
+      <StatusBar style={theme === 'dark' ? "light" : "dark"} />
       <SafeAreaView style={styles.safe} edges={['top']}>
         {/* Header */}
         <View style={styles.header}>
-          <Text style={styles.greeting}>Good evening ☕</Text>
-          <Text style={styles.headerTitle}>Discover Cafes</Text>
-          <Text style={styles.headerSubtitle}>
+          <Text style={[styles.greeting, { color: activeColors.text, opacity: 0.7 }]}>Good evening ☕</Text>
+          <Text style={[styles.headerTitle, { color: activeColors.text }]}>Discover Cafes</Text>
+          <Text style={[styles.headerSubtitle, { color: activeColors.text, opacity: 0.6 }]}>
             Find your next favorite spot in the Tavia network
           </Text>
         </View>
@@ -81,11 +85,11 @@ export default function DiscoveryScreen() {
 
         {/* Results header */}
         <View style={styles.resultsHeader}>
-          <Text style={styles.resultsLabel}>
+          <Text style={[styles.resultsLabel, { color: activeColors.text }]}>
             Cafes in {CityDisplayLabels[selectedCity]}
           </Text>
           {!isLoading && (
-            <Text style={styles.resultsCount}>
+            <Text style={[styles.resultsCount, { color: activeColors.text, opacity: 0.6 }]}>
               {tenants.length} {tenants.length === 1 ? 'cafe' : 'cafes'}
             </Text>
           )}
@@ -94,8 +98,8 @@ export default function DiscoveryScreen() {
         {/* Loading state */}
         {isLoading && tenants.length === 0 ? (
           <View style={styles.loadingContainer}>
-            <ActivityIndicator size="large" color="#6B9E78" />
-            <Text style={styles.loadingText}>Finding cafes…</Text>
+            <ActivityIndicator size="large" color={activeColors.tint} />
+            <Text style={[styles.loadingText, { color: activeColors.text, opacity: 0.6 }]}>Finding cafes…</Text>
           </View>
         ) : (
           <FlatList
@@ -109,8 +113,8 @@ export default function DiscoveryScreen() {
               <RefreshControl
                 refreshing={isLoading}
                 onRefresh={handleRefresh}
-                tintColor="#6B9E78"
-                colors={['#6B9E78']}
+                tintColor={activeColors.tint}
+                colors={[activeColors.tint]}
               />
             }
           />
@@ -123,7 +127,6 @@ export default function DiscoveryScreen() {
 const styles = StyleSheet.create({
   root: {
     flex: 1,
-    backgroundColor: '#1C2520',
   },
   safe: {
     flex: 1,

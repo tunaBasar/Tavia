@@ -58,8 +58,6 @@ configurations/*.yaml
 
 db-seed.js
 GEMINI.md
-project-srs.md
-.windsurfrules
 .cursorrules
 logs/*
 pids/*

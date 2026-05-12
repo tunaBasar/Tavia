@@ -7,6 +7,8 @@ import {
   View,
 } from 'react-native';
 import { City, CityDisplayLabels } from '@/types';
+import { useThemeStore } from '@/store/useThemeStore';
+import { Colors } from '@/constants/theme';
 
 const ALL_CITIES = Object.values(City);
 
@@ -16,6 +18,10 @@ interface CitySelectorProps {
 }
 
 export function CitySelector({ selectedCity, onCitySelect }: CitySelectorProps) {
+  const { theme } = useThemeStore();
+  const c = Colors[theme];
+  const isDark = theme === 'dark';
+
   return (
     <View style={styles.container}>
       <FlatList
@@ -31,13 +37,21 @@ export function CitySelector({ selectedCity, onCitySelect }: CitySelectorProps) 
               onPress={() => onCitySelect(item)}
               style={({ pressed }) => [
                 styles.pill,
-                isSelected && styles.pillSelected,
+                {
+                  backgroundColor: isSelected
+                    ? c.tint
+                    : isDark ? 'rgba(255,255,255,0.08)' : 'rgba(93,64,55,0.08)',
+                  borderColor: isSelected
+                    ? c.tint
+                    : isDark ? 'rgba(255,255,255,0.12)' : c.border,
+                },
                 pressed && styles.pillPressed,
               ]}
             >
               <Text
                 style={[
                   styles.pillText,
+                  { color: isSelected ? '#FFF' : c.text },
                   isSelected && styles.pillTextSelected,
                 ]}
               >
@@ -63,18 +77,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 18,
     paddingVertical: 10,
     borderRadius: 24,
-    backgroundColor: 'rgba(255, 255, 255, 0.08)',
     borderWidth: 1,
-    borderColor: 'rgba(255, 255, 255, 0.12)',
-  },
-  pillSelected: {
-    backgroundColor: '#6B9E78',
-    borderColor: '#6B9E78',
-    shadowColor: '#6B9E78',
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.35,
-    shadowRadius: 8,
-    elevation: 6,
   },
   pillPressed: {
     opacity: 0.7,
@@ -82,10 +85,8 @@ const styles = StyleSheet.create({
   pillText: {
     fontSize: 14,
     fontWeight: '600',
-    color: 'rgba(255, 255, 255, 0.6)',
   },
   pillTextSelected: {
-    color: '#FFFFFF',
     fontWeight: '700',
   },
 });

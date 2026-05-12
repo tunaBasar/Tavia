@@ -13,6 +13,7 @@ import {
 } from 'react-native';
 import { useFocusEffect } from 'expo-router';
 import { useThemeStore } from '@/store/useThemeStore';
+import { Colors } from '@/constants/theme';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useCustomerAuthStore } from '@/store/useCustomerAuthStore';
 import { useActiveTenantStore } from '@/store/useActiveTenantStore';
@@ -30,40 +31,68 @@ const TAB_BAR_HEIGHT = 64;
 const MascotAvatar = ({ isThinking }: { isThinking?: boolean }) => {
   const floatAnim = useRef(new Animated.Value(0)).current;
   const pulseAnim = useRef(new Animated.Value(1)).current;
+  const mouthAnim = useRef(new Animated.Value(0)).current;
 
   useEffect(() => {
     // Gentle float
     Animated.loop(
       Animated.sequence([
-        Animated.timing(floatAnim, { toValue: -3, duration: 1500, useNativeDriver: true }),
-        Animated.timing(floatAnim, { toValue: 3, duration: 1500, useNativeDriver: true }),
+        Animated.timing(floatAnim, { toValue: -3, duration: 1500, useNativeDriver: false }),
+        Animated.timing(floatAnim, { toValue: 3, duration: 1500, useNativeDriver: false }),
       ])
     ).start();
+  }, []);
 
-    // Pulse antenna when thinking
+  useEffect(() => {
     if (isThinking) {
+      // Pulse antenna
       Animated.loop(
         Animated.sequence([
-          Animated.timing(pulseAnim, { toValue: 1.5, duration: 600, useNativeDriver: true }),
-          Animated.timing(pulseAnim, { toValue: 1, duration: 600, useNativeDriver: true }),
+          Animated.timing(pulseAnim, { toValue: 1.5, duration: 600, useNativeDriver: false }),
+          Animated.timing(pulseAnim, { toValue: 1, duration: 600, useNativeDriver: false }),
+        ])
+      ).start();
+      // Mouth open/close "talking" animation
+      Animated.loop(
+        Animated.sequence([
+          Animated.timing(mouthAnim, { toValue: 1, duration: 250, useNativeDriver: false }),
+          Animated.timing(mouthAnim, { toValue: 0, duration: 200, useNativeDriver: false }),
+          Animated.timing(mouthAnim, { toValue: 0.6, duration: 180, useNativeDriver: false }),
+          Animated.timing(mouthAnim, { toValue: 0, duration: 220, useNativeDriver: false }),
         ])
       ).start();
     } else {
       pulseAnim.setValue(1);
+      mouthAnim.setValue(0);
     }
   }, [isThinking]);
 
+  // Mouth height animates between 3 (closed smile) and 8 (open talking)
+  const mouthHeight = mouthAnim.interpolate({ inputRange: [0, 1], outputRange: [3, 8] });
+  // Mouth border-radius to keep it round when open
+  const mouthRadius = mouthAnim.interpolate({ inputRange: [0, 1], outputRange: [6, 4] });
+
   return (
-    <Animated.View style={{ transform: [{ translateY: floatAnim }], alignItems: 'center', justifyContent: 'center', width: 36, height: 36, backgroundColor: '#2E5F3E', borderRadius: 18, borderWidth: 2, borderColor: '#6B9E78', marginRight: 10 }}>
-      {/* Eyes */}
-      <View style={{ flexDirection: 'row', marginTop: 2 }}>
-        <View style={{ width: 5, height: 5, borderRadius: 2.5, backgroundColor: '#FFF', marginHorizontal: 4 }} />
-        <View style={{ width: 5, height: 5, borderRadius: 2.5, backgroundColor: '#FFF', marginHorizontal: 4 }} />
-      </View>
-      {/* Mouth */}
-      <View style={{ width: 10, height: 2, backgroundColor: '#FFF', borderRadius: 1, marginTop: 4, opacity: 0.8 }} />
+    <Animated.View style={{ transform: [{ translateY: floatAnim }], alignItems: 'center', justifyContent: 'center', width: 40, height: 40, backgroundColor: '#5D4037', borderRadius: 20, borderWidth: 2, borderColor: '#8D6E63', marginRight: 10 }}>
       {/* Antenna glow */}
-      <Animated.View style={{ position: 'absolute', top: 3, width: 4, height: 4, borderRadius: 2, backgroundColor: isThinking ? '#FFD700' : '#4ADE80', transform: [{ scale: pulseAnim }], shadowColor: isThinking ? '#FFD700' : 'transparent', shadowOpacity: 0.8, shadowRadius: 4 }} />
+      <Animated.View style={{ position: 'absolute', top: -4, width: 6, height: 6, borderRadius: 3, backgroundColor: isThinking ? '#FFD700' : '#A5D6A7', transform: [{ scale: pulseAnim }], shadowColor: isThinking ? '#FFD700' : 'transparent', shadowOpacity: 0.9, shadowRadius: 6 }} />
+      {/* Eyes - happy curved */}
+      <View style={{ flexDirection: 'row', marginTop: 4 }}>
+        <View style={{ width: 6, height: 6, borderRadius: 3, backgroundColor: '#FFF', marginHorizontal: 3 }} />
+        <View style={{ width: 6, height: 6, borderRadius: 3, backgroundColor: '#FFF', marginHorizontal: 3 }} />
+      </View>
+      {/* Smile / Talking Mouth */}
+      <Animated.View style={{
+        width: 12,
+        height: mouthHeight,
+        backgroundColor: '#FFCCBC',
+        borderBottomLeftRadius: mouthRadius,
+        borderBottomRightRadius: mouthRadius,
+        borderTopLeftRadius: 1,
+        borderTopRightRadius: 1,
+        marginTop: 3,
+        overflow: 'hidden',
+      }} />
     </Animated.View>
   );
 };
@@ -81,13 +110,14 @@ export default function AiChatScreen() {
   const { theme } = useThemeStore();
 
   const isDark = theme === 'dark';
-  const bgColor = isDark ? '#1C2520' : '#FAFAFA';
-  const headerBg = isDark ? '#1C1C2E' : '#FFF';
-  const textColor = isDark ? '#FFFFFF' : '#3E2723';
-  const inputBg = isDark ? '#1C2520' : '#FAFAFA';
-  const borderColor = isDark ? 'rgba(255, 255, 255, 0.05)' : '#E0E0E0';
-  const aiBubbleBg = isDark ? '#2A2A40' : '#EFEBE9';
-  const aiTextColor = isDark ? '#FFFFFF' : '#3E2723';
+  const c = Colors[theme];
+  const bgColor = c.background;
+  const headerBg = c.card;
+  const textColor = c.text;
+  const inputBg = c.background;
+  const borderColor = c.border;
+  const aiBubbleBg = isDark ? '#3E2723' : '#EFEBE9';
+  const aiTextColor = c.text;
 
   // ── Clear chat history when navigating away ──────────────────────────
   useFocusEffect(

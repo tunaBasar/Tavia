@@ -5,25 +5,29 @@
 
 import { Platform } from 'react-native';
 
-const tintColorLight = '#2E5F3E'; // Cafe Green
-const tintColorDark = '#6B9E78';  // Matcha Light Green
+const tintColorLight = '#5D4037'; // Mocha Brown
+const tintColorDark = '#D7CCC8';  // Latte Light Brown
 
 export const Colors = {
   light: {
-    text: '#4E342E', // Earthy Brown
+    text: '#3E2723', // Dark Roast Brown
     background: '#FAFAFA', // Clean White
-    tint: tintColorLight, // Green
-    icon: '#795548', // Medium Brown
+    tint: tintColorLight,
+    icon: '#795548', // Wood Brown
     tabIconDefault: '#795548',
     tabIconSelected: tintColorLight,
+    card: '#F5F5DC', // Beige
+    border: '#D7CCC8',
   },
   dark: {
     text: '#EFEBE9', // Light Warm White
-    background: '#3E2723', // Dark Roast Brown
-    tint: tintColorDark, // Light Green
-    icon: '#BCAAA4', // Soft Taupe/Brown
+    background: '#2D1B15', // Deep Coffee Brown
+    tint: tintColorDark,
+    icon: '#BCAAA4', // Soft Mocha
     tabIconDefault: '#BCAAA4',
     tabIconSelected: tintColorDark,
+    card: '#3E2723', // Dark Roast Card
+    border: '#4E342E',
   },
 };
 

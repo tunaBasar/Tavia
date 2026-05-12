@@ -7,15 +7,16 @@ import 'react-native-reanimated';
 
 import { useCustomerAuthStore } from '@/store/useCustomerAuthStore';
 import { useThemeStore } from '@/store/useThemeStore';
+import { Colors } from '@/constants/theme';
 
 /** Custom dark theme to match Tavia brand (Earthy Cafe Palette) */
 const TaviaDark = {
   ...DarkTheme,
   colors: {
     ...DarkTheme.colors,
-    background: '#1C2520',
-    card: '#1C2520',
-    primary: '#6B9E78',
+    background: Colors.dark.background,
+    card: Colors.dark.background,
+    primary: Colors.dark.tint,
   },
 };
 
@@ -23,9 +24,9 @@ const TaviaLight = {
   ...DefaultTheme,
   colors: {
     ...DefaultTheme.colors,
-    background: '#FAFAFA',
-    card: '#FAFAFA',
-    primary: '#2E5F3E',
+    background: Colors.light.background,
+    card: Colors.light.background,
+    primary: Colors.light.tint,
   },
 };
 
