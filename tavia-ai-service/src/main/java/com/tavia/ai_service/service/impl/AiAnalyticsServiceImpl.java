@@ -2,6 +2,7 @@ package com.tavia.ai_service.service.impl;
 
 import com.tavia.ai_service.domain.DailySales;
 import com.tavia.ai_service.dto.DailySalesDto;
+import com.tavia.ai_service.dto.WeeklySalesDto;
 import com.tavia.ai_service.engine.RuleEngine;
 import com.tavia.ai_service.mapper.DailySalesMapper;
 import com.tavia.ai_service.repository.DailySalesRepository;
@@ -9,7 +10,10 @@ import com.tavia.ai_service.service.AiAnalyticsService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
+import java.time.DayOfWeek;
 import java.time.LocalDate;
+import java.time.temporal.TemporalAdjusters;
 import java.util.List;
 import java.util.UUID;
 
@@ -27,6 +31,36 @@ public class AiAnalyticsServiceImpl implements AiAnalyticsService {
         DailySales sales = dailySalesRepository.findByTenantIdAndReportDate(tenantId, today)
                 .orElseThrow(() -> new RuntimeException("No sales data found for today for tenant: " + tenantId));
         return dailySalesMapper.toDto(sales);
+    }
+
+    @Override
+    public WeeklySalesDto getWeeklySales(UUID tenantId) {
+        LocalDate weekStart = LocalDate.now().with(TemporalAdjusters.previousOrSame(DayOfWeek.MONDAY));
+        LocalDate weekEnd = weekStart.plusDays(6);
+
+        List<DailySales> dailySalesList = dailySalesRepository
+                .findByTenantIdAndReportDateBetween(tenantId, weekStart, weekEnd);
+
+        BigDecimal totalRevenue = dailySalesList.stream()
+                .map(DailySales::getTotalRevenue)
+                .reduce(BigDecimal.ZERO, BigDecimal::add);
+
+        int totalOrders = dailySalesList.stream()
+                .mapToInt(DailySales::getTotalOrders)
+                .sum();
+
+        List<DailySalesDto> breakdown = dailySalesList.stream()
+                .map(dailySalesMapper::toDto)
+                .toList();
+
+        return WeeklySalesDto.builder()
+                .tenantId(tenantId)
+                .weekStart(weekStart)
+                .weekEnd(weekEnd)
+                .totalRevenue(totalRevenue)
+                .totalOrders(totalOrders)
+                .dailyBreakdown(breakdown)
+                .build();
     }
 
     @Override

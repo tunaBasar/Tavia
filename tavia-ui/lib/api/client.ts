@@ -13,6 +13,7 @@ import type {
   Product,
   Machine,
   MachineRegistrationRequest,
+  WeeklySales,
 } from "@/types";
 
 const BASE_URL = "/api";
@@ -284,6 +285,18 @@ export async function registerMachine(payload: MachineRegistrationRequest, tenan
     method: "POST",
     headers: tenantHeaders(tenantId),
     body: JSON.stringify(payload),
+  });
+}
+
+// ─── AI Analytics endpoints ─────────────────────────────────────────
+
+/**
+ * GET /api/v1/ai/weekly/{tenantId}
+ * Backend: AiAnalyticsController#getWeeklyAnalytics(@PathVariable UUID tenantId)
+ */
+export async function fetchWeeklySales(tenantId: string) {
+  return request<ApiResponse<WeeklySales>>(`/ai/weekly/${tenantId}`, {
+    headers: tenantHeaders(tenantId),
   });
 }
 

@@ -49,6 +49,9 @@ public class CatalogServiceImpl implements CatalogService {
         recipe.setTenantId(tenantId);
         recipe.setProductName(normalizedName);
 
+        if (recipe.getPrice() == null) {
+            recipe.setPrice(java.math.BigDecimal.ZERO);
+        }
         if (recipe.getActive() == null) {
             recipe.setActive(true);
         }

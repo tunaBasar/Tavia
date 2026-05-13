@@ -26,6 +26,7 @@ function getImageForTenant(name: string): string {
 }
 
 import { TouchableOpacity } from 'react-native';
+import { useRouter } from 'expo-router';
 import { useActiveTenantStore } from '@/store/useActiveTenantStore';
 import { useThemeStore } from '@/store/useThemeStore';
 import { Colors } from '@/constants/theme';
@@ -34,15 +35,21 @@ export function CafeCard({ tenant }: CafeCardProps) {
   const { theme } = useThemeStore();
   const c = Colors[theme];
   const isDark = theme === 'dark';
+  const router = useRouter();
 
   const activeTenantId = useActiveTenantStore((state) => state.activeTenantId);
   const setActiveTenantId = useActiveTenantStore((state) => state.setActiveTenantId);
   const isActiveTenant = activeTenantId === tenant.id;
 
+  const handlePress = () => {
+    setActiveTenantId(tenant.id);
+    router.push({ pathname: '/storefront' as never, params: { tenantName: tenant.name } });
+  };
+
   return (
     <TouchableOpacity
       activeOpacity={0.7}
-      onPress={() => setActiveTenantId(tenant.id)}
+      onPress={handlePress}
     >
       <View style={[
         styles.card,

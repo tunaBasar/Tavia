@@ -10,6 +10,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 /**
@@ -32,6 +33,8 @@ public class CreateRecipeRequest {
     private ProductCategory category;
 
     private String description;
+
+    private BigDecimal price;
 
     private Boolean active;
 

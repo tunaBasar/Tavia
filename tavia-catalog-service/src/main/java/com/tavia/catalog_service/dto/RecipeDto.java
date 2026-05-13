@@ -10,6 +10,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.UUID;
 
@@ -42,6 +43,8 @@ public class RecipeDto {
     private ProductCategory category;
 
     private String description;
+
+    private BigDecimal price;
 
     private Boolean active;
 

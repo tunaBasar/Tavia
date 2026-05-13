@@ -155,10 +155,12 @@ export default function OrdersPage() {
                   <thead>
                     <tr className="border-b border-border/50 text-left text-muted-foreground">
                       <th className="pb-3 pr-4 font-medium">Order ID</th>
+                      <th className="pb-3 pr-4 font-medium">Customer</th>
                       <th className="pb-3 pr-4 font-medium">Product</th>
                       <th className="pb-3 pr-4 font-medium">Qty</th>
                       <th className="pb-3 pr-4 font-medium">Price</th>
                       <th className="pb-3 pr-4 font-medium">Total</th>
+                      <th className="pb-3 pr-4 font-medium">Status</th>
                       <th className="pb-3 font-medium">Date</th>
                     </tr>
                   </thead>
@@ -181,6 +183,18 @@ export default function OrdersPage() {
                             </span>
                           </td>
                           <td className="py-3 pr-4">
+                            <div className="flex flex-col">
+                              <span className="font-medium text-foreground">
+                                {order.customerName || "Anonymous"}
+                              </span>
+                              {order.loyaltyLevel && (
+                                <span className="text-[10px] font-semibold tracking-wider text-muted-foreground">
+                                  {order.loyaltyLevel}
+                                </span>
+                              )}
+                            </div>
+                          </td>
+                          <td className="py-3 pr-4">
                             <span className="font-medium text-foreground">
                               {order.productName}
                             </span>
@@ -194,6 +208,24 @@ export default function OrdersPage() {
                           <td className="py-3 pr-4">
                             <Badge variant="secondary" className="tabular-nums">
                               {formatPrice(total)}
+                            </Badge>
+                          </td>
+                          <td className="py-3 pr-4">
+                            <Badge
+                              variant="outline"
+                              className={
+                                order.status === "COMPLETED"
+                                  ? "border-green-500/30 bg-green-500/10 text-green-500"
+                                  : order.status === "PENDING"
+                                  ? "border-yellow-500/30 bg-yellow-500/10 text-yellow-500"
+                                  : order.status === "PREPARING"
+                                  ? "border-blue-500/30 bg-blue-500/10 text-blue-500"
+                                  : order.status === "CANCELLED"
+                                  ? "border-red-500/30 bg-red-500/10 text-red-500"
+                                  : ""
+                              }
+                            >
+                              {order.status}
                             </Badge>
                           </td>
                           <td className="py-3 text-xs text-muted-foreground">

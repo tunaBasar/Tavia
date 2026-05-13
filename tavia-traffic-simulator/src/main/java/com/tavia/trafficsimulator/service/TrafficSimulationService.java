@@ -286,6 +286,63 @@ public class TrafficSimulationService {
         return list.get(ThreadLocalRandom.current().nextInt(list.size()));
     }
 
+    /**
+     * Periodically transitions order statuses to simulate real cafe operations:
+     *   PENDING → PREPARING (after ~15s)  →  COMPLETED (after ~15s)
+     * Also randomly cancels ~5% of PENDING orders.
+     */
+    @Scheduled(fixedDelayString = "${simulator.lifecycle-delay-ms:15000}")
+    public void simulateOrderLifecycle() {
+        if (!running.get()) return;
+        if (cachedTenants.isEmpty()) return;
+
+        for (TenantResponse tenant : cachedTenants) {
+            if (!tenant.isActive()) continue;
+            String tid = tenant.getId().toString();
+
+            try {
+                ApiResponse<List<Map<String, Object>>> resp = orderClient.getOrders(tid);
+                List<Map<String, Object>> orders = (resp != null && resp.getData() != null)
+                        ? resp.getData() : Collections.emptyList();
+
+                ThreadLocalRandom rng = ThreadLocalRandom.current();
+                int transitioned = 0;
+
+                for (Map<String, Object> order : orders) {
+                    String status = String.valueOf(order.get("status"));
+                    String orderId = String.valueOf(order.get("id"));
+
+                    if ("PENDING".equals(status)) {
+                        if (rng.nextDouble() < 0.05) {
+                            orderClient.updateOrderStatus(orderId, Map.of("status", "CANCELLED"));
+                            transitioned++;
+                            eventBus.publish(new SimulatorEvent("STATUS_CHANGE", tenant.getCity().name(),
+                                    tenant.getName(), orderId.substring(0, 8) + " → CANCELLED"));
+                        } else if (rng.nextDouble() < 0.6) {
+                            orderClient.updateOrderStatus(orderId, Map.of("status", "PREPARING"));
+                            transitioned++;
+                            eventBus.publish(new SimulatorEvent("STATUS_CHANGE", tenant.getCity().name(),
+                                    tenant.getName(), orderId.substring(0, 8) + " → PREPARING"));
+                        }
+                    } else if ("PREPARING".equals(status)) {
+                        if (rng.nextDouble() < 0.7) {
+                            orderClient.updateOrderStatus(orderId, Map.of("status", "COMPLETED"));
+                            transitioned++;
+                            eventBus.publish(new SimulatorEvent("STATUS_CHANGE", tenant.getCity().name(),
+                                    tenant.getName(), orderId.substring(0, 8) + " → COMPLETED"));
+                        }
+                    }
+                }
+
+                if (transitioned > 0) {
+                    log.info("Lifecycle: {} order(s) transitioned for tenant {}", transitioned, tenant.getName());
+                }
+            } catch (Exception e) {
+                log.debug("Lifecycle skip for tenant {}: {}", tenant.getName(), e.getMessage());
+            }
+        }
+    }
+
     public List<Map<String, String>> getCachedTenantSummary() {
         return cachedTenants.stream()
                 .map(t -> Map.of(

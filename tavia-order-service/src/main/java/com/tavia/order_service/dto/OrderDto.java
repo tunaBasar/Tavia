@@ -1,5 +1,7 @@
 package com.tavia.order_service.dto;
 
+import com.tavia.order_service.enums.LoyaltyLevel;
+import com.tavia.order_service.enums.OrderStatus;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -20,5 +22,8 @@ public class OrderDto {
     private String productName;
     private Integer quantity;
     private BigDecimal price;
+    private OrderStatus status;
+    private String customerName;
+    private LoyaltyLevel loyaltyLevel;
     private LocalDateTime orderDate;
 }

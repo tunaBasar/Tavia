@@ -4,10 +4,11 @@ import { CustomersCard } from "@/components/dashboard/customers-card";
 import { ContextCard } from "@/components/dashboard/context-card";
 import { AiLiveFeed } from "@/components/dashboard/ai-live-feed";
 import { SimulateOrderButton } from "@/components/dashboard/simulate-order-button";
-import { useOrderCount } from "@/lib/hooks/use-order-count";
+import { useWeeklySales } from "@/lib/hooks/use-weekly-sales";
 
 export default function OverviewPage() {
-  const { data: totalOrders, isLoading: isOrderCountLoading } = useOrderCount();
+  const { data: weeklySalesRes, isLoading: isWeeklySalesLoading } = useWeeklySales();
+  const weeklySales = weeklySalesRes?.data;
 
   return (
     <div className="space-y-8">
@@ -36,31 +37,41 @@ export default function OverviewPage() {
           {/* Additional metrics area — ready for future expansion */}
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
             <StatCard
-              label="Total Orders"
+              label="Weekly Orders"
               value={
-                isOrderCountLoading
+                isWeeklySalesLoading
                   ? "..."
-                  : totalOrders != null
-                    ? totalOrders.toLocaleString()
+                  : weeklySales?.totalOrders != null
+                    ? weeklySales.totalOrders.toLocaleString()
                     : "0"
               }
               subtext={
-                isOrderCountLoading
+                isWeeklySalesLoading
                   ? "Loading..."
-                  : "All-time for this tenant"
+                  : "This week for this tenant"
               }
               gradient="from-amber-500 via-orange-500 to-red-500"
+            />
+            <StatCard
+              label="Weekly Revenue"
+              value={
+                isWeeklySalesLoading
+                  ? "..."
+                  : weeklySales?.totalRevenue != null
+                    ? `₺${weeklySales.totalRevenue.toLocaleString("tr-TR", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`
+                    : "₺0,00"
+              }
+              subtext={
+                isWeeklySalesLoading
+                  ? "Loading..."
+                  : "This week for this tenant"
+              }
+              gradient="from-emerald-500 via-green-500 to-teal-500"
             />
             <StatCard
               label="AI Decisions"
               value="7"
               subtext="Last 24 hours"
-              gradient="from-emerald-500 via-green-500 to-teal-500"
-            />
-            <StatCard
-              label="Revenue Impact"
-              value="—"
-              subtext="Calculation pending"
               gradient="from-pink-500 via-rose-500 to-red-500"
             />
           </div>

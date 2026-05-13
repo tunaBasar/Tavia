@@ -51,7 +51,7 @@ export default function TabLayout() {
         name="chat"
         options={{
           title: 'AI Assistant',
-          tabBarIcon: ({ color }) => <IconSymbol size={24} name="chat.bubble.fill" color={color} />,
+          tabBarIcon: ({ color }) => <IconSymbol size={24} name="paperplane.fill" color={color} />,
         }}
       />
       <Tabs.Screen

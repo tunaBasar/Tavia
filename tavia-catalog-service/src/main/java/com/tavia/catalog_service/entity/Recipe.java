@@ -4,6 +4,7 @@ import com.tavia.catalog_service.enums.ProductCategory;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
@@ -57,6 +58,13 @@ public class Recipe {
      */
     @Column(name = "description", length = 500)
     private String description;
+
+    /**
+     * Customer-facing price for one unit of this product.
+     */
+    @Column(name = "price", nullable = false, precision = 10, scale = 2)
+    @Builder.Default
+    private BigDecimal price = BigDecimal.ZERO;
 
     /**
      * Whether this recipe is currently active and available for ordering.

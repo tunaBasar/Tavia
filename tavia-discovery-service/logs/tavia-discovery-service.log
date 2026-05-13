@@ -1,72 +1,251 @@
-2026-05-12 00:00:41.245 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
-2026-05-12 00:01:41.245 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
-2026-05-12 00:02:41.220 [Eureka-PeerNodesUpdater] WARN  [traceId=, spanId=] c.n.eureka.cluster.PeerEurekaNodes — The replica size seems to be empty. Check the route 53 DNS Registry
-2026-05-12 00:02:41.226 [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] INFO  [traceId=, spanId=] c.n.e.r.PeerAwareInstanceRegistryImpl — Current renewal threshold is : 20
-2026-05-12 00:02:41.246 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
-2026-05-12 00:03:41.245 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
-2026-05-12 00:04:41.245 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
-2026-05-12 00:05:41.245 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
-2026-05-12 00:06:41.245 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
-2026-05-12 00:06:43.375 [http-nio-8761-exec-10] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Registered instance TAVIA-AI-SERVICE/10.0.0.139:tavia-ai-service:8084 with status DOWN (replication=false)
-2026-05-12 00:06:46.398 [http-nio-8761-exec-7] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Cancelled instance TAVIA-AI-SERVICE/10.0.0.139:tavia-ai-service:8084 (replication=false)
-2026-05-12 00:07:16.928 [http-nio-8761-exec-3] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Registered instance TAVIA-AI-SERVICE/10.0.0.139:tavia-ai-service:8084 with status UP (replication=false)
-2026-05-12 00:07:41.245 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
-2026-05-12 00:08:41.245 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
-2026-05-12 00:09:41.245 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
-2026-05-12 00:10:41.246 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
-2026-05-12 00:11:41.246 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
-2026-05-12 00:12:41.221 [Eureka-PeerNodesUpdater] WARN  [traceId=, spanId=] c.n.eureka.cluster.PeerEurekaNodes — The replica size seems to be empty. Check the route 53 DNS Registry
-2026-05-12 00:12:41.246 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
-2026-05-12 00:13:41.246 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
-2026-05-12 00:14:41.246 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
-2026-05-12 00:15:41.246 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
-2026-05-12 00:16:41.246 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
-2026-05-12 00:17:41.226 [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] INFO  [traceId=, spanId=] c.n.e.r.PeerAwareInstanceRegistryImpl — Current renewal threshold is : 20
-2026-05-12 00:17:41.246 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
-2026-05-12 00:18:41.246 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
-2026-05-12 00:19:41.246 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
-2026-05-12 00:20:41.246 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
-2026-05-12 00:21:41.246 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
-2026-05-12 00:22:41.221 [Eureka-PeerNodesUpdater] WARN  [traceId=, spanId=] c.n.eureka.cluster.PeerEurekaNodes — The replica size seems to be empty. Check the route 53 DNS Registry
-2026-05-12 00:22:41.246 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
-2026-05-12 00:23:41.246 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
-2026-05-12 00:24:41.246 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
-2026-05-12 00:25:41.247 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
-2026-05-12 00:26:41.246 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
-2026-05-12 00:27:41.246 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
-2026-05-12 00:28:41.246 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
-2026-05-12 00:29:41.247 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
-2026-05-12 00:30:41.246 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
-2026-05-12 00:31:41.246 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
-2026-05-12 00:32:41.221 [Eureka-PeerNodesUpdater] WARN  [traceId=, spanId=] c.n.eureka.cluster.PeerEurekaNodes — The replica size seems to be empty. Check the route 53 DNS Registry
-2026-05-12 00:32:41.226 [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] INFO  [traceId=, spanId=] c.n.e.r.PeerAwareInstanceRegistryImpl — Current renewal threshold is : 20
-2026-05-12 00:32:41.246 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
-2026-05-12 00:33:41.247 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
-2026-05-12 00:34:41.246 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
-2026-05-12 00:35:41.246 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
-2026-05-12 00:36:41.246 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
-2026-05-12 00:37:41.246 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
-2026-05-12 00:38:41.246 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
-2026-05-12 00:39:41.246 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
-2026-05-12 00:40:41.246 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
-2026-05-12 00:40:43.504 [http-nio-8761-exec-1] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Registered instance TAVIA-CRM-SERVICE/10.0.0.139:tavia-crm-service:8086 with status DOWN (replication=false)
-2026-05-12 00:40:46.511 [http-nio-8761-exec-10] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Cancelled instance TAVIA-CRM-SERVICE/10.0.0.139:tavia-crm-service:8086 (replication=false)
-2026-05-12 00:41:06.798 [http-nio-8761-exec-10] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Registered instance TAVIA-CRM-SERVICE/10.0.0.139:tavia-crm-service:8086 with status UP (replication=false)
-2026-05-12 00:41:41.246 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
-2026-05-12 00:42:41.222 [Eureka-PeerNodesUpdater] WARN  [traceId=, spanId=] c.n.eureka.cluster.PeerEurekaNodes — The replica size seems to be empty. Check the route 53 DNS Registry
-2026-05-12 00:42:41.246 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
-2026-05-12 00:43:41.246 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
-2026-05-12 00:44:37.757 [http-nio-8761-exec-5] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Registered instance TAVIA-CRM-SERVICE/10.0.0.139:tavia-crm-service:8086 with status DOWN (replication=false)
-2026-05-12 00:44:37.805 [http-nio-8761-exec-1] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Registered instance TAVIA-AI-SERVICE/10.0.0.139:tavia-ai-service:8084 with status DOWN (replication=false)
-2026-05-12 00:44:37.825 [SpringApplicationShutdownHook] INFO  [traceId=, spanId=] o.s.c.n.e.s.EurekaServiceRegistry — Unregistering application TAVIA-DISCOVERY-SERVICE with eureka with status DOWN
-2026-05-12 00:44:37.834 [SpringApplicationShutdownHook] INFO  [traceId=, spanId=] o.s.boot.tomcat.GracefulShutdown — Commencing graceful shutdown. Waiting for active requests to complete
-2026-05-12 00:44:37.838 [http-nio-8761-exec-10] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Registered instance TAVIA-IOT-SERVICE/10.0.0.139:tavia-iot-service:8089 with status DOWN (replication=false)
-2026-05-12 00:44:37.844 [tomcat-shutdown] INFO  [traceId=, spanId=] o.s.boot.tomcat.GracefulShutdown — Graceful shutdown complete
-2026-05-12 00:44:37.858 [SpringApplicationShutdownHook] INFO  [traceId=, spanId=] o.s.c.n.e.s.EurekaServerBootstrap — Shutting down Eureka Server..
-2026-05-12 00:44:37.858 [SpringApplicationShutdownHook] INFO  [traceId=, spanId=] c.n.e.DefaultEurekaServerContext — Shutting down ...
-2026-05-12 00:44:37.859 [SpringApplicationShutdownHook] INFO  [traceId=, spanId=] c.n.e.DefaultEurekaServerContext — Shut down
-2026-05-12 00:44:37.859 [SpringApplicationShutdownHook] INFO  [traceId=, spanId=] o.s.c.n.e.s.EurekaServerBootstrap — Eureka Service is now shutdown...
-2026-05-12 00:44:37.865 [SpringApplicationShutdownHook] INFO  [traceId=, spanId=] c.n.e.DefaultEurekaServerContext — Shutting down ...
-2026-05-12 00:44:37.865 [SpringApplicationShutdownHook] INFO  [traceId=, spanId=] c.n.e.DefaultEurekaServerContext — Shut down
-2026-05-12 00:44:37.871 [SpringApplicationShutdownHook] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — Shutting down DiscoveryClient ...
-2026-05-12 00:44:37.871 [SpringApplicationShutdownHook] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — Completed shut down of DiscoveryClient
+2026-05-13 06:11:55.113 [restartedMain] INFO  [traceId=, spanId=] c.t.d.TaviaDiscoveryServiceApplication — Starting TaviaDiscoveryServiceApplication using Java 21.0.10 with PID 17659 (/home/tuna/Desktop/tavia_v2/tavia-discovery-service/build/classes/java/main started by tuna in /home/tuna/Desktop/tavia_v2/tavia-discovery-service)
+2026-05-13 06:11:55.116 [restartedMain] DEBUG [traceId=, spanId=] c.t.d.TaviaDiscoveryServiceApplication — Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-13 06:11:55.117 [restartedMain] INFO  [traceId=, spanId=] c.t.d.TaviaDiscoveryServiceApplication — No active profile set, falling back to 1 default profile: "default"
+2026-05-13 06:11:55.142 [restartedMain] INFO  [traceId=, spanId=] o.s.c.c.c.ConfigServerConfigDataLoader — Fetching config from server at : http://localhost:8888
+2026-05-13 06:11:55.142 [restartedMain] INFO  [traceId=, spanId=] o.s.c.c.c.ConfigServerConfigDataLoader — Located environment: name=tavia-discovery-service, profiles=[default], label=null, version=null, state=null
+2026-05-13 06:11:55.144 [restartedMain] INFO  [traceId=, spanId=] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor — Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-13 06:11:55.144 [restartedMain] INFO  [traceId=, spanId=] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor — For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-13 06:11:55.696 [restartedMain] INFO  [traceId=, spanId=] o.s.cloud.context.scope.GenericScope — BeanFactory id=c5577a8b-fec0-3fae-9748-8fc15580100b
+2026-05-13 06:11:55.973 [restartedMain] INFO  [traceId=, spanId=] o.s.boot.tomcat.TomcatWebServer — Tomcat initialized with port 8761 (http)
+2026-05-13 06:11:55.981 [restartedMain] INFO  [traceId=, spanId=] o.a.coyote.http11.Http11NioProtocol — Initializing ProtocolHandler ["http-nio-8761"]
+2026-05-13 06:11:55.982 [restartedMain] INFO  [traceId=, spanId=] o.a.catalina.core.StandardService — Starting service [Tomcat]
+2026-05-13 06:11:55.982 [restartedMain] INFO  [traceId=, spanId=] o.a.catalina.core.StandardEngine — Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-13 06:11:56.006 [restartedMain] INFO  [traceId=, spanId=] o.s.b.w.c.s.WebApplicationContextInitializer — Root WebApplicationContext: initialization completed in 862 ms
+2026-05-13 06:11:56.560 [restartedMain] INFO  [traceId=, spanId=] c.n.d.p.DiscoveryJerseyProvider — Using JSON encoding codec LegacyJacksonJson
+2026-05-13 06:11:56.560 [restartedMain] INFO  [traceId=, spanId=] c.n.d.p.DiscoveryJerseyProvider — Using JSON decoding codec LegacyJacksonJson
+2026-05-13 06:11:56.680 [restartedMain] INFO  [traceId=, spanId=] c.n.d.p.DiscoveryJerseyProvider — Using XML encoding codec XStreamXml
+2026-05-13 06:11:56.680 [restartedMain] INFO  [traceId=, spanId=] c.n.d.p.DiscoveryJerseyProvider — Using XML decoding codec XStreamXml
+2026-05-13 06:11:56.896 [restartedMain] INFO  [traceId=, spanId=] o.s.c.n.eureka.InstanceInfoFactory — Setting initial instance status as: STARTING
+2026-05-13 06:11:56.907 [restartedMain] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — Initializing Eureka in region us-east-1
+2026-05-13 06:11:56.907 [restartedMain] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — Client configured to neither register nor query for data.
+2026-05-13 06:11:56.908 [restartedMain] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — Discovery Client initialized at timestamp 1778641916908 with initial instances count: 0
+2026-05-13 06:11:56.933 [restartedMain] INFO  [traceId=, spanId=] c.n.e.DefaultEurekaServerContext — Initializing ...
+2026-05-13 06:11:56.935 [restartedMain] WARN  [traceId=, spanId=] c.n.eureka.cluster.PeerEurekaNodes — The replica size seems to be empty. Check the route 53 DNS Registry
+2026-05-13 06:11:56.941 [restartedMain] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Finished initializing remote region registries. All known remote regions: []
+2026-05-13 06:11:56.942 [restartedMain] INFO  [traceId=, spanId=] c.n.e.DefaultEurekaServerContext — Initialized
+2026-05-13 06:11:56.949 [restartedMain] INFO  [traceId=, spanId=] o.s.c.n.e.s.EurekaServiceRegistry — Registering application TAVIA-DISCOVERY-SERVICE with eureka with status UP
+2026-05-13 06:11:56.950 [restartedMain] INFO  [traceId=, spanId=] o.a.coyote.http11.Http11NioProtocol — Starting ProtocolHandler ["http-nio-8761"]
+2026-05-13 06:11:56.956 [Thread-13] INFO  [traceId=, spanId=] o.s.c.n.e.s.EurekaServerBootstrap — isAws returned false
+2026-05-13 06:11:56.956 [Thread-13] INFO  [traceId=, spanId=] o.s.c.n.e.s.EurekaServerBootstrap — Initialized server context
+2026-05-13 06:11:56.956 [Thread-13] INFO  [traceId=, spanId=] c.n.e.r.PeerAwareInstanceRegistryImpl — Got 1 instances from neighboring DS node
+2026-05-13 06:11:56.956 [Thread-13] INFO  [traceId=, spanId=] c.n.e.r.PeerAwareInstanceRegistryImpl — Renew threshold is: 1
+2026-05-13 06:11:56.956 [Thread-13] INFO  [traceId=, spanId=] c.n.e.r.PeerAwareInstanceRegistryImpl — Changing status to UP
+2026-05-13 06:11:56.958 [Thread-13] INFO  [traceId=, spanId=] o.s.c.n.e.s.EurekaServerInitializerConfiguration — Started Eureka Server
+2026-05-13 06:11:56.958 [restartedMain] INFO  [traceId=, spanId=] o.s.boot.tomcat.TomcatWebServer — Tomcat started on port 8761 (http) with context path '/'
+2026-05-13 06:11:56.959 [restartedMain] INFO  [traceId=, spanId=] o.s.c.n.e.s.EurekaAutoServiceRegistration — Updating port to 8761
+2026-05-13 06:11:57.093 [restartedMain] INFO  [traceId=, spanId=] o.s.b.a.e.web.EndpointLinksResolver — Exposing 1 endpoint beneath base path '/actuator'
+2026-05-13 06:11:57.098 [restartedMain] INFO  [traceId=, spanId=] c.t.d.TaviaDiscoveryServiceApplication — Started TaviaDiscoveryServiceApplication in 2.838 seconds (process running for 3.239)
+2026-05-13 06:12:15.452 [http-nio-8761-exec-1] INFO  [traceId=, spanId=] o.a.c.c.C.[Tomcat].[localhost].[/] — Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-13 06:12:15.452 [http-nio-8761-exec-1] INFO  [traceId=, spanId=] o.s.web.servlet.DispatcherServlet — Initializing Servlet 'dispatcherServlet'
+2026-05-13 06:12:15.460 [http-nio-8761-exec-1] INFO  [traceId=, spanId=] o.s.v.b.OptionalValidatorFactoryBean — Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-05-13 06:12:15.620 [http-nio-8761-exec-1] INFO  [traceId=, spanId=] o.s.web.servlet.DispatcherServlet — Completed initialization in 167 ms
+2026-05-13 06:12:15.775 [http-nio-8761-exec-2] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Registered instance TAVIA-TENANT-SERVICE/10.0.0.139:tavia-tenant-service:8081 with status UP (replication=false)
+2026-05-13 06:12:32.309 [http-nio-8761-exec-4] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Registered instance TAVIA-INVENTORY-SERVICE/10.0.0.139:tavia-inventory-service:8083 with status UP (replication=false)
+2026-05-13 06:12:49.575 [http-nio-8761-exec-8] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Registered instance TAVIA-CATALOG-SERVICE/10.0.0.139:tavia-catalog-service:8088 with status UP (replication=false)
+2026-05-13 06:12:56.957 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 06:13:06.339 [http-nio-8761-exec-2] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Registered instance TAVIA-CRM-SERVICE/10.0.0.139:tavia-crm-service:8086 with status UP (replication=false)
+2026-05-13 06:13:23.615 [http-nio-8761-exec-8] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Registered instance TAVIA-ORDER-SERVICE/10.0.0.139:tavia-order-service:8082 with status UP (replication=false)
+2026-05-13 06:13:42.904 [http-nio-8761-exec-3] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Registered instance TAVIA-IOT-SERVICE/10.0.0.139:tavia-iot-service:8089 with status UP (replication=false)
+2026-05-13 06:13:56.640 [http-nio-8761-exec-2] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Registered instance TAVIA-SUPPLY-SERVICE/10.0.0.139:tavia-supply-service:8091 with status UP (replication=false)
+2026-05-13 06:13:56.957 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 06:14:12.509 [http-nio-8761-exec-8] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Registered instance TAVIA-CONTEXT-SERVICE/10.0.0.139:tavia-context-service:8087 with status UP (replication=false)
+2026-05-13 06:14:32.209 [http-nio-8761-exec-10] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Registered instance TAVIA-AI-SERVICE/10.0.0.139:tavia-ai-service:8084 with status UP (replication=false)
+2026-05-13 06:14:46.168 [http-nio-8761-exec-2] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Registered instance TAVIA-API-GATEWAY/10.0.0.139:tavia-api-gateway:8080 with status UP (replication=false)
+2026-05-13 06:14:56.957 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 06:15:03.755 [http-nio-8761-exec-3] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Registered instance TAVIA-TRAFFIC-SIMULATOR/10.0.0.139:tavia-traffic-simulator:8095 with status UP (replication=false)
+2026-05-13 06:15:56.957 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 06:16:56.957 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 06:17:56.957 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 06:18:56.957 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 06:19:56.957 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 06:20:56.957 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 06:21:56.937 [Eureka-PeerNodesUpdater] WARN  [traceId=, spanId=] c.n.eureka.cluster.PeerEurekaNodes — The replica size seems to be empty. Check the route 53 DNS Registry
+2026-05-13 06:21:56.958 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 1ms
+2026-05-13 06:22:56.958 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 06:23:56.958 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 06:24:56.958 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 06:25:56.958 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 06:26:56.945 [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] INFO  [traceId=, spanId=] c.n.e.r.PeerAwareInstanceRegistryImpl — Current renewal threshold is : 20
+2026-05-13 06:26:56.958 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 06:27:56.958 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 06:28:56.958 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 06:29:56.958 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 06:30:37.920 [http-nio-8761-exec-5] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Registered instance TAVIA-CRM-SERVICE/10.0.0.139:tavia-crm-service:8086 with status DOWN (replication=false)
+2026-05-13 06:30:37.924 [http-nio-8761-exec-7] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Registered instance TAVIA-INVENTORY-SERVICE/10.0.0.139:tavia-inventory-service:8083 with status DOWN (replication=false)
+2026-05-13 06:30:37.926 [http-nio-8761-exec-9] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Registered instance TAVIA-CONTEXT-SERVICE/10.0.0.139:tavia-context-service:8087 with status DOWN (replication=false)
+2026-05-13 06:30:37.927 [http-nio-8761-exec-6] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Registered instance TAVIA-IOT-SERVICE/10.0.0.139:tavia-iot-service:8089 with status DOWN (replication=false)
+2026-05-13 06:30:37.944 [http-nio-8761-exec-8] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Registered instance TAVIA-SUPPLY-SERVICE/10.0.0.139:tavia-supply-service:8091 with status DOWN (replication=false)
+2026-05-13 06:30:38.047 [http-nio-8761-exec-10] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Registered instance TAVIA-AI-SERVICE/10.0.0.139:tavia-ai-service:8084 with status DOWN (replication=false)
+2026-05-13 06:30:38.063 [http-nio-8761-exec-2] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Registered instance TAVIA-API-GATEWAY/10.0.0.139:tavia-api-gateway:8080 with status DOWN (replication=false)
+2026-05-13 06:30:38.117 [http-nio-8761-exec-1] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Registered instance TAVIA-ORDER-SERVICE/10.0.0.139:tavia-order-service:8082 with status DOWN (replication=false)
+2026-05-13 06:30:38.141 [SpringApplicationShutdownHook] INFO  [traceId=, spanId=] o.s.c.n.e.s.EurekaServiceRegistry — Unregistering application TAVIA-DISCOVERY-SERVICE with eureka with status DOWN
+2026-05-13 06:30:38.188 [http-nio-8761-exec-3] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Registered instance TAVIA-TRAFFIC-SIMULATOR/10.0.0.139:tavia-traffic-simulator:8095 with status DOWN (replication=false)
+2026-05-13 06:30:38.216 [SpringApplicationShutdownHook] INFO  [traceId=, spanId=] o.s.boot.tomcat.GracefulShutdown — Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-13 06:30:38.254 [tomcat-shutdown] INFO  [traceId=, spanId=] o.s.boot.tomcat.GracefulShutdown — Graceful shutdown complete
+2026-05-13 06:30:38.274 [SpringApplicationShutdownHook] INFO  [traceId=, spanId=] o.s.c.n.e.s.EurekaServerBootstrap — Shutting down Eureka Server..
+2026-05-13 06:30:38.278 [SpringApplicationShutdownHook] INFO  [traceId=, spanId=] c.n.e.DefaultEurekaServerContext — Shutting down ...
+2026-05-13 06:30:38.279 [SpringApplicationShutdownHook] INFO  [traceId=, spanId=] c.n.e.DefaultEurekaServerContext — Shut down
+2026-05-13 06:30:38.279 [SpringApplicationShutdownHook] INFO  [traceId=, spanId=] o.s.c.n.e.s.EurekaServerBootstrap — Eureka Service is now shutdown...
+2026-05-13 06:30:38.307 [SpringApplicationShutdownHook] INFO  [traceId=, spanId=] c.n.e.DefaultEurekaServerContext — Shutting down ...
+2026-05-13 06:30:38.311 [SpringApplicationShutdownHook] INFO  [traceId=, spanId=] c.n.e.DefaultEurekaServerContext — Shut down
+2026-05-13 06:30:38.336 [SpringApplicationShutdownHook] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — Shutting down DiscoveryClient ...
+2026-05-13 06:30:38.336 [SpringApplicationShutdownHook] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — Completed shut down of DiscoveryClient
+2026-05-13 07:06:41.823 [restartedMain] INFO  [traceId=, spanId=] c.t.d.TaviaDiscoveryServiceApplication — Starting TaviaDiscoveryServiceApplication using Java 21.0.10 with PID 50280 (/home/tuna/Desktop/tavia_v2/tavia-discovery-service/build/classes/java/main started by tuna in /home/tuna/Desktop/tavia_v2/tavia-discovery-service)
+2026-05-13 07:06:41.825 [restartedMain] DEBUG [traceId=, spanId=] c.t.d.TaviaDiscoveryServiceApplication — Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-13 07:06:41.826 [restartedMain] INFO  [traceId=, spanId=] c.t.d.TaviaDiscoveryServiceApplication — No active profile set, falling back to 1 default profile: "default"
+2026-05-13 07:06:41.857 [restartedMain] INFO  [traceId=, spanId=] o.s.c.c.c.ConfigServerConfigDataLoader — Fetching config from server at : http://localhost:8888
+2026-05-13 07:06:41.857 [restartedMain] INFO  [traceId=, spanId=] o.s.c.c.c.ConfigServerConfigDataLoader — Located environment: name=tavia-discovery-service, profiles=[default], label=null, version=null, state=null
+2026-05-13 07:06:41.860 [restartedMain] INFO  [traceId=, spanId=] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor — Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-13 07:06:41.860 [restartedMain] INFO  [traceId=, spanId=] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor — For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-13 07:06:42.517 [restartedMain] INFO  [traceId=, spanId=] o.s.cloud.context.scope.GenericScope — BeanFactory id=c5577a8b-fec0-3fae-9748-8fc15580100b
+2026-05-13 07:06:42.852 [restartedMain] INFO  [traceId=, spanId=] o.s.boot.tomcat.TomcatWebServer — Tomcat initialized with port 8761 (http)
+2026-05-13 07:06:42.862 [restartedMain] INFO  [traceId=, spanId=] o.a.coyote.http11.Http11NioProtocol — Initializing ProtocolHandler ["http-nio-8761"]
+2026-05-13 07:06:42.863 [restartedMain] INFO  [traceId=, spanId=] o.a.catalina.core.StandardService — Starting service [Tomcat]
+2026-05-13 07:06:42.864 [restartedMain] INFO  [traceId=, spanId=] o.a.catalina.core.StandardEngine — Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-13 07:06:42.893 [restartedMain] INFO  [traceId=, spanId=] o.s.b.w.c.s.WebApplicationContextInitializer — Root WebApplicationContext: initialization completed in 1033 ms
+2026-05-13 07:06:43.486 [restartedMain] INFO  [traceId=, spanId=] c.n.d.p.DiscoveryJerseyProvider — Using JSON encoding codec LegacyJacksonJson
+2026-05-13 07:06:43.486 [restartedMain] INFO  [traceId=, spanId=] c.n.d.p.DiscoveryJerseyProvider — Using JSON decoding codec LegacyJacksonJson
+2026-05-13 07:06:43.617 [restartedMain] INFO  [traceId=, spanId=] c.n.d.p.DiscoveryJerseyProvider — Using XML encoding codec XStreamXml
+2026-05-13 07:06:43.617 [restartedMain] INFO  [traceId=, spanId=] c.n.d.p.DiscoveryJerseyProvider — Using XML decoding codec XStreamXml
+2026-05-13 07:06:43.873 [restartedMain] INFO  [traceId=, spanId=] o.s.c.n.eureka.InstanceInfoFactory — Setting initial instance status as: STARTING
+2026-05-13 07:06:43.886 [restartedMain] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — Initializing Eureka in region us-east-1
+2026-05-13 07:06:43.886 [restartedMain] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — Client configured to neither register nor query for data.
+2026-05-13 07:06:43.887 [restartedMain] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — Discovery Client initialized at timestamp 1778645203887 with initial instances count: 0
+2026-05-13 07:06:43.913 [restartedMain] INFO  [traceId=, spanId=] c.n.e.DefaultEurekaServerContext — Initializing ...
+2026-05-13 07:06:43.915 [restartedMain] WARN  [traceId=, spanId=] c.n.eureka.cluster.PeerEurekaNodes — The replica size seems to be empty. Check the route 53 DNS Registry
+2026-05-13 07:06:43.920 [restartedMain] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Finished initializing remote region registries. All known remote regions: []
+2026-05-13 07:06:43.920 [restartedMain] INFO  [traceId=, spanId=] c.n.e.DefaultEurekaServerContext — Initialized
+2026-05-13 07:06:43.930 [restartedMain] INFO  [traceId=, spanId=] o.s.c.n.e.s.EurekaServiceRegistry — Registering application TAVIA-DISCOVERY-SERVICE with eureka with status UP
+2026-05-13 07:06:43.932 [restartedMain] INFO  [traceId=, spanId=] o.a.coyote.http11.Http11NioProtocol — Starting ProtocolHandler ["http-nio-8761"]
+2026-05-13 07:06:43.937 [Thread-13] INFO  [traceId=, spanId=] o.s.c.n.e.s.EurekaServerBootstrap — isAws returned false
+2026-05-13 07:06:43.938 [Thread-13] INFO  [traceId=, spanId=] o.s.c.n.e.s.EurekaServerBootstrap — Initialized server context
+2026-05-13 07:06:43.938 [Thread-13] INFO  [traceId=, spanId=] c.n.e.r.PeerAwareInstanceRegistryImpl — Got 1 instances from neighboring DS node
+2026-05-13 07:06:43.938 [Thread-13] INFO  [traceId=, spanId=] c.n.e.r.PeerAwareInstanceRegistryImpl — Renew threshold is: 1
+2026-05-13 07:06:43.938 [Thread-13] INFO  [traceId=, spanId=] c.n.e.r.PeerAwareInstanceRegistryImpl — Changing status to UP
+2026-05-13 07:06:43.940 [Thread-13] INFO  [traceId=, spanId=] o.s.c.n.e.s.EurekaServerInitializerConfiguration — Started Eureka Server
+2026-05-13 07:06:43.941 [restartedMain] INFO  [traceId=, spanId=] o.s.boot.tomcat.TomcatWebServer — Tomcat started on port 8761 (http) with context path '/'
+2026-05-13 07:06:43.943 [restartedMain] INFO  [traceId=, spanId=] o.s.c.n.e.s.EurekaAutoServiceRegistration — Updating port to 8761
+2026-05-13 07:06:44.105 [restartedMain] INFO  [traceId=, spanId=] o.s.b.a.e.web.EndpointLinksResolver — Exposing 1 endpoint beneath base path '/actuator'
+2026-05-13 07:06:44.113 [restartedMain] INFO  [traceId=, spanId=] c.t.d.TaviaDiscoveryServiceApplication — Started TaviaDiscoveryServiceApplication in 3.277 seconds (process running for 3.73)
+2026-05-13 07:07:02.392 [http-nio-8761-exec-1] INFO  [traceId=, spanId=] o.a.c.c.C.[Tomcat].[localhost].[/] — Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-13 07:07:02.392 [http-nio-8761-exec-1] INFO  [traceId=, spanId=] o.s.web.servlet.DispatcherServlet — Initializing Servlet 'dispatcherServlet'
+2026-05-13 07:07:02.400 [http-nio-8761-exec-1] INFO  [traceId=, spanId=] o.s.v.b.OptionalValidatorFactoryBean — Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-05-13 07:07:02.591 [http-nio-8761-exec-1] INFO  [traceId=, spanId=] o.s.web.servlet.DispatcherServlet — Completed initialization in 199 ms
+2026-05-13 07:07:02.772 [http-nio-8761-exec-2] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Registered instance TAVIA-TENANT-SERVICE/10.0.0.139:tavia-tenant-service:8081 with status UP (replication=false)
+2026-05-13 07:07:19.649 [http-nio-8761-exec-4] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Registered instance TAVIA-INVENTORY-SERVICE/10.0.0.139:tavia-inventory-service:8083 with status UP (replication=false)
+2026-05-13 07:07:37.491 [http-nio-8761-exec-8] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Registered instance TAVIA-CATALOG-SERVICE/10.0.0.139:tavia-catalog-service:8088 with status UP (replication=false)
+2026-05-13 07:07:43.939 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 07:07:54.131 [http-nio-8761-exec-2] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Registered instance TAVIA-CRM-SERVICE/10.0.0.139:tavia-crm-service:8086 with status UP (replication=false)
+2026-05-13 07:08:23.808 [http-nio-8761-exec-9] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Registered instance TAVIA-IOT-SERVICE/10.0.0.139:tavia-iot-service:8089 with status UP (replication=false)
+2026-05-13 07:08:43.939 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 07:08:44.206 [http-nio-8761-exec-8] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Registered instance TAVIA-SUPPLY-SERVICE/10.0.0.139:tavia-supply-service:8091 with status UP (replication=false)
+2026-05-13 07:08:59.761 [http-nio-8761-exec-6] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Registered instance TAVIA-CONTEXT-SERVICE/10.0.0.139:tavia-context-service:8087 with status UP (replication=false)
+2026-05-13 07:09:19.676 [http-nio-8761-exec-6] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Registered instance TAVIA-AI-SERVICE/10.0.0.139:tavia-ai-service:8084 with status UP (replication=false)
+2026-05-13 07:09:34.099 [http-nio-8761-exec-6] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Registered instance TAVIA-API-GATEWAY/10.0.0.139:tavia-api-gateway:8080 with status UP (replication=false)
+2026-05-13 07:09:43.939 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 07:09:50.735 [http-nio-8761-exec-6] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Registered instance TAVIA-TRAFFIC-SIMULATOR/10.0.0.139:tavia-traffic-simulator:8095 with status UP (replication=false)
+2026-05-13 07:10:43.939 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 07:11:43.939 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 07:12:43.939 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 07:13:43.939 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 07:14:43.939 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 07:15:43.939 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 07:16:43.915 [Eureka-PeerNodesUpdater] WARN  [traceId=, spanId=] c.n.eureka.cluster.PeerEurekaNodes — The replica size seems to be empty. Check the route 53 DNS Registry
+2026-05-13 07:16:43.939 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 07:17:43.939 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 07:18:43.939 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 07:19:43.258 [http-nio-8761-exec-2] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Registered instance TAVIA-ORDER-SERVICE/10.0.0.139:tavia-order-service:8082 with status DOWN (replication=false)
+2026-05-13 07:19:43.262 [http-nio-8761-exec-1] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Registered instance TAVIA-ORDER-SERVICE/10.0.0.139:tavia-order-service:8082 with status DOWN (replication=false)
+2026-05-13 07:19:43.266 [http-nio-8761-exec-3] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Cancelled instance TAVIA-ORDER-SERVICE/10.0.0.139:tavia-order-service:8082 (replication=false)
+2026-05-13 07:19:43.939 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 07:20:12.571 [http-nio-8761-exec-7] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Registered instance TAVIA-ORDER-SERVICE/10.0.0.139:tavia-order-service:8082 with status UP (replication=false)
+2026-05-13 07:20:43.940 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 07:21:43.920 [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] INFO  [traceId=, spanId=] c.n.e.r.PeerAwareInstanceRegistryImpl — Current renewal threshold is : 20
+2026-05-13 07:21:43.940 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 07:22:43.940 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 07:23:43.941 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 07:24:43.941 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 07:25:43.941 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 07:26:43.915 [Eureka-PeerNodesUpdater] WARN  [traceId=, spanId=] c.n.eureka.cluster.PeerEurekaNodes — The replica size seems to be empty. Check the route 53 DNS Registry
+2026-05-13 07:26:43.941 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 07:27:43.941 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 07:28:43.941 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 07:29:43.941 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 07:30:43.941 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 07:31:43.941 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 07:32:43.941 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 07:33:43.941 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 07:34:43.941 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 07:35:43.941 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 07:36:43.916 [Eureka-PeerNodesUpdater] WARN  [traceId=, spanId=] c.n.eureka.cluster.PeerEurekaNodes — The replica size seems to be empty. Check the route 53 DNS Registry
+2026-05-13 07:36:43.921 [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] INFO  [traceId=, spanId=] c.n.e.r.PeerAwareInstanceRegistryImpl — Current renewal threshold is : 20
+2026-05-13 07:36:43.941 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 07:37:43.941 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 07:38:43.941 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 07:39:43.941 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 07:40:43.941 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 07:41:43.941 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 07:42:43.941 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 07:43:43.941 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 07:44:43.941 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 07:45:43.941 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 07:46:43.916 [Eureka-PeerNodesUpdater] WARN  [traceId=, spanId=] c.n.eureka.cluster.PeerEurekaNodes — The replica size seems to be empty. Check the route 53 DNS Registry
+2026-05-13 07:46:43.941 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 07:47:43.941 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 07:48:43.941 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 07:49:43.941 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 07:50:43.941 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 07:51:43.921 [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] INFO  [traceId=, spanId=] c.n.e.r.PeerAwareInstanceRegistryImpl — Current renewal threshold is : 20
+2026-05-13 07:51:43.941 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 07:52:43.941 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 07:53:43.941 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 07:54:43.941 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 07:55:43.941 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 07:56:43.917 [Eureka-PeerNodesUpdater] WARN  [traceId=, spanId=] c.n.eureka.cluster.PeerEurekaNodes — The replica size seems to be empty. Check the route 53 DNS Registry
+2026-05-13 07:56:43.941 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 07:57:43.941 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 07:58:43.941 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 07:59:43.941 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 08:00:43.942 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 08:01:43.942 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 08:02:43.942 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 08:03:43.942 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 08:04:43.943 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 08:05:43.943 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 08:06:43.917 [Eureka-PeerNodesUpdater] WARN  [traceId=, spanId=] c.n.eureka.cluster.PeerEurekaNodes — The replica size seems to be empty. Check the route 53 DNS Registry
+2026-05-13 08:06:43.921 [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] INFO  [traceId=, spanId=] c.n.e.r.PeerAwareInstanceRegistryImpl — Current renewal threshold is : 20
+2026-05-13 08:06:43.943 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 08:07:43.943 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 08:08:43.943 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 08:09:43.943 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 08:10:43.943 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 08:11:43.943 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 08:12:43.943 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 08:13:43.943 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 08:14:43.944 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 08:15:43.944 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 08:16:43.917 [Eureka-PeerNodesUpdater] WARN  [traceId=, spanId=] c.n.eureka.cluster.PeerEurekaNodes — The replica size seems to be empty. Check the route 53 DNS Registry
+2026-05-13 08:16:43.944 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 08:17:43.944 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 08:18:43.945 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 08:19:43.944 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 08:20:43.944 [Eureka-EvictionTimer] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Running the evict task with compensationTime 0ms
+2026-05-13 08:21:05.494 [http-nio-8761-exec-6] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Registered instance TAVIA-ORDER-SERVICE/10.0.0.139:tavia-order-service:8082 with status DOWN (replication=false)
+2026-05-13 08:21:05.535 [http-nio-8761-exec-5] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Registered instance TAVIA-CATALOG-SERVICE/10.0.0.139:tavia-catalog-service:8088 with status DOWN (replication=false)
+2026-05-13 08:21:05.540 [http-nio-8761-exec-3] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Registered instance TAVIA-INVENTORY-SERVICE/10.0.0.139:tavia-inventory-service:8083 with status DOWN (replication=false)
+2026-05-13 08:21:05.601 [http-nio-8761-exec-1] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Registered instance TAVIA-CONTEXT-SERVICE/10.0.0.139:tavia-context-service:8087 with status DOWN (replication=false)
+2026-05-13 08:21:05.610 [http-nio-8761-exec-9] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Registered instance TAVIA-API-GATEWAY/10.0.0.139:tavia-api-gateway:8080 with status DOWN (replication=false)
+2026-05-13 08:21:05.642 [http-nio-8761-exec-8] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Registered instance TAVIA-AI-SERVICE/10.0.0.139:tavia-ai-service:8084 with status DOWN (replication=false)
+2026-05-13 08:21:05.679 [http-nio-8761-exec-2] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Registered instance TAVIA-TENANT-SERVICE/10.0.0.139:tavia-tenant-service:8081 with status DOWN (replication=false)
+2026-05-13 08:21:05.699 [http-nio-8761-exec-4] INFO  [traceId=, spanId=] c.n.e.r.AbstractInstanceRegistry — Registered instance TAVIA-SUPPLY-SERVICE/10.0.0.139:tavia-supply-service:8091 with status DOWN (replication=false)
+2026-05-13 08:21:05.720 [SpringApplicationShutdownHook] INFO  [traceId=, spanId=] o.s.c.n.e.s.EurekaServiceRegistry — Unregistering application TAVIA-DISCOVERY-SERVICE with eureka with status DOWN
+2026-05-13 08:21:05.734 [SpringApplicationShutdownHook] INFO  [traceId=, spanId=] o.s.boot.tomcat.GracefulShutdown — Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-13 08:21:05.742 [tomcat-shutdown] INFO  [traceId=, spanId=] o.s.boot.tomcat.GracefulShutdown — Graceful shutdown complete
+2026-05-13 08:21:05.758 [SpringApplicationShutdownHook] INFO  [traceId=, spanId=] o.s.c.n.e.s.EurekaServerBootstrap — Shutting down Eureka Server..
+2026-05-13 08:21:05.762 [SpringApplicationShutdownHook] INFO  [traceId=, spanId=] c.n.e.DefaultEurekaServerContext — Shutting down ...
+2026-05-13 08:21:05.765 [SpringApplicationShutdownHook] INFO  [traceId=, spanId=] c.n.e.DefaultEurekaServerContext — Shut down
+2026-05-13 08:21:05.766 [SpringApplicationShutdownHook] INFO  [traceId=, spanId=] o.s.c.n.e.s.EurekaServerBootstrap — Eureka Service is now shutdown...
+2026-05-13 08:21:05.772 [SpringApplicationShutdownHook] INFO  [traceId=, spanId=] c.n.e.DefaultEurekaServerContext — Shutting down ...
+2026-05-13 08:21:05.772 [SpringApplicationShutdownHook] INFO  [traceId=, spanId=] c.n.e.DefaultEurekaServerContext — Shut down
+2026-05-13 08:21:05.781 [SpringApplicationShutdownHook] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — Shutting down DiscoveryClient ...
+2026-05-13 08:21:05.782 [SpringApplicationShutdownHook] INFO  [traceId=, spanId=] c.netflix.discovery.DiscoveryClient — Completed shut down of DiscoveryClient

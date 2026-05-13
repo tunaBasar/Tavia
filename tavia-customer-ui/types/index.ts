@@ -122,6 +122,62 @@ export interface ResetPasswordRequest {
 }
 
 // ============================================================
+// CATALOG TYPES (tavia-catalog-service)
+// ============================================================
+
+/** Matches com.tavia.catalog_service.enums.ProductCategory */
+export enum ProductCategory {
+  ESPRESSO_BASED = 'ESPRESSO_BASED',
+  TEA = 'TEA',
+  COLD_BEVERAGE = 'COLD_BEVERAGE',
+  FOOD = 'FOOD',
+  DESSERT = 'DESSERT',
+}
+
+/** Display labels for product categories */
+export const ProductCategoryLabels: Record<ProductCategory, string> = {
+  [ProductCategory.ESPRESSO_BASED]: 'Espresso',
+  [ProductCategory.TEA]: 'Tea',
+  [ProductCategory.COLD_BEVERAGE]: 'Cold Drinks',
+  [ProductCategory.FOOD]: 'Food',
+  [ProductCategory.DESSERT]: 'Dessert',
+};
+
+/** Matches com.tavia.catalog_service.dto.RecipeDto */
+export interface RecipeDto {
+  id: string;
+  productName: string;
+  displayName: string;
+  category: ProductCategory;
+  description: string | null;
+  price: number | null;
+  active: boolean;
+}
+
+// ============================================================
+// ORDER TYPES (tavia-order-service)
+// ============================================================
+
+/** Matches com.tavia.order_service.dto.CreateOrderRequest */
+export interface CreateOrderRequest {
+  customerId: string;
+  productName: string;
+  quantity: number;
+  price: number;
+}
+
+/** Matches com.tavia.order_service.dto.OrderDto */
+export interface OrderResponse {
+  id: string;
+  tenantId: string;
+  customerId: string;
+  productName: string;
+  quantity: number;
+  price: number;
+  orderDate: string;
+}
+
+// ============================================================
 // COUPON TYPES (UI-local for now)
 // ============================================================
 

@@ -1,6 +1,11 @@
 package com.tavia.order_service.entity;
 
+import com.tavia.order_service.enums.LoyaltyLevel;
+import com.tavia.order_service.enums.OrderStatus;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -37,6 +42,16 @@ public class Order {
     private Integer quantity;
 
     private BigDecimal price;
+
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    @Builder.Default
+    private OrderStatus status = OrderStatus.PENDING;
+
+    private String customerName;
+
+    @Enumerated(EnumType.STRING)
+    private LoyaltyLevel loyaltyLevel;
 
     @CreationTimestamp
     private LocalDateTime orderDate;

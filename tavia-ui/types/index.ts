@@ -117,6 +117,8 @@ export interface ContextData {
 
 // ─── Order ───────────────────────────────────────────────────────
 
+export type OrderStatus = "PENDING" | "PREPARING" | "COMPLETED" | "CANCELLED";
+
 /**
  * Matches backend: CreateOrderRequest (order-service)
  * Fields: tenantId (UUID), customerId (UUID, optional), productName, quantity, price (BigDecimal)
@@ -132,7 +134,7 @@ export interface CreateOrderPayload {
 
 /**
  * Matches backend: OrderDto (order-service)
- * Fields: id (UUID), tenantId (UUID), customerId (UUID), productName, quantity, price, orderDate
+ * Fields: id, tenantId, customerId, productName, quantity, price, status, customerName, loyaltyLevel, orderDate
  */
 export interface Order {
   id: string;
@@ -141,7 +143,34 @@ export interface Order {
   productName: string;
   quantity: number;
   price: number;
+  status: OrderStatus;
+  customerName: string | null;
+  loyaltyLevel: LoyaltyLevel | null;
   orderDate: string;
+}
+
+/**
+ * Weekly sales aggregation from tavia-ai-service.
+ * Endpoint: GET /api/v1/ai/weekly/{tenantId}
+ */
+export interface WeeklySales {
+  tenantId: string;
+  weekStart: string;
+  weekEnd: string;
+  totalRevenue: number;
+  totalOrders: number;
+  dailyBreakdown: DailySales[];
+}
+
+export interface DailySales {
+  id: string;
+  tenantId: string;
+  totalRevenue: number;
+  totalOrders: number;
+  reportDate: string;
+  weather: string | null;
+  loyaltyLevel: LoyaltyLevel | null;
+  eventType: string | null;
 }
 
 // ─── Inventory (Raw Materials — DDD) ─────────────────────────────
